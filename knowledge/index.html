@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>БАЗА ЗНАНИЙ</title>
+    <link href="../styles/styles.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="../images/favicon.png">
+    <!-- Font Awesome CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+     m[i].l=1*new Date();
+     for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+     k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+     (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+     ym(98771693, "init", {
+          clickmap:true,
+          trackLinks:true,
+          accurateTrackBounce:true
+     });
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f9f9f9;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown select {
+            padding: 8px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .dropdown select option:hover {
+            background-color: dodgerblue;
+            color: #fff;
+        }
+
+        .search-bar {
+            display: block;
+            align-items: center;
+        }
+
+        .search-bar input {
+            padding: 8px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px 0 0 4px;
+            width: 200px;
+        }
+
+        .search-bar button {
+            background-color: dodgerblue;
+            border: none;
+            color: white;
+            padding: 8px 12px;
+            cursor: pointer;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .search-bar button i {
+            margin-right: 5px;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+
+            gap: 10px;
+            padding: 20px;
+        }
+
+        .video {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .video iframe {
+            width: 100%;
+            height: 250px;
+            border: none;
+        }
+
+        @media (max-width: 768px) {
+            .controls {
+                flex-direction: column;
+                gap: 10px;
+                align-items: flex-start;
+            }
+            .dropdown {
+              width: 100%;
+            }
+            .search-bar {
+                width: 100%;
+            }
+
+            .search-bar input {
+                width: 100%;
+                border-radius: 4px;
+                background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 99% center;
+            }
+
+            .search-bar button {
+                display: none;
+            }
+
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navigation-bar-container">
+        <div class="nav-container">
+            <div class="logo-container">
+                <a href="../"><img src="../images/novapos5.png" alt="NovaPos logo" id="logo"></a>
+            </div>
+            <div class="navbar">
+                <div class="nav-mobile">
+                    <a href="#" id="nav-toggle"><span></span></a>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="../about/">О нас</a></li>
+                    <li><a href="../shop/">Магазин</a></li>
+                    <li><a href="../trusted/">Нам доверяют</a></li>
+                    <li><a href="#">Помощь<i class="fa fa-caret-down"></i></a>
+                        <ul class="nav-dropdown">
+                            <li><a href="../drivers/">Драйверы</a></li>
+                            <li><a href="../knowledge/">База знаний</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../moysklad/">МойСклад<i class="fa fa-shopping-cart" style="font-size:20px;color:white;padding-left:4px;"></i></a></li>
+                    <li><a href="../contacts/">Контакты</a></li>
+                    <li><a href="../cart/">Корзина<i class="fa fa-shopping-bag" style="font-size:20px;color:white;padding-left:4px;"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="../scripts/script.js"></script>
+    <header>
+        <h1>Видео-уроки</h1>
+    </header>
+    <div class="controls">
+        <div class="dropdown">
+            <select id="category">
+                <option value="all">Все видео-уроки</option>
+                <option value="gbs-market">GBS.Market</option>
+                <option value="moysklad">МойСклад</option>
+            </select>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Введите название урока...">
+            <button><i class="fa fa-search"></i> Поиск</button>
+        </div>
+    </div>
+    <div class="video-grid" id="videos">
+        <div class="video" data-category="gbs-market">
+            <iframe src="https://www.youtube.com/embed/s3EesLoo8vU" allowfullscreen></iframe>
+            <p>Обзор кассовой программы GBS.Market</p>
+        </div>
+        <div class="video" data-category="gbs-market">
+            <iframe src="https://www.youtube.com/embed/cjyQO17jDtw" allowfullscreen></iframe>
+            <p>Импорт данных из GBS.Market 5 в GBS.Market 6</p>
+        </div>
+        <div class="video" data-category="gbs-market">
+            <iframe src="https://www.youtube.com/embed/-SWVw_O_V_I" allowfullscreen></iframe>
+            <p>GBS.Market процесс первичной настройки</p>
+        </div>
+        <div class="video" data-category="gbs-market">
+            <iframe src="https://www.youtube.com/embed/P27vvaCSG-o" allowfullscreen></iframe>
+            <p>Как выполнить продажу в кассовой программе GBS.Market</p>
+        </div>
+        <div class="video" data-category="gbs-market">
+            <iframe src="https://www.youtube.com/embed/Qs2Vg7UPB4w" allowfullscreen></iframe>
+            <p>GBS.Market: возврат товара (продажи) от покупателя</p>
+        </div>
+        <div class="video" data-category="gbs-market">
+            <iframe src="https://www.youtube.com/embed/HWus-y4CU4w" allowfullscreen></iframe>
+            <p>GBS.Market: все о скидках. Установка и настройка правил </p>
+        </div>
+        <div class="video" data-category="gbs-market">
+            <iframe src="https://www.youtube.com/embed/Ev-mXB8ZBFw" allowfullscreen></iframe>
+            <p>GBS.Market: продажа товаров в долг</p>
+        </div>
+        <div class="video" data-category="gbs-market">
+            <iframe src="https://www.youtube.com/embed/CMuCncsn9io" allowfullscreen></iframe>
+            <p>GBS.Market: создание способов оплаты и их использование при продаже</p>
+        </div>
+        <div class="video" data-category="gbs-market">
+            <iframe src="https://www.youtube.com/embed/WEuTlPlF9iw" allowfullscreen></iframe>
+            <p>GBS.Market: управление сотрудниками и правами доступа</p>
+        </div>
+        <div class="video" data-category="gbs-market">
+            <iframe src="https://www.youtube.com/embed/p6V8vgF3br4" allowfullscreen></iframe>
+            <p>Быстрое добавление избранных товаров в чек в кассовой программе GBS.Market</p>
+        </div>
+        <div class="video" data-category="gbs-market">
+            <iframe src="https://www.youtube.com/embed/Akr_aGblt4s" allowfullscreen></iframe>
+            <p>Создание резервной копии вручную</p>
+        </div>
+        <div class="video" data-category="gbs-market">
+            <iframe src="https://www.youtube.com/embed/rYaYkRE6API" allowfullscreen></iframe>
+            <p>Восстановление пароля для сотрудника</p>
+        </div>
+        <div class="video" data-category="gbs-market">
+            <iframe src="https://www.youtube.com/embed/zMEhRGDIyew" allowfullscreen></iframe>
+            <p>Дополнительные поля для товаров и контактов </p>
+        </div>
+        <div class="video" data-category="gbs-market">
+            <iframe src="https://www.youtube.com/embed/VrM3qtMsuqY" allowfullscreen></iframe>
+            <p>Как обновить программу GBS.Market</p>
+        </div>
+        <div class="video" data-category="gbs-market">
+            <iframe src="https://www.youtube.com/embed/7ZHEYzI1ErU" allowfullscreen></iframe>
+            <p>Кассовая программа GBS.Market: обслуживание нескольких покупателей одновременно</p>
+        </div>
+        <div class="video" data-category="gbs-market">
+            <iframe src="https://www.youtube.com/embed/ZiWroeARtLA" allowfullscreen></iframe>
+            <p>Кассовая программа GBS.Market: печать ценников</p>
+        </div>
+        <div class="video" data-category="gbs-market">
+            <iframe src="https://www.youtube.com/embed/bTpl-kgR2vk" allowfullscreen></iframe>
+            <p>Краткий обзор режима КАФЕ в кассовой программе GBS.Market</p>
+        </div>
+        <div class="video" data-category="gbs-market">
+            <iframe src="https://www.youtube.com/embed/YwDYmDUwxqw" allowfullscreen></iframe>
+            <p>Настройка отправки отчетов на электронную почту</p>
+        </div>
+        <div class="video" data-category="gbs-market">
+            <iframe src="https://www.youtube.com/embed/-6S1Gzjx4ao" allowfullscreen></iframe>
+            <p>Настройка правил ценообразования</p>
+        </div>
+        <div class="video" data-category="gbs-market">
+            <iframe src="https://www.youtube.com/embed/SsaeYVUS4T4" allowfullscreen></iframe>
+            <p>Редактирование шаблонов документов</p>
+        </div>
+        <div class="video" data-category="moysklad">
+            <iframe src="https://www.youtube.com/embed/AtkAWlO_le0" allowfullscreen></iframe>
+            <p>1. Начало работы: настройки</p>
+        </div>
+        <div class="video" data-category="moysklad">
+            <iframe src="https://www.youtube.com/embed/3B1TN6UB1U0" allowfullscreen></iframe>
+            <p>2. Начало работы: товары и остатки</p>
+        </div>
+        <div class="video" data-category="moysklad">
+            <iframe src="https://www.youtube.com/embed/64cVfc_IXys" allowfullscreen></iframe>
+            <p>3. Начало работы: контрагенты</p>
+        </div>
+        <div class="video" data-category="moysklad">
+            <iframe src="https://www.youtube.com/embed/E3KgBWt2Wsk" allowfullscreen></iframe>
+            <p>4. Начало работы: документы, фильтры и таблицы</p>
+        </div>
+        <div class="video" data-category="moysklad">
+            <iframe src="https://www.youtube.com/embed/nYSemJ_0O_U" allowfullscreen></iframe>
+            <p>5. Начало работы: закупка и продажа товаров</p>
+        </div>
+        <div class="video" data-category="moysklad">
+            <iframe src="https://www.youtube.com/embed/In7BXuEEqUk" allowfullscreen></iframe>
+            <p>Адрес доставки в Заказе покупателя и Отгрузке. Инструкция | МойСклад</p>
+        </div>
+        <div class="video" data-category="moysklad">
+            <iframe src="https://www.youtube.com/embed/zft4fu5yyAI" allowfullscreen></iframe>
+            <p>Как импортировать товары из Excel в МойСклад</p>
+        </div>
+        <div class="video" data-category="moysklad">
+            <iframe src="https://www.youtube.com/embed/OqxuFsr9BwU" allowfullscreen></iframe>
+            <p>Как работать с Кассой МойСклад</p>
+        </div>
+        <div class="video" data-category="moysklad">
+            <iframe src="https://www.youtube.com/embed/AkkMPiUumDI" allowfullscreen></iframe>
+            <p>Касса МойСклад. Обзор возможностей</p>
+        </div>
+        <div class="video" data-category="moysklad">
+            <iframe src="https://www.youtube.com/embed/W7Wh1drGDxo" allowfullscreen></iframe>
+            <p>Как создать и настроить каналы продаж в МоемСкладе. Инструкция</p>
+        </div>
+        <div class="video" data-category="moysklad">
+            <iframe src="https://www.youtube.com/embed/iAiyCAJPmOg" allowfullscreen></iframe>
+            <p>Маркировка: продажа табачной продукции</p>
+        </div>
+        <div class="video" data-category="moysklad">
+            <iframe src="https://www.youtube.com/embed/xuWKjEarl_E" allowfullscreen></iframe>
+            <p>МойСклад. Работа с терминалом сбора данных</p>
+        </div>
+        <div class="video" data-category="moysklad">
+            <iframe src="https://www.youtube.com/embed/3a3s3awbl0I" allowfullscreen></iframe>
+            <p>Обзор приложения «Управление ценами»</p>
+        </div>
+        <div class="video" data-category="moysklad">
+            <iframe src="https://www.youtube.com/embed/X-niOknOGnE" allowfullscreen></iframe>
+            <p>Печать кодов маркировки. Настройка своего шаблона этикетки</p>
+        </div>
+        <div class="video" data-category="moysklad">
+            <iframe src="https://www.youtube.com/embed/562vFhKLNM4" allowfullscreen></iframe>
+            <p>Производство в МоемСкладе: производственное задание</p>
+        </div>
+        <div class="video" data-category="moysklad">
+            <iframe src="https://www.youtube.com/embed/MgmCR_mPN-A" allowfullscreen></iframe>
+            <p>Производство: этапы, техпроцессы и техкарты</p>
+        </div>
+        <div class="video" data-category="moysklad">
+            <iframe src="https://www.youtube.com/embed/UpTPtiyagG0" allowfullscreen></iframe>
+            <p>Управление ценами в МоемСкладе</p>
+        </div>
+    </div>
+    <div id="copyright">
+        <p>ВСЕ ПРАВА ЗАЩИЩЕНЫ <span style="font-size:18px">&copy;</span> NOVAPOS.KZ </p>
+    </div>
+    <script>
+        const categorySelect = document.getElementById('category');
+        const searchInput = document.getElementById('search');
+        const videos = document.querySelectorAll('.video');
+
+        categorySelect.addEventListener('change', filterVideos);
+        searchInput.addEventListener('input', filterVideos);
+
+        function filterVideos() {
+            const category = categorySelect.value;
+            const searchTerm = searchInput.value.toLowerCase();
+
+            videos.forEach(video => {
+                const videoCategory = video.dataset.category;
+                const videoTitle = video.querySelector('p').textContent.toLowerCase();
+
+                if ((category === 'all' || videoCategory === category) && videoTitle.includes(searchTerm)) {
+                    video.style.display = 'block';
+                } else {
+                    video.style.display = 'none';
+                }
+            });
+        }
+    </script>
+    <a href="https://wa.me/77765595726" class="whatsapp-float" target="_blank">
+        <img src="../images/whatsapp.png" alt="WhatsApp">
+    </a>
+
+</body>
+</html>

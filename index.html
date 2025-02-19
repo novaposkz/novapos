@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Автоматизация торговли и кассовое оборудование.">
+	<title>NovaPos.kz - Автоматизация торговых точек и учет торговли</title>
+	<link href="styles/styles.css" rel="stylesheet" type="text/css">
+	<link rel="icon" href="images/favicon.png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript" >
+	   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+	   m[i].l=1*new Date();
+	   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+	   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+	   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+	   ym(98771693, "init", {
+	        clickmap:true,
+	        trackLinks:true,
+	        accurateTrackBounce:true
+	   });
+	</script>
+	<noscript><div><img src="https://mc.yandex.ru/watch/98771693" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+	<!-- /Yandex.Metrika counter -->
+</head>
+<body>
+	<div class="navigation-bar-container">
+		<div class="nav-container">
+			<div class="logo-container">
+				<a href="/"><img src="images/novapos5.png" alt="NovaPos logo" id="logo"></a>
+			</div>
+			<div class="navbar">
+				<div class="nav-mobile">
+					<a href="#" id="nav-toggle"><span></span></a>
+				</div>
+				<ul class="nav-list">
+					<li><a href="about/">О нас</a></li>
+					<li><a href="shop/">Магазин</a></li>
+					<li><a href="trusted/">Нам доверяют</a></li>
+					<li><a href="#">Помощь<i class="fa fa-caret-down"></i></a>
+						<ul class="nav-dropdown">
+							<li><a href="drivers/">Драйверы</a></li>
+							<li><a href="knowledge/">База знаний</a></li>
+						</ul>
+					</li>
+					<li><a href="moysklad/">МойСклад<i class="fa fa-shopping-cart" style="font-size:20px;color:white;padding-left:4px;"></i></a></li>
+					<li><a href="contacts/">Контакты</a></li>
+					<li><a href="cart/">Корзина<i class="fa fa-shopping-bag" style="font-size:20px;color:white;padding-left:4px;"></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+	<div style="padding-left:20px">
+		<div class="header-container">
+			<h1>АВТОМАТИЗАЦИЯ ТОРГОВЛИ В КАЗАХСТАНЕ</h1>
+<!-- 			<div class="flag kazakhstan">
+				<img height="70" src="https://imgur.com/kRMTKRv.png" alt="" class="kazakhstan__center_logo" />
+				<img height="89" src="https://imgur.com/ZrWtDUS.png" alt="" class="kazakhstan__left_logo" />
+			</div> -->
+		</div>
+	</div>
+
+	<div class="carousel">
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<picture>
+					<source media="(max-width: 768px)" srcset="images/IMG_4003.PNG">
+					<img src="images/IMG_3996.PNG" alt="Баннер">
+				</picture>
+			</div>
+			<div class="carousel-item active">
+				<picture>
+					<source media="(max-width: 768px)" srcset="images/promo_small.jpg">
+					<img src="images/promo_big.jpg" alt="Акция">
+				</picture>
+			</div>
+			<div class="carousel-item">
+				<picture>
+					<source media="(max-width: 768px)" srcset="images/tradein_small.jpg">
+					<img src="images/tradein_big.jpg" alt="Trade-In">
+				</picture>
+			</div>
+			<div class="carousel-item">
+				<picture>
+					<source media="(max-width: 768px)" srcset="images/guarantee_small.jpg">
+					<img src="images/guarantee_big.jpg" alt="Гарантия низкой цены">
+				</picture>
+			</div>
+			<!-- Add more images as needed -->
+		</div>
+		<button class="carousel-control prev" aria-label="Previous">&#10094;</button>
+		<button class="carousel-control next" aria-label="Next">&#10095;</button>
+	</div>
+	<div class="carousel-dots">
+		<!-- Dots will be added dynamically via JavaScript -->
+	</div>
+
+	<!-- Trade section -->
+	<section class="trade-section">
+	    <h1>ВЫБЕРИТЕ СФЕРУ ТОРГОВЛИ</h1>
+	    <div class="trade-cards-container">
+	      	<!-- Large Card 1 -->
+	      	<div class="trade-card large" data-url="page1.html">
+	        	<h2>Магазин спортивных товаров</h2>
+	       		<p>Спортивные магазины любого размера.</p>
+	        	<div class="trade-image-container">
+	          	<img src="images/spheres/sports.png" alt="Товары для спорта">
+	        	</div>
+	        	<button class="trade-select-button">Выбрать</button>
+	      	</div>
+
+		      <!-- Small Card 1 -->
+	      	<div class="trade-card small" data-url="page1.html">
+	        	<h2>Продуктовый магазин</h2>
+	        	<p>Все виды продуктовых магазинов — от минимаркетов до супермаркетов.</p>
+	        	<div class="trade-image-container">
+	        	<img src="images/spheres/groceries.png" alt="Продукты">
+	        	</div>
+	        	<button class="trade-select-button">Выбрать</button>
+	      	</div>
+
+		   	<!-- Small Card 2 -->
+		   	<div class="trade-card small" data-url="page1.html">
+		        <h2>Бутик модной одежды</h2>
+		        <p>Любые магазины и бутики модных вещей.</p>
+		        <div class="trade-image-container">
+		        <img src="images/spheres/clothes.png" alt="Одежда">
+		        </div>
+		        <button class="trade-select-button">Выбрать</button>
+		   	</div>
+
+		  	<!-- Large Card 2 -->
+		   	<div class="trade-card large" data-url="page1.html">
+		        <h2>Алкомаркет</h2>
+		        <p>Магазин алкогольной продукции и пива на разлив.</p>
+		        <div class="trade-image-container">
+		        <img src="images/spheres/alcohol.png" alt="Алкоголь">
+		        </div>
+		        <button class="trade-select-button">Выбрать</button>
+		   	</div>
+
+		  	<!-- Small Card 3 -->
+		   	<div class="trade-card small" data-url="page1.html">
+		        <h2>Магазин косметики</h2>
+		        <p>Косметика, парфюмерия и аксессуары для ухода</p>
+		        <div class="trade-image-container">
+		        <img src="images/spheres/cosmetics.png" alt="Косметика">
+		        </div>
+		        <button class="trade-select-button">Выбрать</button>
+		   	</div>
+
+		   	<!-- Small Card 4 -->
+	      	<div class="trade-card small" data-url="page1.html">
+	        	<h2>Аптека</h2>
+	        	<p>Продажа медикаментов и медицинского оборудования.</p>
+	        	<div class="trade-image-container">
+	          	<img src="images/spheres/pharmacy.png" alt="Аптека">
+	        	</div>
+	        	<button class="trade-select-button">Выбрать</button>
+	      	</div>
+	    </div>
+  	</section>
+
+	<h1 class="services-title">НАШИ УСЛУГИ</h1>
+	<div class="gallery-container">
+		<div class="gallery">
+			<div class="card">
+				<img src="images/services/umag.jpg" alt="Service 1" class="card-image">
+				<div class="card-content">
+					<h2 class="card-title">Переход с программы UMAG</h2>
+					<p class="card-description">Легкая и надежная миграция данных из Umag в нашу программу – мы перенесем номенклатуру, транзакции и клиентскую базу с максимальной точностью и минимальными рисками.</p>
+					<a href="https://wa.me/77765595726?text=Здравствуйте!%20Интересуюсь%20услугой%20«Переход%20с%20UMAG».%20Хотел(а)%20бы%20узнать%20подробнее%20об%20условиях.%20Заранее%20спасибо%20за%20ответ!" class="order-button" target="_blank">Подробнее</a>
+				</div>
+			</div>
+			<div class="card">
+				<img src="images/services/paloma.jpg" alt="Service 2" class="card-image">
+				<div class="card-content">
+					<h2 class="card-title">Переход с Paloma365</h2>
+					<p class="card-description">Мы осуществляем полный перенос базы данных из Paloma365 в нашу систему без потери данных и с сохранением всех настроек. Ваш бизнес продолжит работу без задержек и сбоев.</p>
+					<a href="https://wa.me/77765595726?text=Здравствуйте!%20Интересуюсь%20услугой%20«Переход%20с%20Paloma365».%20Хотел(а)%20бы%20узнать%20подробнее%20об%20условиях.%20Заранее%20спасибо%20за%20ответ!" class="order-button" target="_blank">Подробнее</a>
+				</div>
+			</div>
+			<div class="card">
+				<img src="images/services/shopuchet.jpg" alt="Service 3" class="card-image">
+				<div class="card-content">
+					<h2 class="card-title">Переход с ShopUchet</h2>
+					<p class="card-description">Наши специалисты помогут вам быстро и безопасно перенести данные из ShopUchet в нашу программу, включая товары, остатки, заказы и отчёты. Гарантируем точность и сохранность информации.</p>
+					<a href="https://wa.me/77765595726?text=Здравствуйте!%20Интересуюсь%20услугой%20«Переход%20с%20ShopUchet».%20Хотел(а)%20бы%20узнать%20подробнее%20об%20условиях.%20Заранее%20спасибо%20за%20ответ!" class="order-button" target="_blank">Подробнее</a>
+				</div>
+			</div>
+			<!-- Add more cards as needed -->
+			<div class="card">
+				<img src="images/services/1c.jpg" alt="Service 4" class="card-image">
+				<div class="card-content">
+					<h2 class="card-title">Переход с системы 1C</h2>
+					<p class="card-description">Мы предлагаем бесшовный перенос базы данных из 1C в нашу систему, сохраняя всю структуру, историю продаж и клиентскую информацию. Обеспечиваем полную совместимость и поддержку на всех этапах миграции.</p>
+					<a href="https://wa.me/77765595726?text=Здравствуйте!%20Интересуюсь%20услугой%20«Переход%20с%20системы%201C».%20Хотел(а)%20бы%20узнать%20подробнее%20об%20условиях.%20Заранее%20спасибо%20за%20ответ!" class="order-button" target="_blank">Подробнее</a>
+				</div>
+			</div>
+			<div class="card">
+				<img src="images/services/prosklad.jpg" alt="Service 5" class="card-image">
+				<div class="card-content">
+					<h2 class="card-title">Переход с ProSklad</h2>
+					<p class="card-description">Мы предлагаем оперативный и точный перенос базы данных из ProSklad в нашу систему, сохраняя структуру каталогов, остатки, историю продаж и клиентов для бесперебойной работы вашего бизнеса.</p>
+					<a href="https://wa.me/77765595726?text=Здравствуйте!%20Интересуюсь%20услугой%20«Переход%20с%20ProSklad».%20Хотел(а)%20бы%20узнать%20подробнее%20об%20условиях.%20Заранее%20спасибо%20за%20ответ!" class="order-button" target="_blank">Подробнее</a>
+				</div>
+			</div>
+			<div class="card">
+				<img src="images/services/video.jpg" alt="Service 6" class="card-image">
+				<div class="card-content">
+					<h2 class="card-title">Установка видеорегистратора</h2>
+					<p class="card-description">Мы профессионально устанавливаем видеорегистраторы для магазинов, обеспечивая круглосуточный контроль, защиту от краж и полный обзор торговых помещений. Гарантируем качественный монтаж, настройку системы и техническую поддержку.</p>
+					<a href="https://wa.me/77765595726?text=Здравствуйте!%20Интересуюсь%20услугой%20«Установка%20видеорегистратора».%20Хотел(а)%20бы%20узнать%20подробнее%20об%20условиях.%20Заранее%20спасибо%20за%20ответ!" class="order-button" target="_blank">Подробнее</a>
+				</div>
+			</div>
+			<div class="card">
+				<img src="images/services/rekassa.jpg" alt="Service 7" class="card-image">
+				<div class="card-content">
+					<h2 class="card-title">Интеграция с Rekassa</h2>
+					<p class="card-description">Мы предлагаем интеграцию с Rekassa, позволяя автоматизировать обмен данными о продажах, остатках и чековых операциях. Это обеспечит удобство учета и минимизирует ручной труд.</p>
+					<a href="https://wa.me/77765595726?text=Здравствуйте!%20Интересуюсь%20услугой%20«Интеграция%20с%20Rekassa».%20Хотел(а)%20бы%20узнать%20подробнее%20об%20условиях.%20Заранее%20спасибо%20за%20ответ!" class="order-button" target="_blank">Подробнее</a>
+				</div>
+			</div>
+			<div class="card">
+				<img src="images/services/webkassa.jpg" alt="Service 8" class="card-image">
+				<div class="card-content">
+					<h2 class="card-title">Интеграция с Webkassa</h2>
+					<p class="card-description">Наша система легко интегрируется с Webkassa, позволяя передавать данные о продажах в режиме реального времени, автоматизировать фискальный учет и соответствовать всем требованиям законодательства.</p>
+					<a href="https://wa.me/77765595726?text=Здравствуйте!%20Интересуюсь%20услугой%20«Интеграция%20с%20Webkassa».%20Хотел(а)%20бы%20узнать%20подробнее%20об%20условиях.%20Заранее%20спасибо%20за%20ответ!" class="order-button" target="_blank">Подробнее</a>
+				</div>
+			</div>
+			<div class="card">
+				<img src="images/services/accountant.jpg" alt="Service 9" class="card-image">
+				<div class="card-content">
+					<h2 class="card-title">Бухгалтерский учет</h2>
+					<p class="card-description">Мы предлагаем профессиональные услуги бухгалтерского учета для вашего бизнеса – ведение отчетности, налоговый учет, расчет заработной платы и финансовый анализ. Обеспечиваем точность, прозрачность и соответствие всем требованиям законодательства.</p>
+					<a href="https://wa.me/77765595726?text=Здравствуйте!%20Интересуюсь%20услугой%20«Бухгалтерский%20учет».%20Хотел(а)%20бы%20узнать%20подробнее%20об%20условиях.%20Заранее%20спасибо%20за%20ответ!" class="order-button" target="_blank">Подробнее</a>
+				</div>
+			</div>
+			<div class="card">
+				<img src="images/services/consult.jpg" alt="Service 10" class="card-image">
+				<div class="card-content">
+					<h2 class="card-title">Консультация по автоматизации</h2>
+					<p class="card-description">Мы предлагаем профессиональные консультации по автоматизации магазинов – поможем подобрать и внедрить подходящие решения для учета продаж, склада и клиентов, оптимизируя бизнес-процессы и повышая эффективность работы.</p>
+					<a href="https://wa.me/77765595726?text=Здравствуйте!%20Интересуюсь%20услугой%20«Консультация%20по%20автоматизации».%20Хотел(а)%20бы%20узнать%20подробнее%20об%20условиях.%20Заранее%20спасибо%20за%20ответ!" class="order-button" target="_blank">Подробнее</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Contact Form Section -->
+	<div class="contact-container">
+		<!-- Left Side -->
+		<div class="left-contact-container">
+			<h1>Свяжитесь с нами!</h1>
+			<div class="contact-icons">
+				<a href="https://wa.me/77765595726" target="_blank">
+					<img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp">
+					<span style="font-size:20px;">+7 776 559-57-26</span>
+				</a>
+				<a href="tel:+77765595726">
+					<img src="https://img.icons8.com/color/48/000000/phone.png" alt="Phone">
+					<span style="font-size:20px;">+7 776 559-57-26</span>
+				</a>
+				<a href="https://instagram.com/novapos.kz" target="_blank">
+					<img src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="Instagram">
+					<span style="font-size:20px;padding-right: 60px;">novapos.kz</span>
+				</a>
+			</div>
+		</div>
+
+		<!-- Right Side -->
+		<div class="right-contact-container">
+			<p>Пожалуйста, заполните поля ниже, и наш менеджер свяжется с вами в кратчайшие сроки.</p>
+			<form action="#" method="post">
+				<label for="name">Как к вам обратиться?</label>
+				<input type="text" id="name" name="name" required>
+
+				<label for="contact">Как с вами связаться?</label>
+				<input type="text" id="contact" name="contact" required>
+
+				<label for="message">Ваше сообщение</label>
+				<textarea id="message" name="message" rows="4" required></textarea>
+
+				<button type="submit">Отправить</button>
+			</form>
+		</div>
+	</div>
+
+	<!-- Copyright Section -->
+	<div id="copyright">
+		<p>ВСЕ ПРАВА ЗАЩИЩЕНЫ <span style="font-size:18px">&copy;</span> NOVAPOS.KZ </p>
+	</div>
+	
+	<a href="https://wa.me/77765595726" class="whatsapp-float" target="_blank">
+    	<img src="images/whatsapp.png" alt="WhatsApp">
+	</a>
+
+	<script src="scripts/script.js"></script>
+</body>
+</html>
