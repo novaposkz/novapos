@@ -681,12 +681,13 @@ button:hover {
   text-align: center;
   background-color: #f1f1f1;
   margin-top: 13px;
+  margin-bottom: 60px;
 }
 
 /* Whatsapp */
 .whatsapp-float {
   position: fixed;
-  bottom: 20px;
+  bottom: 80px;
   right: 20px;
   background-color: #25d366;
   color: white;
@@ -730,4 +731,65 @@ button:hover {
 /* Hover effect */
 .whatsapp-float:hover {
   transform: scale(1.1);
+}
+
+/* Bottom Navigation Bar */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: #262626;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    z-index: 1000;
+}
+
+.bottom-nav a {
+    color: #808080;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease;
+}
+
+.bottom-nav a:hover {
+    color: white;
+}
+
+.bottom-nav i {
+    font-size: 20px;
+}
+
+/* Mobile responsive styles */
+@media screen and (max-width: 768px) {
+    .bottom-nav {
+        gap: 40px;
+        padding: 0 10px;
+    }
+    
+    .bottom-nav a span {
+        display: none;
+    }
+
+    /* Show text only for feedback */
+    .bottom-nav a:first-child span {
+        display: inline;
+        font-size: 14px;
+    }
+    
+    .bottom-nav i {
+        font-size: 24px; /* Slightly larger icons on mobile */
+    }
+}
+
+/* Adjust WhatsApp float position for mobile */
+@media screen and (max-width: 768px) {
+    .whatsapp-float {
+        bottom: 70px;
+    }
 }
