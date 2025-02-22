@@ -765,10 +765,35 @@ button:hover {
     font-size: 20px;
 }
 
+/* Search Bar */
+.bottom-nav .search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%; /* Ensure it takes the full height of the navigation bar */
+}
+
+.bottom-nav .search-bar input {
+    padding: 5px 15px; /* Adjust padding to move cursor and text to the right */
+    border: none;
+    border-radius: 4px;
+    background: #333;
+    color: #fff;
+    padding-left: 40px; /* Increase left padding to create more space from the icon */
+    height: 70%; /* Adjust height to be vertically centered */
+    margin: auto 0; /* Center vertically */
+}
+
+.bottom-nav .search-bar i {
+    position: absolute;
+    left: 10px;
+    color: #808080;
+}
+
 /* Mobile responsive styles */
 @media screen and (max-width: 768px) {
     .bottom-nav {
-        gap: 40px;
+        gap: 20px;
         padding: 0 10px;
     }
     
@@ -776,14 +801,13 @@ button:hover {
         display: none;
     }
 
-    /* Show text only for feedback */
-    .bottom-nav a:first-child span {
-        display: inline;
-        font-size: 14px;
-    }
-    
     .bottom-nav i {
         font-size: 24px; /* Slightly larger icons on mobile */
+    }
+
+    .bottom-nav .search-bar {
+        flex: 1;
+        width: 100%; /* Make the search bar wider */
     }
 }
 
