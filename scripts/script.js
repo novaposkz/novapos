@@ -169,3 +169,18 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+
+
+// Feedback section
+
+function sendEmail() {
+    const topic = document.getElementById('topic').value;
+    if (!topic) {
+        alert('Please choose a topic before submitting.');
+        return;
+    }
+    const email = "director@example.com";
+    const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(topic)}`;
+    window.location.href = mailtoLink;
+}
