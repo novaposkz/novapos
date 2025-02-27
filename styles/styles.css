@@ -205,7 +205,7 @@ body {
 /* Carousel */
 .carousel {
   position: relative;
-  max-width: 1100px;
+  max-width: 90%;  /* Changed from 1100px to 90% */
   margin: 0 auto;
   overflow: hidden;
 }
@@ -268,7 +268,7 @@ body {
 /* Mobile Styles */
 @media (max-width: 768px) {
   .carousel {
-    max-width: 1000px;
+    max-width: 90%;  /* Changed from 1000px to 90% */
   }
 
   .carousel-control {
