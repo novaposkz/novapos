@@ -180,7 +180,7 @@ function sendEmail() {
         alert('Пожалуйста, выберите тему перед отправкой.');
         return;
     }
-    const email = "novapos.kz@mail.ru";
+    const email = "info@novapos.kz";
     const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(topic)}`;
     window.location.href = mailtoLink;
 }
