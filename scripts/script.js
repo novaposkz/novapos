@@ -177,10 +177,10 @@ document.addEventListener("DOMContentLoaded", function () {
 function sendEmail() {
     const topic = document.getElementById('topic').value;
     if (!topic) {
-        alert('Please choose a topic before submitting.');
+        alert('Пожалуйста, выберите тему перед отправкой.');
         return;
     }
-    const email = "director@example.com";
+    const email = "novapos.kz@mail.ru";
     const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(topic)}`;
     window.location.href = mailtoLink;
 }
