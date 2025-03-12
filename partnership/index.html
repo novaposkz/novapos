@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Продаём франшизу и помогаем партнёрам открыть бизнес в сфере автоматизации торговли: оборудование, ПО, поддержка и сопровождение.">
   <title>Стать партнером с NovaPos.kz</title>
   <link href="../styles/styles.css" rel="stylesheet" type="text/css">
   <link rel="icon" href="../images/favicon.png">
@@ -55,7 +56,98 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="../scripts/script.js"></script>
 
-  <h1>Страница находится в разработке.</h1>
+
+
+  <div class="full-width-section">
+    <div class="section-content">
+      <div class="left-content">
+        <h1>Открой свой бизнес вместе с NOVAPOS.kz</h1>
+        <ul>
+          <li>Получайте до 30% прибыли от стоимости программы</li>
+          <li>Получайте прибыль с продажи оборудования</li>
+          <li>Зарабатывайте на оказании технической поддержки пользователям</li>
+        </ul>
+      </div>
+      <div class="right-content">
+        <h2>Отправьте заявку</h2>
+        <p>Мы свяжемся с вами и подробно расскажем об условиях партнёрства</p>
+        <form onsubmit="handleFormSubmit(event)" method="post">
+          <label for="name">Ваше Имя</label>
+          <input type="text" id="name" name="name" required>
+          
+          <label for="email">E-mail (необязательно)</label>
+          <input type="email" id="email" name="email">
+          
+          <label for="phone">Телефон</label>
+          <div class="phone-input">
+            <div class="country-prefix">
+                <img src="../images/kz-flag.png" alt="KZ" class="country-flag">
+                <span class="prefix">+7</span>
+            </div>
+            <input type="tel" id="phone" name="phone" placeholder="(777) 777-77-77" pattern="\d{10}" maxlength="14" required>
+          </div>
+          
+          <button type="submit" class="submit-button">Стать партнером</button>
+          <p class="agreement-text">Нажимая на кнопку, вы даёте согласие на обработку своих персональных данных</p>
+          <a href="../policy/" class="policy-link">Политика конфиденциальности и обработки персональных данных</a>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="benefits-section">
+    <h2 class="benefits-title">Преимущества партнерства</h2>
+    <div class="benefits-container">
+        <div class="benefit-block">
+            <ul>
+                <li>До 30% прибыли от стоимости программы</li>
+                <li>100% от внедрения</li>
+                <li>100% от продажи оборудования</li>
+            </ul>
+        </div>
+        <div class="benefit-block">
+            <ul>
+                <li>Ищем партнеров по всему Казахстану</li>
+                <li>Без паушального взноса</li>
+                <li>Помощь при старте</li>
+            </ul>
+        </div>
+        <div class="benefit-block">
+            <ul>
+                <li>Продажа лицензии ПО</li>
+                <li>Внедрение программы</li>
+                <li>Продажа кассового оборудования</li>
+                <li>Платная техническая поддержка</li>
+            </ul>
+        </div>
+    </div>
+  </div>
+
+  <div class="features-section">
+    <h2 class="features-title">Что мы предлагаем нашим партнерам</h2>
+    <div class="features-grid">
+        <div class="feature-block">
+            <i class="fas fa-rocket"></i>
+            <h3>Бизнес с минимальным стартовым капиталом</h3>
+            <p>Вы можете приобрести франшизу, чтобы стать нашим партнером</p>
+        </div>
+        <div class="feature-block">
+            <i class="fas fa-users"></i>
+            <h3>Бесплатные входящие заявки</h3>
+            <p>Передаем клиентов, которые обращаются из вашего региона</p>
+        </div>
+        <div class="feature-block">
+            <i class="fas fa-star"></i>
+            <h3>Программа, не имеющая аналогов</h3>
+            <p>Низкая ежемесячная абонентская плата</p>
+        </div>
+        <div class="feature-block">
+            <i class="fas fa-graduation-cap"></i>
+            <h3>Обучение и поддержка</h3>
+            <p>Наш обучающий курс поможет стать профессионалом своего дела</p>
+        </div>
+    </div>
+  </div>
 
   <div id="copyright" style="margin-top: 700px;">
     <p>ВСЕ ПРАВА ЗАЩИЩЕНЫ <span style="font-size:18px">&copy;</span> NOVAPOS.KZ </p>

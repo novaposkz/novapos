@@ -184,3 +184,67 @@ function sendEmail() {
     const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(topic)}`;
     window.location.href = mailtoLink;
 }
+
+document.getElementById('phone').addEventListener('input', function(e) {
+    // Remove all non-digits
+    let value = e.target.value.replace(/\D/g, '');
+    
+    // Limit to 10 digits
+    value = value.substring(0, 10);
+    
+    // Format the number
+    if (value.length > 0) {
+        value = value.match(/(\d{0,3})(\d{0,3})(\d{0,2})(\d{0,2})/);
+        e.target.value = !value[2] ? value[1] : '(' + value[1] + ') ' + value[2] + (value[3] ? '-' + value[3] + (value[4] ? '-' + value[4] : '') : '');
+    }
+});
+
+// Add this function to handle form submission
+function handleFormSubmit(event) {
+    event.preventDefault();
+    
+    // Get form values
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    
+    // Create message text
+    const messageText = `Новая заявка на партнерство:\n\nИмя: ${name}\nEmail: ${email}\nТелефон: +7${phone}`;
+    
+    // WhatsApp link
+    const whatsappLink = `https://wa.me/77765595726?text=${encodeURIComponent(messageText)}`;
+    
+    // Email link
+    const emailSubject = "Новая заявка на партнерство";
+    const emailLink = `mailto:info@novapos.kz?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(messageText)}`;
+    
+    // Create buttons container
+    const buttonsContainer = document.createElement('div');
+    buttonsContainer.style.cssText = `
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        z-index: 1000;
+        text-align: center;
+    `;
+    
+    buttonsContainer.innerHTML = `
+        <h3 style="margin-bottom: 20px;">Выберите способ отправки:</h3>
+        <button onclick="window.open('${whatsappLink}', '_blank')" style="margin: 10px; padding: 10px 20px; background: #25d366; color: white; border: none; border-radius: 5px; cursor: pointer;">
+            Отправить в WhatsApp
+        </button>
+        <button onclick="window.location.href='${emailLink}'" style="margin: 10px; padding: 10px 20px; background: #0078D4; color: white; border: none; border-radius: 5px; cursor: pointer;">
+            Отправить на Email
+        </button>
+        <button onclick="this.parentElement.remove()" style="margin: 10px; padding: 10px 20px; background: #gray; color: white; border: none; border-radius: 5px; cursor: pointer;">
+            Отмена
+        </button>
+    `;
+    
+    document.body.appendChild(buttonsContainer);
+}

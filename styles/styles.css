@@ -841,3 +841,347 @@ button:hover {
         bottom: 70px;
     }
 }
+
+/* New Section */
+.full-width-section {
+  width: 100%;
+  background: url('../images/partnership-bg.jpg') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+}
+
+.section-content {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1200px;
+  background: none;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.left-content {
+  flex: 1;
+  padding: 20px;
+  color: white;
+}
+
+.left-content h1 {
+  font-size: 3.2rem;
+  margin-bottom: 30px;
+  color: white;
+  line-height: 1.2;
+}
+
+.left-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.left-content ul li {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: white;
+  line-height: 1.4;
+}
+
+.right-content {
+  flex: 1;
+  padding: 30px;
+  max-width: 50%;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+}
+
+.right-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.right-content p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.right-content form {
+  display: flex;
+  flex-direction: column;
+}
+
+.right-content label {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.right-content input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.phone-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin-bottom: 15px;
+  background: white;
+}
+
+.country-prefix {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding-right: 10px;
+  border-right: 1px solid #ccc;
+}
+
+.country-flag {
+  width: 24px;
+  height: 16px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.prefix {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.phone-input input {
+  border: none !important;
+  margin: 0 !important;
+  padding: 5px !important;
+  width: 100%;
+}
+
+.phone-input input:focus {
+  outline: none;
+}
+
+.submit-button {
+  background-color: dodgerblue;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.agreement-text {
+  font-size: 0.8rem;
+  margin-top: 10px;
+}
+
+.policy-link {
+  font-size: 0.8rem;
+  color: dodgerblue;
+  text-decoration: none;
+}
+
+/* Mobile responsive styles */
+@media screen and (max-width: 768px) {
+    .section-content {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        width: 100%; /* Ensure full width on mobile */
+    }
+
+    .left-content {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+        padding: 10px; /* Reduced padding for mobile */
+    }
+
+    .right-content {
+        width: 90%; /* Set to 90% of screen width */
+        max-width: none; /* Remove max-width constraint */
+        padding: 20px;
+        margin: 0 auto; /* Center the form */
+    }
+
+    .full-width-section {
+        padding: 30px 0;
+    }
+}
+
+/* Small mobile devices */
+@media screen and (max-width: 480px) {
+    .right-content {
+        width: 90%; /* Maintain 90% width for smaller devices */
+        padding: 15px;
+    }
+}
+
+/* Benefits Section Styles */
+.benefits-section {
+    padding: 40px 20px;
+    width: 100%;
+}
+
+.benefits-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.benefits-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.benefit-block {
+    flex: 1;
+    background-color: dodgerblue;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+}
+
+.benefit-block ol,
+.benefit-block ul {
+    list-style-position: inside;
+    padding: 0;
+    margin: 0;
+}
+
+.benefit-block li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+.benefit-block li:last-child {
+    margin-bottom: 0;
+}
+
+/* Mobile responsive styles */
+@media screen and (max-width: 768px) {
+    .benefits-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .benefit-block {
+        width: 100%;
+        min-height: auto;
+        padding: 20px;
+    }
+
+    .benefits-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .benefit-block li {
+        font-size: 1rem;
+    }
+}
+
+/* Features Section Styles */
+.features-section {
+    padding: 60px 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding: 20px;
+}
+
+.feature-block {
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    border-radius: 10px;
+}
+
+.feature-block:hover {
+    border-color: dodgerblue;
+    box-shadow: 0 4px 15px rgba(30, 144, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+.feature-block i {
+    font-size: 3rem;
+    color: dodgerblue;
+    margin-bottom: 20px;
+}
+
+.feature-block h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.feature-block p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* Mobile responsive styles */
+@media screen and (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 10px;
+    }
+
+    .feature-block {
+        padding: 20px;
+    }
+
+    .feature-block i {
+        font-size: 2.5rem;
+    }
+
+    .feature-block h3 {
+        font-size: 1.3rem;
+    }
+
+    .feature-block p {
+        font-size: 1rem;
+    }
+}
+
+/* Add to the Features Section Styles */
+.features-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* Update mobile styles */
+@media screen and (max-width: 768px) {
+    .features-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+}
