@@ -1582,16 +1582,21 @@ button:hover {
   color: white;
   border: none;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  font-size: 1.5rem;
+  width: 50px; /* Larger size */
+  height: 50px; /* Larger size */
+  font-size: 1.8rem; /* Larger font size */
   cursor: pointer;
   margin: 0 20px;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .wearetrusted-arrow:hover {
-  background-color: #1E90FF;
+  background-color: #1E90FF; /* Slightly lighter DodgerBlue on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
 }
+
+.wearetrusted-arrow:active {
+  transform: scale(0.9); /* Slightly shrink on click */
