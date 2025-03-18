@@ -239,6 +239,84 @@
     </div>
   </div>
 
+    <!-- We Are Trusted Section -->
+    <div class="wearetrusted-section">
+      <h2 class="wearetrusted-title">Нам доверяют</h2>
+      <div class="wearetrusted-card">
+        <img src="/images/client-logos/company1.png" alt="Company Logo">
+        <h3>Company Name</h3>
+        <p>This is a brief description of the company. It highlights what makes this company unique and trustworthy.</p>
+      </div>
+      <div class="wearetrusted-navigation">
+        <button class="wearetrusted-arrow">&larr;</button>
+        <div class="wearetrusted-dots">
+          <div class="wearetrusted-dot active"></div>
+          <div class="wearetrusted-dot"></div>
+          <div class="wearetrusted-dot"></div>
+          <div class="wearetrusted-dot"></div>
+          <div class="wearetrusted-dot"></div>
+          <div class="wearetrusted-dot"></div>
+          <div class="wearetrusted-dot"></div>
+          <div class="wearetrusted-dot"></div>
+          <div class="wearetrusted-dot"></div>
+          <div class="wearetrusted-dot"></div>
+        </div>
+        <button class="wearetrusted-arrow">&rarr;</button>
+      </div>
+    </div>
+    <script>
+    // JavaScript for Card Navigation
+    const cards = [
+      { logo: "../images/client-logos/milavitsa.jpg", name: "Milavitsa", description: "Бутик нижнего белья." },
+      { logo: "../images/client-logos/neftek.jpg", name: "Neftek", description: "Сеть заправочных станций." },
+      { logo: "../images/client-logos/bauma.jpg", name: "Bauma", description: "Магазин мужской одежды." },
+      { logo: "../images/client-logos/rozovy.jpg", name: "Розовый", description: "Сеть цветочных магазинов." },
+      { logo: "../images/client-logos/salambro.jpg", name: "Salam Bro", description: "Быстрое питание." },
+      { logo: "../images/client-logos/annavogue.jpg", name: "Anna Vogue", description: "Ногтевой сервис." },
+      { logo: "../images/client-logos/bota-showroom.jpg", name: "Bota Showroom", description: "Бутик женской одежды." },
+      { logo: "../images/client-logos/emka-store.jpg", name: "Emka Store", description: "Магазин женской одежды." },
+      { logo: "../images/client-logos/gadget-store.jpg", name: "Gadget Store", description: "Магазин сотовых телефонов." },
+      { logo: "../images/client-logos/irepublic.jpg", name: "IRepublic", description: "Аксессуары к телефонам." },
+    ];
+
+    const cardElement = document.querySelector('.wearetrusted-card');
+    const dots = document.querySelectorAll('.wearetrusted-dot');
+    const prevArrow = document.querySelector('.wearetrusted-arrow:first-child');
+    const nextArrow = document.querySelector('.wearetrusted-arrow:last-child');
+
+    let currentIndex = 0;
+
+    function updateCard(index) {
+      const card = cards[index];
+      cardElement.querySelector('img').src = card.logo;
+      cardElement.querySelector('h3').textContent = card.name;
+      cardElement.querySelector('p').textContent = card.description;
+
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+      });
+    }
+
+    prevArrow.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+      updateCard(currentIndex);
+    });
+
+    nextArrow.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % cards.length;
+      updateCard(currentIndex);
+    });
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        currentIndex = index;
+        updateCard(currentIndex);
+      });
+    });
+
+    // Initialize the first card
+    updateCard(currentIndex);
+  </script>
 
 <div id="copyright" style="margin-top: 700px;">
   <p>ВСЕ ПРАВА ЗАЩИЩЕНЫ <span style="font-size:18px">&copy;</span> NOVAPOS.KZ </p>

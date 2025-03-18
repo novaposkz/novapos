@@ -248,4 +248,3 @@ function handleFormSubmit(event) {
     
     document.body.appendChild(buttonsContainer);
 }
-

@@ -1507,3 +1507,91 @@ button:hover {
     margin: 0; /* Regular text at the bottom */
   }
 }
+
+
+/* We Are Trusted Section */
+.wearetrusted-section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.wearetrusted-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #333;
+}
+
+.wearetrusted-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.wearetrusted-card img {
+  width: 150px; /* Increased size */
+  height: 150px; /* Increased size */
+  border-radius: 10px;
+  border: 1px solid #ccc; /* Thin gray border */
+  margin-bottom: 20px;
+  object-fit: cover; /* Ensures the image fits well */
+}
+
+.wearetrusted-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.wearetrusted-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.wearetrusted-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.wearetrusted-dots {
+  display: flex;
+  gap: 10px;
+}
+
+.wearetrusted-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.wearetrusted-dot.active {
+  background-color: DodgerBlue;
+}
+
+.wearetrusted-arrow {
+  background-color: DodgerBlue;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wearetrusted-arrow:hover {
+  background-color: #1E90FF;
+}
