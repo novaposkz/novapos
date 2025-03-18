@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Become a Partner</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .roadmap-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .roadmap-title {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 50px;
+        color: #333;
+    }
+
+    /* Roadmap Styles */
+    .roadmap {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .roadmap::before {
+      content: '';
+      position: absolute;
+      top: 25px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: DodgerBlue;
+      z-index: 1;
+    }
+
+    .roadmap-step {
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .roadmap-circle {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: DodgerBlue;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin: 0 auto 10px;
+    }
+
+    .roadmap-step h3 {
+      font-size: 1.1rem;
+      margin: 10px 0 5px;
+    }
+
+    .roadmap-step p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    /* Mobile Styles */
+    @media (max-width: 768px) {
+      .roadmap {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .roadmap::before {
+        top: 0;
+        left: 25px;
+        width: 2px;
+        height: 100%;
+      }
+
+      .roadmap-step {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 20px;
+      }
+
+      .roadmap-circle {
+        margin: 0 20px 0 0;
+        flex-shrink: 0; /* Prevent the circle from shrinking */
+      }
+
+      .roadmap-step-content {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .roadmap-step h3 {
+        text-align: left;
+        margin: 0 0 5px 0; /* Bold text at the top */
+      }
+
+      .roadmap-step p {
+        text-align: left;
+        margin: 0; /* Regular text at the bottom */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="roadmap-section">
+    <h2 class="roadmap-title">Как стать партнёром</h2>
+    <div class="roadmap">
+      <div class="roadmap-step">
+        <div class="roadmap-circle">1</div>
+        <div class="roadmap-step-content">
+          <h3>Заполните заявку</h3>
+          <p>Подайте заявку на партнерство</p>
+        </div>
+      </div>
+      <div class="roadmap-step">
+        <div class="roadmap-circle">2</div>
+        <div class="roadmap-step-content">
+          <h3>Пройдите обучение</h3>
+          <p>Мы подготовили курс обучения</p>
+        </div>
+      </div>
+      <div class="roadmap-step">
+        <div class="roadmap-circle">3</div>
+        <div class="roadmap-step-content">
+          <h3>Тестирование</h3>
+          <p>Проверьте полученные знания с помощью тестирования</p>
+        </div>
+      </div>
+      <div class="roadmap-step">
+        <div class="roadmap-circle">4</div>
+        <div class="roadmap-step-content">
+          <h3>Договор</h3>
+          <p>Подпишите договор о сотрудничестве</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

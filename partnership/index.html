@@ -26,7 +26,7 @@
   <noscript><div><img src="https://mc.yandex.ru/watch/98771693" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
   <!-- /Yandex.Metrika counter -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="../scripts/script.js"></script>
+  
 </head>
 <body>
   <div class="navigation-bar-container">
@@ -202,51 +202,43 @@
         </div>
     </div>
 </div>
-
-<div class="calculator-section">
-    <h2 class="calculator-title">Калькулятор годовой прибыли</h2>
-    <div class="calculator-container">
-        <div class="calculator-option">
-            <p class="option-title">Ежемесячная продажа лицензий ПО NovaPos</p>
-            <div class="slider-container">
-                <input type="range" min="0" max="50" value="0" class="slider" id="licenses-slider">
-                <div class="values-display">
-                    <p>Количество: <span class="quantity">0</span> шт</p>
-                    <p>Сумма в месяц: <span class="monthly">0</span> тг</p>
-                    <p>Сумма в год: <span class="yearly">0</span> тг</p>
-                </div>
-            </div>
+  <div class="roadmap-section">
+    <h2 class="roadmap-title">Как стать партнёром</h2>
+    <div class="roadmap">
+      <div class="roadmap-step">
+        <div class="roadmap-circle">1</div>
+        <div class="roadmap-step-content">
+          <h3>Заполните заявку</h3>
+          <p>Подайте заявку на партнерство</p>
         </div>
-
-        <div class="calculator-option">
-            <p class="option-title">Ежемесячная продажа комплектов кассового оборудования</p>
-            <div class="slider-container">
-                <input type="range" min="0" max="50" value="0" class="slider" id="equipment-slider">
-                <div class="values-display">
-                    <p>Количество: <span class="quantity">0</span> шт</p>
-                    <p>Сумма в месяц: <span class="monthly">0</span> тг</p>
-                    <p>Сумма в год: <span class="yearly">0</span> тг</p>
-                </div>
-            </div>
+      </div>
+      <div class="roadmap-step">
+        <div class="roadmap-circle">2</div>
+        <div class="roadmap-step-content">
+          <h3>Пройдите обучение</h3>
+          <p>Мы подготовили курс обучения</p>
         </div>
-
-        <div class="calculator-option">
-            <p class="option-title">Ежемесячное оказание услуг технической поддержки</p>
-            <div class="slider-container">
-                <input type="range" min="0" max="50" value="0" class="slider" id="support-slider">
-                <div class="values-display">
-                    <p>Количество: <span class="quantity">0</span> шт</p>
-                    <p>Сумма в месяц: <span class="monthly">0</span> тг</p>
-                    <p>Сумма в год: <span class="yearly">0</span> тг</p>
-                </div>
-            </div>
+      </div>
+      <div class="roadmap-step">
+        <div class="roadmap-circle">3</div>
+        <div class="roadmap-step-content">
+          <h3>Тестирование</h3>
+          <p>Проверьте полученные знания с помощью тестирования</p>
         </div>
-
-        <div class="total-revenue">
-            <p><strong>Общий доход за год составит: <span id="total-income">0</span> тг</strong></p>
+      </div>
+      <div class="roadmap-step">
+        <div class="roadmap-circle">4</div>
+        <div class="roadmap-step-content">
+          <h3>Договор</h3>
+          <p>Подпишите договор о сотрудничестве</p>
         </div>
+      </div>
     </div>
-</div>
+    <div class="roadmap-button-container">
+      <button class="roadmap-become-partner-btn">Стать партнером</button>
+    </div>
+  </div>
+
 
 <div id="copyright" style="margin-top: 700px;">
   <p>ВСЕ ПРАВА ЗАЩИЩЕНЫ <span style="font-size:18px">&copy;</span> NOVAPOS.KZ </p>
@@ -276,5 +268,6 @@
 			<input type="text" placeholder="Поиск">
 		</div>
 </div>
+<script src="../scripts/script.js"></script>
 </body>
 </html>
