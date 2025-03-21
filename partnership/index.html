@@ -264,6 +264,7 @@
         <button class="wearetrusted-arrow">&rarr;</button>
       </div>
     </div>
+
     <script>
     // JavaScript for Card Navigation
     const cards = [
@@ -318,6 +319,126 @@
     updateCard(currentIndex);
   </script>
 
+
+<!-- FAQ Section -->
+<div class="faq-section">
+  <h2 class="faq-title">Часто задаваемые вопросы</h2>
+
+  <!-- FAQ Items -->
+  <div class="faq-item">
+    <div class="faq-question">
+      <h3>Что такое NovaPos?</h3>
+      <div class="faq-toggle"></div>
+    </div>
+    <div class="faq-answer">
+      <p>NovaPos — это программа для автоматизации торговли. Выполняет роль кассовой программы на рабочем месте кассира. Так же обладает функциями складской программы и может использоваться в магазинах и кафе.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      <h3>Для чего нужна кассовая программа?</h3>
+      <div class="faq-toggle"></div>
+    </div>
+    <div class="faq-answer">
+      <p>Кассовая программа позволяет выполнять ряд операций на рабочем месте кассира:</p>
+      <ul>
+        <li>поиск товара в справочнике</li>
+        <li>печать кассовых чеков</li>
+        <li>фиксация возвратов от покупателей</li>
+        <li>выполнять оплату кредитной картой, наличными и банковским платежом</li>
+      </ul>
+      <p>NovaPos обладает набором этих возможностей.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      <h3>В чем подвох? Зачем вам нужно помогать открывать свой бизнес другим?</h3>
+      <div class="faq-toggle"></div>
+    </div>
+    <div class="faq-answer">
+      <p>Никакого подвоха нет. Многим клиентам во всех городах страны требуется физическое присутствие, так как им сложно самим разобраться в настройке техники, программного обеспечения и обучении персонала. Мы видим решение этой потребности в создании сети партнёров, которые смогут взять эти заявки на себя, заработать деньги и обеспечить качественное внедрение системы.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      <h3>Какую поддержку я получу?</h3>
+      <div class="faq-toggle"></div>
+    </div>
+    <div class="faq-answer">
+      <ul>
+        <li>Мы создали обучающий курс, который поможет вам разобраться во всех тонкостях работы с кассовой техникой и программным обеспечением. Вы всегда сможете обратиться к нам со своими вопросами и получить консультацию.</li>
+        <li>Мы будем рекомендовать вас клиентам, которые захотят приобрести программу в вашем регионе.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      <h3>Кому подходит партнёрство?</h3>
+      <div class="faq-toggle"></div>
+    </div>
+    <div class="faq-answer">
+      <p>Партнёрство подойдет всем, у кого есть желание создать и развивать свой бизнес. Кроме того, если вы уже являетесь опытным специалистом в какой-то области или у вас есть свой бизнес, то для вас открываются дополнительные возможности заработка.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      <h3>Что мне нужно сделать, чтобы начать?</h3>
+      <div class="faq-toggle"></div>
+    </div>
+    <div class="faq-answer">
+      <p>Для того, чтобы начать, достаточно оставить заявку. Сначала вам будет предложена подробная программа обучения, после которой вы сможете пройти тестирование и заключить договор.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      <h3>На чем я буду зарабатывать?</h3>
+      <div class="faq-toggle"></div>
+    </div>
+    <div class="faq-answer">
+      <ul>
+        <li>Продажа лицензии на программу NovaPos (ПО)</li>
+        <li>Внедрение программы (Пусконаладочные работы)</li>
+        <li>Продажа кассового оборудования</li>
+        <li>Платная техническая поддержка</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      <h3>Кто является потенциальным покупателем NextMarket?</h3>
+      <div class="faq-toggle"></div>
+    </div>
+    <div class="faq-answer">
+      <p>Покупателями программы являются самые разные люди от владельцев крошечных кафе, магазинов до крупных торговых сетей. Вашими клиентами будут являться Индивидуальные Предприниматели и Юридические Лица.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  // JavaScript for FAQ Toggle
+  const faqItems = document.querySelectorAll('.faq-item');
+
+  faqItems.forEach((item) => {
+    const toggle = item.querySelector('.faq-toggle');
+    const answer = item.querySelector('.faq-answer');
+
+    toggle.addEventListener('click', () => {
+      item.classList.toggle('active');
+      if (item.classList.contains('active')) {
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      } else {
+        answer.style.maxHeight = '0';
+      }
+    });
+  });
+</script>
 <div id="copyright" style="margin-top: 700px;">
   <p>ВСЕ ПРАВА ЗАЩИЩЕНЫ <span style="font-size:18px">&copy;</span> NOVAPOS.KZ </p>
 </div>
