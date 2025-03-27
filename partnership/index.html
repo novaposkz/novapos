@@ -439,7 +439,38 @@
     });
   });
 </script>
-<div id="copyright" style="margin-top: 700px;">
+
+<div class="bottom-form-section">
+  <h2>Остались вопросы?</h2>
+  <p class="subtitle">Оставьте заявку и мы свяжемся с вами</p>
+  
+  <form onsubmit="handleFormSubmit(event)" method="post" class="bottom-contact-form">
+    <div class="form-row">
+      <div class="form-group">
+        <input type="text" id="bottom-name" name="name" placeholder="Ваше Имя" required>
+      </div>
+      
+      <div class="form-group">
+        <input type="email" id="bottom-email" name="email" placeholder="E-mail (необязательно)">
+      </div>
+      
+      <div class="form-group phone-input-container">
+        <div class="country-prefix">
+          <img src="../images/kz-flag.png" alt="KZ" class="country-flag">
+          <span class="prefix">+7</span>
+        </div>
+        <input type="tel" id="bottom-phone" name="phone" placeholder="(777) 777-77-77" pattern="\d{10}" maxlength="14" required>
+      </div>
+      
+      <button type="submit" class="bottom-submit-button">Отправить</button>
+    </div>
+    
+    <p class="bottom-agreement-text">Нажимая на кнопку, вы даёте согласие на обработку своих персональных данных</p>
+    <a href="../policy/" class="bottom-policy-link">Политика конфиденциальности и обработки персональных данных</a>
+  </form>
+</div>
+
+<div id="copyright" style="margin-top: 12px;">
   <p>ВСЕ ПРАВА ЗАЩИЩЕНЫ <span style="font-size:18px">&copy;</span> NOVAPOS.KZ </p>
 </div>
 <a href="https://wa.me/77765595726" class="whatsapp-float" target="_blank">
@@ -467,6 +498,7 @@
 			<input type="text" placeholder="Поиск">
 		</div>
 </div>
+
 <script src="../scripts/script.js"></script>
 </body>
 </html>
