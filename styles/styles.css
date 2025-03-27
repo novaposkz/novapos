@@ -425,22 +425,36 @@ body {
 /* Mobile Styles */
 @media (max-width: 768px) {
   .trade-cards-container {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile */
-    grid-template-rows: auto; /* Rows adjust automatically */
-  }
-
-  .trade-card.large,
-  .trade-card.small {
-    grid-column: span 1; /* All cards span 1 column in mobile */
-    grid-row: span 1; /* All cards have the same height in mobile */
-  }
-
-  .trade-select-button {
-    display: block; /* Show buttons on mobile */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 0 10px;
   }
 
   .trade-card {
-    cursor: pointer; /* Make entire card clickable in mobile */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .trade-card:active {
+    transform: scale(0.98);
+  }
+
+  .trade-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .trade-select-button {
+    display: none; /* Hide buttons on mobile since entire card is clickable */
+  }
+
+  .trade-card h2 {
+    font-size: 1.2rem;
+    margin: 10px;
+  }
+
+  .trade-card p {
+    font-size: 0.9rem;
+    margin: 0 10px 10px;
   }
 }
 

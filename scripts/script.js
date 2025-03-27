@@ -185,7 +185,35 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Add this after your existing DOMContentLoaded event listeners
 
+document.addEventListener("DOMContentLoaded", function () {
+  const tradeCards = document.querySelectorAll(".trade-card");
+
+  tradeCards.forEach((card) => {
+    // Handle click on entire card (for mobile)
+    card.addEventListener("click", function (e) {
+      if (window.innerWidth <= 768) {
+        const url = this.getAttribute("data-url");
+        if (url) {
+          window.location.href = url;
+        }
+      }
+    });
+
+    // Handle click on select button (for desktop)
+    const selectButton = card.querySelector(".trade-select-button");
+    if (selectButton) {
+      selectButton.addEventListener("click", function (e) {
+        e.stopPropagation(); // Prevent triggering card click
+        const url = this.getAttribute("href");
+        if (url) {
+          window.location.href = url;
+        }
+      });
+    }
+  });
+});
 
 // Feedback section
 
