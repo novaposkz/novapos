@@ -154,6 +154,21 @@ function redirectToPage(url) {
   window.location.href = url;
 }
 
+// Add event listeners for trade card buttons
+document.addEventListener("DOMContentLoaded", function () {
+  const tradeButtons = document.querySelectorAll(".trade-select-button");
+
+  tradeButtons.forEach((button) => {
+    button.addEventListener("click", function (e) {
+      e.stopPropagation(); // Prevent event bubbling
+      const url = this.getAttribute("href");
+      if (url) {
+        window.location.href = url;
+      }
+    });
+  });
+});
+
 // Add event listeners for mobile card clicks
 document.addEventListener("DOMContentLoaded", function () {
   const cards = document.querySelectorAll(".card");

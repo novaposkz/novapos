@@ -410,11 +410,16 @@ body {
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
-  margin: 15px auto; /* Centers the button horizontally */
-  display: block; /* Ensures the button is centered */
+  margin: 15px auto;
+  display: block;
   cursor: pointer;
   text-align: center;
-  text-decoration: none; /* Remove underline if using <a> */
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.trade-select-button:hover {
+  background-color: #1e90ff;
 }
 
 /* Mobile Styles */
@@ -431,7 +436,7 @@ body {
   }
 
   .trade-select-button {
-    display: none; /* Hide button in mobile */
+    display: block; /* Show buttons on mobile */
   }
 
   .trade-card {
