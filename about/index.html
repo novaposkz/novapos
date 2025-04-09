@@ -125,6 +125,114 @@
         top: -30px;
       }
     }
+    .mission-section {
+    background-color: #fff;
+    padding: 60px 20px;
+    margin-bottom: 60px;
+  }
+
+  .mission-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .mission-title {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-weight: 600;
+  }
+
+  .mission-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    .mission-section {
+      padding: 40px 20px;
+    }
+
+    .mission-title {
+      font-size: 1.8rem;
+    }
+
+    .mission-text {
+      font-size: 1.1rem;
+      padding: 0 10px;
+    }
+  }
+  .partners-section {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    margin-bottom: 60px;
+  }
+
+  .partners-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .partners-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .partners-logos {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+  }
+
+  .partner-item {
+    text-align: center;
+    flex: 1;
+    max-width: 300px;
+  }
+
+  .partner-item img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .partner-caption {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    font-weight: 600;
+  }
+
+  @media (max-width: 768px) {
+    .partners-section {
+      padding: 40px 20px;
+    }
+
+    .partners-logos {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .partner-item {
+      max-width: 250px;
+    }
+
+    .partners-text {
+      font-size: 1.1rem;
+      padding: 0 10px;
+    }
+  }
   </style>
 </head>
 <body>
@@ -194,7 +302,34 @@
       </div>
     </div>
   </div>
+  <div class="mission-section">
+    <div class="mission-container">
+      <h2 class="mission-title">Наша миссия</h2>
+      <p class="mission-text">
+        Мы помогаем клиентам эффективно управлять и развивать свой бизнес, внедряя современные решения в области автоматизации торговли. Благодаря нашим инструментам процессы работы с кассой, складом и продажами становятся проще, прозрачнее и доступнее для каждого пользователя.
+      </p>
+    </div>
+  </div>
 
+  <div class="partners-section">
+    <div class="partners-container">
+      <p class="partners-text">
+        Мы с гордостью предлагаем передовые системы автоматизации торговли, включая официальные решения таких популярных программ, как GBS Market и Мой Склад. Как официальные представители этих систем, мы предоставляем нашим клиентам высококачественные и проверенные решения, которые обеспечивают надежность и эффективность в работе.
+      </p>
+      
+      <div class="partners-logos">
+        <div class="partner-item">
+          <img src="../images/gbs-logo.jpg" alt="GBS Market Logo">
+          <p class="partner-caption">GBS Market</p>
+        </div>
+        <div class="partner-item">
+          <img src="../images/moysklad-logo.jpg" alt="МойСклад Logo">
+          <p class="partner-caption">МойСклад</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
   <div id="copyright">
     <p>ВСЕ ПРАВА ЗАЩИЩЕНЫ <span style="font-size:18px">&copy;</span> NOVAPOS.KZ </p>
   </div>
