@@ -233,6 +233,233 @@
       padding: 0 10px;
     }
   }
+  .clients-section {
+    background-color: #fff;
+    padding: 60px 20px;
+    margin-bottom: 60px;
+  }
+
+  .clients-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .clients-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-weight: 600;
+  }
+
+  .clients-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .clients-logos {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+  }
+
+  .client-item {
+    text-align: center;
+    flex: 1;
+    max-width: 250px;
+  }
+
+  .client-item img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    border: 1px solid #e0e0e0;
+  }
+
+  .client-item img:hover {
+    transform: scale(1.05);
+  }
+
+  .client-caption {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    font-weight: 600;
+  }
+
+  @media (max-width: 768px) {
+    .clients-section {
+      padding: 40px 20px;
+    }
+
+    .clients-logos {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .client-item {
+      max-width: 200px;
+    }
+
+    .clients-text {
+      font-size: 1.1rem;
+      padding: 0 10px;
+    }
+
+    .clients-title {
+      font-size: 1.8rem;
+    }
+  }
+  .stats-section {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    margin-bottom: 60px;
+  }
+
+  .stats-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .counter-container {
+    margin-bottom: 30px;
+  }
+
+  .counter-number {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #3498db;
+    margin-bottom: 10px;
+  }
+
+  .counter-text {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    font-weight: 600;
+  }
+
+  .stats-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    .stats-section {
+      padding: 40px 20px;
+    }
+
+    .counter-number {
+      font-size: 3rem;
+    }
+
+    .counter-text {
+      font-size: 1.2rem;
+    }
+
+    .stats-text {
+      font-size: 1.1rem;
+      padding: 0 10px;
+    }
+  }
+  .values-section {
+    background-color: #fff;
+    padding: 60px 20px;
+    margin-bottom: 60px;
+  }
+
+  .values-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .values-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 50px;
+    font-weight: 600;
+  }
+
+  .values-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+  }
+
+  .value-card {
+    flex: 1;
+    max-width: 350px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  .value-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .value-icon {
+    font-size: 2.5rem;
+    color: #3498db;
+    margin-bottom: 20px;
+  }
+
+  .value-heading {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+
+  .value-text {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    .values-section {
+      padding: 40px 20px;
+    }
+
+    .values-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .value-card {
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .values-title {
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+    }
+
+    .value-heading {
+      font-size: 1.3rem;
+    }
+
+    .value-text {
+      font-size: 1rem;
+    }
+  }
   </style>
 </head>
 <body>
@@ -329,7 +556,83 @@
       </div>
     </div>
   </div>
+
+  <div class="clients-section">
+    <div class="clients-container">
+      <h2 class="clients-title">Наши клиенты</h2>
+      <p class="clients-text">
+        Наша компания не ограничивается только розничными продажами, но и активно работает в сфере оптовой торговли. Среди наших клиентов такие известные компании, как Розовый, Нефтек, BauMa и многие другие. Мы предоставляем автоматизацию как для крупных оптовиков, так и для розничных точек, обеспечивая гибкость и удобство в работе с разными бизнес-моделями.
+      </p>
+      
+      <div class="clients-logos">
+        <div class="client-item">
+          <img src="../images/client-logos/rozovy.jpg" alt="Розовый Logo">
+          <p class="client-caption">Розовый</p>
+        </div>
+        <div class="client-item">
+          <img src="../images/client-logos/neftek.jpg" alt="Нефтек Logo">
+          <p class="client-caption">Нефтек</p>
+        </div>
+        <div class="client-item">
+          <img src="../images/client-logos/bauma.jpg" alt="BauMa Logo">
+          <p class="client-caption">BauMa</p>
+        </div>
+      </div>
+    </div>
+  </div>
   
+  <div class="stats-section">
+    <div class="stats-container">
+      <div class="counter-container">
+        <div class="counter-number">
+          <span id="clientCounter">0</span>+
+        </div>
+        <div class="counter-text">довольных клиентов</div>
+      </div>
+      <p class="stats-text">
+        На сегодняшний день более 800 довольных клиентов доверяют нам автоматизацию своих торговых процессов. Мы предлагаем не просто продукт, а комплексное решение, которое позволяет оптимизировать бизнес и повысить его прибыльность.
+      </p>
+    </div>
+  </div>
+  
+  <div class="values-section">
+    <div class="values-container">
+      <h2 class="values-title">Наши ценности</h2>
+      
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <h3 class="value-heading">Сервис</h3>
+          <p class="value-text">
+            Мы ставим удовлетворенность клиентов на первое место и обеспечиваем высокий уровень обслуживания на каждом этапе сотрудничества.
+          </p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">
+            <i class="fas fa-heart"></i>
+          </div>
+          <h3 class="value-heading">Забота</h3>
+          <p class="value-text">
+            Мы внимательно относимся к каждому клиенту, понимаем их потребности и готовы предложить индивидуальные решения для каждого бизнеса.
+          </p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3 class="value-heading">Конкурентность</h3>
+          <p class="value-text">
+            Мы постоянно совершенствуем наши продукты и услуги, чтобы наши клиенты оставались впереди конкурентов, используя самые современные и эффективные решения.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div id="copyright">
     <p>ВСЕ ПРАВА ЗАЩИЩЕНЫ <span style="font-size:18px">&copy;</span> NOVAPOS.KZ </p>
   </div>
@@ -363,5 +666,47 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="../scripts/script.js"></script>
+  <script>
+    // Intersection Observer to start counter when section is visible
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5
+    };
+
+    let hasAnimated = false;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !hasAnimated) {
+          animateCounter();
+          hasAnimated = true;
+        }
+      });
+    }, observerOptions);
+
+    // Observe the counter section
+    observer.observe(document.querySelector('.stats-section'));
+
+    function animateCounter() {
+      const counter = document.getElementById('clientCounter');
+      const target = 800;
+      const duration = 2000; // 2 seconds
+      const steps = 50;
+      const stepDuration = duration / steps;
+      let current = 0;
+
+      const updateCounter = () => {
+        current = Math.min(current + Math.ceil(target / steps), target);
+        counter.textContent = current;
+
+        if (current < target) {
+          setTimeout(updateCounter, stepDuration);
+        }
+      };
+
+      updateCounter();
+    }
+  </script>
 </body>
 </html>
