@@ -460,6 +460,101 @@
       font-size: 1rem;
     }
   }
+  .branches-section {
+    background-color: #fff;
+    padding: 60px 20px;
+    margin-bottom: 60px;
+  }
+
+  .branches-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .branches-title {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    font-weight: 600;
+  }
+
+  .branches-map {
+    margin: 0 auto 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 100%;
+  }
+
+  .branches-map img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .branches-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 40px;
+    text-align: left;
+  }
+
+  .slogan {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    font-weight: 500;
+    padding: 30px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 10px;
+    margin-top: 40px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .slogan::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: #3498db;
+  }
+
+  .slogan-company {
+    color: #3498db;
+    font-weight: 700;
+    font-size: 2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  }
+
+  @media (max-width: 768px) {
+    .branches-section {
+      padding: 40px 20px;
+    }
+
+    .branches-title {
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+    }
+
+    .branches-text {
+      font-size: 1.1rem;
+      padding: 0 10px;
+    }
+
+    .slogan {
+      font-size: 1.4rem;
+      padding: 20px;
+    }
+
+    .slogan-company {
+      font-size: 1.6rem;
+    }
+  }
   </style>
 </head>
 <body>
@@ -629,6 +724,24 @@
             Мы постоянно совершенствуем наши продукты и услуги, чтобы наши клиенты оставались впереди конкурентов, используя самые современные и эффективные решения.
           </p>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="branches-section">
+    <div class="branches-container">
+      <h2 class="branches-title">Наши филиалы</h2>
+      
+      <div class="branches-map">
+        <img src="../images/branches-map.jpg" alt="Карта филиалов NovaPos" width="889" height="535">
+      </div>
+      
+      <p class="branches-text">
+        Головной офис компании находится в городе Уральск, а наши филиалы успешно работают в таких крупных городах, как Астана, Алматы, Актобе, Павлодар, Шымкент, Атырау и Кызылорда. Мы продолжаем расширяться и развивать сеть, чтобы быть ближе к нашим клиентам и предоставлять качественное обслуживание в любом уголке Казахстана.
+      </p>
+
+      <div class="slogan">
+        <span class="slogan-company">NovaPos</span> — ваш надежный партнер в мире автоматизации торговли!
       </div>
     </div>
   </div>
