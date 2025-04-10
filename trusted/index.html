@@ -103,6 +103,45 @@
             gap: 10px;
         }
     }
+
+    #copyright {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        position: fixed;
+        bottom: 60px; /* Height of the bottom-nav */
+        width: 100%;
+        z-index: 998; /* Just below the bottom-nav z-index */
+    }
+
+    .bottom-nav {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #333;
+        padding: 10px 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 999;
+    }
+
+    /* Add padding to the bottom of the content to prevent overlap */
+    body {
+        padding-bottom: 120px; /* Combined height of copyright and bottom-nav */
+    }
+
+    @media (max-width: 768px) {
+        #copyright {
+            font-size: 14px; /* Slightly smaller font on mobile */
+            padding: 8px 0;
+        }
+        
+        body {
+            padding-bottom: 110px; /* Adjust padding for mobile */
+        }
+    }
 	</style>
 </head>
 <body>
