@@ -65,8 +65,15 @@
         object-fit: contain;
     }
 
+    .company-name {
+        font-weight: bold;
+        color: #333;
+        margin: 10px 0 5px;
+        font-size: 1.1em;
+    }
+
     .logo-item p {
-        margin-top: 10px;
+        margin-top: 5px;
         font-size: 0.9em;
         color: #666;
     }
@@ -74,12 +81,26 @@
     @media (max-width: 768px) {
         .logos-container {
             grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .logo-item img {
+            height: 200px;
+        }
+
+        .company-name {
+            font-size: 1em;
+        }
+
+        .logo-item p {
+            font-size: 0.8em;
         }
     }
 
     @media (max-width: 480px) {
         .logos-container {
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
         }
     }
 	</style>
@@ -119,130 +140,162 @@
     <div class="logos-container">
       <div class="logo-item">
         <img src="../images/client-logos/milavitsa.jpg" alt="Milavitsa">
+        <div class="company-name">Milavitsa</div>
         <p>Бутик нижнего белья</p>
       </div>
       <div class="logo-item">
         <img src="../images/client-logos/neftek.jpg" alt="neftek">
+        <div class="company-name">Neftek</div>
         <p>Сеть заправочных станций</p>
       </div>
       <div class="logo-item">
         <img src="../images/client-logos/bauma.jpg" alt="bauma">
+        <div class="company-name">BauMa</div>
         <p>Магазин мужской одежды</p>
       </div>
       <div class="logo-item">
         <img src="../images/client-logos/rozovy.jpg" alt="Розовый">
+        <div class="company-name">Розовый</div>
         <p>Сеть цветочных магазинов</p>
       </div>
       <div class="logo-item">
         <img src="../images/client-logos/salambro.jpg" alt="Salam Bro">
+        <div class="company-name">Salam Bro</div>
         <p>Быстрое питание</p>
       </div>
       <div class="logo-item">
         <img src="../images/client-logos/annavogue.jpg" alt="Anna Vogue">
+        <div class="company-name">Anna Vogue</div>
         <p>Магазин товаров для ногтевого сервиса</p>
       </div>
       <div class="logo-item">
         <img src="../images/client-logos/bota-showroom.jpg" alt="Bota Showroom">
+        <div class="company-name">Bota Showroom</div>
         <p>Бутик женской одежды</p>
       </div>
       <div class="logo-item">
         <img src="../images/client-logos/emka-store.jpg" alt="Emka Store">
+        <div class="company-name">Emka Store</div>
         <p>Магазин женской одежды</p>
       </div>
       <div class="logo-item">
         <img src="../images/client-logos/gadget-store.jpg" alt="Gadget Store">
+        <div class="company-name">Gadget Store</div>
         <p>Магазин сотовых телефонов</p>
       </div>
       <div class="logo-item">
         <img src="../images/client-logos/irepublic.jpg" alt="Irepublic">
+        <div class="company-name">Irepublic</div>
         <p>Аксессуары к телефонам</p>
       </div>
       <div class="logo-item">
         <img src="../images/client-logos/joytoys.jpg" alt="Joy Toys">
+        <div class="company-name">Joy Toys</div>
         <p>Магазин игрушек</p>
       </div>
       <div class="logo-item">
         <img src="../images/client-logos/malifat.jpg" alt="Malifat">
+        <div class="company-name">Malifat</div>
         <p>Бутик женской обуви</p>
       </div>
       <div class="logo-item">
         <img src="../images/client-logos/smartfon.jpg" alt="Smartfon">
+        <div class="company-name">Smartfon</div>
         <p>Магазин сотовых телефонов</p>
       </div>
       <div class="logo-item">
         <img src="../images/client-logos/soft-homewear.jpg" alt="Soft Homewear">
+        <div class="company-name">Soft Homewear</div>
         <p>Бутик пижам и нижнего белья</p>
       </div>
       <div class="logo-item">
         <img src="../images/client-logos/manhattan.jpg" alt="Manhattan Lounge">
+        <div class="company-name">Manhattan Lounge</div>
         <p>Лаундж-бар</p>
       </div>
       <div class="logo-item">
         <img src="../images/client-logos/lalestyle.jpeg" alt="lalestyle">
+        <div class="company-name">Lalestyle</div>
         <p>Магазин одежды г.Атырау</p>
       </div>
       <div class="logo-item">
         <img src="../images/client-logos/overpack.jpg" alt="overpack">
+        <div class="company-name">Overpack</div>
         <p>Профессиональный кальянный магазин</p>
       </div>
       <div class="logo-item">
         <img src="../images/client-logos/margo_fashion.jpg" alt="margo fashion">
+        <div class="company-name">Margo Fashion</div>
         <p>Магазин одежды</p>
       </div>
       <div class="logo-item">
         <img src="../images/client-logos/smokingshop.jpg" alt="smoking shop">
-        <p>SmokingShop. Табачный магазин</p>
+        <div class="company-name">SmokingShop</div>
+        <p>Табачный магазин</p>
       </div>
       <div class="logo-item">
         <img src="../images/client-logos/sultan_auto.jpg" alt="sultan auto">
+        <div class="company-name">Sultan Auto</div>
         <p>Магазин автозапчастей</p>
       </div>
       <div class="logo-item">
         <img src="../images/client-logos/lady_jeans.jpg" alt="lady jeans">
+        <div class="company-name">Lady Jeans</div>
         <p>Женская одежда и обувь</p>
       </div>
       <div class="logo-item">
         <img src="../images/client-logos/makhovik_vremeni.jpg" alt="маховик времени">
+        <div class="company-name">Маховик времени</div>
         <p>Ювелирные изделия и часы</p>
       </div>
       <div class="logo-item">
         <img src="../images/client-logos/my_day.jpg" alt="my day">
+        <div class="company-name">My day</div>
         <p>Детская и подростковая одежда</p>
       </div>
       <div class="logo-item">
         <img src="../images/client-logos/mirra.jpg" alt="mirra">
+        <div class="company-name">Mirra</div>
         <p>Женская одежда</p>
       </div>
       <div class="logo-item">
         <img src="../images/client-logos/diva.jpg" alt="diva luxe shop">
+        <div class="company-name">Diva</div>
         <p>Женская одежда</p>
       </div>
       <div class="logo-item">
         <img src="../images/client-logos/miracle.jpg" alt="miracle">
+        <div class="company-name">Miracle</div>
         <p>Магазин итальянских сумок</p>
       </div>
       <div class="logo-item">
         <img src="../images/client-logos/lacreme.jpg" alt="lacreme">
+        <div class="company-name">Lacreme</div>
         <p>Уходовая и декоративная косметика</p>
       </div>
       <div class="logo-item">
         <img src="../images/client-logos/ponpon.jpg" alt="Pon Pon">
+        <div class="company-name">Pon Pon</div>
         <p>Паназиатская кухня в аниме стиле</p>
       </div>
       <div class="logo-item">
         <img src="../images/client-logos/el_classico.jpg" alt="el classico">
+        <div class="company-name">El Classico</div>
         <p>Спортивная одежда</p>
       </div>
       <div class="logo-item">
         <img src="../images/client-logos/rich.jpg" alt="rich">
+        <div class="company-name">Rich</div>
         <p>Женская одежда</p>
       </div>
       <div class="logo-item">
         <img src="../images/client-logos/harmonys.jpg" alt="harmonys">
+        <div class="company-name">Harmonys</div>
         <p>Быстрое питание</p>
       </div>
       <div class="logo-item">
         <img src="../images/client-logos/portal_cyberzone.jpg" alt="portal cyberzone">
+        <div class="company-name">Portal Cyberzone</div>
         <p>Компьютерный клуб</p>
       </div>
     </div>
