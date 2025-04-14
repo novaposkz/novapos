@@ -5,10 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Продаём франшизу и помогаем партнёрам открыть бизнес в сфере автоматизации торговли: оборудование, ПО, поддержка и сопровождение.">
   <title>Стать партнером с NovaPos.kz</title>
+  
+  <!-- Combine all CSS -->
   <link href="../styles/styles.css" rel="stylesheet" type="text/css">
-  <link rel="icon" href="../images/favicon.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" href="../images/favicon.png">
+  
+  <style>
+    /* Move all inline styles here */
+    #copyright {
+      margin-top: 12px;
+    }
+    
+    .features-button-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    /* Add consistent section spacing */
+    .full-width-section,
+    .benefits-section,
+    .features-section,
+    .earnings-section,
+    .program-section,
+    .roadmap-section,
+    .calculator-section,
+    .wearetrusted-section,
+    .faq-section,
+    .bottom-form-section {
+      margin-bottom: 80px; /* Consistent spacing between sections */
+    }
+
+    /* Last section shouldn't have bottom margin */
+    .bottom-form-section {
+      margin-bottom: 0;
+    }
+  </style>
   <!-- Yandex.Metrika counter -->
   <script type="text/javascript" >
      (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -145,6 +178,9 @@
             <p>Наш обучающий курс поможет стать профессионалом своего дела</p>
         </div>
     </div>
+    <div class="features-button-container" style="text-align: center; margin-top: 30px;">
+        <button class="roadmap-become-partner-btn">Стать партнером</button>
+    </div>
   </div>
 
   <div class="earnings-section">
@@ -238,7 +274,40 @@
       <button class="roadmap-become-partner-btn">Стать партнером</button>
     </div>
   </div>
-
+  <div class="calculator-section">
+    <h2 class="calculator-title">Калькулятор годовой прибыли</h2>
+    
+    <div class="calculator-container">
+        <div class="calculator-inputs">
+            <div class="input-group">
+                <label>Количество торговых точек в месяц</label>
+                <div class="range-container">
+                    <input type="range" id="storesCount" min="1" max="10" value="3">
+                    <span class="range-value" id="storesValue">3</span>
+                </div>
+            </div>
+            
+            <div class="input-group">
+                <label>Средний чек продажи, тг</label>
+                <div class="range-container">
+                    <input type="range" id="averageCheck" min="100000" max="1000000" step="50000" value="400000">
+                    <span class="range-value" id="checkValue">400 000</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="calculator-results">
+            <div class="result-item">
+                <span class="result-label">Выручка в месяц</span>
+                <span class="result-value" id="monthlyRevenue">1 200 000 тг</span>
+            </div>
+            <div class="result-item">
+                <span class="result-label">Выручка в год</span>
+                <span class="result-value" id="yearlyRevenue">14 400 000 тг</span>
+            </div>
+        </div>
+    </div>
+</div>
     <!-- We Are Trusted Section -->
     <div class="wearetrusted-section">
       <h2 class="wearetrusted-title">Нам доверяют</h2>
@@ -500,5 +569,464 @@
   </div>
 
 <script src="../scripts/script.js"></script>
+
+<!-- Popup Form -->
+<div class="popup-form-overlay" id="partnerFormPopup">
+    <div class="popup-form-container">
+        <button class="popup-close">&times;</button>
+        <h2>Отправить заявку</h2>
+        <p class="popup-subtitle">Мы свяжемся с вами и подробно расскажем об условиях партнёрства</p>
+        
+        <form onsubmit="handlePopupFormSubmit(event)" method="post" class="popup-contact-form">
+            <div class="popup-form-group">
+                <input type="text" id="popup-name" name="name" placeholder="Ваше Имя" required>
+            </div>
+            
+            <div class="popup-form-group">
+                <input type="email" id="popup-email" name="email" placeholder="E-mail (необязательно)">
+            </div>
+            
+            <div class="popup-form-group">
+                <div class="phone-input-container" style="margin: 0; height: 46px;">
+                    <div class="country-prefix">
+                        <img src="../images/kz-flag.png" alt="KZ" class="country-flag">
+                        <span class="prefix">+7</span>
+                    </div>
+                    <input type="tel" id="popup-phone" name="phone" placeholder="(777) 777-77-77" pattern="\d{10}" maxlength="14" required style="height: 100%; border: none; margin: 0; padding: 0 12px;">
+                </div>
+            </div>
+            
+            <button type="submit" class="popup-submit-button">Отправить</button>
+        </form>
+    </div>
+</div>
+
+<style>
+/* Popup Form Styles */
+.popup-form-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-form-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.popup-close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 24px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #666;
+}
+
+.popup-form-container h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 1.8rem;
+}
+
+.popup-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 1rem;
+}
+
+.popup-form-group {
+    margin-bottom: 20px;
+}
+
+.popup-form-group:last-of-type {
+    margin-bottom: 20px;
+}
+
+.popup-form-group input,
+.popup-form-group .phone-input-container {
+    margin: 0;
+}
+
+.popup-form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.popup-submit-button {
+    width: 100%;
+    padding: 12px;
+    background-color: DodgerBlue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.popup-submit-button:hover {
+    background-color: #1e90ff;
+}
+
+/* Show popup animation */
+.popup-form-overlay.active {
+    display: flex;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Update/Add these styles in your existing popup styles */
+.popup-form-group .phone-input-container {
+    display: flex;
+    background: white;
+    border-radius: 5px;
+    padding: 0 10px;
+    align-items: center;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.popup-form-group .country-prefix {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-right: 10px;
+    border-right: 1px solid #ccc;
+}
+
+.popup-form-group .country-flag {
+    width: 24px;
+    height: 16px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+.popup-form-group .prefix {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.popup-form-group input[type="tel"] {
+    outline: none;
+    width: 100%;
+}
+
+/* Remove the default styles for the phone input container */
+.popup-form-group .phone-input-container input {
+    border: none;
+    background: none;
+    width: 100%;
+}
+</style>
+
+<script>
+// Get all buttons with the class 'roadmap-become-partner-btn'
+const partnerButtons = document.querySelectorAll('.roadmap-become-partner-btn');
+const popup = document.getElementById('partnerFormPopup');
+const popupClose = document.querySelector('.popup-close');
+
+// Add click event to all partner buttons
+partnerButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        popup.classList.add('active');
+    });
+});
+
+// Close popup when clicking the close button
+popupClose.addEventListener('click', () => {
+    popup.classList.remove('active');
+});
+
+// Close popup when clicking outside the form
+popup.addEventListener('click', (e) => {
+    if (e.target === popup) {
+        popup.classList.remove('active');
+    }
+});
+
+// Handle form submission
+function handlePopupFormSubmit(event) {
+    event.preventDefault();
+    
+    // Get form values
+    const name = document.getElementById('popup-name').value;
+    const email = document.getElementById('popup-email').value;
+    const phone = document.getElementById('popup-phone').value;
+    
+    // Option 1: Send to WhatsApp
+    const whatsappMessage = `Здравствуйте! Меня интересует партнерство с NovaPos.\n\nИмя: ${name}\nEmail: ${email}\nТелефон: +7${phone}`;
+    const whatsappUrl = `https://wa.me/77765595726?text=${encodeURIComponent(whatsappMessage)}`;
+    
+    // Option 2: Send to Email (using mailto)
+    const emailSubject = 'Заявка на партнерство с NovaPos';
+    const emailBody = `Имя: ${name}\nEmail: ${email}\nТелефон: +7${phone}`;
+    const mailtoUrl = `mailto:info@novapos.kz?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+    
+    // You can choose which method to use:
+    window.open(whatsappUrl, '_blank'); // For WhatsApp
+    // window.location.href = mailtoUrl; // For Email
+    
+    // Close the popup after submission
+    popup.classList.remove('active');
+    
+    // Show success message
+    alert('Спасибо! Мы свяжемся с вами в ближайшее время.');
+}
+</script>
+
+<!-- Add this section before the FAQ section -->
+
+
+<style>
+/* Calculator Styles */
+.calculator-section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.calculator-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.calculator-container {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.calculator-inputs {
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 25px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.range-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.range-container input[type="range"] {
+    flex: 1;
+    height: 6px;
+    background: #e0e0e0;
+    border-radius: 3px;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.range-container input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 28px;
+    height: 28px;
+    background: DodgerBlue;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    border: 2px solid white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.range-container input[type="range"]::-webkit-slider-thumb:hover {
+    background: #1e90ff;
+    transform: scale(1.1);
+}
+
+.range-container input[type="range"]::-moz-range-thumb {
+    width: 28px;
+    height: 28px;
+    background: DodgerBlue;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    border: 2px solid white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.range-container input[type="range"]::-moz-range-thumb:hover {
+    background: #1e90ff;
+    transform: scale(1.1);
+}
+
+.range-container input[type="range"]::-ms-thumb {
+    width: 28px;
+    height: 28px;
+    background: DodgerBlue;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    border: 2px solid white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.range-container input[type="range"]::-ms-thumb:hover {
+    background: #1e90ff;
+    transform: scale(1.1);
+}
+
+.range-value {
+    min-width: 100px;
+    padding: 8px 12px;
+    background: #f5f5f5;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.calculator-results {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.result-item:last-child {
+    border-bottom: none;
+}
+
+.result-label {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.result-value {
+    color: DodgerBlue;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .calculator-title {
+        font-size: 2rem;
+    }
+    
+    .calculator-container {
+        padding: 20px;
+    }
+    
+    .range-container {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+    
+    .range-container input[type="range"] {
+        width: 100%;
+        margin: 10px 0;
+    }
+    
+    .range-value {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        background: #f5f5f5;
+        border-radius: 5px;
+        font-weight: 500;
+    }
+    
+    .result-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+
+    .calculator-inputs {
+        padding: 0 10px;
+    }
+
+    .range-container input[type="range"]::-webkit-slider-thumb {
+        width: 32px;
+        height: 32px;
+    }
+
+    .range-container input[type="range"]::-moz-range-thumb {
+        width: 32px;
+        height: 32px;
+    }
+
+    .range-container input[type="range"]::-ms-thumb {
+        width: 32px;
+        height: 32px;
+    }
+}
+</style>
+
+<script>
+// Calculator functionality
+function formatNumber(number) {
+    return new Intl.NumberFormat('ru-RU').format(number);
+}
+
+function updateCalculator() {
+    const storesCount = parseInt(document.getElementById('storesCount').value);
+    const averageCheck = parseInt(document.getElementById('averageCheck').value);
+    
+    // Update range values display
+    document.getElementById('storesValue').textContent = storesCount;
+    document.getElementById('checkValue').textContent = formatNumber(averageCheck);
+    
+    // Calculate revenues
+    const monthlyRevenue = storesCount * averageCheck;
+    const yearlyRevenue = monthlyRevenue * 12;
+    
+    // Update results
+    document.getElementById('monthlyRevenue').textContent = formatNumber(monthlyRevenue) + ' тг';
+    document.getElementById('yearlyRevenue').textContent = formatNumber(yearlyRevenue) + ' тг';
+}
+
+// Add event listeners
+document.getElementById('storesCount').addEventListener('input', updateCalculator);
+document.getElementById('averageCheck').addEventListener('input', updateCalculator);
+
+// Initialize calculator
+updateCalculator();
+</script>
 </body>
 </html>
