@@ -100,77 +100,107 @@
 		<!-- Dots will be added dynamically via JavaScript -->
 	</div>
 
-	<!-- Trade section -->
 	<section class="trade-section">
-	    <h1>ВЫБЕРИТЕ СФЕРУ ТОРГОВЛИ</h1>
-	    <div class="trade-cards-container">
-	      	<!-- Large Card 1 -->
-	      	<div class="trade-card large" data-url="sports/">
-	        	<h2>Магазин спортивных товаров</h2>
-	       		<p>Спортивные магазины любого размера.</p>
-	        	<div class="trade-image-container">
-	          	<img src="images/spheres/sports.png" alt="Товары для спорта">
-	        	</div>
-				<a href="sports/" class="trade-select-button">Выбрать</a>
-	        	<!-- <button class="trade-select-button">Выбрать</button> -->
-	      	</div>
-
-		      <!-- Small Card 1 -->
-	      	<div class="trade-card small" data-url="groceries/">
-	        	<h2>Продуктовый магазин</h2>
-	        	<p>Все виды продуктовых магазинов — от минимаркетов до супермаркетов.</p>
-	        	<div class="trade-image-container">
-	        	<img src="images/spheres/groceries.png" alt="Продукты">
-	        	</div>
-				<a href="groceries/" class="trade-select-button">Выбрать</a>
-	        	<!-- <button class="trade-select-button">Выбрать</button> -->
-	      	</div>
-
-		   	<!-- Small Card 2 -->
-		   	<div class="trade-card small" data-url="clothes/">
-		        <h2>Бутик модной одежды</h2>
-		        <p>Любые магазины и бутики модных вещей.</p>
-		        <div class="trade-image-container">
-		        <img src="images/spheres/clothes.png" alt="Одежда">
-		        </div>
-				<a href="clothes/" class="trade-select-button">Выбрать</a>
-		        <!-- <button class="trade-select-button">Выбрать</button> -->
-		   	</div>
-
-		  	<!-- Large Card 2 -->
-		   	<div class="trade-card large" data-url="alcohol/">
-		        <h2>Алкомаркет</h2>
-		        <p>Магазин алкогольной продукции и пива на разлив.</p>
-		        <div class="trade-image-container">
-		        <img src="images/spheres/alcohol.png" alt="Алкоголь">
-		        </div>
-				<a href="alcohol/" class="trade-select-button">Выбрать</a>
-		        <!-- <button class="trade-select-button">Выбрать</button> -->
-		   	</div>
-
-		  	<!-- Small Card 3 -->
-		   	<div class="trade-card small" data-url="cosmetics/">
-		        <h2>Магазин косметики</h2>
-		        <p>Косметика, парфюмерия и аксессуары для ухода</p>
-		        <div class="trade-image-container">
-		        <img src="images/spheres/cosmetics.png" alt="Косметика">
-		        </div>
-				<a href="cosmetics/" class="trade-select-button">Выбрать</a>
-		        <!-- <button class="trade-select-button">Выбрать</button> -->
-		   	</div>
-
-		   	<!-- Small Card 4 -->
-	      	<div class="trade-card small" data-url="pharmacy/">
-	        	<h2>Аптека</h2>
-	        	<p>Продажа медикаментов и медицинского оборудования.</p>
-	        	<div class="trade-image-container">
-	          	<img src="images/spheres/pharmacy.png" alt="Аптека">
-	        	</div>
-				<a href="pharmacy/" class="trade-select-button">Выбрать</a>
-	        	<!-- <button class="trade-select-button">Выбрать</button> -->
-	      	</div>
-	    </div>
-  	</section>
+		<h1>ВЫБЕРИТЕ СФЕРУ ТОРГОВЛИ</h1>
+		<div class="trade-grid">
+			<a href="sports/" class="trade-item">
+				<span class="trade-icon">🏃</span>
+				<span class="trade-name">Спортовары</span>
+			</a>
+			<a href="pharmacy/" class="trade-item">
+				<span class="trade-icon">💊</span>
+				<span class="trade-name">Аптека</span>
+			</a>
+			<a href="bags/" class="trade-item">
+				<span class="trade-icon">👜</span>
+				<span class="trade-name">Сумки</span>
+			</a>
+			<a href="shoes/" class="trade-item">
+				<span class="trade-icon">👞</span>
+				<span class="trade-name">Обувь</span>
+			</a>
+			<a href="clothes/" class="trade-item">
+				<span class="trade-icon">👕</span>
+				<span class="trade-name">Одежда</span>
+			</a>
+			<a href="alcohol/" class="trade-item">
+				<span class="trade-icon">🍷</span>
+				<span class="trade-name">Алкоголь</span>
+			</a>
+			<a href="baby-products/" class="trade-item">
+				<span class="trade-icon">👶</span>
+				<span class="trade-name">Детям</span>
+			</a>
+			<a href="books/" class="trade-item">
+				<span class="trade-icon">📚</span>
+				<span class="trade-name">Книги</span>
+			</a>
+			<a href="car-parts/" class="trade-item">
+				<span class="trade-icon">🚗</span>
+				<span class="trade-name">Автозапчасти</span>
+			</a>
+			<a href="coffee/" class="trade-item">
+				<span class="trade-icon">☕</span>
+				<span class="trade-name">Кофе</span>
+			</a>
+			<a href="cosmetics/" class="trade-item">
+				<span class="trade-icon">💄</span>
+				<span class="trade-name">Косметика</span>
+			</a>
+			<a href="flowers/" class="trade-item">
+				<span class="trade-icon">💐</span>
+				<span class="trade-name">Цветы</span>
+			</a>
+			<a href="groceries/" class="trade-item">
+				<span class="trade-icon">🛒</span>
+				<span class="trade-name">Продукты</span>
+			</a>
+			<a href="housewares/" class="trade-item">
+				<span class="trade-icon">🧹</span>
+				<span class="trade-name">Хозтовары</span>
+			</a>
+			<a href="jewelry/" class="trade-item">
+				<span class="trade-icon">💍</span>
+				<span class="trade-name">Ювелирка</span>
+			</a>
+			<a href="mobile-accessories/" class="trade-item">
+				<span class="trade-icon">📱</span>
+				<span class="trade-name">Аксессуары</span>
+			</a>
+			<a href="perfume/" class="trade-item">
+				<span class="trade-icon">🌺</span>
+				<span class="trade-name">Парфюм</span>
+			</a>
+			<a href="stationery/" class="trade-item">
+				<span class="trade-icon">✏️</span>
+				<span class="trade-name">Канцтовары</span>
+			</a>
+			<a href="tableware/" class="trade-item">
+				<span class="trade-icon">🍽️</span>
+				<span class="trade-name">Посуда</span>
+			</a>
+			<a href="tobacco/" class="trade-item">
+				<span class="trade-icon">🚬</span>
+				<span class="trade-name">Табак</span>
+			</a>
+			<a href="textile/" class="trade-item">
+				<span class="trade-icon">🧵</span>
+				<span class="trade-name">Текстиль</span>
+			</a>
+			<a href="toys/" class="trade-item">
+				<span class="trade-icon">🧸</span>
+				<span class="trade-name">Игрушки</span>
+			</a>
+			<a href="watches/" class="trade-item">
+				<span class="trade-icon">⌚</span>
+				<span class="trade-name">Часы</span>
+			</a>
+			<a href="catering/" class="trade-item">
+				<span class="trade-icon">🍽️</span>
+				<span class="trade-name">Кафе/рестораны</span>
+			</a>
+		</div>
+	</section>
 
 	<div class="services-section">
 	  <h2 class="services-title">НАШИ УСЛУГИ</h2>
@@ -406,6 +436,80 @@
 
 	  .service-image {
 	    height: 180px;
+	  }
+	}
+
+	.trade-section {
+	  padding: 40px 20px;
+	  max-width: 1200px;
+	  margin: 0 auto;
+	}
+
+	.trade-section h1 {
+	  text-align: center;
+	  font-size: 2.5rem;
+	  margin-bottom: 40px;
+	  color: #333;
+	}
+
+	.trade-grid {
+	  display: grid;
+	  grid-template-columns: repeat(4, 1fr);
+	  gap: 15px;
+	}
+
+	.trade-item {
+	  display: flex;
+	  align-items: center;
+	  padding: 15px;
+	  background-color: #f8f9fa;
+	  border-radius: 8px;
+	  text-decoration: none;
+	  color: #333;
+	  transition: all 0.3s ease;
+	  border: 1px solid #e9ecef;
+	}
+
+	.trade-item:hover {
+	  background-color: #e3f2fd;
+	  transform: translateY(-2px);
+	  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+	}
+
+	.trade-icon {
+	  font-size: 1.5rem;
+	  margin-right: 15px;
+	  flex-shrink: 0;
+	}
+
+	.trade-name {
+	  font-size: 1rem;
+	  font-weight: 500;
+	}
+
+	/* Mobile Styles */
+	@media (max-width: 768px) {
+	  .trade-grid {
+	    grid-template-columns: repeat(2, 1fr);
+	    gap: 10px;
+	  }
+
+	  .trade-section h1 {
+	    font-size: 2rem;
+	    margin-bottom: 30px;
+	  }
+
+	  .trade-item {
+	    padding: 12px;
+	  }
+
+	  .trade-icon {
+	    font-size: 1.3rem;
+	    margin-right: 10px;
+	  }
+
+	  .trade-name {
+	    font-size: 0.9rem;
 	  }
 	}
 	</style>
