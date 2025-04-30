@@ -577,11 +577,14 @@
 	  flex-wrap: wrap;
 	  gap: 20px;
 	  margin-bottom: 20px;
+	  align-items: flex-start;
 	}
 
 	.form-group {
 	  flex: 1;
 	  min-width: 200px;
+	  display: flex;
+	  flex-direction: column;
 	}
 
 	.form-group input {
@@ -592,21 +595,24 @@
 	  font-size: 1rem;
 	}
 
-	.phone-input-container {
+	.phone-input {
 	  display: flex;
 	  background: white;
 	  border-radius: 5px;
-	  padding: 0 10px;
-	  align-items: center;
 	  border: 1px solid #ccc;
+	  overflow: hidden;
+	  height: 46px;
+	  width: 100%;
 	}
 
 	.country-prefix {
 	  display: flex;
 	  align-items: center;
 	  gap: 5px;
-	  padding-right: 10px;
+	  padding: 0 10px;
 	  border-right: 1px solid #ccc;
+	  background: #f8f9fa;
+	  height: 100%;
 	}
 
 	.country-flag {
@@ -620,6 +626,13 @@
 	  font-size: 1rem;
 	  color: #333;
 	  font-weight: 500;
+	}
+
+	.phone-input input {
+	  border: none;
+	  padding: 12px 10px;
+	  flex: 1;
+	  height: 100%;
 	}
 
 	.bottom-submit-button {
@@ -678,6 +691,10 @@
 	  .form-row {
 	    gap: 15px;
 	  }
+
+	  .phone-input {
+	    width: 100%;
+	  }
 	}
 	</style>
 
@@ -706,12 +723,14 @@
 					<input type="email" id="bottom-email" name="email" placeholder="E-mail (необязательно)">
 				</div>
 				
-				<div class="form-group phone-input-container">
-					<div class="country-prefix">
-						<img src="images/kz-flag.png" alt="KZ" class="country-flag">
-						<span class="prefix">+7</span>
+				<div class="form-group">
+					<div class="phone-input">
+						<div class="country-prefix">
+							<img src="images/kz-flag.png" alt="KZ" class="country-flag">
+							<span class="prefix">+7</span>
+						</div>
+						<input type="tel" id="bottom-phone" name="phone" placeholder="(777) 777-77-77" pattern="\d{10}" maxlength="14" required>
 					</div>
-					<input type="tel" id="bottom-phone" name="phone" placeholder="(777) 777-77-77" pattern="\d{10}" maxlength="14" required>
 				</div>
 				
 				<button type="submit" class="bottom-submit-button">Отправить</button>
