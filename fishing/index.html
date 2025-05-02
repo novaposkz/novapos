@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Автоматизация рыболовных магазинов: онлайн-кассы, учёт снастей и товаров, штрихкодирование, принтеры чеков и этикеток. Удобное управление продажами!">
+  <title>Рыболовный магазин - автоматизация</title>
+  <link href="../styles/styles.css" rel="stylesheet" type="text/css">
+  <link rel="icon" href="../images/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" >
+     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+     m[i].l=1*new Date();
+     for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+     k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+     (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+     ym(98771693, "init", {
+          clickmap:true,
+          trackLinks:true,
+          accurateTrackBounce:true
+     });
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/98771693" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+  <style>
+    .jewelry-hero {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .jewelry-hero h1 {
+      font-size: 2.5rem;
+      color: #333;
+      margin-bottom: 40px;
+    }
+
+    .main-content {
+      display: flex;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .image-section {
+      flex: 1;
+    }
+
+    .image-section img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .text-section {
+      flex: 1;
+    }
+
+    .text-section h2 {
+      font-size: 2rem;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .text-section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .benefits-list {
+      margin-bottom: 30px;
+    }
+
+    .benefits-list h3 {
+      font-size: 1.3rem;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .benefits-list p {
+      margin-bottom: 10px;
+      padding-left: 25px;
+      position: relative;
+    }
+
+    .equipment-list,
+    .features-list,
+    .why-us-list {
+      margin-bottom: 30px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: DodgerBlue;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #1e90ff;
+    }
+
+    @media (max-width: 768px) {
+      .main-content {
+        flex-direction: column;
+      }
+
+      .jewelry-hero h1 {
+        font-size: 2rem;
+      }
+
+      .text-section h2 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="navigation-bar-container">
+    <div class="nav-container">
+      <div class="logo-container">
+        <a href="../"><img src="../images/novapos5.png" alt="NovaPos logo" id="logo"></a>
+      </div>
+      <div class="navbar">
+        <div class="nav-mobile">
+          <a href="#" id="nav-toggle"><span></span></a>
+        </div>
+        <ul class="nav-list">
+          <li><a href="../about/">О нас</a></li>
+          <li><a href="../shop/">Магазин</a></li>
+          <li><a href="../trusted/">Нам доверяют</a></li>
+          <li><a href="#">Помощь<i class="fa fa-caret-down"></i></a>
+            <ul class="nav-dropdown">
+              <li><a href="../drivers/">Драйверы</a></li>
+              <li><a href="../knowledge/">База знаний</a></li>
+            </ul>
+          </li>
+          <li><a href="../moysklad/">МойСклад</a></li>
+          <li><a href="../contacts/">Контакты</a></li>
+          <li><a href="../partnership/">Стать партнером</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="../scripts/script.js"></script>
+
+  <div class="jewelry-hero">
+    <h1>Автоматизация ювелирного магазина: точный учет, строгий контроль, рост продаж</h1>
+  </div>
+
+  <div class="main-content">
+    <div class="image-section">
+      <img src="../images/spheres/jewelry.jpeg" alt="Ювелирный магазин">
+    </div>
+    
+    <div class="text-section">
+      <h2>Премиальное решение для вашего ювелирного бизнеса</h2>
+      <p>Автоматизируйте учет украшений, обеспечьте безопасность, ускорьте обслуживание клиентов и увеличьте прибыль с помощью кассовой программы и профессионального оборудования. Всё — под строгим контролем, в одном решении.</p>
+
+      <div class="benefits-list">
+        <h3>Что дает автоматизация ювелирного бутика?</h3>
+        <p>✔ Рост прибыли до 30% – исключите потери, ускорьте продажи, контролируйте остатки и цены.</p>
+        <p>✔ Контроль каждого изделия – учёт по весу, пробе, материалу, вставке, размеру и стоимости.</p>
+        <p>✔ Безошибочный учет – программа фиксирует все действия сотрудников, исключая человеческий фактор.</p>
+        <p>✔ Безопасная работа 24/7 – надёжная система, устойчиво работающая даже в загруженные дни.</p>
+      </div>
+
+      <div class="equipment-list">
+        <h3>Оборудование для ювелирного магазина</h3>
+        <p>🖨 Принтер чеков и этикеток – печать ценников с характеристиками изделия.</p>
+        <p>📡 Сканер штрих-кодов – точное и быстрое считывание с ювелирных бирок.</p>
+        <p>💳 POS-терминал – быстрая и безопасная оплата банковскими картами.</p>
+        <p>📊 Кассовая программа – ведение учёта по номенклатуре, пробе, вставке, весу, скидкам и серийным номерам.</p>
+        <p>💰 Денежный ящик – защита наличности.</p>
+        <p>🔍 Терминал сбора данных – удобная инвентаризация и проверка остатков.</p>
+      </div>
+
+      <div class="features-list">
+        <h3>Дополнительные возможности</h3>
+        <p>💎 Программа лояльности – бонусы и персонализированные предложения для постоянных клиентов.</p>
+        <p>📈 Подробная аналитика – анализ продаж по категориям, коллекциям, материалам.</p>
+        <p>🔐 Контроль персонала – исключение махинаций и ошибок за счет полной прозрачности действий.</p>
+        <p>🧾 Отчетность в один клик – быстрые отчёты для владельца и бухгалтера.</p>
+      </div>
+
+      <div class="why-us-list">
+        <h3>Почему выбирают нас?</h3>
+        <p>✅ Комплексное решение под ключ – оборудование, программа, настройка, обучение персонала.</p>
+        <p>✅ Поддержка 24/7 – мы всегда на связи, чтобы обеспечить стабильную работу.</p>
+        <p>✅ Интеграция с интернет-магазином – единый склад, учёт онлайн и офлайн.</p>
+      </div>
+
+      <p>🔗 Автоматизируйте ваш ювелирный магазин уже сегодня!</p>
+      <p>Свяжитесь с нами — и мы подберем надёжное и эффективное решение для вашего бутика.</p>
+
+      <a href="https://wa.me/77765595726?text=Добрый%20день,%20меня%20интересует%20автоматизация%20ювелирного%20магазина" 
+         class="cta-button" 
+         target="_blank">
+        Подробнее
+      </a>
+    </div>
+  </div>
+
+  <div id="copyright" style="margin-top: 70px;">
+    <p>ВСЕ ПРАВА ЗАЩИЩЕНЫ <span style="font-size:18px">&copy;</span> NOVAPOS.KZ </p>
+  </div>
+  <a href="https://wa.me/77765595726" class="whatsapp-float" target="_blank">
+      <img src="../images/whatsapp.png" alt="WhatsApp">
+  </a>
+  <div class="bottom-nav">
+    <a href="../feedback/">
+        <i class="fa fa-comments"></i>
+        <span>Обратная связь</span>
+    </a>
+    <a href="tel:+77765595726">
+        <i class="fa fa-phone"></i>
+        <span>+7 776 559-57-26</span>
+    </a>
+    <a href="mailto:info@novapos.kz">
+        <i class="fa fa-envelope"></i>
+        <span>info@novapos.kz</span>
+    </a>
+    <a href="../cart/">
+      <i class="fa fa-shopping-cart"></i>
+      <span class="cart-text">Корзина</span>
+    </a>
+    <div class="search-bar">
+      <i class="fa fa-search"></i>
+      <input type="text" placeholder="Поиск">
+    </div>
+  </div>
+</body>
+</html>
