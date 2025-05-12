@@ -222,9 +222,34 @@ body {
   position: relative;
 }
 
+.carousel-item-content {
+  position: relative;
+  width: 100%;
+}
+
 .carousel-item img {
   width: 100%;
   display: block;
+}
+
+.carousel-button {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #e74c3c;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-button:hover {
+  background-color: #c0392b; /* Darker red shade on hover */
+  transform: translateX(-50%) scale(1.05);
 }
 
 .carousel-control {
@@ -270,22 +295,22 @@ body {
 /* Mobile Styles */
 @media (max-width: 768px) {
   .carousel {
-    max-width: 90%;  /* Changed from 1000px to 90% */
+    max-width: 90%;
   }
 
   .carousel-control {
-    display: none; /* Hide buttons on mobile */
+    display: none;
   }
 
   .carousel-inner {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
-    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 
   .carousel-inner::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for Chrome/Safari */
+    display: none;
   }
 
   .carousel-item {
@@ -295,6 +320,12 @@ body {
   .carousel-item img {
     width: 100%;
     height: auto;
+  }
+
+  .carousel-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    bottom: 55px;
   }
 
   .header-container {
