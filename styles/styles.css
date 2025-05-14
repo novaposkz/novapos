@@ -237,7 +237,7 @@ body {
   bottom: 60px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #e74c3c;
+  background-color: #333333;
   color: white;
   padding: 12px 30px;
   border-radius: 5px;
@@ -248,7 +248,7 @@ body {
 }
 
 .carousel-button:hover {
-  background-color: #c0392b; /* Darker red shade on hover */
+  background-color: #1a1a1a; /* Darker black shade on hover */
   transform: translateX(-50%) scale(1.05);
 }
 
@@ -326,6 +326,11 @@ body {
     padding: 10px 20px;
     font-size: 0.9rem;
     bottom: 55px;
+    background-color: #333333;
+  }
+
+  .carousel-button:hover {
+    background-color: #1a1a1a;
   }
 
   .header-container {
