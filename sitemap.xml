@@ -9,7 +9,7 @@
 
 <url>
   <loc>https://www.novapos.kz/</loc>
-  <lastmod>2025-05-13T10:05:11+00:00</lastmod>
+  <lastmod>2025-05-15T22:52:12+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
@@ -63,6 +63,16 @@
   <priority>0.80</priority>
 </url>
 <url>
+  <loc>https://www.novapos.kz/optics/</loc>
+  <lastmod>2025-05-19T14:05:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.novapos.kz/vitamins/</loc>
+  <lastmod>2025-05-19T14:05:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
   <loc>https://www.novapos.kz/bags/</loc>
   <lastmod>2025-04-19T23:23:09+00:00</lastmod>
   <priority>0.80</priority>
@@ -78,8 +88,13 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.novapos.kz/alcohol/</loc>
-  <lastmod>2025-03-31T12:32:00+00:00</lastmod>
+  <loc>https://www.novapos.kz/underwear/</loc>
+  <lastmod>2025-05-19T14:05:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.novapos.kz/wedding/</loc>
+  <lastmod>2025-05-19T14:05:23+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
@@ -98,8 +113,8 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.novapos.kz/coffee/</loc>
-  <lastmod>2025-04-30T22:39:59+00:00</lastmod>
+  <loc>https://www.novapos.kz/wheels/</loc>
+  <lastmod>2025-05-19T14:05:23+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
@@ -108,13 +123,48 @@
   <priority>0.80</priority>
 </url>
 <url>
+  <loc>https://www.novapos.kz/nails/</loc>
+  <lastmod>2025-05-19T14:05:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
   <loc>https://www.novapos.kz/flowers/</loc>
   <lastmod>2025-04-30T22:39:59+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
+  <loc>https://www.novapos.kz/alcohol/</loc>
+  <lastmod>2025-03-31T12:32:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
   <loc>https://www.novapos.kz/groceries/</loc>
   <lastmod>2025-04-02T14:52:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.novapos.kz/eco-shop/</loc>
+  <lastmod>2025-05-19T14:05:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.novapos.kz/milk/</loc>
+  <lastmod>2025-05-19T14:05:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.novapos.kz/fish/</loc>
+  <lastmod>2025-05-19T14:05:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.novapos.kz/bread/</loc>
+  <lastmod>2025-05-19T14:05:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.novapos.kz/cakes/</loc>
+  <lastmod>2025-05-19T14:05:23+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
@@ -125,11 +175,6 @@
 <url>
   <loc>https://www.novapos.kz/chemicals/</loc>
   <lastmod>2025-05-13T10:58:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.novapos.kz/plumbing/</loc>
-  <lastmod>2025-04-30T17:16:49+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
@@ -168,6 +213,11 @@
   <priority>0.80</priority>
 </url>
 <url>
+  <loc>https://www.novapos.kz/fabrics/</loc>
+  <lastmod>2025-05-08T12:09:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
   <loc>https://www.novapos.kz/toys/</loc>
   <lastmod>2025-05-12T08:13:30+00:00</lastmod>
   <priority>0.80</priority>
@@ -175,6 +225,36 @@
 <url>
   <loc>https://www.novapos.kz/watches/</loc>
   <lastmod>2025-04-19T23:23:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.novapos.kz/coffee/</loc>
+  <lastmod>2025-04-30T22:39:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.novapos.kz/fastfood/</loc>
+  <lastmod>2025-05-19T14:05:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.novapos.kz/samsa/</loc>
+  <lastmod>2025-05-19T14:05:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.novapos.kz/doner/</loc>
+  <lastmod>2025-05-19T14:05:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.novapos.kz/sushi/</loc>
+  <lastmod>2025-05-19T14:05:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.novapos.kz/pizza/</loc>
+  <lastmod>2025-05-19T14:05:23+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
@@ -189,11 +269,6 @@
 </url>
 <url>
   <loc>https://www.novapos.kz/bar/</loc>
-  <lastmod>2025-05-08T12:09:47+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.novapos.kz/fabrics/</loc>
   <lastmod>2025-05-08T12:09:47+00:00</lastmod>
   <priority>0.80</priority>
 </url>
@@ -214,12 +289,12 @@
 </url>
 <url>
   <loc>https://www.novapos.kz/tourism/</loc>
-  <lastmod>2025-05-02T11:17:51+00:00</lastmod>
+  <lastmod>2025-05-13T23:15:52+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.novapos.kz/sexshop/</loc>
-  <lastmod>2025-05-02T11:17:51+00:00</lastmod>
+  <lastmod>2025-05-13T23:15:52+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
@@ -230,6 +305,66 @@
 <url>
   <loc>https://www.novapos.kz/pet-store/</loc>
   <lastmod>2025-05-01T22:09:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.novapos.kz/furniture/</loc>
+  <lastmod>2025-05-19T14:05:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.novapos.kz/powertools/</loc>
+  <lastmod>2025-05-19T14:05:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.novapos.kz/barbershop/</loc>
+  <lastmod>2025-05-19T14:05:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.novapos.kz/playstation/</loc>
+  <lastmod>2025-05-19T14:05:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.novapos.kz/computerclub/</loc>
+  <lastmod>2025-05-19T14:05:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.novapos.kz/gas-station/</loc>
+  <lastmod>2025-05-19T14:05:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.novapos.kz/music/</loc>
+  <lastmod>2025-05-19T14:05:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.novapos.kz/wood/</loc>
+  <lastmod>2025-05-19T14:05:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.novapos.kz/wallpaper/</loc>
+  <lastmod>2025-05-19T14:05:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.novapos.kz/fixings/</loc>
+  <lastmod>2025-05-19T14:05:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.novapos.kz/plumbing/</loc>
+  <lastmod>2025-04-30T17:16:49+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.novapos.kz/building/</loc>
+  <lastmod>2025-05-19T14:05:23+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
