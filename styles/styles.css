@@ -1655,5 +1655,87 @@ body {
   }
 }
 
+.trade-item {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Add this to center horizontally */
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+}
+
+.trade-icon {
+  font-size: 1.5rem;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.trade-name {
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center; /* Add this to center the text */
+}
+
+.trade-section {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.trade-search-container {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  padding: 0 20px;
+}
+
+.trade-search-bar {
+  position: relative;
+  width: 100%;
+}
+
+.trade-search-bar i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  font-size: 1.2rem;
+}
+
+.trade-search-bar input {
+  width: 100%;
+  padding: 15px 15px 15px 45px;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.trade-search-bar input:focus {
+  outline: none;
+  border-color: DodgerBlue;
+  box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.1);
+}
+
+.trade-search-bar input::placeholder {
+  color: #999;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .trade-search-container {
+    padding: 0 10px;
+  }
+  
+  .trade-search-bar input {
+    padding: 12px 12px 12px 40px;
+    font-size: 0.9rem;
+  }
+}
+
 
 

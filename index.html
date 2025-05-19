@@ -114,6 +114,12 @@
 
 	<section class="trade-section">
 		<h1>ВЫБЕРИТЕ СФЕРУ ТОРГОВЛИ</h1>
+		<div class="trade-search-container">
+			<div class="trade-search-bar">
+				<i class="fa fa-search"></i>
+				<input type="text" id="tradeSearch" placeholder="Поиск сферы торговли..." onkeyup="filterTradeItems()">
+			</div>
+		</div>
 		<div class="trade-grid">
 			<a href="sports/" class="trade-item">
 				<span class="trade-icon">🏃</span>
@@ -940,6 +946,21 @@
 		
 		// Show success message
 		alert('Спасибо! Мы свяжемся с вами в ближайшее время.');
+	}
+
+	function filterTradeItems() {
+		const searchInput = document.getElementById('tradeSearch');
+		const filter = searchInput.value.toLowerCase();
+		const tradeItems = document.getElementsByClassName('trade-item');
+
+		for (let item of tradeItems) {
+			const tradeName = item.querySelector('.trade-name').textContent.toLowerCase();
+			if (tradeName.includes(filter)) {
+				item.style.display = '';
+			} else {
+				item.style.display = 'none';
+			}
+		}
 	}
 	</script>
 </body>
