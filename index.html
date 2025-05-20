@@ -915,7 +915,8 @@
 		</a>
 		<div class="search-bar">
 			<i class="fa fa-search"></i>
-			<input type="text" placeholder="Поиск">
+			<input type="text" id="bottomSearch" placeholder="Поиск..." onkeyup="searchPages(this.value)">
+			<div id="searchResults" class="search-results"></div>
 		</div>
 	</div>
 	
@@ -962,6 +963,115 @@
 			}
 		}
 	}
+
+	// Site pages data
+	const sitePages = [
+		{ url: 'clothes/', title: 'Shop fashionable clothes' },
+		{ url: 'sports/', title: 'Sports equipment and accessories' },
+		{ url: 'pharmacy/', title: 'Pharmacy and medical supplies' },
+		{ url: 'optics/', title: 'Optical goods and eyewear' },
+		{ url: 'vitamins/', title: 'Vitamins and supplements' },
+		{ url: 'bags/', title: 'Bags and accessories' },
+		{ url: 'shoes/', title: 'Shoes and footwear' },
+		{ url: 'underwear/', title: 'Underwear and lingerie' },
+		{ url: 'wedding/', title: 'Wedding dresses and accessories' },
+		{ url: 'baby-products/', title: 'Baby products and accessories' },
+		{ url: 'books/', title: 'Books and literature' },
+		{ url: 'car-parts/', title: 'Car parts and accessories' },
+		{ url: 'wheels/', title: 'Wheels and tires' },
+		{ url: 'cosmetics/', title: 'Cosmetics and beauty products' },
+		{ url: 'nails/', title: 'Nail care and accessories' },
+		{ url: 'flowers/', title: 'Flowers and bouquets' },
+		{ url: 'alcohol/', title: 'Alcoholic beverages' },
+		{ url: 'groceries/', title: 'Groceries and food products' },
+		{ url: 'eco-shop/', title: 'Eco-friendly products' },
+		{ url: 'milk/', title: 'Dairy products' },
+		{ url: 'meat/', title: 'Meat products' },
+		{ url: 'fish/', title: 'Fish and seafood' },
+		{ url: 'bread/', title: 'Bakery products' },
+		{ url: 'cakes/', title: 'Cakes and pastries' },
+		{ url: 'housewares/', title: 'Household goods' },
+		{ url: 'chemicals/', title: 'Cleaning chemicals' },
+		{ url: 'jewelry/', title: 'Jewelry and accessories' },
+		{ url: 'mobile-accessories/', title: 'Mobile phone accessories' },
+		{ url: 'perfume/', title: 'Perfumes and fragrances' },
+		{ url: 'stationery/', title: 'Stationery and office supplies' },
+		{ url: 'tableware/', title: 'Tableware and kitchen items' },
+		{ url: 'tobacco/', title: 'Tobacco products' },
+		{ url: 'textile/', title: 'Textile and fabrics' },
+		{ url: 'fabrics/', title: 'Fabrics and materials' },
+		{ url: 'toys/', title: 'Toys and games' },
+		{ url: 'watches/', title: 'Watches and timepieces' },
+		{ url: 'coffee/', title: 'Coffee shop supplies' },
+		{ url: 'fastfood/', title: 'Fast food supplies' },
+		{ url: 'samsa/', title: 'Samsa and pastries' },
+		{ url: 'doner/', title: 'Doner and kebab supplies' },
+		{ url: 'sushi/', title: 'Sushi and rolls supplies' },
+		{ url: 'pizza/', title: 'Pizza supplies' },
+		{ url: 'cafe/', title: 'Cafe supplies' },
+		{ url: 'restaurant/', title: 'Restaurant supplies' },
+		{ url: 'bar/', title: 'Bar supplies' },
+		{ url: 'garden/', title: 'Garden supplies' },
+		{ url: 'hunting/', title: 'Hunting equipment' },
+		{ url: 'fishing/', title: 'Fishing equipment' },
+		{ url: 'tourism/', title: 'Tourism and travel' },
+		{ url: 'sexshop/', title: 'Adult products' },
+		{ url: 'souvenirs/', title: 'Souvenirs and gifts' },
+		{ url: 'pet-store/', title: 'Pet supplies' },
+		{ url: 'furniture/', title: 'Furniture and home decor' },
+		{ url: 'powertools/', title: 'Power tools and equipment' },
+		{ url: 'barbershop/', title: 'Barbershop supplies' },
+		{ url: 'playstation/', title: 'PlayStation games and accessories' },
+		{ url: 'computerclub/', title: 'Computer club supplies' },
+		{ url: 'gas-station/', title: 'Gas station supplies' },
+		{ url: 'music/', title: 'Musical instruments and accessories' },
+		{ url: 'wood/', title: 'Wood and lumber' },
+		{ url: 'wallpaper/', title: 'Wallpaper and wall coverings' },
+		{ url: 'fixings/', title: 'Fixings and hardware' },
+		{ url: 'plumbing/', title: 'Plumbing supplies' },
+		{ url: 'building/', title: 'Building materials' }
+	];
+
+	function searchPages(query) {
+		const searchResults = document.getElementById('searchResults');
+		searchResults.innerHTML = '';
+		
+		if (query.length < 2) {
+			searchResults.style.display = 'none';
+			return;
+		}
+
+		const results = sitePages.filter(page => 
+			page.title.toLowerCase().includes(query.toLowerCase()) || 
+			page.url.toLowerCase().includes(query.toLowerCase())
+		);
+
+		if (results.length > 0) {
+			searchResults.style.display = 'block';
+			results.forEach(page => {
+				const resultItem = document.createElement('a');
+				resultItem.href = page.url;
+				resultItem.className = 'search-result-item';
+				resultItem.innerHTML = `
+					<div class="search-result-title">${page.title}</div>
+					<div class="search-result-url">/${page.url}</div>
+				`;
+				searchResults.appendChild(resultItem);
+			});
+		} else {
+			searchResults.style.display = 'none';
+		}
+	}
+
+	// Close search results when clicking outside
+	document.addEventListener('click', function(event) {
+		const searchResults = document.getElementById('searchResults');
+		const searchBar = document.querySelector('.search-bar');
+		
+		if (!searchBar.contains(event.target)) {
+			searchResults.style.display = 'none';
+		}
+	});
 	</script>
 </body>
 </html>
