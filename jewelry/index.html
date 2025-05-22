@@ -188,6 +188,16 @@
       text-align: center;
     }
 
+    .program-card p {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #4a5568;
+      margin-bottom: 20px;
+      text-align: justify;
+      letter-spacing: 0.2px;
+    }
+
     .program-image {
       width: 200px;
       height: 200px;
@@ -207,8 +217,9 @@
       padding-left: 25px;
       position: relative;
       font-size: 1.1rem;
-      line-height: 1.5;
+      line-height: 1.6;
       color: #4a5568;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     .program-features li:before {
@@ -230,12 +241,72 @@
       background: white;
       border-radius: 15px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .automated-stores {
+      padding: 60px 20px;
+      background: #f8f9fa;
+    }
+
+    .automated-stores h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #2c3e50;
+      margin-bottom: 40px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .stores-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .store-card {
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+
+    .store-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .store-image {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: contain;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .store-name {
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #2c3e50;
+      margin: 0;
     }
 
     @media (max-width: 768px) {
       .jewelry-hero h1 {
         font-size: 2rem;
         padding: 0 15px;
+      }
+
+      .main-content {
+        padding: 20px;
+      }
+
+      .text-section {
+        padding: 20px;
       }
 
       .text-section h2 {
@@ -247,6 +318,7 @@
       .features-list,
       .why-us-list {
         padding: 20px;
+        margin: 20px 0;
       }
 
       .cta-button {
@@ -257,25 +329,77 @@
         display: inline-block;
       }
 
+      .programs-section {
+        padding: 40px 20px;
+      }
+
       .programs-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
       }
 
       .program-card {
         padding: 20px;
+        margin: 0;
       }
 
       .program-card h3 {
         font-size: 1.5rem;
+        margin-bottom: 20px;
       }
 
       .program-image {
         height: 180px;
+        margin-bottom: 20px;
       }
 
       .programs-title {
         font-size: 2rem;
         padding: 0 15px;
+        margin-bottom: 30px;
+      }
+
+      .programs-intro {
+        padding: 0 15px;
+        margin-bottom: 30px;
+      }
+
+      .programs-conclusion {
+        margin: 30px 15px 0;
+        padding: 20px;
+      }
+
+      .program-card p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 15px;
+      }
+
+      .program-features li {
+        font-size: 1rem;
+        margin-bottom: 12px;
+      }
+
+      .automated-stores {
+        padding: 40px 20px;
+      }
+
+      .automated-stores h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+      }
+
+      .stores-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .store-card {
+        padding: 15px;
+      }
+
+      .store-name {
+        font-size: 1rem;
       }
     }
   </style>
@@ -415,6 +539,16 @@
          target="_blank">
         Подробнее
       </a>
+    </div>
+  </div>
+
+  <div class="automated-stores">
+    <h2>Автоматизированные нами ювелирные магазины</h2>
+    <div class="stores-grid">
+      <div class="store-card">
+        <img src="../images/client-logos/aidesign.jpg" alt="ai design" class="store-image">
+        <p class="store-name">AI Design</p>
+      </div>
     </div>
   </div>
 
