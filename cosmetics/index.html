@@ -28,100 +28,378 @@
   <style>
     .cosmetics-hero {
       text-align: center;
-      padding: 40px 20px;
+      padding: 60px 20px;
+      background: linear-gradient(to bottom, #f8f9fa, #ffffff);
     }
 
     .cosmetics-hero h1 {
-      font-size: 2.5rem;
-      color: #333;
+      font-size: 2.8rem;
+      color: #2c3e50;
       margin-bottom: 40px;
+      line-height: 1.3;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .main-content {
-      display: flex;
-      max-width: 1200px;
+      max-width: 900px;
       margin: 0 auto;
-      padding: 20px;
-      gap: 40px;
-      align-items: center;
+      padding: 40px 20px;
     }
 
     .image-section {
-      flex: 1;
+      margin-bottom: 50px;
+      text-align: center;
     }
 
     .image-section img {
       width: 100%;
+      max-width: 800px;
       height: auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .image-section img:hover {
+      transform: scale(1.02);
     }
 
     .text-section {
-      flex: 1;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     }
 
     .text-section h2 {
-      font-size: 2rem;
-      color: #333;
-      margin-bottom: 20px;
+      font-size: 2.2rem;
+      color: #2c3e50;
+      margin-bottom: 25px;
+      text-align: center;
     }
 
     .text-section p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      color: #555;
+      font-size: 1.15rem;
+      line-height: 1.7;
+      color: #4a5568;
       margin-bottom: 30px;
     }
 
-    .benefits-list {
-      margin-bottom: 30px;
-    }
-
-    .benefits-list h3 {
-      font-size: 1.3rem;
-      color: #333;
-      margin-bottom: 15px;
-    }
-
-    .benefits-list p {
-      margin-bottom: 10px;
-      padding-left: 25px;
-      position: relative;
-    }
-
+    .benefits-list,
     .equipment-list,
     .features-list,
     .why-us-list {
-      margin-bottom: 30px;
+      margin-bottom: 40px;
+      padding: 25px;
+      background: #f8f9fa;
+      border-radius: 12px;
+    }
+
+    .benefits-list h3,
+    .equipment-list h3,
+    .features-list h3,
+    .why-us-list h3 {
+      font-size: 1.5rem;
+      color: #2c3e50;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .benefits-list p,
+    .equipment-list p,
+    .features-list p,
+    .why-us-list p {
+      margin-bottom: 15px;
+      padding-left: 30px;
+      position: relative;
+      font-size: 1.1rem;
     }
 
     .cta-button {
       display: inline-block;
-      background-color: DodgerBlue;
+      background-color: #3498db;
       color: white;
-      padding: 15px 30px;
-      border-radius: 5px;
+      padding: 18px 35px;
+      border-radius: 8px;
       text-decoration: none;
-      font-size: 1.1rem;
-      transition: background-color 0.3s ease;
+      font-size: 1.2rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+      margin-top: 20px;
     }
 
     .cta-button:hover {
-      background-color: #1e90ff;
+      background-color: #2980b9;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+    }
+
+    .programs-section {
+      padding: 60px 20px;
+      background: #f8f9fa;
+    }
+
+    .programs-title {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #2c3e50;
+      margin-bottom: 40px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .programs-intro {
+      max-width: 900px;
+      margin: 0 auto 50px;
+      text-align: center;
+      font-size: 1.2rem;
+      line-height: 1.7;
+      color: #4a5568;
+    }
+
+    .programs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .program-card {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .program-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .program-card h3 {
+      font-size: 1.8rem;
+      color: #2c3e50;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+
+    .program-card p {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #4a5568;
+      margin-bottom: 20px;
+      text-align: justify;
+      letter-spacing: 0.2px;
+    }
+
+    .program-image {
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+      border-radius: 10px;
+      margin: 0 auto 25px;
+      display: block;
+    }
+
+    .program-features {
+      list-style: none;
+      padding: 0;
+    }
+
+    .program-features li {
+      margin-bottom: 15px;
+      padding-left: 25px;
+      position: relative;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #4a5568;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .program-features li:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #3498db;
+      font-weight: bold;
+    }
+
+    .programs-conclusion {
+      max-width: 900px;
+      margin: 50px auto 0;
+      text-align: center;
+      font-size: 1.2rem;
+      line-height: 1.7;
+      color: #4a5568;
+      padding: 30px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .automated-stores {
+      padding: 60px 20px;
+      background: #f8f9fa;
+    }
+
+    .automated-stores h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #2c3e50;
+      margin-bottom: 40px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .stores-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .store-card {
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+
+    .store-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .store-image {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: contain;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .store-name {
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #2c3e50;
+      margin: 0;
     }
 
     @media (max-width: 768px) {
-      .main-content {
-        flex-direction: column;
-      }
-
       .cosmetics-hero h1 {
         font-size: 2rem;
+        padding: 0 15px;
+      }
+
+      .main-content {
+        padding: 20px;
+      }
+
+      .text-section {
+        padding: 20px;
       }
 
       .text-section h2 {
         font-size: 1.8rem;
+      }
+
+      .benefits-list,
+      .equipment-list,
+      .features-list,
+      .why-us-list {
+        padding: 20px;
+        margin: 20px 0;
+      }
+
+      .cta-button {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+        margin: 30px auto 0;
+        display: inline-block;
+      }
+
+      .programs-section {
+        padding: 40px 20px;
+      }
+
+      .programs-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .program-card {
+        padding: 20px;
+        margin: 0;
+      }
+
+      .program-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+      }
+
+      .program-image {
+        height: 180px;
+        margin-bottom: 20px;
+      }
+
+      .programs-title {
+        font-size: 2rem;
+        padding: 0 15px;
+        margin-bottom: 30px;
+      }
+
+      .programs-intro {
+        padding: 0 15px;
+        margin-bottom: 30px;
+      }
+
+      .programs-conclusion {
+        margin: 30px 15px 0;
+        padding: 20px;
+      }
+
+      .program-card p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 15px;
+      }
+
+      .program-features li {
+        font-size: 1rem;
+        margin-bottom: 12px;
+      }
+
+      .automated-stores {
+        padding: 40px 20px;
+      }
+
+      .automated-stores h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+      }
+
+      .stores-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .store-card {
+        padding: 15px;
+      }
+
+      .store-name {
+        font-size: 1rem;
       }
     }
   </style>
@@ -153,14 +431,16 @@
       </div>
     </div>
   </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="../scripts/script.js"></script>
 
   <div class="cosmetics-hero">
-    <h1>Автоматизация магазина косметики: удобный учет, быстрые продажи, рост прибыли.</h1>
+    <h1>Автоматизация магазина косметики: удобный учет, быстрые продажи, рост прибыли</h1>
   </div>
 
   <div class="main-content">
     <div class="image-section">
-      <img src="../images/spheres/cosmetics.jpg" alt="Магазин косметики">
+      <img src="../images/spheres/cosmetics.jpeg" alt="Магазин косметики">
     </div>
     
     <div class="text-section">
@@ -203,7 +483,60 @@
       <p>💎 Автоматизируйте ваш магазин косметики уже сегодня!</p>
       <p>Свяжитесь с нами, и мы подберем идеальное решение для вашего бизнеса.</p>
 
-      <a href="https://wa.me/77765595726?text=Добрый%20день,%20меня%20интересует%20автоматизация%20магазина%20косметики" 
+      <div style="text-align: center; margin-top: 30px;">
+        <a href="https://wa.me/77765595726?text=Добрый%20день,%20меня%20интересует%20автоматизация%20магазина%20косметики" 
+           class="cta-button" 
+           target="_blank">
+          Подробнее
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="programs-section">
+    <h2 class="programs-title">Программа для автоматизации магазина косметики</h2>
+    <div class="programs-intro">
+      Магазины косметики работают с широчайшим ассортиментом: от декоративной продукции до уходовой, парфюмерии и аксессуаров. Автоматизация позволяет точно учитывать остатки, ускорить работу кассы и улучшить обслуживание клиентов. Мы предлагаем два надёжных решения — GBS.Market и МойСклад, каждое из которых эффективно решает задачи в сфере косметической розницы.
+    </div>
+
+    <div class="programs-grid">
+      <div class="program-card">
+        <h3>GBS.Market — удобство и скорость на кассе</h3>
+        <img src="../images/gbs-logo.jpg" alt="GBS.Market" class="program-image">
+        <p>Если важна быстрая работа продавцов и интуитивный интерфейс, GBS.Market — отличный выбор для магазина косметики. Система адаптирована под розничную торговлю с большим ассортиментом и частыми акциями:</p>
+        <ul class="program-features">
+          <li>Простой и понятный интерфейс кассира — легко обучить персонал, продажи проходят без задержек.</li>
+          <li>Гибкое создание акций и скидок — настройка по категориям, дням недели или времени суток.</li>
+          <li>Учет остатков по партиям и срокам годности — важно для хранения и ротации косметических средств.</li>
+          <li>Поддержка сканеров, чековых и этикеточных принтеров — ускоряет работу и упрощает маркировку.</li>
+          <li>Интеграция с фискальными регистраторами — соответствие требованиям законодательства Казахстана.</li>
+          <li>Удобная печать ценников и ярлыков — помогает поддерживать порядок на полках.</li>
+        </ul>
+        <p>GBS.Market идеально подойдёт для магазинов с высокой проходимостью, где важна скорость обслуживания и стабильная работа кассы.</p>
+      </div>
+
+      <div class="program-card">
+        <h3>МойСклад — расширенные возможности управления</h3>
+        <img src="../images/moysklad-logo.jpg" alt="МойСклад" class="program-image">
+        <p>Если у вас сеть магазинов, интернет-продажи или потребность в точной аналитике и клиентской базе, МойСклад предоставит весь нужный функционал:</p>
+        <ul class="program-features">
+          <li>Онлайн-доступ с любого устройства — управляйте бизнесом из любой точки.</li>
+          <li>Точный учет остатков — по брендам, сериям, срокам годности, поставщикам.</li>
+          <li>CRM для работы с клиентами — история покупок, скидки, накопительные программы.</li>
+          <li>Интеграция с сайтами и маркетплейсами — синхронизация заказов и остатков в реальном времени.</li>
+          <li>Автоматизация заказов поставщикам — система подскажет, что пора пополнить.</li>
+          <li>Подробная аналитика — по категориям товаров, сотрудникам, выручке и среднему чеку.</li>
+        </ul>
+        <p>МойСклад — это универсальное решение для тех, кто хочет управлять бизнесом эффективно, видеть полную картину и развивать розничную сеть.</p>
+      </div>
+    </div>
+
+    <div class="programs-conclusion">
+      Мы поможем подобрать подходящее программное решение под ваш магазин косметики. Свяжитесь с нами — подберём лучшее решение именно под ваш формат торговли и ассортимент.
+    </div>
+
+    <div style="text-align: center; margin-top: 30px;">
+      <a href="https://wa.me/77765595726?text=Добрый%20день,%20меня%20интересует%20программа%20для%20автоматизации%20магазина%20косметики" 
          class="cta-button" 
          target="_blank">
         Подробнее
@@ -211,26 +544,50 @@
     </div>
   </div>
 
+  <div class="automated-stores">
+    <h2>Автоматизированные нами магазины косметики</h2>
+    <div class="stores-grid">
+      <div class="store-card">
+        <img src="../images/client-logos/lacreme.jpg" alt="La Creme " class="store-image">
+        <p class="store-name">La Creme </p>
+      </div>
+      <div class="store-card">
+        <img src="../images/client-logos/blosskin.jpg" alt="Blosskin" class="store-image">
+        <p class="store-name">Blosskin</p>
+      </div>
+      <div class="store-card">
+        <img src="../images/client-logos/zama.jpg" alt="Zama" class="store-image">
+        <p class="store-name">Zama</p>
+      </div>
+      <div class="store-card">
+        <img src="../images/client-logos/margo-parfum.jpg" alt="Margo Parfum" class="store-image">
+        <p class="store-name">Margo Parfum</p>
+      </div>
+            <div class="store-card">
+        <img src="../images/client-logos/hair-cosmetics.jpg" alt="Hair Cosmetics" class="store-image">
+        <p class="store-name">Hair Cosmetics</p>
+      </div>
+    </div>
+  </div>
+
   <div id="copyright" style="margin-top: 70px;">
     <p>ВСЕ ПРАВА ЗАЩИЩЕНЫ <span style="font-size:18px">&copy;</span> NOVAPOS.KZ </p>
   </div>
-  
   <a href="https://wa.me/77765595726" class="whatsapp-float" target="_blank">
-    <img src="../images/whatsapp.png" alt="WhatsApp">
+      <img src="../images/whatsapp.png" alt="WhatsApp">
   </a>
-  
   <div class="bottom-nav">
     <a href="../feedback/">
-      <i class="fa fa-comments"></i>
-      <span>Обратная связь</span>
+        <i class="fa fa-comments"></i>
+        <span>Обратная связь</span>
     </a>
     <a href="tel:+77765595726">
-      <i class="fa fa-phone"></i>
-      <span>+7 776 559-57-26</span>
+        <i class="fa fa-phone"></i>
+        <span>+7 776 559-57-26</span>
     </a>
     <a href="mailto:info@novapos.kz">
-      <i class="fa fa-envelope"></i>
-      <span>info@novapos.kz</span>
+        <i class="fa fa-envelope"></i>
+        <span>info@novapos.kz</span>
     </a>
     <a href="../cart/">
       <i class="fa fa-shopping-cart"></i>
@@ -241,8 +598,5 @@
       <input type="text" placeholder="Поиск">
     </div>
   </div>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="../scripts/script.js"></script>
 </body>
 </html>
