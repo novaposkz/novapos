@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Это временная страница.">
-  <title>Страница в разработке - NovaPos.kz</title>
+  <meta name="description" content="Автоматизация точек донера и шаурмы: онлайн-кассы, учёт ингредиентов, печать чеков. Быстрое обслуживание и удобное управление продажами!">
+  <title>Донер, шаурма, кебаб - автоматизация</title>
   <link href="../styles/styles.css" rel="stylesheet" type="text/css">
   <link rel="icon" href="../images/favicon.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -26,53 +26,102 @@
   <noscript><div><img src="https://mc.yandex.ru/watch/98771693" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
   <!-- /Yandex.Metrika counter -->
   <style>
-    .under-development {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 60vh;
-      padding: 40px 20px;
+    .doner-hero {
       text-align: center;
-      background-color: #f8f9fa;
+      padding: 40px 20px;
     }
 
-    .under-development i {
-      font-size: 4rem;
+    .doner-hero h1 {
+      font-size: 2.5rem;
+      color: #333;
+      margin-bottom: 40px;
+    }
+
+    .main-content {
+      display: flex;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .image-section {
+      flex: 1;
+    }
+
+    .image-section img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .text-section {
+      flex: 1;
+    }
+
+    .text-section h2 {
+      font-size: 2rem;
       color: #333;
       margin-bottom: 20px;
     }
 
-    .under-development h1 {
-      font-size: 2.5rem;
+    .text-section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .benefits-list {
+      margin-bottom: 30px;
+    }
+
+    .benefits-list h3 {
+      font-size: 1.3rem;
       color: #333;
       margin-bottom: 15px;
     }
 
-    .under-development p {
-      font-size: 1.2rem;
-      color: #666;
-      max-width: 600px;
-      margin: 0 auto;
-      line-height: 1.6;
+    .benefits-list p {
+      margin-bottom: 10px;
+      padding-left: 25px;
+      position: relative;
+    }
+
+    .equipment-list,
+    .features-list,
+    .why-us-list {
+      margin-bottom: 30px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: DodgerBlue;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #1e90ff;
     }
 
     @media (max-width: 768px) {
-      .under-development {
-        min-height: 50vh;
-        padding: 30px 15px;
+      .main-content {
+        flex-direction: column;
       }
 
-      .under-development i {
-        font-size: 3rem;
-      }
-
-      .under-development h1 {
+      .doner-hero h1 {
         font-size: 2rem;
       }
 
-      .under-development p {
-        font-size: 1.1rem;
+      .text-section h2 {
+        font-size: 1.8rem;
       }
     }
   </style>
@@ -107,13 +156,67 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="../scripts/script.js"></script>
 
-  <div class="under-development">
-    <i class="fas fa-tools"></i>
-    <h1>Страница находится в разработке</h1>
-    <p>Мы работаем над созданием качественного контента для вас. Пожалуйста, загляните позже или свяжитесь с нами для получения дополнительной информации.</p>
+  <div class="doner-hero">
+    <h1>Автоматизация точки с шаурмой, донерами и кебабом — быстрый сервис, строгий контроль, максимум прибыли</h1>
   </div>
 
+  <div class="main-content">
+    <div class="image-section">
+      <img src="../images/spheres/doner.jpg" alt="Донер и шаурма">
+    </div>
+    
+    <div class="text-section">
+      <h2>Готовое решение для донерной</h2>
+      <p>В киосках с уличной едой важна каждая секунда: поток клиентов, высокая скорость обслуживания и стабильный контроль. Наша система автоматизации создана именно для этого.</p>
 
+      <div class="benefits-list">
+        <h3>Что даёт автоматизация вашей точки</h3>
+        <p>🌯 Мгновенная работа кассы — заказ оформляется за пару кликов, чек печатается сразу</p>
+        <p>🥩 Учёт мяса, соусов, лаваша и упаковки — никакой путаницы, всё под контролем</p>
+        <p>📉 Уменьшение списаний — программа точно рассчитывает порции и остатки</p>
+        <p>📊 Отчёты по выручке, наценке и самым продаваемым позициям</p>
+        <p>👨‍🍳 Учёт смен и сотрудников — каждый вход под личным паролем, прозрачность в работе</p>
+      </div>
+
+      <div class="equipment-list">
+        <h3>Оборудование для донерной</h3>
+        <p>🖨 Принтер чеков и заказов на кухню — ускорение процессов и исключение ошибок.</p>
+        <p>💳 POS-терминал — приём безналичных оплат, интеграция с банками.</p>
+        <p>📊 Кассовая программа — удобное меню, учёт по рецептам, скидки, акции.</p>
+        <p>📲 Терминал сбора данных — для ревизии склада и контроля остатков.</p>
+        <p>📡 Сканер штрих-кодов — при приёмке и продаже сопутствующих товаров (десертов, напитков).</p>
+        <p>💰 Денежный ящик — защита наличных средств.</p>
+      </div>
+
+      <div class="features-list">
+        <h3>Дополнительные возможности</h3>
+        <p>📱 Удалённый контроль с телефона — отчёты приходят в любое время</p>
+        <p>🎁 Скидки, акции, бонусы — гибкая система лояльности для постоянных клиентов</p>
+        <p>🛒 Работа с эквайрингом и QR-оплатой — для удобства покупателей</p>
+        <p>⚙️ Стабильная работа 24/7 — система не тормозит, даже при пиковых нагрузках</p>
+      </div>
+
+      <div class="why-us-list">
+        <h3>Почему выбирают нас?</h3>
+        <p>✅ Полная автоматизация "под ключ" — от оборудования до настройки и обучения.</p>
+        <p>✅ Простой и понятный интерфейс — персонал работает без ошибок уже в первый день.</p>
+        <p>✅ Надёжная техподдержка — мы всегда на связи.</p>
+      </div>
+
+      <p>🌯 Автоматизируйте донерную — сосредоточьтесь на атмосфере, вкусе и гостях. Остальное сделаем мы.</p>
+      <p>📞 Напишите нам — подберём надёжное решение для вашей точки, будь это шаурма на вынос, донер-киоск или сеть быстрого питания.</p>
+
+      <a href="https://wa.me/77765595726?text=Добрый%20день,%20меня%20интересует%20автоматизация%20точек%20шаурмы" 
+         class="cta-button" 
+         target="_blank">
+        Подробнее
+      </a>
+    </div>
+  </div>
+
+  <div id="copyright" style="margin-top: 70px;">
+    <p>ВСЕ ПРАВА ЗАЩИЩЕНЫ <span style="font-size:18px">&copy;</span> NOVAPOS.KZ </p>
+  </div>
   <a href="https://wa.me/77765595726" class="whatsapp-float" target="_blank">
       <img src="../images/whatsapp.png" alt="WhatsApp">
   </a>
@@ -131,13 +234,13 @@
         <span>info@novapos.kz</span>
     </a>
     <a href="../cart/">
-			<i class="fa fa-shopping-cart"></i>
-			<span class="cart-text">Корзина</span>
-		</a>
+      <i class="fa fa-shopping-cart"></i>
+      <span class="cart-text">Корзина</span>
+    </a>
     <div class="search-bar">
-			<i class="fa fa-search"></i>
-			<input type="text" placeholder="Поиск">
-		</div>
+      <i class="fa fa-search"></i>
+      <input type="text" placeholder="Поиск">
+    </div>
   </div>
 </body>
 </html>
