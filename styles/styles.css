@@ -1808,5 +1808,14 @@ body {
   }
 }
 
+/* Remove contact-specific styles */
+.branch-list,
+.branch,
+.social-links,
+.social-links a,
+.social-links a:hover {
+  /* These styles will be removed */
+}
+
 
 

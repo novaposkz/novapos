@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Наши контакты и адреса филиалов по Казахстану. Свяжитесь с нами по телефону или приезжайте в ближайший офис – всегда рады помочь!">
-	<title>Свяжитесь с нами</title>
+	<title>Офисы и контакты</title>
 	<link href="../styles/styles.css" rel="stylesheet" type="text/css">
 	<link rel="icon" href="../images/favicon.png">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -25,76 +25,125 @@
 	<noscript><div><img src="https://mc.yandex.ru/watch/98771693" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 	<!-- /Yandex.Metrika counter -->
 	<style>
-		* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+		.contacts-container {
+			display: flex;
+			gap: 30px;
+			padding: 40px 20px;
+			max-width: 1400px;
+			margin: 0 auto;
 		}
 
-		body {
-		    font-family: Arial, sans-serif;
-		    background-color: #f0f0f0;
-		    color: #333;
-		}
-		
-		section {
-			padding: 20px;
+		.cities-list {
+			flex: 0 0 350px;
+			background: white;
+			border-radius: 10px;
+			box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 		}
 
-		header {
-		    text-align: center;
-		    margin-bottom: 40px;
+		.city-item {
+			padding: 15px 20px;
+			border-bottom: 1px solid #eee;
+			cursor: pointer;
+			transition: all 0.3s ease;
 		}
 
-		h1 {
-		    font-size: 2.5rem;
-		    color: #2c3e50;
+		.city-item:hover {
+			background: #f8f9fa;
 		}
 
-		.branch-list {
-		    display: flex;
-		    flex-direction: column;
-		    gap: 20px;
+		.city-item.main-office {
+			background: #e3f2fd;
+			border-left: 4px solid #2196f3;
 		}
 
-		.branch {
-		    background-color: white;
-		    border-radius: 8px;
-		    padding: 20px;
-		    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		.city-name {
+			font-size: 1.1rem;
+			color: #2196f3;
+			font-weight: 500;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
 		}
 
-		h2 {
-		    font-size: 1.75rem;
-		    color: #2980b9;
+		.city-name i {
+			transition: transform 0.3s ease;
 		}
 
-		p {
-		    font-size: 1rem;
-		    margin: 10px 0;
+		.city-item.active .city-name i {
+			transform: rotate(180deg);
 		}
 
-		a {
-		    text-decoration: none;
-		    color: #2980b9;
+		.city-details {
+			display: none;
+			padding: 15px 0 0 0;
 		}
 
-		a:hover {
-		    text-decoration: underline;
+		.city-item.active .city-details {
+			display: block;
 		}
 
-		.social-links {
-		    margin-top: 10px;
+		.city-info {
+			display: flex;
+			align-items: flex-start;
+			gap: 10px;
+			margin-bottom: 10px;
+			color: #666;
 		}
 
-		.social-links a {
-		    margin-right: 15px;
-		    font-size: 1rem;
-		    color: #34495e;
+		.city-info i {
+			color: #2196f3;
+			margin-top: 3px;
 		}
 
-		.social-links a:hover {
-		    color: #2980b9;
+		.map-container {
+			flex: 1;
+			min-height: 600px;
+			border-radius: 10px;
+			overflow: hidden;
+			box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+		}
+
+		@media (max-width: 1024px) {
+			.contacts-container {
+				flex-direction: column;
+				padding: 20px;
+				padding-bottom: 80px;
+			}
+
+			.cities-list {
+				flex: none;
+				width: 100%;
+				margin-bottom: 30px;
+			}
+
+			.map-container {
+				width: 100%;
+				height: 400px;
+				min-height: auto;
+				margin-bottom: 20px;
+			}
+
+			/* Adjust map iframe for mobile */
+			.map-container iframe {
+				width: 100% !important;
+				height: 400px !important;
+			}
+		}
+
+		/* Additional breakpoint for smaller screens */
+		@media (max-width: 480px) {
+			.contacts-container {
+				padding-bottom: 70px;
+			}
+
+			.map-container {
+				height: 300px;
+				margin-bottom: 15px;
+			}
+
+			.map-container iframe {
+				height: 300px !important;
+			}
 		}
 	</style>
 </head>
@@ -128,63 +177,303 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="../scripts/script.js"></script>
 
-  <header>
-    <h1 style="padding-top: 40px;">Контакты наших филиалов</h1>
-  </header>
+	<div class="contacts-container">
+		<div class="cities-list">
+			<div class="city-item main-office">
+				<div class="city-name">
+					Уральск
+					<i class="fa fa-caret-down"></i>
+				</div>
+				<div class="city-details">
+					<div class="city-info">
+						<i class="fa fa-map-marker"></i>
+						<span>ТД Ваш ДОМ; Улица Касыма Аманжолова, 95; 21 офис; 3 этаж</span>
+					</div>
+					<div class="city-info">
+						<i class="fa fa-phone"></i>
+						<span>+7 (776) 559-57-26</span>
+					</div>
+				</div>
+			</div>
+			<div class="city-item">
+				<div class="city-name">
+					Астана
+					<i class="fa fa-caret-down"></i>
+				</div>
+				<div class="city-details">
+					<div class="city-info">
+						<i class="fa fa-map-marker"></i>
+						<span>Адрес офиса в Астане</span>
+					</div>
+					<div class="city-info">
+						<i class="fa fa-phone"></i>
+						<span>+7 (700) 211-89-63</span>
+					</div>
+				</div>
+			</div>
+			<div class="city-item">
+				<div class="city-name">
+					Алматы
+					<i class="fa fa-caret-down"></i>
+				</div>
+				<div class="city-details">
+					<div class="city-info">
+						<i class="fa fa-map-marker"></i>
+						<span>Турксибский район, ул. Бухтарминская 11</span>
+					</div>
+					<div class="city-info">
+						<i class="fa fa-phone"></i>
+						<span>+7 (706) 411-26-95</span>
+					</div>
+				</div>
+			</div>
+			<div class="city-item">
+				<div class="city-name">
+					Актобе
+					<i class="fa fa-caret-down"></i>
+				</div>
+				<div class="city-details">
+					<div class="city-info">
+						<i class="fa fa-map-marker"></i>
+						<span>БЦ "Асан", улица Аз Наурыз, 17</span>
+					</div>
+					<div class="city-info">
+						<i class="fa fa-phone"></i>
+						<span>+7 (706) 604-08-95</span>
+					</div>
+				</div>
+			</div>
+			<div class="city-item">
+				<div class="city-name">
+					Атырау
+					<i class="fa fa-caret-down"></i>
+				</div>
+				<div class="city-details">
+					<div class="city-info">
+						<i class="fa fa-map-marker"></i>
+						<span>Адрес офиса в Атырау</span>
+					</div>
+					<div class="city-info">
+						<i class="fa fa-phone"></i>
+						<span>+7 (XXX) XXX-XX-XX</span>
+					</div>
+				</div>
+			</div>
+			<div class="city-item">
+				<div class="city-name">
+					Актау
+					<i class="fa fa-caret-down"></i>
+				</div>
+				<div class="city-details">
+					<div class="city-info">
+						<i class="fa fa-map-marker"></i>
+						<span>Адрес офиса в Актау</span>
+					</div>
+					<div class="city-info">
+						<i class="fa fa-phone"></i>
+						<span>+7 (XXX) XXX-XX-XX</span>
+					</div>
+				</div>
+			</div>
+			<div class="city-item">
+				<div class="city-name">
+					Шымкент
+					<i class="fa fa-caret-down"></i>
+				</div>
+				<div class="city-details">
+					<div class="city-info">
+						<i class="fa fa-map-marker"></i>
+						<span>Адрес офиса в Шымкенте</span>
+					</div>
+					<div class="city-info">
+						<i class="fa fa-phone"></i>
+						<span>+7 (XXX) XXX-XX-XX</span>
+					</div>
+				</div>
+			</div>
+			<div class="city-item">
+				<div class="city-name">
+					Тараз
+					<i class="fa fa-caret-down"></i>
+				</div>
+				<div class="city-details">
+					<div class="city-info">
+						<i class="fa fa-map-marker"></i>
+						<span>Адрес офиса в Таразе</span>
+					</div>
+					<div class="city-info">
+						<i class="fa fa-phone"></i>
+						<span>+7 (XXX) XXX-XX-XX</span>
+					</div>
+				</div>
+			</div>
+			<div class="city-item">
+				<div class="city-name">
+					Туркестан
+					<i class="fa fa-caret-down"></i>
+				</div>
+				<div class="city-details">
+					<div class="city-info">
+						<i class="fa fa-map-marker"></i>
+						<span>Адрес офиса в Туркестане</span>
+					</div>
+					<div class="city-info">
+						<i class="fa fa-phone"></i>
+						<span>+7 (XXX) XXX-XX-XX</span>
+					</div>
+				</div>
+			</div>
+			<div class="city-item">
+				<div class="city-name">
+					Кызылорда
+					<i class="fa fa-caret-down"></i>
+				</div>
+				<div class="city-details">
+					<div class="city-info">
+						<i class="fa fa-map-marker"></i>
+						<span>Адрес офиса в Кызылорде</span>
+					</div>
+					<div class="city-info">
+						<i class="fa fa-phone"></i>
+						<span>+7 (XXX) XXX-XX-XX</span>
+					</div>
+				</div>
+			</div>
+			<div class="city-item">
+				<div class="city-name">
+					Жезказган
+					<i class="fa fa-caret-down"></i>
+				</div>
+				<div class="city-details">
+					<div class="city-info">
+						<i class="fa fa-map-marker"></i>
+						<span>Адрес офиса в Жезказгане</span>
+					</div>
+					<div class="city-info">
+						<i class="fa fa-phone"></i>
+						<span>+7 (XXX) XXX-XX-XX</span>
+					</div>
+				</div>
+			</div>
+			<div class="city-item">
+				<div class="city-name">
+					Караганда
+					<i class="fa fa-caret-down"></i>
+				</div>
+				<div class="city-details">
+					<div class="city-info">
+						<i class="fa fa-map-marker"></i>
+						<span>Адрес офиса в Караганде</span>
+					</div>
+					<div class="city-info">
+						<i class="fa fa-phone"></i>
+						<span>+7 (XXX) XXX-XX-XX</span>
+					</div>
+				</div>
+			</div>
+			<div class="city-item">
+				<div class="city-name">
+					Экибастуз
+					<i class="fa fa-caret-down"></i>
+				</div>
+				<div class="city-details">
+					<div class="city-info">
+						<i class="fa fa-map-marker"></i>
+						<span>Адрес офиса в Экибастузе</span>
+					</div>
+					<div class="city-info">
+						<i class="fa fa-phone"></i>
+						<span>+7 (XXX) XXX-XX-XX</span>
+					</div>
+				</div>
+			</div>
+			<div class="city-item">
+				<div class="city-name">
+					Костанай
+					<i class="fa fa-caret-down"></i>
+				</div>
+				<div class="city-details">
+					<div class="city-info">
+						<i class="fa fa-map-marker"></i>
+						<span>Адрес офиса в Костанае</span>
+					</div>
+					<div class="city-info">
+						<i class="fa fa-phone"></i>
+						<span>+7 (XXX) XXX-XX-XX</span>
+					</div>
+				</div>
+			</div>
+			<div class="city-item">
+				<div class="city-name">
+					Павлодар
+					<i class="fa fa-caret-down"></i>
+				</div>
+				<div class="city-details">
+					<div class="city-info">
+						<i class="fa fa-map-marker"></i>
+						<span>Адрес офиса в Павлодаре</span>
+					</div>
+					<div class="city-info">
+						<i class="fa fa-phone"></i>
+						<span>+7 (XXX) XXX-XX-XX</span>
+					</div>
+				</div>
+			</div>
+			<div class="city-item">
+				<div class="city-name">
+					Петропавловск
+					<i class="fa fa-caret-down"></i>
+				</div>
+				<div class="city-details">
+					<div class="city-info">
+						<i class="fa fa-map-marker"></i>
+						<span>Адрес офиса в Петропавловске</span>
+					</div>
+					<div class="city-info">
+						<i class="fa fa-phone"></i>
+						<span>+7 (XXX) XXX-XX-XX</span>
+					</div>
+				</div>
+			</div>
+			<div class="city-item">
+				<div class="city-name">
+					Семей
+					<i class="fa fa-caret-down"></i>
+				</div>
+				<div class="city-details">
+					<div class="city-info">
+						<i class="fa fa-map-marker"></i>
+						<span>Адрес офиса в Семее</span>
+					</div>
+					<div class="city-info">
+						<i class="fa fa-phone"></i>
+						<span>+7 (XXX) XXX-XX-XX</span>
+					</div>
+				</div>
+			</div>
 
-  <section class="branch-list">
-    <div class="branch">
-      <h2>Уральск</h2>
-      <p>Call-центр: <a href="tel:+77765595726">+7 (776) 559-57-26</a></p>
-      <div class="social-links">
-      	<i class="fa fa-instagram" style="font-size:24px"></i>
-        <a href="https://www.instagram.com/novapos.kz" target="_blank">Instagram</a>
-        <i class="fa fa-whatsapp" style="font-size:24px"></i>
-        <a href="https://wa.me/77765595726" target="_blank">WhatsApp</a>
-      </div>
-      <p>Адрес: ТД Ваш ДОМ; Улица Касыма Аманжолова, 95; 21 офис; 3 этаж.</p>
-    </div>
-
-    <div class="branch">
-      <h2>Астана</h2>
-      <p>Телефон: <a href="tel:+77002118963">+7 (700) 211-89-63</a></p>
-      <div class="social-links">
-      	<i class="fa fa-instagram" style="font-size:24px"></i>
-        <a href="https://www.instagram.com/novapos.astana" target="_blank">Instagram</a>
-        <i class="fa fa-whatsapp" style="font-size:24px"></i>
-        <a href="https://wa.me/77002118963" target="_blank">WhatsApp</a>
-      </div>
-    </div>
-
-    <div class="branch">
-      <h2>Алматы</h2>
-      <p>Телефон: <a href="tel:+77064112695">+7 (706) 411-26-95</a></p>
-      <div class="social-links">
-      	<i class="fa fa-instagram" style="font-size:24px"></i>
-        <a href="https://www.instagram.com/novapos.almaty" target="_blank">Instagram</a>
-        <i class="fa fa-whatsapp" style="font-size:24px"></i>
-        <a href="https://wa.me/77765595726" target="_blank">WhatsApp</a>
-      </div>
-      <p>Адрес: Турксибский район, ул. Бухтарминская 11</p>
-    </div>
-
-    <div class="branch">
-      <h2>Актобе</h2>
-      <p>Телефон: <a href="tel:+77066040895">+7 (706) 604-08-95</a></p>
-      <div class="social-links">
-      	<i class="fa fa-instagram" style="font-size:24px"></i>
-        <a href="https://www.instagram.com/novapos.aktobe" target="_blank">Instagram</a>
-        <i class="fa fa-whatsapp" style="font-size:24px"></i>
-        <a href="https://wa.me/77066040895" target="_blank">WhatsApp</a>
-      </div>
-      <p>Адрес: БЦ "Асан", улица Аз Наурыз, 17.</p>
-    </div>
-  </section>
-
-
-	<div id="copyright">
-		<p>ВСЕ ПРАВА ЗАЩИЩЕНЫ <span style="font-size:18px">&copy;</span> NOVAPOS.KZ </p>
+			<div class="city-item">
+				<div class="city-name">
+					Усть-Каменогорск
+					<i class="fa fa-caret-down"></i>
+				</div>
+				<div class="city-details">
+					<div class="city-info">
+						<i class="fa fa-map-marker"></i>
+						<span>Адрес офиса в Усть-Каменогорске</span>
+					</div>
+					<div class="city-info">
+						<i class="fa fa-phone"></i>
+						<span>+7 (XXX) XXX-XX-XX</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="map-container">
+			<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A48b96e7952b00edaad66e9b2f902ebdddba1f9babb7b9b3985ffa3680e2f8ec3&amp;width=100%&amp;height=400&amp;lang=en_FR&amp;scroll=true"></script>
+		</div>
 	</div>
+
 	<a href="https://wa.me/77765595726" class="whatsapp-float" target="_blank">
     	<img src="../images/whatsapp.png" alt="WhatsApp">
 	</a>
@@ -211,5 +500,25 @@
 			<input type="text" placeholder="Поиск">
 		</div>
 	</div>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			const cityItems = document.querySelectorAll('.city-item');
+			
+			cityItems.forEach(item => {
+				item.addEventListener('click', function() {
+					// Close all other items
+					cityItems.forEach(otherItem => {
+						if (otherItem !== this) {
+							otherItem.classList.remove('active');
+						}
+					});
+					
+					// Toggle current item
+					this.classList.toggle('active');
+				});
+			});
+		});
+	</script>
 </body>
 </html>
