@@ -261,6 +261,64 @@
                 width: 100%;
             }
         }
+
+        .cash-programs-flex {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        .cash-program-card {
+            min-width: 260px;
+            max-width: 350px;
+            height: 370px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            box-sizing: border-box;
+        }
+        .cash-program-logo {
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 180px;
+        }
+        .cash-program-logo img {
+            max-width: 140px;
+            max-height: 140px;
+            border-radius: 14px;
+            box-shadow: 0 2px 8px rgba(102,126,234,0.07);
+        }
+        @media (max-width: 900px) {
+            .cash-programs-flex {
+                gap: 20px;
+            }
+            .cash-program-card {
+                height: 340px;
+            }
+        }
+        @media (max-width: 768px) {
+            .cash-programs-flex {
+                flex-direction: column;
+                align-items: center;
+                gap: 24px;
+            }
+            .cash-program-card {
+                min-width: 0;
+                max-width: 100%;
+                height: auto;
+            }
+            .cash-program-logo {
+                height: 120px;
+            }
+            .cash-program-logo img {
+                max-width: 90px;
+                max-height: 90px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -391,6 +449,35 @@
                 <h3>Статьи в разработке</h3>
                 <p>Скоро здесь появятся подробные текстовые инструкции с скриншотами и пошаговыми руководствами</p>
             </div>
+        </div>
+
+        <div class="section-header" style="margin-top:60px;">
+            <i class="fa fa-cash-register"></i>
+            <h2>Кассовые программы</h2>
+        </div>
+        <div class="cash-programs-flex">
+            <a href="videos/gbs-market/index.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card cash-program-card">
+                    <div class="card-image cash-program-logo">
+                        <img src="../images/gbs-market.jpg" alt="GBS.Market Logo">
+                    </div>
+                    <div class="card-content" style="text-align:center;">
+                        <h3 class="card-title">GBS.Market</h3>
+                        <p class="card-description">Современная кассовая программа для автоматизации торговли и управления бизнесом.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="videos/moysklad/index.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card cash-program-card">
+                    <div class="card-image cash-program-logo">
+                        <img src="../images/moysklad.jpg" alt="МойСклад Logo">
+                    </div>
+                    <div class="card-content" style="text-align:center;">
+                        <h3 class="card-title">МойСклад</h3>
+                        <p class="card-description">Облачный сервис для управления торговлей, складом и финансами.</p>
+                    </div>
+                </div>
+            </a>
         </div>
     </div>
     
