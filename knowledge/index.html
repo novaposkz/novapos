@@ -262,12 +262,16 @@
             }
         }
 
-        .cash-programs-flex {
+        .cash-programs-center-wrapper {
             display: flex;
             justify-content: center;
-            align-items: stretch;
-            gap: 40px;
+            width: 100%;
+        }
+        .cash-programs-grid {
             margin-bottom: 60px;
+            max-width: 800px;
+            width: 100%;
+            justify-content: center;
         }
         .cash-program-card {
             min-width: 260px;
@@ -293,18 +297,14 @@
             box-shadow: 0 2px 8px rgba(102,126,234,0.07);
         }
         @media (max-width: 900px) {
-            .cash-programs-flex {
+            .cash-programs-grid {
+                max-width: 100%;
                 gap: 20px;
-            }
-            .cash-program-card {
-                height: 340px;
             }
         }
         @media (max-width: 768px) {
-            .cash-programs-flex {
-                flex-direction: column;
-                align-items: center;
-                gap: 24px;
+            .cash-programs-center-wrapper {
+                justify-content: flex-start;
             }
             .cash-program-card {
                 min-width: 0;
@@ -455,29 +455,31 @@
             <i class="fa fa-cash-register"></i>
             <h2>Кассовые программы</h2>
         </div>
-        <div class="cash-programs-flex">
-            <a href="videos/gbs-market/index.html" class="content-card-link" style="text-decoration:none;color:inherit;">
-                <div class="content-card cash-program-card">
-                    <div class="card-image cash-program-logo">
-                        <img src="../images/gbs-market.jpg" alt="GBS.Market Logo">
+        <div class="cash-programs-center-wrapper">
+            <div class="content-grid cash-programs-grid">
+                <a href="videos/gbs-market/index.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                    <div class="content-card cash-program-card">
+                        <div class="card-image cash-program-logo">
+                            <img src="../images/gbs-market.jpg" alt="GBS.Market Logo">
+                        </div>
+                        <div class="card-content" style="text-align:center;">
+                            <h3 class="card-title">GBS.Market</h3>
+                            <p class="card-description">Современная кассовая программа для автоматизации торговли и управления бизнесом.</p>
+                        </div>
                     </div>
-                    <div class="card-content" style="text-align:center;">
-                        <h3 class="card-title">GBS.Market</h3>
-                        <p class="card-description">Современная кассовая программа для автоматизации торговли и управления бизнесом.</p>
+                </a>
+                <a href="videos/moysklad/index.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                    <div class="content-card cash-program-card">
+                        <div class="card-image cash-program-logo">
+                            <img src="../images/moysklad.jpg" alt="МойСклад Logo">
+                        </div>
+                        <div class="card-content" style="text-align:center;">
+                            <h3 class="card-title">МойСклад</h3>
+                            <p class="card-description">Облачный сервис для управления торговлей, складом и финансами.</p>
+                        </div>
                     </div>
-                </div>
-            </a>
-            <a href="videos/moysklad/index.html" class="content-card-link" style="text-decoration:none;color:inherit;">
-                <div class="content-card cash-program-card">
-                    <div class="card-image cash-program-logo">
-                        <img src="../images/moysklad.jpg" alt="МойСклад Logo">
-                    </div>
-                    <div class="card-content" style="text-align:center;">
-                        <h3 class="card-title">МойСклад</h3>
-                        <p class="card-description">Облачный сервис для управления торговлей, складом и финансами.</p>
-                    </div>
-                </div>
-            </a>
+                </a>
+            </div>
         </div>
     </div>
     
