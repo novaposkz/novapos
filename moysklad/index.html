@@ -1,136 +1,292 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="МойСклад – удобная кассовая программа для бизнеса. Мы – официальные партнёры, помогаем с подключением, настройкой и поддержкой.">
-	<title>Кассовая программа - МойСклад</title>
-	<link href="../styles/styles.css" rel="stylesheet" type="text/css">
-	<link rel="icon" href="../images/favicon.png">
-	<!-- Font Awesome CDN-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet"/>
-  <!-- Yandex.Metrika counter -->
-	<script type="text/javascript" >
-	   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-	   m[i].l=1*new Date();
-	   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-	   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-	   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="МойСклад – удобная кассовая программа для бизнеса. Мы – официальные партнёры, помогаем с подключением, настройкой и поддержкой.">
+    <title>МойСклад - Кассовая программа для бизнеса</title>
+    <link href="../styles/styles.css" rel="stylesheet" type="text/css">
+    <link href="../styles/design-system.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="../images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();
+       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-	   ym(98771693, "init", {
-	        clickmap:true,
-	        trackLinks:true,
-	        accurateTrackBounce:true
-	   });
-	</script>
-	<noscript><div><img src="https://mc.yandex.ru/watch/98771693" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-	<!-- /Yandex.Metrika counter -->
-  <style>
-    .image-container {
-      position: relative;
-      width: 100%;
-      max-width: 600px;
-    }
-
-    .main-image {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .download-btn {
-      position: absolute;
-      bottom: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      padding: 10px 20px;
-      background-color: DodgerBlue;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-
-    .download-btn:hover {
-      background-color: #1e90ff;
-    }
-    .responsive {
-      width: 100%;
-      height: auto;
-    }
-  </style>
+       ym(98771693, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/98771693" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <style>
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        .moysklad-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            margin-bottom: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .moysklad-header h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: 2px;
+        }
+        .moysklad-header p {
+            font-size: 1.3rem;
+            margin: 20px 0 0 0;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+        .moysklad-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .hero-section {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .hero-logo {
+            max-width: 300px;
+            margin: 0 auto 30px auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .hero-description {
+            font-size: 1.2rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+        .features-section {
+            margin-bottom: 60px;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .feature-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        .feature-card i {
+            font-size: 3rem;
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+        .feature-card h3 {
+            font-size: 1.4rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .feature-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+        .register-section {
+            background: white;
+            border-radius: 15px;
+            padding: 50px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 60px;
+        }
+        .register-section h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .register-section p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        .register-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 600;
+            padding: 18px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            box-shadow: 0 4px 16px rgba(102,126,234,0.13);
+            transition: background 0.2s, transform 0.2s;
+        }
+        .register-btn:hover {
+            background: linear-gradient(90deg, #764ba2 0%, #667eea 100%);
+            transform: translateY(-2px) scale(1.04);
+        }
+        @media (max-width: 768px) {
+            .moysklad-header h1 {
+                font-size: 2.5rem;
+            }
+            .moysklad-header p {
+                font-size: 1.1rem;
+            }
+            .hero-logo {
+                max-width: 200px;
+            }
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .register-section {
+                padding: 30px 20px;
+            }
+            .register-section h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-	<div class="navigation-bar-container">
-		<div class="nav-container">
-			<div class="logo-container">
-				<a href="../"><img src="../images/novapos5.png" alt="NovaPos logo" id="logo"></a>
-			</div>
-			<div class="navbar">
-				<div class="nav-mobile">
-					<a href="#" id="nav-toggle"><span></span></a>
-				</div>
-				<ul class="nav-list">
-					<li><a href="../about/">О нас</a></li>
-					<li><a href="../shop/">Магазин</a></li>
-					<li><a href="../trusted/">Нам доверяют</a></li>
-          <li><a href="#">Помощь<i class="fa fa-caret-down"></i></a>
-            <ul class="nav-dropdown">
-              <li><a href="../drivers/">Драйверы</a></li>
-              <li><a href="../knowledge/">База знаний</a></li>
-            </ul>
-          </li>
-          <li><a href="../moysklad/">МойСклад</a></li>
-          <li><a href="../contacts/">Контакты</a></li>
-          <li><a href="../partnership/">Стать партнером</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="../scripts/script.js"></script>
-  <h2 style="text-align:center">МойСклад — интернет-сервис управления торговлей и складом.</h2>
-  <img src="../images/moysklad2.png" alt="" class="responsive">
-  <p style="text-align:center;font-size:20px">Все, что нужно для малого бизнеса в Казахстане, — в одной системе: продажи, закупки, склад, финансы и производство</p>
-  <div class="image-container" style="width:400px; margin:0 auto;">
-    <img src="../images/moysklad.png" alt="Logo" class="main-image">
-    <a href="https://www.moysklad.kz/register/?p=2024-3951" target="_blank">
-        <button class="download-btn">РЕГИСТРАЦИЯ</button>
-    </a>
-  </div>
+    <div class="navigation-bar-container">
+        <div class="nav-container">
+            <div class="logo-container">
+                <a href="../"><img src="../images/novapos5.png" alt="NovaPos logo" id="logo"></a>
+            </div>
+            <div class="navbar">
+                <div class="nav-mobile">
+                    <a href="#" id="nav-toggle"><span></span></a>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="../about/">О нас</a></li>
+                    <li><a href="../shop/">Магазин</a></li>
+                    <li><a href="../trusted/">Нам доверяют</a></li>
+                    <li><a href="#">Помощь<i class="fa fa-caret-down"></i></a>
+                        <ul class="nav-dropdown">
+                            <li><a href="../drivers/">Драйверы</a></li>
+                            <li><a href="../knowledge/">База знаний</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../moysklad/">МойСклад</a></li>
+                    <li><a href="../contacts/">Контакты</a></li>
+                    <li><a href="../partnership/">Стать партнером</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="../scripts/script.js"></script>
 
-	<div id="copyright">
-		<p>ВСЕ ПРАВА ЗАЩИЩЕНЫ <span style="font-size:18px">&copy;</span> NOVAPOS.KZ </p>
-	</div>
-  <a href="https://wa.me/77765595726" class="whatsapp-float" target="_blank">
-      <img src="../images/whatsapp.png" alt="WhatsApp">
-  </a>
+    <div class="moysklad-header">
+        <h1>МойСклад</h1>
+        <p>Облачная система управления торговлей и складом для вашего бизнеса</p>
+    </div>
 
-  <div class="bottom-nav">
-    <a href="../feedback/">
-        <i class="fa fa-comments"></i>
-        <span>Обратная связь</span>
+    <div class="moysklad-container">
+        <div class="hero-section">
+            <img src="../images/moysklad-logo.jpg" alt="МойСклад" class="hero-logo">
+            <p class="hero-description">
+                МойСклад — это современный облачный сервис, который объединяет все процессы вашего бизнеса в одной системе: 
+                продажи, закупки, складской учет, финансы и производство. Работайте из любой точки мира с любого устройства.
+            </p>
+        </div>
+
+        <div class="features-section">
+            <div class="section-header">
+                <i class="fa fa-star"></i>
+                <h2>Преимущества МойСклад</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fa fa-cloud"></i>
+                    <h3>Облачная система</h3>
+                    <p>Доступ к данным из любой точки мира через браузер, планшет или смартфон. Никаких установок и обновлений.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fa fa-link"></i>
+                    <h3>Интеграции</h3>
+                    <p>Легко интегрируется с онлайн-кассами, интернет-магазинами, маркетплейсами и CRM-системами.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fa fa-bar-chart"></i>
+                    <h3>Аналитика и отчеты</h3>
+                    <p>Мощные инструменты для анализа продаж, остатков, прибыли и эффективности работы сотрудников.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fa fa-users"></i>
+                    <h3>Многопользовательский режим</h3>
+                    <p>Гибкая система прав доступа для сотрудников. Каждый работает в своей зоне ответственности.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fa fa-cogs"></i>
+                    <h3>Гибкие настройки</h3>
+                    <p>Настройте систему под особенности вашего бизнеса. Создавайте собственные поля и справочники.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fa fa-lock"></i>
+                    <h3>Безопасность данных</h3>
+                    <p>Надежное хранение информации с автоматическим резервным копированием и защитой от потери данных.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="register-section">
+            <h2>Начните работу с МойСклад</h2>
+            <p>Зарегистрируйтесь прямо сейчас и получите доступ к полному функционалу системы</p>
+            <a href="https://www.moysklad.kz/register/?p=2024-3951" target="_blank" class="register-btn">
+                <i class="fa fa-user-plus"></i> Зарегистрироваться
+            </a>
+        </div>
+    </div>
+
+    <div id="copyright">
+        <p>ВСЕ ПРАВА ЗАЩИЩЕНЫ <span style="font-size:18px">&copy;</span> NOVAPOS.KZ </p>
+    </div>
+    <a href="https://wa.me/77765595726" class="whatsapp-float" target="_blank">
+        <img src="../images/whatsapp.png" alt="WhatsApp">
     </a>
-    <a href="tel:+77765595726">
-        <i class="fa fa-phone"></i>
-        <span>+7 776 559-57-26</span>
-    </a>
-    <a href="mailto:info@novapos.kz">
-        <i class="fa fa-envelope"></i>
-        <span>info@novapos.kz</span>
-    </a>
-    <a href="../cart/">
-			<i class="fa fa-shopping-cart"></i>
-			<span class="cart-text">Корзина</span>
-		</a>
-    <div class="search-bar">
-			<i class="fa fa-search"></i>
-			<input type="text" placeholder="Поиск">
-		</div>
-  </div>
+
+    <div class="bottom-nav">
+        <a href="../feedback/">
+            <i class="fa fa-comments"></i>
+            <span>Обратная связь</span>
+        </a>
+        <a href="tel:+77765595726">
+            <i class="fa fa-phone"></i>
+            <span>+7 776 559-57-26</span>
+        </a>
+        <a href="mailto:info@novapos.kz">
+            <i class="fa fa-envelope"></i>
+            <span>info@novapos.kz</span>
+        </a>
+        <a href="../cart/">
+            <i class="fa fa-shopping-cart"></i>
+            <span class="cart-text">Корзина</span>
+        </a>
+        <div class="search-bar">
+            <i class="fa fa-search"></i>
+            <input type="text" placeholder="Поиск">
+        </div>
+    </div>
 </body>
 </html>
