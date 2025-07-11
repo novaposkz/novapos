@@ -1,435 +1,475 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Компании, которые выбрали нашу программу для автоматизации торговли. Доверьтесь опыту успешных бизнесов!">
-	<title>Нам доверяют</title>
-	<link href="../styles/styles.css" rel="stylesheet" type="text/css">
-	<link rel="icon" href="../images/favicon.png">
-	<!-- Font Awesome CDN-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet"/>
-  <!-- Yandex.Metrika counter -->
-  <script type="text/javascript" >
-     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-     m[i].l=1*new Date();
-     for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-     k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-     (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Компании, которые выбрали нашу программу для автоматизации торговли. Доверьтесь опыту успешных бизнесов!">
+    <title>Нам доверяют</title>
+    <link href="../styles/styles.css" rel="stylesheet" type="text/css">
+    <link href="../styles/design-system.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="../images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();
+       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-     ym(98771693, "init", {
-          clickmap:true,
-          trackLinks:true,
-          accurateTrackBounce:true
-     });
-  </script>
-  <noscript><div><img src="https://mc.yandex.ru/watch/98771693" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-  <!-- /Yandex.Metrika counter -->
-	<style>
-  /* Trusted Section */
-
-  .trusted-section {
-    background-color: #f0f0f0;
-    text-align: center;
-    padding: 50px 20px;
-    }
-
-    .trusted-section h2 {
-        font-size: 2.5em;
-        margin-bottom: 30px;
-        color: #333;
-    }
-
-    .logos-container {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
-        justify-items: center;
-    }
-
-    .logo-item {
-        background-color: white;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        text-align: center;
-        padding: 10px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    .logo-item img {
-        max-width: 100%;
-        height: 270px;
-        object-fit: contain;
-    }
-
-    .company-name {
-        font-weight: bold;
-        color: #333;
-        margin: 10px 0 5px;
-        font-size: 1.1em;
-    }
-
-    .logo-item p {
-        margin-top: 5px;
-        font-size: 0.9em;
-        color: #666;
-    }
-
-    @media (max-width: 768px) {
-        .logos-container {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
+       ym(98771693, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/98771693" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <style>
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
         }
-
-        .logo-item img {
-            height: 200px;
+        .trusted-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 20px 60px 20px;
+            margin-bottom: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
-
-        .company-name {
-            font-size: 1em;
+        .trusted-header h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: 2px;
         }
-
-        .logo-item p {
-            font-size: 0.8em;
+        .trusted-header p {
+            font-size: 1.3rem;
+            margin: 20px 0 0 0;
+            opacity: 0.9;
+            font-weight: 300;
         }
-    }
-
-    @media (max-width: 480px) {
-        .logos-container {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
+        .trusted-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 32px;
+            max-width: 1200px;
+            margin: 0 auto 60px auto;
+            padding: 0 20px;
         }
-    }
-	</style>
+        .trusted-card {
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(102,126,234,0.10);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: box-shadow 0.3s, transform 0.3s;
+            border: 1px solid #e0e0e0;
+            min-height: 220px;
+            padding: 18px 18px 14px 18px; /* Equal left/right/top padding */
+        }
+        .trusted-card:hover {
+            box-shadow: 0 16px 48px rgba(102,126,234,0.18);
+            transform: translateY(-6px) scale(1.02);
+        }
+        .trusted-card img {
+            width: 100%;
+            max-width: 100%;
+            max-height: 170px;
+            min-height: 90px;
+            object-fit: contain;
+            margin: 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(102,126,234,0.07);
+            background: #f5f7fa;
+            display: block;
+        }
+        .trusted-card .company-name {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #333;
+            margin: 10px 0 4px 0;
+            text-align: center;
+        }
+        .trusted-card .company-desc {
+            color: #666;
+            font-size: 1rem;
+            text-align: center;
+            margin-bottom: 0;
+        }
+        @media (max-width: 900px) {
+            .trusted-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+        }
+        @media (max-width: 600px) {
+            .trusted-header h1 {
+                font-size: 2.2rem;
+            }
+            .trusted-header p {
+                font-size: 1rem;
+            }
+            .trusted-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+                padding: 0 4px;
+            }
+            .trusted-card {
+                min-height: 0;
+                /* Remove max-height to allow card to grow with image */
+                padding: 6vw 6vw 8px 6vw; /* Equal, minimal padding (responsive) */
+                margin: 0 4px; /* margin from left and right edges */
+            }
+            .trusted-card img {
+                width: 100%;
+                max-width: 100%;
+                max-height: 40vw;
+                min-height: 20vw;
+                margin: 0;
+                display: block;
+            }
+            .trusted-card .company-name {
+                font-size: 1em;
+                margin: 8px 0 3px 0;
+            }
+            .trusted-card .company-desc {
+                font-size: 0.92em;
+            }
+        }
+    </style>
 </head>
 <body>
-	<div class="navigation-bar-container">
-		<div class="nav-container">
-			<div class="logo-container">
-				<a href="../"><img src="../images/novapos5.png" alt="NovaPos logo" id="logo"></a>
-			</div>
-			<div class="navbar">
-				<div class="nav-mobile">
-					<a href="#" id="nav-toggle"><span></span></a>
-				</div>
-				<ul class="nav-list">
-					<li><a href="../about/">О нас</a></li>
-					<li><a href="../shop/">Магазин</a></li>
-					<li><a href="../trusted/">Нам доверяют</a></li>
-          <li><a href="#">Помощь<i class="fa fa-caret-down"></i></a>
-            <ul class="nav-dropdown">
-              <li><a href="../drivers/">Драйверы</a></li>
-              <li><a href="../knowledge/">База знаний</a></li>
-            </ul>
-          </li>
-          <li><a href="../moysklad/">МойСклад</a></li>
-          <li><a href="../contacts/">Контакты</a></li>
-          <li><a href="../partnership/">Стать партнером</i></a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="../scripts/script.js"></script>
-
-  <section class="trusted-section">
-    <h2>НАМ ДОВЕРЯЮТ</h2>
-    <div class="logos-container">
-      <div class="logo-item">
-        <img src="../images/client-logos/milavitsa.jpg" alt="Milavitsa">
-        <div class="company-name">Milavitsa</div>
-        <p>Бутик нижнего белья</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/neftek.jpg" alt="neftek">
-        <div class="company-name">Neftek</div>
-        <p>Сеть заправочных станций</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/bauma.jpg" alt="bauma">
-        <div class="company-name">BauMa</div>
-        <p>Магазин мужской одежды</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/rozovy.jpg" alt="Розовый">
-        <div class="company-name">Розовый</div>
-        <p>Сеть цветочных магазинов</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/salambro.jpg" alt="Salam Bro">
-        <div class="company-name">Salam Bro</div>
-        <p>Быстрое питание</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/annavogue.jpg" alt="Anna Vogue">
-        <div class="company-name">Anna Vogue</div>
-        <p>Магазин товаров для ногтевого сервиса</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/bota-showroom.jpg" alt="Bota Showroom">
-        <div class="company-name">Bota Showroom</div>
-        <p>Бутик женской одежды</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/emka-store.jpg" alt="Emka Store">
-        <div class="company-name">Emka Store</div>
-        <p>Магазин женской одежды</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/gadget-store.jpg" alt="Gadget Store">
-        <div class="company-name">Gadget Store</div>
-        <p>Магазин сотовых телефонов</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/irepublic.jpg" alt="Irepublic">
-        <div class="company-name">Irepublic</div>
-        <p>Аксессуары к телефонам</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/joytoys.jpg" alt="Joy Toys">
-        <div class="company-name">Joy Toys</div>
-        <p>Магазин игрушек</p>
-      </div>
-            <div class="logo-item">
-        <img src="../images/client-logos/igrushki_akmaral.jpg" alt="Игрушки Акмарал">
-        <div class="company-name">Игрушки Акмарал</div>
-        <p>Детские игрушки</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/malifat.jpg" alt="Malifat">
-        <div class="company-name">Malifat</div>
-        <p>Бутик женской обуви</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/smartfon.jpg" alt="Smartfon">
-        <div class="company-name">Smartfon</div>
-        <p>Магазин сотовых телефонов</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/soft-homewear.jpg" alt="Soft Homewear">
-        <div class="company-name">Soft Homewear</div>
-        <p>Бутик пижам и нижнего белья</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/manhattan.jpg" alt="Manhattan Lounge">
-        <div class="company-name">Manhattan Lounge</div>
-        <p>Лаундж-бар</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/lalestyle.jpeg" alt="lalestyle">
-        <div class="company-name">Lalestyle</div>
-        <p>Магазин одежды г.Атырау</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/overpack.jpg" alt="overpack">
-        <div class="company-name">Overpack</div>
-        <p>Профессиональный кальянный магазин</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/margo_fashion.jpg" alt="margo fashion">
-        <div class="company-name">Margo Fashion</div>
-        <p>Магазин одежды</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/smokingshop.jpg" alt="smoking shop">
-        <div class="company-name">SmokingShop</div>
-        <p>Табачный магазин</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/sultan_auto.jpg" alt="sultan auto">
-        <div class="company-name">Sultan Auto</div>
-        <p>Магазин автозапчастей</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/lady_jeans.jpg" alt="lady jeans">
-        <div class="company-name">Lady Jeans</div>
-        <p>Женская одежда и обувь</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/makhovik_vremeni.jpg" alt="маховик времени">
-        <div class="company-name">Маховик времени</div>
-        <p>Ювелирные изделия и часы</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/my_day.jpg" alt="my day">
-        <div class="company-name">My day</div>
-        <p>Детская и подростковая одежда</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/hellokids.jpg" alt="Hello Kids">
-        <div class="company-name">Hello Kids</div>
-        <p>Детская одежда</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/bambi.jpg" alt="Бэмби">
-        <div class="company-name">Бэмби</div>
-        <p>Детская одежда</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/babyshark.jpg" alt="Baby Shark">
-        <div class="company-name">Baby Shark</div>
-        <p>Детская одежда</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/nurin.jpg" alt="Nurin">
-        <div class="company-name">Nurin</div>
-        <p>Детская одежда</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/ak_kids.jpg" alt="AK Kids">
-        <div class="company-name">AK Kids</div>
-        <p>Детская одежда</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/kyzyma.jpg" alt="Kyzyma">
-        <div class="company-name">Kyzyma</div>
-        <p>Детская одежда</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/modniedety.jpg" alt="Модные дети">
-        <div class="company-name">Модные дети</div>
-        <p>Детская одежда</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/tattim.jpg" alt="Tattim">
-        <div class="company-name">Tattim</div>
-        <p>Товары для детей</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/maminptenchik.jpg" alt="Мамин птенчик">
-        <div class="company-name">Мамин птенчик</div>
-        <p>Товары для детей</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/kinderpark.jpg" alt="Kinder Park">
-        <div class="company-name">Kinder Park</div>
-        <p>Детский развлекательный центр</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/mirra.jpg" alt="mirra">
-        <div class="company-name">Mirra</div>
-        <p>Женская одежда</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/diva.jpg" alt="diva luxe shop">
-        <div class="company-name">Diva</div>
-        <p>Женская одежда</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/miracle.jpg" alt="miracle">
-        <div class="company-name">Miracle</div>
-        <p>Магазин итальянских сумок</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/lacreme.jpg" alt="lacreme">
-        <div class="company-name">La Creme</div>
-        <p>Уходовая и декоративная косметика</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/zama.jpg" alt="Zama">
-        <div class="company-name">Zama</div>
-        <p>Салон красоты</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/hair-cosmetics.jpg" alt="Hair Cosmetics">
-        <div class="company-name">Hair Cosmetics</div>
-        <p>Косметика для волос</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/blosskin.jpg" alt="Blosskin">
-        <div class="company-name">Blosskin</div>
-        <p>Корейская косметика</p>
-      </div>
-            <div class="logo-item">
-        <img src="../images/client-logos/margo-parfum.jpg" alt="Margo Parfum">
-        <div class="company-name">Margo Parfum</div>
-        <p>Парфюмерия и косметика</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/ponpon.jpg" alt="Pon Pon">
-        <div class="company-name">Pon Pon</div>
-        <p>Паназиатская кухня в аниме стиле</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/el_classico.jpg" alt="el classico">
-        <div class="company-name">El Classico</div>
-        <p>Спортивная одежда</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/rich.jpg" alt="rich">
-        <div class="company-name">Rich</div>
-        <p>Женская одежда</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/harmonys.jpg" alt="harmonys">
-        <div class="company-name">Harmonys</div>
-        <p>Быстрое питание</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/portal_cyberzone.jpg" alt="portal cyberzone">
-        <div class="company-name">Portal Cyberzone</div>
-        <p>Компьютерный клуб</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/aidesign.jpg" alt="AI Design">
-        <div class="company-name">AI Design</div>
-        <p>Авторская и селективная бижутерия</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/crystalhouse.jpg" alt="Хрустальный дом">
-        <div class="company-name">Хрустальный дом</div>
-        <p>Бижутерия</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/sapphire.jpg" alt="Sapphire">
-        <div class="company-name">Sapphire</div>
-        <p>Магазин ювелирных украшений</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/vita-zoo.jpg" alt="Вита Зоо">
-        <div class="company-name">Вита Зоо</div>
-        <p>Вет аптека</p>
-      </div>
-      <div class="logo-item">
-        <img src="../images/client-logos/argymaq.jpg" alt="Аргымак">
-        <div class="company-name">Аргымак</div>
-        <p>Вет аптека</p>
-      </div>
+    <div class="navigation-bar-container">
+        <div class="nav-container">
+            <div class="logo-container">
+                <a href="../"><img src="../images/novapos5.png" alt="NovaPos logo" id="logo"></a>
+            </div>
+            <div class="navbar">
+                <div class="nav-mobile">
+                    <a href="#" id="nav-toggle"><span></span></a>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="../about/">О нас</a></li>
+                    <li><a href="../shop/">Магазин</a></li>
+                    <li><a href="../trusted/">Нам доверяют</a></li>
+                    <li><a href="#">Помощь<i class="fa fa-caret-down"></i></a>
+                        <ul class="nav-dropdown">
+                            <li><a href="../drivers/">Драйверы</a></li>
+                            <li><a href="../knowledge/">База знаний</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../moysklad/">МойСклад</a></li>
+                    <li><a href="../contacts/">Контакты</a></li>
+                    <li><a href="../partnership/">Стать партнером</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
-  </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="../scripts/script.js"></script>
 
-	<div id="copyright">
-		<p>ВСЕ ПРАВА ЗАЩИЩЕНЫ <span style="font-size:18px">&copy;</span> NOVAPOS.KZ </p>
-	</div>
-  <a href="https://wa.me/77765595726" class="whatsapp-float" target="_blank">
-      <img src="../images/whatsapp.png" alt="WhatsApp">
-  </a>
+    <div class="trusted-header">
+        <h1>НАМ ДОВЕРЯЮТ</h1>
+        <div class="company-desc">Компании, которые выбрали нашу программу для автоматизации торговли. Доверьтесь опыту успешных бизнесов!</div>
+    </div>
 
-  <div class="bottom-nav">
-    <a href="../feedback/">
-        <i class="fa fa-comments"></i>
-        <span>Обратная связь</span>
-    </a>
-    <a href="tel:+77765595726">
-        <i class="fa fa-phone"></i>
-        <span>+7 776 559-57-26</span>
-    </a>
-    <a href="mailto:info@novapos.kz">
-        <i class="fa fa-envelope"></i>
-        <span>info@novapos.kz</span>
-    </a>
-    <a href="../cart/">
-			<i class="fa fa-shopping-cart"></i>
-			<span class="cart-text">Корзина</span>
-		</a>
-    <div class="search-bar">
-			<i class="fa fa-search"></i>
-			<input type="text" placeholder="Поиск">
-		</div>
-  </div>
+    <div class="trusted-grid">
+        <div class="trusted-card">
+          <img src="../images/client-logos/milavitsa.jpg" alt="Milavitsa" loading="lazy">
+          <div class="company-name">Milavitsa</div>
+          <div class="company-desc">Бутик нижнего белья</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/neftek.jpg" alt="neftek" loading="lazy">
+          <div class="company-name">Neftek</div>
+          <div class="company-desc">Сеть заправочных станций</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/bauma.jpg" alt="bauma" loading="lazy">
+          <div class="company-name">BauMa</div>
+          <div class="company-desc">Магазин мужской одежды</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/rozovy.jpg" alt="Розовый" loading="lazy">
+          <div class="company-name">Розовый</div>
+          <div class="company-desc">Сеть цветочных магазинов</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/salambro.jpg" alt="Salam Bro" loading="lazy">
+          <div class="company-name">Salam Bro</div>
+          <div class="company-desc">Быстрое питание</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/annavogue.jpg" alt="Anna Vogue" loading="lazy">
+          <div class="company-name">Anna Vogue</div>
+          <div class="company-desc">Магазин товаров для ногтевого сервиса</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/bota-showroom.jpg" alt="Bota Showroom" loading="lazy">
+          <div class="company-name">Bota Showroom</div>
+          <div class="company-desc">Бутик женской одежды</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/emka-store.jpg" alt="Emka Store" loading="lazy">
+          <div class="company-name">Emka Store</div>
+          <div class="company-desc">Магазин женской одежды</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/gadget-store.jpg" alt="Gadget Store" loading="lazy">
+          <div class="company-name">Gadget Store</div>
+          <div class="company-desc">Магазин сотовых телефонов</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/irepublic.jpg" alt="Irepublic" loading="lazy">
+          <div class="company-name">Irepublic</div>
+          <div class="company-desc">Аксессуары к телефонам</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/joytoys.jpg" alt="Joy Toys" loading="lazy">
+          <div class="company-name">Joy Toys</div>
+          <div class="company-desc">Магазин игрушек</div>
+        </div>
+              <div class="trusted-card">
+          <img src="../images/client-logos/igrushki_akmaral.jpg" alt="Игрушки Акмарал" loading="lazy">
+          <div class="company-name">Игрушки Акмарал</div>
+          <div class="company-desc">Детские игрушки</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/malifat.jpg" alt="Malifat" loading="lazy">
+          <div class="company-name">Malifat</div>
+          <div class="company-desc">Бутик женской обуви</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/smartfon.jpg" alt="Smartfon" loading="lazy">
+          <div class="company-name">Smartfon</div>
+          <div class="company-desc">Магазин сотовых телефонов</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/soft-homewear.jpg" alt="Soft Homewear" loading="lazy">
+          <div class="company-name">Soft Homewear</div>
+          <div class="company-desc">Бутик пижам и нижнего белья</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/manhattan.jpg" alt="Manhattan Lounge" loading="lazy">
+          <div class="company-name">Manhattan Lounge</div>
+          <div class="company-desc">Лаундж-бар</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/lalestyle.jpeg" alt="lalestyle" loading="lazy">
+          <div class="company-name">Lalestyle</div>
+          <div class="company-desc">Магазин одежды г.Атырау</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/overpack.jpg" alt="overpack" loading="lazy">
+          <div class="company-name">Overpack</div>
+          <div class="company-desc">Профессиональный кальянный магазин</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/margo_fashion.jpg" alt="margo fashion" loading="lazy">
+          <div class="company-name">Margo Fashion</div>
+          <div class="company-desc">Магазин одежды</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/smokingshop.jpg" alt="smoking shop" loading="lazy">
+          <div class="company-name">SmokingShop</div>
+          <div class="company-desc">Табачный магазин</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/sultan_auto.jpg" alt="sultan auto" loading="lazy">
+          <div class="company-name">Sultan Auto</div>
+          <div class="company-desc">Магазин автозапчастей</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/lady_jeans.jpg" alt="lady jeans" loading="lazy">
+          <div class="company-name">Lady Jeans</div>
+          <div class="company-desc">Женская одежда и обувь</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/makhovik_vremeni.jpg" alt="маховик времени" loading="lazy">
+          <div class="company-name">Маховик времени</div>
+          <div class="company-desc">Ювелирные изделия и часы</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/my_day.jpg" alt="my day" loading="lazy">
+          <div class="company-name">My day</div>
+          <div class="company-desc">Детская и подростковая одежда</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/hellokids.jpg" alt="Hello Kids" loading="lazy">
+          <div class="company-name">Hello Kids</div>
+          <div class="company-desc">Детская одежда</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/bambi.jpg" alt="Бэмби" loading="lazy">
+          <div class="company-name">Бэмби</div>
+          <div class="company-desc">Детская одежда</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/babyshark.jpg" alt="Baby Shark" loading="lazy">
+          <div class="company-name">Baby Shark</div>
+          <div class="company-desc">Детская одежда</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/nurin.jpg" alt="Nurin" loading="lazy">
+          <div class="company-name">Nurin</div>
+          <div class="company-desc">Детская одежда</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/ak_kids.jpg" alt="AK Kids" loading="lazy">
+          <div class="company-name">AK Kids</div>
+          <div class="company-desc">Детская одежда</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/kyzyma.jpg" alt="Kyzyma" loading="lazy">
+          <div class="company-name">Kyzyma</div>
+          <div class="company-desc">Детская одежда</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/modniedety.jpg" alt="Модные дети" loading="lazy">
+          <div class="company-name">Модные дети</div>
+          <div class="company-desc">Детская одежда</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/tattim.jpg" alt="Tattim" loading="lazy">
+          <div class="company-name">Tattim</div>
+          <div class="company-desc">Товары для детей</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/maminptenchik.jpg" alt="Мамин птенчик" loading="lazy">
+          <div class="company-name">Мамин птенчик</div>
+          <div class="company-desc">Товары для детей</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/kinderpark.jpg" alt="Kinder Park" loading="lazy">
+          <div class="company-name">Kinder Park</div>
+          <div class="company-desc">Детский развлекательный центр</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/mirra.jpg" alt="mirra" loading="lazy">
+          <div class="company-name">Mirra</div>
+          <div class="company-desc">Женская одежда</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/diva.jpg" alt="diva luxe shop" loading="lazy">
+          <div class="company-name">Diva</div>
+          <div class="company-desc">Женская одежда</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/miracle.jpg" alt="miracle" loading="lazy">
+          <div class="company-name">Miracle</div>
+          <div class="company-desc">Магазин итальянских сумок</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/lacreme.jpg" alt="lacreme" loading="lazy">
+          <div class="company-name">La Creme</div>
+          <div class="company-desc">Уходовая и декоративная косметика</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/zama.jpg" alt="Zama" loading="lazy">
+          <div class="company-name">Zama</div>
+          <div class="company-desc">Салон красоты</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/hair-cosmetics.jpg" alt="Hair Cosmetics" loading="lazy">
+          <div class="company-name">Hair Cosmetics</div>
+          <div class="company-desc">Косметика для волос</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/blosskin.jpg" alt="Blosskin" loading="lazy">
+          <div class="company-name">Blosskin</div>
+          <div class="company-desc">Корейская косметика</div>
+        </div>
+              <div class="trusted-card">
+          <img src="../images/client-logos/margo-parfum.jpg" alt="Margo Parfum" loading="lazy">
+          <div class="company-name">Margo Parfum</div>
+          <div class="company-desc">Парфюмерия и косметика</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/ponpon.jpg" alt="Pon Pon" loading="lazy">
+          <div class="company-name">Pon Pon</div>
+          <div class="company-desc">Паназиатская кухня в аниме стиле</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/el_classico.jpg" alt="el classico" loading="lazy">
+          <div class="company-name">El Classico</div>
+          <div class="company-desc">Спортивная одежда</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/rich.jpg" alt="rich" loading="lazy">
+          <div class="company-name">Rich</div>
+          <div class="company-desc">Женская одежда</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/harmonys.jpg" alt="harmonys" loading="lazy">
+          <div class="company-name">Harmonys</div>
+          <div class="company-desc">Быстрое питание</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/portal_cyberzone.jpg" alt="portal cyberzone" loading="lazy">
+          <div class="company-name">Portal Cyberzone</div>
+          <div class="company-desc">Компьютерный клуб</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/aidesign.jpg" alt="AI Design" loading="lazy">
+          <div class="company-name">AI Design</div>
+          <div class="company-desc">Авторская и селективная бижутерия</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/crystalhouse.jpg" alt="Хрустальный дом" loading="lazy">
+          <div class="company-name">Хрустальный дом</div>
+          <div class="company-desc">Бижутерия</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/sapphire.jpg" alt="Sapphire" loading="lazy">
+          <div class="company-name">Sapphire</div>
+          <div class="company-desc">Магазин ювелирных украшений</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/vita-zoo.jpg" alt="Вита Зоо" loading="lazy">
+          <div class="company-name">Вита Зоо</div>
+          <div class="company-desc">Вет аптека</div>
+        </div>
+        <div class="trusted-card">
+          <img src="../images/client-logos/argymaq.jpg" alt="Аргымак" loading="lazy">
+          <div class="company-name">Аргымак</div>
+          <div class="company-desc">Вет аптека</div>
+        </div>
+    </div>
 
+    <div id="copyright">
+        <div class="company-desc">ВСЕ ПРАВА ЗАЩИЩЕНЫ <span style="font-size:18px">&copy;</span> NOVAPOS.KZ </div>
+    </div>
+    <a href="https://wa.me/77765595726" class="whatsapp-float" target="_blank">
+        <img src="../images/whatsapp.png" alt="WhatsApp">
+    </a>
+
+    <div class="bottom-nav">
+        <a href="../feedback/">
+            <i class="fa fa-comments"></i>
+            <span>Обратная связь</span>
+        </a>
+        <a href="tel:+77765595726">
+            <i class="fa fa-phone"></i>
+            <span>+7 776 559-57-26</span>
+        </a>
+        <a href="mailto:info@novapos.kz">
+            <i class="fa fa-envelope"></i>
+            <span>info@novapos.kz</span>
+        </a>
+        <a href="../cart/">
+            <i class="fa fa-shopping-cart"></i>
+            <span class="cart-text">Корзина</span>
+        </a>
+        <div class="search-bar">
+            <i class="fa fa-search"></i>
+            <input type="text" placeholder="Поиск">
+        </div>
+    </div>
 </body>
 </html>
