@@ -6,560 +6,23 @@
   <meta name="description" content="О компании NovaPos - лидере в автоматизации торговли. Наша история, миссия и ключевые этапы развития.">
   <title>О НАС | NovaPos</title>
   <link href="../styles/styles.css" rel="stylesheet" type="text/css">
+  <link href="../styles/design-system.css" rel="stylesheet" type="text/css">
   <link rel="icon" href="../images/favicon.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
   <style>
-    /* Additional styles for about page */
-    .about-hero {
-      background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
-      color: white;
-      padding: 80px 20px;
-      text-align: center;
-      margin-bottom: 50px;
-    }
-    
-    .about-hero h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-      font-weight: 700;
-    }
-    
-    .about-content {
-      max-width: 900px;
+    .about-container {
+      max-width: 1200px;
       margin: 0 auto;
       padding: 0 20px;
-      line-height: 1.8;
-      font-size: 1.1rem;
-      color: #333;
     }
-    
-    .about-content p {
-      margin-bottom: 25px;
-    }
-    
-    .roadmap-section {
-      background-color: #f9f9f9;
-      padding: 60px 20px;
-      margin: 60px 0;
-    }
-    
-    .roadmap-container {
-      max-width: 900px;
-      margin: 0 auto;
-      position: relative;
-      padding-left: 100px;
-    }
-    
-    .roadmap-title {
-      text-align: center;
-      font-size: 2.2rem;
-      margin-bottom: 50px;
-      color: #2c3e50;
-      font-weight: 600;
-    }
-    
-    .roadmap-item {
-      display: flex;
-      margin-bottom: 50px;
-    position: relative;
-      z-index: 1;
-    }
-    
-    .roadmap-year {
-      flex: 0 0 120px;
-      text-align: center;
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: #3498db;
-    }
-    
-    .roadmap-content {
-      flex: 1;
-      background: white;
-      padding: 25px;
-      border-radius: 8px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    position: relative;
-      border-left: 4px solid #3498db;
-  }
-
-    .roadmap-content:before {
-    content: '';
-    position: absolute;
-      width: 20px;
-      height: 20px;
-      background: #3498db;
-      border-radius: 50%;
-      left: -12px;
-      top: 30px;
-      border: 4px solid white;
-    }
-    
-    .roadmap-content h3 {
-      margin-top: 0;
-      color: #2c3e50;
-      font-size: 1.4rem;
-    }
-    
-    .mission-statement {
-      font-style: italic;
-      background-color: #f0f8ff;
-      padding: 20px;
-      border-left: 4px solid #3498db;
-      margin: 40px 0;
-    }
-    
+    /* Use default .section-header from design-system.css for left-aligned headers */
     @media (max-width: 768px) {
-      .roadmap-item {
-        flex-direction: column;
-      }
-      
-      .roadmap-year {
-        margin-bottom: 15px;
-        text-align: left;
-        padding-left: 35px;
-      }
-      
-      .roadmap-content:before {
-        left: 8px;
-        top: -30px;
-      }
-
-      .roadmap-container {
-        padding-left: 0;
+      .about-container {
+        padding: 0 8px;
       }
     }
-    .mission-section {
-    background-color: #fff;
-    padding: 60px 20px;
-    margin-bottom: 60px;
-  }
-
-  .mission-container {
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .mission-title {
-    font-size: 2.2rem;
-    color: #2c3e50;
-    margin-bottom: 30px;
-    font-weight: 600;
-  }
-
-  .mission-text {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: #555;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  @media (max-width: 768px) {
-    .mission-section {
-      padding: 40px 20px;
-    }
-
-    .mission-title {
-      font-size: 1.8rem;
-    }
-
-    .mission-text {
-      font-size: 1.1rem;
-      padding: 0 10px;
-    }
-  }
-  .partners-section {
-    background-color: #f9f9f9;
-    padding: 60px 20px;
-    margin-bottom: 60px;
-  }
-
-  .partners-container {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  .partners-text {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: #555;
-    text-align: center;
-    margin-bottom: 40px;
-  }
-
-  .partners-logos {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 30px;
-  }
-
-  .partner-item {
-    text-align: center;
-    flex: 1;
-    max-width: 300px;
-  }
-
-  .partner-item img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
-
-  .partner-caption {
-    font-size: 1.2rem;
-    color: #2c3e50;
-    font-weight: 600;
-  }
-
-  @media (max-width: 768px) {
-    .partners-section {
-      padding: 40px 20px;
-    }
-
-    .partners-logos {
-      flex-direction: column;
-      align-items: center;
-      gap: 30px;
-    }
-
-    .partner-item {
-      max-width: 250px;
-    }
-
-    .partners-text {
-      font-size: 1.1rem;
-      padding: 0 10px;
-    }
-  }
-  .clients-section {
-    background-color: #fff;
-    padding: 60px 20px;
-    margin-bottom: 60px;
-  }
-
-  .clients-container {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  .clients-title {
-    text-align: center;
-    font-size: 2.2rem;
-    color: #2c3e50;
-    margin-bottom: 30px;
-    font-weight: 600;
-  }
-
-  .clients-text {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: #555;
-    text-align: center;
-    margin-bottom: 40px;
-  }
-
-  .clients-logos {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 30px;
-  }
-
-  .client-item {
-    text-align: center;
-    flex: 1;
-    max-width: 250px;
-  }
-
-  .client-item img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-    border: 1px solid #e0e0e0;
-  }
-
-  .client-item img:hover {
-    transform: scale(1.05);
-  }
-
-  .client-caption {
-    font-size: 1.2rem;
-    color: #2c3e50;
-    font-weight: 600;
-  }
-
-  @media (max-width: 768px) {
-    .clients-section {
-      padding: 40px 20px;
-    }
-
-    .clients-logos {
-      flex-direction: column;
-      align-items: center;
-      gap: 30px;
-    }
-
-    .client-item {
-      max-width: 200px;
-    }
-
-    .clients-text {
-      font-size: 1.1rem;
-      padding: 0 10px;
-    }
-
-    .clients-title {
-      font-size: 1.8rem;
-    }
-  }
-  .stats-section {
-    background-color: #f9f9f9;
-    padding: 60px 20px;
-    margin-bottom: 60px;
-  }
-
-  .stats-container {
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .counter-container {
-    margin-bottom: 30px;
-  }
-
-  .counter-number {
-    font-size: 4rem;
-    font-weight: 700;
-    color: #3498db;
-    margin-bottom: 10px;
-  }
-
-  .counter-text {
-    font-size: 1.5rem;
-    color: #2c3e50;
-    font-weight: 600;
-  }
-
-  .stats-text {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: #555;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  @media (max-width: 768px) {
-    .stats-section {
-      padding: 40px 20px;
-    }
-
-    .counter-number {
-      font-size: 3rem;
-    }
-
-    .counter-text {
-      font-size: 1.2rem;
-    }
-
-    .stats-text {
-      font-size: 1.1rem;
-      padding: 0 10px;
-    }
-  }
-  .values-section {
-    background-color: #fff;
-    padding: 60px 20px;
-    margin-bottom: 60px;
-  }
-
-  .values-container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .values-title {
-    text-align: center;
-    font-size: 2.2rem;
-    color: #2c3e50;
-    margin-bottom: 50px;
-    font-weight: 600;
-  }
-
-  .values-grid {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-  }
-
-  .value-card {
-    flex: 1;
-    max-width: 350px;
-    padding: 30px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    text-align: center;
-    transition: transform 0.3s ease;
-  }
-
-  .value-card:hover {
-    transform: translateY(-5px);
-  }
-
-  .value-icon {
-    font-size: 2.5rem;
-    color: #3498db;
-    margin-bottom: 20px;
-  }
-
-  .value-heading {
-    font-size: 1.5rem;
-    color: #2c3e50;
-    margin-bottom: 15px;
-    font-weight: 600;
-  }
-
-  .value-text {
-    font-size: 1.1rem;
-    color: #555;
-    line-height: 1.6;
-  }
-
-  @media (max-width: 768px) {
-    .values-section {
-      padding: 40px 20px;
-    }
-
-    .values-grid {
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .value-card {
-      width: 100%;
-      max-width: 400px;
-    }
-
-    .values-title {
-      font-size: 1.8rem;
-      margin-bottom: 30px;
-    }
-
-    .value-heading {
-      font-size: 1.3rem;
-    }
-
-    .value-text {
-      font-size: 1rem;
-    }
-  }
-  .branches-section {
-    background-color: #fff;
-    padding: 60px 20px;
-    margin-bottom: 60px;
-  }
-
-  .branches-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .branches-title {
-    font-size: 2.2rem;
-    color: #2c3e50;
-    margin-bottom: 40px;
-    font-weight: 600;
-  }
-
-  .branches-map {
-    margin: 0 auto 30px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    border-radius: 10px;
-    overflow: hidden;
-    max-width: 100%;
-  }
-
-  .branches-map img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  .branches-text {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: #555;
-    margin-bottom: 40px;
-    text-align: left;
-  }
-
-  .slogan {
-    font-size: 1.8rem;
-    color: #2c3e50;
-    font-weight: 500;
-    padding: 30px;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    border-radius: 10px;
-    margin-top: 40px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .slogan::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 4px;
-    height: 100%;
-    background: #3498db;
-  }
-
-  .slogan-company {
-    color: #3498db;
-    font-weight: 700;
-    font-size: 2rem;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-  }
-
-  @media (max-width: 768px) {
-    .branches-section {
-      padding: 40px 20px;
-    }
-
-    .branches-title {
-      font-size: 1.8rem;
-      margin-bottom: 30px;
-    }
-
-    .branches-text {
-      font-size: 1.1rem;
-      padding: 0 10px;
-    }
-
-    .slogan {
-      font-size: 1.4rem;
-      padding: 20px;
-    }
-
-    .slogan-company {
-      font-size: 1.6rem;
-    }
-  }
   </style>
 </head>
 <body>
@@ -590,169 +53,219 @@
     </div>
   </div>
 
-  <div class="about-hero">
+  <div class="novapos-header">
     <h1>О НАС</h1>
+    <p>Лидер в автоматизации торговли и сервисе для бизнеса</p>
   </div>
 
-  <div class="about-content">
-    <h2>О компании NovaPos</h2>
-    
-    <p>С 2020 года NovaPos уверенно занимает лидирующие позиции в сфере автоматизации торговли. Наша миссия — внедрение современных решений для эффективного учета и управления розничными точками. Мы стремимся помогать бизнесу расти и адаптироваться к меняющемуся рынку, предлагая надежные и гибкие инструменты.</p>
-    
-    <div class="mission-statement">
-      Мы верим, что технологии должны работать на бизнес, а не наоборот. Наши решения созданы, чтобы освободить вас от рутины и дать возможность сосредоточиться на развитии.
+  <div class="about-container">
+    <div class="section-header">
+      <i class="fa fa-building"></i>
+      <h2>О компании NovaPos</h2>
     </div>
-    
-    <h3>Новая глава в развитии</h3>
-    
-    <p>С 16 апреля 2024 года компания прошла этап масштабного ребрендинга и официально приняла имя NovaPos. Это событие стало символом обновления и движения вперёд, открыв новые перспективы как для нас, так и для наших клиентов.</p>
-  </div>
-
-  <div class="roadmap-section">
-    <div class="roadmap-container">
-      <h2 class="roadmap-title">Наш путь</h2>
-      
-      <div class="roadmap-item">
-        <div class="roadmap-year">2020</div>
-        <div class="roadmap-content">
-          <h3>Основание компании</h3>
-          <p>Запуск первых решений по автоматизации торговли и формирование ключевых направлений развития. В этот период мы заложили фундамент наших будущих успехов, сфокусировавшись на создании интуитивно понятных и эффективных инструментов для бизнеса.</p>
+    <div class="content-card" style="margin-bottom:40px;">
+      <div class="card-content">
+        <p>С 2020 года NovaPos уверенно занимает лидирующие позиции в сфере автоматизации торговли. Наша миссия — внедрение современных решений для эффективного учета и управления розничными точками. Мы стремимся помогать бизнесу расти и адаптироваться к меняющемуся рынку, предлагая надежные и гибкие инструменты.</p>
+        <div class="mission-statement" style="background:#f8f9fa;border-left:4px solid #667eea;padding:18px 24px;margin:30px 0 0 0;font-style:italic;">
+          Мы верим, что технологии должны работать на бизнес, а не наоборот. Наши решения созданы, чтобы освободить вас от рутины и дать возможность сосредоточиться на развитии.
         </div>
-      </div>
-      
-      <div class="roadmap-item">
-        <div class="roadmap-year">2024</div>
-        <div class="roadmap-content">
-          <h3>Ребрендинг и новый этап</h3>
-          <p>Выход под новым именем NovaPos. Обновление стратегии, усиление позиций на рынке, расширение продуктовой линейки. Этот год стал поворотным в нашей истории, обозначив переход к более комплексному подходу в автоматизации бизнес-процессов.</p>
-        </div>
+        <h3 style="margin-top:32px;">Новая глава в развитии</h3>
+        <p>С 16 апреля 2024 года компания прошла этап масштабного ребрендинга и официально приняла имя NovaPos. Это событие стало символом обновления и движения вперёд, открыв новые перспективы как для нас, так и для наших клиентов.</p>
       </div>
     </div>
-  </div>
-  <div class="mission-section">
-    <div class="mission-container">
-      <h2 class="mission-title">Наша миссия</h2>
-      <p class="mission-text">
-        Мы помогаем клиентам эффективно управлять и развивать свой бизнес, внедряя современные решения в области автоматизации торговли. Благодаря нашим инструментам процессы работы с кассой, складом и продажами становятся проще, прозрачнее и доступнее для каждого пользователя.
-      </p>
-    </div>
-  </div>
 
-  <div class="partners-section">
-    <div class="partners-container">
-      <p class="partners-text">
-        Мы с гордостью предлагаем передовые системы автоматизации торговли, включая официальные решения таких популярных программ, как GBS Market и Мой Склад. Как официальные представители этих систем, мы предоставляем нашим клиентам высококачественные и проверенные решения, которые обеспечивают надежность и эффективность в работе.
-      </p>
-      
-      <div class="partners-logos">
-        <div class="partner-item">
-          <img src="../images/gbs-logo.jpg" alt="GBS Market Logo">
-          <p class="partner-caption">GBS Market</p>
+    <div class="section-header">
+      <i class="fa fa-road"></i>
+      <h2>Наш путь</h2>
+    </div>
+    <div class="content-grid" style="margin-bottom:40px;">
+      <div class="content-card">
+        <div class="card-content">
+          <div class="card-meta"><span class="card-type">2020</span></div>
+          <h3 class="card-title">Основание компании</h3>
+          <p class="card-description">Запуск первых решений по автоматизации торговли и формирование ключевых направлений развития. В этот период мы заложили фундамент наших будущих успехов, сфокусировавшись на создании интуитивно понятных и эффективных инструментов для бизнеса.</p>
         </div>
-        <div class="partner-item">
-          <img src="../images/moysklad-logo.jpg" alt="МойСклад Logo">
-          <p class="partner-caption">МойСклад</p>
+      </div>
+      <div class="content-card">
+        <div class="card-content">
+          <div class="card-meta"><span class="card-type">2024</span></div>
+          <h3 class="card-title">Ребрендинг и новый этап</h3>
+          <p class="card-description">Выход под новым именем NovaPos. Обновление стратегии, усиление позиций на рынке, расширение продуктовой линейки. Этот год стал поворотным в нашей истории, обозначив переход к более комплексному подходу в автоматизации бизнес-процессов.</p>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="clients-section">
-    <div class="clients-container">
-      <h2 class="clients-title">Наши клиенты</h2>
-      <p class="clients-text">
-        Наша компания не ограничивается только розничными продажами, но и активно работает в сфере оптовой торговли. Среди наших клиентов такие известные компании, как Розовый, Нефтек, BauMa и многие другие. Мы предоставляем автоматизацию как для крупных оптовиков, так и для розничных точек, обеспечивая гибкость и удобство в работе с разными бизнес-моделями.
-      </p>
-      
-      <div class="clients-logos">
-        <div class="client-item">
-          <img src="../images/client-logos/rozovy.jpg" alt="Розовый Logo">
-          <p class="client-caption">Розовый</p>
+    <div class="section-header">
+      <i class="fa fa-bullseye"></i>
+      <h2>Наша миссия</h2>
+    </div>
+    <div class="content-card" style="margin-bottom:40px;">
+      <div class="card-content">
+        <p style="font-size:1.15rem;line-height:1.8;">Мы помогаем клиентам эффективно управлять и развивать свой бизнес, внедряя современные решения в области автоматизации торговли. Благодаря нашим инструментам процессы работы с кассой, складом и продажами становятся проще, прозрачнее и доступнее для каждого пользователя.</p>
+      </div>
+    </div>
+
+    <div class="section-header">
+      <i class="fa fa-handshake"></i>
+      <h2>Партнеры</h2>
+    </div>
+    <div class="content-grid" style="margin-bottom:40px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));">
+      <style>
+        .partner-logo-image {
+          max-width: 140px;
+          max-height: 140px;
+          object-fit: contain;
+          display: block;
+          margin: 0 auto;
+        }
+        .partner-logo-card-image {
+          background: #fff;
+          height: 180px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0;
+        }
+        @media (max-width: 600px) {
+          .partner-logo-card-image {
+            height: 120px;
+          }
+          .partner-logo-image {
+            max-width: 90px;
+            max-height: 90px;
+          }
+        }
+      </style>
+      <div class="content-card" style="text-align:center;">
+        <div class="card-image partner-logo-card-image">
+          <img src="../images/gbs-logo.jpg" alt="GBS Market Logo" class="partner-logo-image">
         </div>
-        <div class="client-item">
-          <img src="../images/client-logos/neftek.jpg" alt="Нефтек Logo">
-          <p class="client-caption">Нефтек</p>
+        <div class="card-content">
+          <h3 class="card-title">GBS Market</h3>
         </div>
-        <div class="client-item">
-          <img src="../images/client-logos/bauma.jpg" alt="BauMa Logo">
-          <p class="client-caption">BauMa</p>
+      </div>
+      <div class="content-card" style="text-align:center;">
+        <div class="card-image partner-logo-card-image">
+          <img src="../images/moysklad2.png" alt="МойСклад Logo" class="partner-logo-image">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">МойСклад</h3>
         </div>
       </div>
     </div>
-  </div>
-  
-  <div class="stats-section">
-    <div class="stats-container">
-      <div class="counter-container">
-        <div class="counter-number">
-          <span id="clientCounter">0</span>+
-        </div>
-        <div class="counter-text">довольных клиентов</div>
-      </div>
-      <p class="stats-text">
-        На сегодняшний день более 800 довольных клиентов доверяют нам автоматизацию своих торговых процессов. Мы предлагаем не просто продукт, а комплексное решение, которое позволяет оптимизировать бизнес и повысить его прибыльность.
-      </p>
+
+    <div class="section-header">
+      <i class="fa fa-users"></i>
+      <h2>Наши клиенты</h2>
     </div>
-  </div>
-
-  <div class="values-section">
-    <div class="values-container">
-      <h2 class="values-title">Наши ценности</h2>
-      
-      <div class="values-grid">
-        <div class="value-card">
-          <div class="value-icon">
-            <i class="fas fa-handshake"></i>
-          </div>
-          <h3 class="value-heading">Сервис</h3>
-          <p class="value-text">
-            Мы ставим удовлетворенность клиентов на первое место и обеспечиваем высокий уровень обслуживания на каждом этапе сотрудничества.
-          </p>
+    <style>
+      .client-logo-image {
+        max-width: 120px;
+        max-height: 120px;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto;
+      }
+      .client-logo-card-image {
+        background: #fff;
+        height: 140px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+      }
+      @media (max-width: 600px) {
+        .client-logo-card-image {
+          height: 120px;
+        }
+        .client-logo-image {
+          max-width: 100px;
+          max-height: 100px;
+        }
+      }
+    </style>
+    <div class="content-grid" style="margin-bottom:40px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));">
+      <div class="content-card" style="text-align:center;">
+        <div class="card-image client-logo-card-image">
+          <img src="../images/client-logos/rozovy.jpg" alt="Розовый Logo" class="client-logo-image">
         </div>
-
-        <div class="value-card">
-          <div class="value-icon">
-            <i class="fas fa-heart"></i>
-          </div>
-          <h3 class="value-heading">Забота</h3>
-          <p class="value-text">
-            Мы внимательно относимся к каждому клиенту, понимаем их потребности и готовы предложить индивидуальные решения для каждого бизнеса.
-          </p>
-        </div>
-
-        <div class="value-card">
-          <div class="value-icon">
-            <i class="fas fa-chart-line"></i>
-          </div>
-          <h3 class="value-heading">Конкурентность</h3>
-          <p class="value-text">
-            Мы постоянно совершенствуем наши продукты и услуги, чтобы наши клиенты оставались впереди конкурентов, используя самые современные и эффективные решения.
-          </p>
+        <div class="card-content">
+          <h3 class="card-title">Розовый</h3>
         </div>
       </div>
-    </div>
-  </div>
-
-  <div class="branches-section">
-    <div class="branches-container">
-      <h2 class="branches-title">Наши филиалы</h2>
-      
-      <div class="branches-map">
-        <img src="../images/branches-map.jpg" alt="Карта филиалов NovaPos" width="889" height="535">
+      <div class="content-card" style="text-align:center;">
+        <div class="card-image client-logo-card-image">
+          <img src="../images/client-logos/neftek.jpg" alt="Нефтек Logo" class="client-logo-image">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Нефтек</h3>
+        </div>
       </div>
-      
-      <p class="branches-text">
-        Головной офис компании находится в городе Уральск, а наши филиалы успешно работают в таких крупных городах, как Астана, Алматы, Актобе, Павлодар, Шымкент, Атырау и Кызылорда. Мы продолжаем расширяться и развивать сеть, чтобы быть ближе к нашим клиентам и предоставлять качественное обслуживание в любом уголке Казахстана.
-      </p>
-
-      <div class="slogan">
-        <span class="slogan-company">NovaPos</span> — ваш надежный партнер в мире автоматизации торговли!
+      <div class="content-card" style="text-align:center;">
+        <div class="card-image client-logo-card-image">
+          <img src="../images/client-logos/bauma.jpg" alt="BauMa Logo" class="client-logo-image">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">BauMa</h3>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div id="copyright">
-    <p>ВСЕ ПРАВА ЗАЩИЩЕНЫ <span style="font-size:18px">&copy;</span> NOVAPOS.KZ </p>
+    <div class="section-header">
+      <i class="fa fa-chart-bar"></i>
+      <h2>В цифрах</h2>
+    </div>
+    <div class="content-card" style="margin-bottom:40px;text-align:center;">
+      <div class="card-content">
+        <div style="font-size:3rem;font-weight:700;color:#667eea;">800+</div>
+        <div style="font-size:1.2rem;color:#333;font-weight:500;margin-bottom:18px;">Довольных клиентов</div>
+        <p style="color:#555;max-width:500px;margin:0 auto;">На сегодняшний день более 800 довольных клиентов доверяют нам автоматизацию своих торговых процессов. Мы предлагаем не просто продукт, а комплексное решение, которое позволяет оптимизировать бизнес и повысить его прибыльность.</p>
+      </div>
+    </div>
+
+    <div class="section-header">
+      <i class="fa fa-gem"></i>
+      <h2>Наши ценности</h2>
+    </div>
+    <div class="content-grid" style="margin-bottom:40px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));">
+      <div class="content-card" style="text-align:center;">
+        <div class="card-content">
+          <div class="value-icon"><i class="fas fa-handshake"></i></div>
+          <h3 class="card-title">Сервис</h3>
+          <p class="card-description">Мы ставим удовлетворенность клиентов на первое место и обеспечиваем высокий уровень обслуживания на каждом этапе сотрудничества.</p>
+        </div>
+      </div>
+      <div class="content-card" style="text-align:center;">
+        <div class="card-content">
+          <div class="value-icon"><i class="fas fa-heart"></i></div>
+          <h3 class="card-title">Забота</h3>
+          <p class="card-description">Мы внимательно относимся к каждому клиенту, понимаем их потребности и готовы предложить индивидуальные решения для каждого бизнеса.</p>
+        </div>
+      </div>
+      <div class="content-card" style="text-align:center;">
+        <div class="card-content">
+          <div class="value-icon"><i class="fas fa-chart-line"></i></div>
+          <h3 class="card-title">Конкурентность</h3>
+          <p class="card-description">Мы постоянно совершенствуем наши продукты и услуги, чтобы наши клиенты оставались впереди конкурентов, используя самые современные и эффективные решения.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-header">
+      <i class="fa fa-map-marker-alt"></i>
+      <h2>Наши филиалы</h2>
+    </div>
+    <div class="content-card" style="margin-bottom:40px;">
+      <div class="card-content" style="text-align:center;">
+        <div style="margin:0 auto 30px;max-width:600px;">
+          <img src="../images/branches-map.jpg" alt="Карта филиалов NovaPos" style="width:100%;height:auto;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.08);">
+        </div>
+        <p style="font-size:1.1rem;line-height:1.7;color:#555;">Головной офис компании находится в городе Уральск, а наши филиалы успешно работают в таких крупных городах, как Астана, Алматы, Актобе, Павлодар, Шымкент, Атырау и Кызылорда. Мы продолжаем расширяться и развивать сеть, чтобы быть ближе к нашим клиентам и предоставлять качественное обслуживание в любом уголке Казахстана.</p>
+        <div class="slogan" style="font-size:1.3rem;color:#667eea;font-weight:600;margin-top:30px;background:linear-gradient(135deg,#f8f9fa 0%,#e9ecef 100%);border-radius:10px;padding:22px 18px;box-shadow:0 4px 15px rgba(0,0,0,0.05);">
+          <span class="slogan-company" style="color:#764ba2;font-weight:700;font-size:1.5rem;">NovaPos</span> — ваш надежный партнер в мире автоматизации торговли!
+        </div>
+      </div>
+    </div>
   </div>
 
   <a href="https://wa.me/77765595726" class="whatsapp-float" target="_blank">
@@ -784,47 +297,5 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="../scripts/script.js"></script>
-  <script>
-    // Intersection Observer to start counter when section is visible
-    const observerOptions = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.5
-    };
-
-    let hasAnimated = false;
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting && !hasAnimated) {
-          animateCounter();
-          hasAnimated = true;
-        }
-      });
-    }, observerOptions);
-
-    // Observe the counter section
-    observer.observe(document.querySelector('.stats-section'));
-
-    function animateCounter() {
-      const counter = document.getElementById('clientCounter');
-      const target = 800;
-      const duration = 2000; // 2 seconds
-      const steps = 50;
-      const stepDuration = duration / steps;
-      let current = 0;
-
-      const updateCounter = () => {
-        current = Math.min(current + Math.ceil(target / steps), target);
-        counter.textContent = current;
-
-        if (current < target) {
-          setTimeout(updateCounter, stepDuration);
-        }
-      };
-
-      updateCounter();
-    }
-  </script>
 </body>
 </html>
