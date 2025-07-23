@@ -6,8 +6,11 @@
 	<meta name="description" content="Наши контакты и адреса филиалов по Казахстану. Свяжитесь с нами по телефону или приезжайте в ближайший офис – всегда рады помочь!">
 	<title>Офисы и контакты</title>
 	<link href="../styles/styles.css" rel="stylesheet" type="text/css">
+	<link href="../styles/design-system.css" rel="stylesheet" type="text/css">
 	<link rel="icon" href="../images/favicon.png">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 	<!-- Yandex.Metrika counter -->
 	<script type="text/javascript" >
 	   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -25,124 +28,104 @@
 	<noscript><div><img src="https://mc.yandex.ru/watch/98771693" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 	<!-- /Yandex.Metrika counter -->
 	<style>
-		.contacts-container {
-			display: flex;
+		.contacts-header {
+			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+			color: white;
+			text-align: center;
+			padding: 80px 20px;
+			margin-bottom: 50px;
+			box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+		}
+		.contacts-header h1 {
+			font-size: 4rem;
+			font-weight: 800;
+			margin: 0;
+			text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+			letter-spacing: 2px;
+		}
+		.contacts-header p {
+			font-size: 1.3rem;
+			margin: 20px 0 0 0;
+			opacity: 0.9;
+			font-weight: 300;
+		}
+		.contacts-grid {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
 			gap: 30px;
-			padding: 40px 20px;
-			max-width: 1400px;
-			margin: 0 auto;
+			margin-bottom: 60px;
+			max-width: 1200px;
+			margin-left: auto;
+			margin-right: auto;
+			padding: 0 20px;
+			min-height: 350px;
 		}
-
-		.cities-list {
-			flex: 0 0 350px;
+		@media (max-width: 1024px) {
+			.contacts-grid {
+				grid-template-columns: repeat(2, 1fr);
+			}
+		}
+		@media (max-width: 768px) {
+			.contacts-grid {
+				grid-template-columns: 1fr;
+				gap: 20px;
+			}
+		}
+		.contact-card {
 			background: white;
-			border-radius: 10px;
-			box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-		}
-
-		.city-item {
-			padding: 15px 20px;
-			border-bottom: 1px solid #eee;
-			cursor: pointer;
+			border-radius: 15px;
+			overflow: hidden;
+			box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 			transition: all 0.3s ease;
+			border: 1px solid #e0e0e0;
+			padding: 30px 25px 25px 25px;
+			display: flex;
+			flex-direction: column;
+			gap: 18px;
+			min-height: 180px;
+			max-height: 220px;
 		}
-
-		.city-item:hover {
-			background: #f8f9fa;
+		@media (max-width: 768px) {
+			.contact-card {
+				min-height: 160px;
+				max-height: 200px;
+			}
 		}
-
-		.city-item.main-office {
-			background: #e3f2fd;
-			border-left: 4px solid #2196f3;
+		.contact-card:hover {
+			transform: translateY(-10px);
+			box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 		}
-
-		.city-name {
-			font-size: 1.1rem;
-			color: #2196f3;
-			font-weight: 500;
+		.contact-city {
+			font-size: 1.5rem;
+			font-weight: 700;
+			color: #667eea;
+			margin-bottom: 10px;
 			display: flex;
 			align-items: center;
-			justify-content: space-between;
+			gap: 10px;
 		}
-
-		.city-name i {
-			transition: transform 0.3s ease;
-		}
-
-		.city-item.active .city-name i {
-			transform: rotate(180deg);
-		}
-
-		.city-details {
-			display: none;
-			padding: 15px 0 0 0;
-		}
-
-		.city-item.active .city-details {
-			display: block;
-		}
-
-		.city-info {
+		.contact-info {
 			display: flex;
 			align-items: flex-start;
 			gap: 10px;
-			margin-bottom: 10px;
 			color: #666;
+			font-size: 1.05rem;
 		}
-
-		.city-info i {
+		.contact-info i {
 			color: #2196f3;
 			margin-top: 3px;
+			font-size: 1.2rem;
 		}
-
-		.map-container {
-			flex: 1;
-			min-height: 600px;
-			border-radius: 10px;
-			overflow: hidden;
-			box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-		}
-
-		@media (max-width: 1024px) {
-			.contacts-container {
-				flex-direction: column;
-				padding: 20px;
-				padding-bottom: 80px;
+		@media (max-width: 768px) {
+			.contacts-header h1 {
+				font-size: 2.5rem;
 			}
-
-			.cities-list {
-				flex: none;
-				width: 100%;
-				margin-bottom: 30px;
+			.contacts-header p {
+				font-size: 1.1rem;
 			}
-
-			.map-container {
-				width: 100%;
-				height: 400px;
-				min-height: auto;
-				margin-bottom: 20px;
-			}
-
-			/* Adjust map iframe for mobile */
-			.map-container iframe {
-				width: 100% !important;
-				height: 400px !important;
-			}
-		}
-
-		/* Additional breakpoint for smaller screens */
-		@media (max-width: 480px) {
-			.contacts-container {
-				padding-bottom: 70px;
-			}
-
-			.map-container {
-				height: 300px;
-				margin-bottom: 15px;
-			}
-
-			.map-container iframe {
-				height: 300px !important;
+			.section-header {
+				padding-left: 16px !important;
+				padding-right: 16px !important;
 			}
 		}
 	</style>
@@ -162,11 +145,11 @@
 					<li><a href="../shop/">Магазин</a></li>
 					<li><a href="../trusted/">Нам доверяют</a></li>
 					<li><a href="#">Помощь<i class="fa fa-caret-down"></i></a>
-            <ul class="nav-dropdown">
-              <li><a href="../drivers/">Драйверы</a></li>
-              <li><a href="../knowledge/">База знаний</a></li>
-            </ul>
-          </li>
+						<ul class="nav-dropdown">
+							<li><a href="../drivers/">Драйверы</a></li>
+							<li><a href="../knowledge/">База знаний</a></li>
+						</ul>
+					</li>
 					<li><a href="../moysklad/">МойСклад</a></li>
 					<li><a href="../contacts/">Контакты</a></li>
 					<li><a href="../partnership/">Стать партнером</a></li>
@@ -177,306 +160,142 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="../scripts/script.js"></script>
 
-	<div class="header-container">
-		<h1>Наши филиалы</h1>
+	<div class="contacts-header novapos-header">
+		<h1>Офисы и контакты</h1>
+		<p>Наши филиалы по Казахстану. Свяжитесь с нами по телефону или приезжайте в ближайший офис – всегда рады помочь!</p>
 	</div>
 
-	<div class="contacts-container">
-		<div class="cities-list">
-			<div class="city-item main-office">
-				<div class="city-name">
-					Уральск
-					<i class="fa fa-caret-down"></i>
-				</div>
-				<div class="city-details">
-					<div class="city-info">
-						<i class="fa fa-map-marker"></i>
-						<span>ТД Ваш ДОМ; Улица Касыма Аманжолова, 95; 21 офис; 3 этаж</span>
-					</div>
-					<div class="city-info">
-						<i class="fa fa-phone"></i>
-						<span>+7 (776) 559-57-26</span>
-					</div>
-				</div>
-			</div>
-			<div class="city-item">
-				<div class="city-name">
-					Астана
-					<i class="fa fa-caret-down"></i>
-				</div>
-				<div class="city-details">
-					<div class="city-info">
-						<i class="fa fa-map-marker"></i>
-						<span>Проспект Мангилик Ел, 51/2</span>
-					</div>
-					<div class="city-info">
-						<i class="fa fa-phone"></i>
-						<span>+7 (700) 211-89-63</span>
-					</div>
-				</div>
-			</div>
-			<div class="city-item">
-				<div class="city-name">
-					Алматы
-					<i class="fa fa-caret-down"></i>
-				</div>
-				<div class="city-details">
-					<div class="city-info">
-						<i class="fa fa-map-marker"></i>
-						<span>Адрес офиса в Алматы</span>
-					</div>
-					<div class="city-info">
-						<i class="fa fa-phone"></i>
-						<span>+7 (776) 559-57-26</span>
-					</div>
-				</div>
-			</div>
-			<div class="city-item">
-				<div class="city-name">
-					Актобе
-					<i class="fa fa-caret-down"></i>
-				</div>
-				<div class="city-details">
-					<div class="city-info">
-						<i class="fa fa-map-marker"></i>
-						<span>БЦ "Асан" Улица Аз Наурыз, 17 308 офис; 3 этаж</span>
-					</div>
-					<div class="city-info">
-						<i class="fa fa-phone"></i>
-						<span>+7 (702) 500-19-93</span>
-					</div>
-				</div>
-			</div>
-			<div class="city-item">
-				<div class="city-name">
-					Атырау
-					<i class="fa fa-caret-down"></i>
-				</div>
-				<div class="city-details">
-					<div class="city-info">
-						<i class="fa fa-map-marker"></i>
-						<span>Улица Ахмет Байтурсынов, 47а 3 этаж</span>
-					</div>
-					<div class="city-info">
-						<i class="fa fa-phone"></i>
-						<span>+7 (706) 604-08-95</span>
-					</div>
-				</div>
-			</div>
-			<div class="city-item">
-				<div class="city-name">
-					Актау
-					<i class="fa fa-caret-down"></i>
-				</div>
-				<div class="city-details">
-					<div class="city-info">
-						<i class="fa fa-map-marker"></i>
-						<span>БЦ Nomad 16-й микрорайон, 6</span>
-					</div>
-					<div class="city-info">
-						<i class="fa fa-phone"></i>
-						<span>+7 (706) 604-08-95</span>
-					</div>
-				</div>
-			</div>
-			<div class="city-item">
-				<div class="city-name">
-					Шымкент
-					<i class="fa fa-caret-down"></i>
-				</div>
-				<div class="city-details">
-					<div class="city-info">
-						<i class="fa fa-map-marker"></i>
-						<span>Улица Рыскулова, 8а/1 1 этаж</span>
-					</div>
-					<div class="city-info">
-						<i class="fa fa-phone"></i>
-						<span>+7 (706) 604-08-95</span>
-					</div>
-				</div>
-			</div>
-			<div class="city-item">
-				<div class="city-name">
-					Тараз
-					<i class="fa fa-caret-down"></i>
-				</div>
-				<div class="city-details">
-					<div class="city-info">
-						<i class="fa fa-map-marker"></i>
-						<span>БЦ Begans Улица Айтеке би, 73</span>
-					</div>
-					<div class="city-info">
-						<i class="fa fa-phone"></i>
-						<span>+7 (706) 604-08-95</span>
-					</div>
-				</div>
-			</div>
-			<div class="city-item">
-				<div class="city-name">
-					Туркестан
-					<i class="fa fa-caret-down"></i>
-				</div>
-				<div class="city-details">
-					<div class="city-info">
-						<i class="fa fa-map-marker"></i>
-						<span>Улица Аль-Фараби, 10</span>
-					</div>
-					<div class="city-info">
-						<i class="fa fa-phone"></i>
-						<span>+7 (706) 604-08-95</span>
-					</div>
-				</div>
-			</div>
-			<div class="city-item">
-				<div class="city-name">
-					Кызылорда
-					<i class="fa fa-caret-down"></i>
-				</div>
-				<div class="city-details">
-					<div class="city-info">
-						<i class="fa fa-map-marker"></i>
-						<span>Улица Ивана Журба, 96 к1</span>
-					</div>
-					<div class="city-info">
-						<i class="fa fa-phone"></i>
-						<span>+7 (706) 604-08-95</span>
-					</div>
-				</div>
-			</div>
-			<div class="city-item">
-				<div class="city-name">
-					Жезказган
-					<i class="fa fa-caret-down"></i>
-				</div>
-				<div class="city-details">
-					<div class="city-info">
-						<i class="fa fa-map-marker"></i>
-						<span>Улица Тарадая, 2</span>
-					</div>
-					<div class="city-info">
-						<i class="fa fa-phone"></i>
-						<span>+7 (776) 559-57-26</span>
-					</div>
-				</div>
-			</div>
-			<div class="city-item">
-				<div class="city-name">
-					Караганда
-					<i class="fa fa-caret-down"></i>
-				</div>
-				<div class="city-details">
-					<div class="city-info">
-						<i class="fa fa-map-marker"></i>
-						<span>Проспект Нуркена Абдирова, 26/6</span>
-					</div>
-					<div class="city-info">
-						<i class="fa fa-phone"></i>
-						<span>+7 (706) 604-08-95</span>
-					</div>
-				</div>
-			</div>
-			<div class="city-item">
-				<div class="city-name">
-					Экибастуз
-					<i class="fa fa-caret-down"></i>
-				</div>
-				<div class="city-details">
-					<div class="city-info">
-						<i class="fa fa-map-marker"></i>
-						<span>Улица Мухтара Ауэзова, 53а</span>
-					</div>
-					<div class="city-info">
-						<i class="fa fa-phone"></i>
-						<span>+7 (706) 604-08-95</span>
-					</div>
-				</div>
-			</div>
-			<div class="city-item">
-				<div class="city-name">
-					Костанай
-					<i class="fa fa-caret-down"></i>
-				</div>
-				<div class="city-details">
-					<div class="city-info">
-						<i class="fa fa-map-marker"></i>
-						<span>Адрес офиса в Костанае</span>
-					</div>
-					<div class="city-info">
-						<i class="fa fa-phone"></i>
-						<span>+7 (776) 559-57-26</span>
-					</div>
-				</div>
-			</div>
-			<div class="city-item">
-				<div class="city-name">
-					Павлодар
-					<i class="fa fa-caret-down"></i>
-				</div>
-				<div class="city-details">
-					<div class="city-info">
-						<i class="fa fa-map-marker"></i>
-						<span>БЦ 8 Марта Улица Машхур Жусупа, 189</span>
-					</div>
-					<div class="city-info">
-						<i class="fa fa-phone"></i>
-						<span>+7 (706) 604-08-95</span>
-					</div>
-				</div>
-			</div>
-			<div class="city-item">
-				<div class="city-name">
-					Петропавловск
-					<i class="fa fa-caret-down"></i>
-				</div>
-				<div class="city-details">
-					<div class="city-info">
-						<i class="fa fa-map-marker"></i>
-						<span>Адрес офиса в Петропавловске</span>
-					</div>
-					<div class="city-info">
-						<i class="fa fa-phone"></i>
-						<span>+7 (776) 559-57-26</span>
-					</div>
-				</div>
-			</div>
-			<div class="city-item">
-				<div class="city-name">
-					Семей
-					<i class="fa fa-caret-down"></i>
-				</div>
-				<div class="city-details">
-					<div class="city-info">
-						<i class="fa fa-map-marker"></i>
-						<span>БЦ Ertis Улица Абая, 99в</span>
-					</div>
-					<div class="city-info">
-						<i class="fa fa-phone"></i>
-						<span>+7 (776) 559‒57‒26</span>
-					</div>
-				</div>
-			</div>
-
-			<div class="city-item">
-				<div class="city-name">
-					Усть-Каменогорск
-					<i class="fa fa-caret-down"></i>
-				</div>
-				<div class="city-details">
-					<div class="city-info">
-						<i class="fa fa-map-marker"></i>
-						<span>Адрес офиса в Усть-Каменогорске</span>
-					</div>
-					<div class="city-info">
-						<i class="fa fa-phone"></i>
-						<span>+7 (776) 559‒57‒26</span>
-					</div>
-				</div>
+	<div class="knowledge-container">
+		<div class="section-header" style="padding: 0 0 0 0; max-width: 1200px; margin-left: auto; margin-right: auto;">
+			<i class="fa fa-map-marker-alt"></i>
+			<h2>Филиалы и офисы</h2>
+		</div>
+		<div class="search-section" style="background:white;padding:30px;border-radius:15px;margin-bottom:40px;box-shadow:0 5px 15px rgba(0,0,0,0.1);max-width:1020px;margin-left:auto;margin-right:auto;">
+			<div class="search-container" style="display:flex;gap:15px;align-items:center;">
+				<input type="text" id="office-search" class="search-input" placeholder="Поиск по офисам (город, адрес, телефон)..." style="flex:1;padding:15px 20px;border:2px solid #e0e0e0;border-radius:10px;font-size:1rem;">
 			</div>
 		</div>
-		<div class="map-container">
-			<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A48b96e7952b00edaad66e9b2f902ebdddba1f9babb7b9b3985ffa3680e2f8ec3&amp;width=100%&amp;height=400&amp;lang=en_FR&amp;scroll=true"></script>
+		<div class="contacts-grid" id="contacts-grid">
+			<div class="contact-card">
+				<div class="contact-city"><i class="fa fa-building"></i>Уральск <span style="font-size:0.9rem;color:#764ba2;font-weight:500;margin-left:8px;">(Главный офис)</span></div>
+				<div class="contact-info"><i class="fa fa-map-marker"></i><span>ТД Ваш ДОМ; Улица Касыма Аманжолова, 95; 21 офис; 3 этаж</span></div>
+				<div class="contact-info"><i class="fa fa-phone"></i><span>+7 (776) 559-57-26</span></div>
+			</div>
+			<div class="contact-card">
+				<div class="contact-city"><i class="fa fa-building"></i>Астана</div>
+				<div class="contact-info"><i class="fa fa-map-marker"></i><span>Проспект Мангилик Ел, 51/2</span></div>
+				<div class="contact-info"><i class="fa fa-phone"></i><span>+7 (700) 211-89-63</span></div>
+			</div>
+			<div class="contact-card">
+				<div class="contact-city"><i class="fa fa-building"></i>Алматы</div>
+				<div class="contact-info"><i class="fa fa-map-marker"></i><span>Адрес офиса в Алматы</span></div>
+				<div class="contact-info"><i class="fa fa-phone"></i><span>+7 (776) 559-57-26</span></div>
+			</div>
+			<div class="contact-card">
+				<div class="contact-city"><i class="fa fa-building"></i>Актобе</div>
+				<div class="contact-info"><i class="fa fa-map-marker"></i><span>БЦ "Асан" Улица Аз Наурыз, 17 308 офис; 3 этаж</span></div>
+				<div class="contact-info"><i class="fa fa-phone"></i><span>+7 (702) 500-19-93</span></div>
+			</div>
+			<div class="contact-card">
+				<div class="contact-city"><i class="fa fa-building"></i>Атырау</div>
+				<div class="contact-info"><i class="fa fa-map-marker"></i><span>Улица Ахмет Байтурсынов, 47а 3 этаж</span></div>
+				<div class="contact-info"><i class="fa fa-phone"></i><span>+7 (706) 604-08-95</span></div>
+			</div>
+			<div class="contact-card">
+				<div class="contact-city"><i class="fa fa-building"></i>Актау</div>
+				<div class="contact-info"><i class="fa fa-map-marker"></i><span>БЦ Nomad 16-й микрорайон, 6</span></div>
+				<div class="contact-info"><i class="fa fa-phone"></i><span>+7 (706) 604-08-95</span></div>
+			</div>
+			<div class="contact-card">
+				<div class="contact-city"><i class="fa fa-building"></i>Шымкент</div>
+				<div class="contact-info"><i class="fa fa-map-marker"></i><span>Улица Рыскулова, 8а/1 1 этаж</span></div>
+				<div class="contact-info"><i class="fa fa-phone"></i><span>+7 (706) 604-08-95</span></div>
+			</div>
+			<div class="contact-card">
+				<div class="contact-city"><i class="fa fa-building"></i>Тараз</div>
+				<div class="contact-info"><i class="fa fa-map-marker"></i><span>БЦ Begans Улица Айтеке би, 73</span></div>
+				<div class="contact-info"><i class="fa fa-phone"></i><span>+7 (706) 604-08-95</span></div>
+			</div>
+			<div class="contact-card">
+				<div class="contact-city"><i class="fa fa-building"></i>Туркестан</div>
+				<div class="contact-info"><i class="fa fa-map-marker"></i><span>Улица Аль-Фараби, 10</span></div>
+				<div class="contact-info"><i class="fa fa-phone"></i><span>+7 (706) 604-08-95</span></div>
+			</div>
+			<div class="contact-card">
+				<div class="contact-city"><i class="fa fa-building"></i>Кызылорда</div>
+				<div class="contact-info"><i class="fa fa-map-marker"></i><span>Улица Ивана Журба, 96 к1</span></div>
+				<div class="contact-info"><i class="fa fa-phone"></i><span>+7 (706) 604-08-95</span></div>
+			</div>
+			<div class="contact-card">
+				<div class="contact-city"><i class="fa fa-building"></i>Жезказган</div>
+				<div class="contact-info"><i class="fa fa-map-marker"></i><span>Улица Тарадая, 2</span></div>
+				<div class="contact-info"><i class="fa fa-phone"></i><span>+7 (776) 559-57-26</span></div>
+			</div>
+			<div class="contact-card">
+				<div class="contact-city"><i class="fa fa-building"></i>Караганда</div>
+				<div class="contact-info"><i class="fa fa-map-marker"></i><span>Проспект Нуркена Абдирова, 26/6</span></div>
+				<div class="contact-info"><i class="fa fa-phone"></i><span>+7 (706) 604-08-95</span></div>
+			</div>
+			<div class="contact-card">
+				<div class="contact-city"><i class="fa fa-building"></i>Экибастуз</div>
+				<div class="contact-info"><i class="fa fa-map-marker"></i><span>Улица Мухтара Ауэзова, 53а</span></div>
+				<div class="contact-info"><i class="fa fa-phone"></i><span>+7 (706) 604-08-95</span></div>
+			</div>
+			<div class="contact-card">
+				<div class="contact-city"><i class="fa fa-building"></i>Костанай</div>
+				<div class="contact-info"><i class="fa fa-map-marker"></i><span>Адрес офиса в Костанае</span></div>
+				<div class="contact-info"><i class="fa fa-phone"></i><span>+7 (776) 559-57-26</span></div>
+			</div>
+			<div class="contact-card">
+				<div class="contact-city"><i class="fa fa-building"></i>Павлодар</div>
+				<div class="contact-info"><i class="fa fa-map-marker"></i><span>БЦ 8 Марта Улица Машхур Жусупа, 189</span></div>
+				<div class="contact-info"><i class="fa fa-phone"></i><span>+7 (706) 604-08-95</span></div>
+			</div>
+			<div class="contact-card">
+				<div class="contact-city"><i class="fa fa-building"></i>Петропавловск</div>
+				<div class="contact-info"><i class="fa fa-map-marker"></i><span>Адрес офиса в Петропавловске</span></div>
+				<div class="contact-info"><i class="fa fa-phone"></i><span>+7 (776) 559-57-26</span></div>
+			</div>
+			<div class="contact-card">
+				<div class="contact-city"><i class="fa fa-building"></i>Семей</div>
+				<div class="contact-info"><i class="fa fa-map-marker"></i><span>БЦ Ertis Улица Абая, 99в</span></div>
+				<div class="contact-info"><i class="fa fa-phone"></i><span>+7 (776) 559‒57‒26</span></div>
+			</div>
+			<div class="contact-card">
+				<div class="contact-city"><i class="fa fa-building"></i>Усть-Каменогорск</div>
+				<div class="contact-info"><i class="fa fa-map-marker"></i><span>Адрес офиса в Усть-Каменогорске</span></div>
+				<div class="contact-info"><i class="fa fa-phone"></i><span>+7 (776) 559‒57‒26</span></div>
+			</div>
 		</div>
+		<div class="section-header" style="padding: 0 0 0 0; max-width: 1200px; margin-left: auto; margin-right: auto; margin-top:60px;">
+			<i class="fa fa-map"></i>
+			<h2>Карта расположения</h2>
+		</div>
+		<div class="map-container" style="border-radius:15px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.1);margin-bottom:60px;max-width:1020px;margin-left:auto;margin-right:auto;height:350px;">
+			<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A48b96e7952b00edaad66e9b2f902ebdddba1f9babb7b9b3985ffa3680e2f8ec3&amp;width=100%&amp;height=350&amp;lang=en_FR&amp;scroll=true"></script>
+		</div>
+		@media (max-width: 768px) {
+			.map-container {
+				margin-bottom: 80px;
+			}
+		}
 	</div>
+	<script>
+// Office search filter
+const searchInput = document.getElementById('office-search');
+const cards = document.querySelectorAll('.contact-card');
+searchInput.addEventListener('input', function() {
+	const value = this.value.toLowerCase();
+	cards.forEach(card => {
+		const text = card.textContent.toLowerCase();
+		if (text.includes(value)) {
+			card.style.display = '';
+		} else {
+			card.style.display = 'none';
+		}
+	});
+});
+</script>
 
 	<a href="https://wa.me/77765595726" class="whatsapp-float" target="_blank">
     	<img src="../images/whatsapp.png" alt="WhatsApp">
@@ -504,25 +323,5 @@
 			<input type="text" placeholder="Поиск">
 		</div>
 	</div>
-
-	<script>
-		document.addEventListener('DOMContentLoaded', function() {
-			const cityItems = document.querySelectorAll('.city-item');
-			
-			cityItems.forEach(item => {
-				item.addEventListener('click', function() {
-					// Close all other items
-					cityItems.forEach(otherItem => {
-						if (otherItem !== this) {
-							otherItem.classList.remove('active');
-						}
-					});
-					
-					// Toggle current item
-					this.classList.toggle('active');
-				});
-			});
-		});
-	</script>
 </body>
 </html>
