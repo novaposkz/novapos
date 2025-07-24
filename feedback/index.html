@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Оставьте отзыв, жалобу или предложение. Мы ценим ваше мнение и стремимся улучшить сервис для удобства наших клиентов!">
-    <title>Отзывы клиентов</title>
+    <title>Обратная связь</title>
     <link href="../styles/styles.css" rel="stylesheet" type="text/css">
     <link rel="icon" href="../images/favicon.png">
     <!-- Font Awesome CDN-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript" >
        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -28,68 +28,338 @@
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/98771693" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
+    <link href="../styles/design-system.css" rel="stylesheet" type="text/css">
     <style>
-        h1 {
-            margin-top: 20px;
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
         }
-        h2 {
-            margin-bottom: 20px;
-        }
-        select {
-            padding: 10px;
-            font-size: 16px;
-            width: 250px;
-            margin-bottom: 20px;
-        }
-        button {
-            background-color: DodgerBlue;
+
+        .feedback-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 5px;
+            text-align: center;
+            padding: 80px 20px;
+            margin-bottom: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
-        button:hover {
-            background-color: #1e90ff;
+
+        .feedback-header h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: 2px;
         }
-        .contact-info {
-            margin-top: 20px;
-            font-size: 14px;
+
+        .feedback-header p {
+            font-size: 1.3rem;
+            margin: 20px 0 0 0;
+            opacity: 0.9;
+            font-weight: 300;
         }
-        .content-wrapper {
+
+        .feedback-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        @media (min-width: 1200px) {
+            .feedback-container {
+                max-width: 1600px;
+            }
+        }
+
+        .section-header {
             display: flex;
-            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .section-header i {
+            font-size: 2.5rem;
+            color: #667eea;
+            margin-right: 20px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #333;
+            margin: 0;
+        }
+
+        .feedback-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        @media (min-width: 1200px) {
+            .feedback-grid {
+                grid-template-columns: repeat(3, 1fr);
+                max-width: none;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1199px) {
+            .feedback-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .feedback-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #e0e0e0;
+            padding: 30px;
+        }
+
+        .feedback-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .card-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
             align-items: center;
             justify-content: center;
-            text-align: center;
-            padding: 20px;
-            margin: 0 auto;
-            max-width: 800px;
+            margin: 0 auto 20px;
         }
-        h1, h2 {
-            width: 100%;
+
+        .card-icon i {
+            font-size: 2.5rem;
+            color: white;
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
             text-align: center;
         }
-        p {
-            width: 100%;
-            max-width: 600px;
+
+        .card-description {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
             text-align: center;
-            margin: 20px auto;
         }
-        select {
-            width: 250px;
-            margin: 20px auto;
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
             display: block;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+            min-width: 120px;
         }
-        button {
-            margin: 20px auto;
-            display: block;
+
+        .form-input, .form-select, .form-textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: 'Poppins', Arial, sans-serif;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
         }
-        .contact-info {
-            text-align: center;
-            max-width: 600px;
-            margin: 20px auto;
+
+        @media (min-width: 768px) {
+            .form-input, .form-select, .form-textarea {
+                width: calc(100% + 40px);
+                margin-right: -40px;
+            }
+            
+            .feedback-card:first-child .form-input {
+                width: calc(100% + 60px);
+                margin-right: -60px;
+            }
+            
+            .feedback-card:first-child .form-input[name="subject"] {
+                width: calc(100% + 40px);
+                margin-right: -40px;
+            }
+            
+            .feedback-card:first-child .form-input[name="name"],
+            .feedback-card:first-child .form-input[name="email"] {
+                width: calc(100% + 40px);
+                margin-right: -40px;
+            }
+            
+            .feedback-card:nth-child(2) .form-input[name="name"],
+            .feedback-card:nth-child(2) .form-input[name="email"],
+            .feedback-card:nth-child(3) .form-input[name="name"],
+            .feedback-card:nth-child(3) .form-input[name="email"] {
+                width: calc(100% + 40px);
+                margin-right: -40px;
+            }
+        }
+
+        .form-input:focus, .form-select:focus, .form-textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            font-family: 'Poppins', Arial, sans-serif;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .contact-info-section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: #e9ecef;
+            transform: translateX(5px);
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+
+        .contact-icon i {
+            font-size: 1.2rem;
+            color: white;
+        }
+        
+        .contact-icon .fab.fa-whatsapp {
+            font-size: 1.4rem;
+        }
+
+        .contact-details h4 {
+            margin: 0 0 5px 0;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .contact-details p {
+            margin: 0;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .contact-details a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-details a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .feedback-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .feedback-header p {
+                font-size: 1.1rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .feedback-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #c3e6cb;
+            display: none;
+        }
+
+        .error-message {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #f5c6cb;
+            display: none;
         }
     </style>
 </head>
@@ -122,19 +392,167 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="../scripts/script.js"></script>
-    <div class="content-wrapper">
-        <h1>Обратная связь</h1>
-        <p>Если у вас есть вопросы или пожелания, пожалуйста, заполните форму ниже и отправьте письмо нашему управляющему директору.</p>
-        <h2>Напишите нашему директору</h2>
-        <select id="topic">
-            <option value="" disabled selected>Выберите вашу тему</option>
-            <option value="Предложить идею">Предложить идею</option>
-            <option value="Вопрос о работе сайта">Вопрос о работе сайта</option>
-            <option value="Жалоба">Жалоба</option>
-            <option value="Пожелание, предложение">Пожелание, предложение</option>
-        </select>
-        <button onclick="sendEmail()">Отправить</button>
-        <p class="contact-info">Остались вопросы? Звоните по номеру <a href="tel:+77765595726">+7 776 559-57-26</a> или пишите <br>на WhatsApp <a href="https://wa.me/77765595726">+7 (776) 559 57 26</a></p>
+    
+    <div class="feedback-header">
+        <h1>ОБРАТНАЯ СВЯЗЬ</h1>
+        <p>Мы ценим ваше мнение и стремимся улучшить сервис для удобства наших клиентов</p>
+    </div>
+
+    <div class="feedback-container">
+        <div class="contact-info-section">
+            <div class="section-header">
+                <i class="fa fa-phone"></i>
+                <h2>Свяжитесь с нами</h2>
+            </div>
+            <p style="text-align: center; color: #666; margin-bottom: 20px;">Выберите удобный для вас способ связи или заполните форму обратной связи</p>
+            
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fa fa-phone"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Телефон</h4>
+                        <p><a href="tel:+77765595726">+7 776 559-57-26</a></p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>WhatsApp</h4>
+                        <p><a href="https://wa.me/77765595726" target="_blank">+7 (776) 559 57 26</a></p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fa fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Email</h4>
+                        <p><a href="mailto:info@novapos.kz">info@novapos.kz</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-header">
+            <i class="fa fa-comments"></i>
+            <h2>Форма обратной связи</h2>
+        </div>
+
+        <div class="feedback-grid">
+            <div class="feedback-card">
+                <div class="card-icon">
+                    <i class="fa fa-lightbulb-o"></i>
+                </div>
+                <h3 class="card-title">Предложить идею</h3>
+                <p class="card-description">У вас есть предложения по улучшению наших продуктов или услуг? Мы будем рады их услышать!</p>
+                
+                <form id="ideaForm">
+                    <div class="form-group">
+                        <label class="form-label">Ваше имя *</label>
+                        <input type="text" class="form-input" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Email *</label>
+                        <input type="email" class="form-input" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Тема идеи</label>
+                        <input type="text" class="form-input" name="subject" placeholder="Краткое описание идеи">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Описание идеи *</label>
+                        <textarea class="form-textarea" name="message" placeholder="Подробно опишите вашу идею..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Отправить идею</button>
+                </form>
+            </div>
+
+            <div class="feedback-card">
+                <div class="card-icon">
+                    <i class="fa fa-exclamation-triangle"></i>
+                </div>
+                <h3 class="card-title">Жалоба или проблема</h3>
+                <p class="card-description">Столкнулись с проблемой? Сообщите нам, и мы постараемся решить её как можно быстрее.</p>
+                
+                <form id="complaintForm">
+                    <div class="form-group">
+                        <label class="form-label">Ваше имя *</label>
+                        <input type="text" class="form-input" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Email *</label>
+                        <input type="email" class="form-input" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Тип проблемы</label>
+                        <select class="form-select" name="issueType">
+                            <option value="">Выберите тип проблемы</option>
+                            <option value="technical">Техническая проблема</option>
+                            <option value="service">Проблема с обслуживанием</option>
+                            <option value="product">Проблема с продуктом</option>
+                            <option value="other">Другое</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Описание проблемы *</label>
+                        <textarea class="form-textarea" name="message" placeholder="Опишите проблему подробно..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Отправить жалобу</button>
+                </form>
+            </div>
+
+            <div class="feedback-card">
+                <div class="card-icon">
+                    <i class="fa fa-heart"></i>
+                </div>
+                <h3 class="card-title">Пожелания и предложения</h3>
+                <p class="card-description">Хотите поделиться своими пожеланиями или предложениями? Ваше мнение важно для нас!</p>
+                
+                <form id="suggestionForm">
+                    <div class="form-group">
+                        <label class="form-label">Ваше имя *</label>
+                        <input type="text" class="form-input" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Email *</label>
+                        <input type="email" class="form-input" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Категория</label>
+                        <select class="form-select" name="category">
+                            <option value="">Выберите категорию</option>
+                            <option value="website">Работа сайта</option>
+                            <option value="products">Продукты и услуги</option>
+                            <option value="support">Поддержка клиентов</option>
+                            <option value="general">Общие пожелания</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Ваше сообщение *</label>
+                        <textarea class="form-textarea" name="message" placeholder="Ваши пожелания или предложения..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Отправить пожелание</button>
+                </form>
+            </div>
+        </div>
     </div>
     
     <a href="https://wa.me/77765595726" class="whatsapp-float" target="_blank">
@@ -163,5 +581,48 @@
             <input type="text" placeholder="Поиск">
         </div>
     </div>
+
+    <script>
+        function sendEmail() {
+            const topic = document.getElementById('topic').value;
+            if (!topic) {
+                alert('Пожалуйста, выберите тему');
+                return;
+            }
+            
+            const subject = encodeURIComponent(topic);
+            const body = encodeURIComponent('Здравствуйте!\n\nЯ хотел бы оставить обратную связь по теме: ' + topic + '\n\nС уважением,\n[Ваше имя]');
+            
+            window.location.href = `mailto:info@novapos.kz?subject=${subject}&body=${body}`;
+        }
+
+        // Form submission handlers
+        document.getElementById('ideaForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const subject = 'Предложение идеи - NovaPos';
+            const body = `Имя: ${formData.get('name')}\nEmail: ${formData.get('email')}\nТема: ${formData.get('subject')}\n\nОписание идеи:\n${formData.get('message')}`;
+            
+            window.location.href = `mailto:info@novapos.kz?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        });
+
+        document.getElementById('complaintForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const subject = 'Жалоба - NovaPos';
+            const body = `Имя: ${formData.get('name')}\nEmail: ${formData.get('email')}\nТип проблемы: ${formData.get('issueType')}\n\nОписание проблемы:\n${formData.get('message')}`;
+            
+            window.location.href = `mailto:info@novapos.kz?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        });
+
+        document.getElementById('suggestionForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const subject = 'Пожелания и предложения - NovaPos';
+            const body = `Имя: ${formData.get('name')}\nEmail: ${formData.get('email')}\nКатегория: ${formData.get('category')}\n\nСообщение:\n${formData.get('message')}`;
+            
+            window.location.href = `mailto:info@novapos.kz?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        });
+    </script>
 </body>
 </html>
