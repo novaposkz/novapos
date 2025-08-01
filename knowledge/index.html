@@ -91,9 +91,11 @@
 
     .content-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(350px, 350px));
         gap: 30px;
         margin-bottom: 60px;
+        align-items: stretch;
+        justify-content: start;
     }
 
     .content-card {
@@ -103,6 +105,9 @@
         box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         transition: all 0.3s ease;
         border: 1px solid #e0e0e0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
     }
 
     .content-card:hover {
@@ -135,6 +140,9 @@
 
     .card-content {
         padding: 25px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
     }
 
     .card-title {
@@ -150,6 +158,7 @@
         font-size: 0.95rem;
         line-height: 1.6;
         margin-bottom: 20px;
+        flex: 1;
     }
 
     .card-meta {
@@ -363,11 +372,9 @@
     <div class="knowledge-container">
         <div class="search-section">
             <div class="search-container">
-                <input type="text" class="search-input" placeholder="Поиск по базе знаний...">
-                <select class="filter-select">
-                    <option value="all">Все материалы</option>
-                    <option value="videos">Видео-уроки</option>
-                    <option value="articles">Статьи</option>
+                <input type="text" class="search-input" id="video-search" placeholder="Поиск по видео-урокам...">
+                <select class="filter-select" id="video-filter">
+                    <option value="all">Все видео-уроки</option>
                     <option value="gbs-market">GBS.Market</option>
                     <option value="moysklad">МойСклад</option>
                 </select>
@@ -937,6 +944,17 @@
             </a>
         </div>
 
+        <div class="search-section">
+            <div class="search-container">
+                <input type="text" class="search-input" id="article-search" placeholder="Поиск по статьям и инструкциям...">
+                <select class="filter-select" id="article-filter">
+                    <option value="all">Все статьи</option>
+                    <option value="gbs-market">GBS.Market</option>
+                    <option value="moysklad">МойСклад</option>
+                </select>
+            </div>
+        </div>
+
         <div class="section-header">
             <i class="fa fa-file-text"></i>
             <h2>Статьи и инструкции</h2>
@@ -1111,6 +1129,85 @@
          <input type="text" placeholder="Поиск">
      </div>
  </div>
+
+<script>
+// Search functionality for video lessons and articles
+document.addEventListener('DOMContentLoaded', function() {
+    const videoSearch = document.getElementById('video-search');
+    const videoFilter = document.getElementById('video-filter');
+    const articleSearch = document.getElementById('article-search');
+    const articleFilter = document.getElementById('article-filter');
+    
+    // Get all video cards and article cards with more specific selectors
+    const videoCards = document.querySelectorAll('a[href*="videos/"]');
+    const articleCards = document.querySelectorAll('a[href*="articles/"]');
+    
+    console.log('Video cards found:', videoCards.length);
+    console.log('Article cards found:', articleCards.length);
+    
+    function filterVideos() {
+        const searchTerm = videoSearch.value.toLowerCase();
+        const filterValue = videoFilter.value;
+        
+        videoCards.forEach(card => {
+            const title = card.querySelector('.card-title').textContent.toLowerCase();
+            const description = card.querySelector('.card-description').textContent.toLowerCase();
+            const type = card.querySelector('.card-type').textContent.toLowerCase();
+            
+            const matchesSearch = searchTerm === '' || title.includes(searchTerm) || description.includes(searchTerm);
+            const matchesFilter = filterValue === 'all' || 
+                                (filterValue === 'gbs-market' && type.includes('gbs.market')) ||
+                                (filterValue === 'moysklad' && type.includes('мойсклад'));
+            
+            if (matchesSearch && matchesFilter) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+    
+    function filterArticles() {
+        const searchTerm = articleSearch.value.toLowerCase();
+        const filterValue = articleFilter.value;
+        
+        articleCards.forEach(card => {
+            const title = card.querySelector('.card-title').textContent.toLowerCase();
+            const description = card.querySelector('.card-description').textContent.toLowerCase();
+            const type = card.querySelector('.card-type').textContent.toLowerCase();
+            
+            const matchesSearch = searchTerm === '' || title.includes(searchTerm) || description.includes(searchTerm);
+            const matchesFilter = filterValue === 'all' || 
+                                (filterValue === 'gbs-market' && type.includes('gbs.market')) ||
+                                (filterValue === 'moysklad' && type.includes('мойсклад'));
+            
+            if (matchesSearch && matchesFilter) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+    
+    // Add event listeners
+    if (videoSearch) {
+        videoSearch.addEventListener('input', filterVideos);
+        console.log('Video search event listener added');
+    }
+    if (videoFilter) {
+        videoFilter.addEventListener('change', filterVideos);
+        console.log('Video filter event listener added');
+    }
+    if (articleSearch) {
+        articleSearch.addEventListener('input', filterArticles);
+        console.log('Article search event listener added');
+    }
+    if (articleFilter) {
+        articleFilter.addEventListener('change', filterArticles);
+        console.log('Article filter event listener added');
+    }
+});
+</script>
 </body>
 </html>
 
