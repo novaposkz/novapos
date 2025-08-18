@@ -127,7 +127,7 @@
       <i class="fa fa-handshake"></i>
       <h2>Партнеры</h2>
     </div>
-    <div class="content-grid" style="margin-bottom:40px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));">
+    <div class="content-grid" style="margin-bottom:40px;grid-template-columns:repeat(3,1fr);gap:20px;">
       <style>
         .partner-logo-image {
           max-width: 140px;
@@ -147,7 +147,15 @@
           padding-left: 0;
           padding-right: 0;
         }
+        @media (max-width: 768px) {
+          .content-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+          }
+        }
         @media (max-width: 600px) {
+          .content-grid {
+            grid-template-columns: 1fr !important;
+          }
           .partner-logo-card-image {
             height: 120px;
             padding-top: 20px;
@@ -172,6 +180,14 @@
         </div>
         <div class="card-content">
           <h3 class="card-title">МойСклад</h3>
+        </div>
+      </div>
+      <div class="content-card" style="text-align:center;">
+        <div class="card-image partner-logo-card-image">
+          <img src="../images/partners/amocrm.png" alt="amoCRM" class="partner-logo-image">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">amoCRM</h3>
         </div>
       </div>
       <div class="content-card" style="text-align:center;">
