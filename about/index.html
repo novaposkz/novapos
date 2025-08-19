@@ -201,6 +201,53 @@
     </div>
 
     <div class="section-header">
+      <i class="fa fa-certificate"></i>
+      <h2>Сертификаты</h2>
+    </div>
+    <div class="content-grid" style="margin-bottom:40px;grid-template-columns:1fr;gap:20px;">
+      <style>
+        .certificate-image {
+          width: 100%;
+          height: auto;
+          object-fit: contain;
+          display: block;
+        }
+        .certificate-card-image {
+          background: #fff;
+          height: auto !important;
+          min-height: auto !important;
+          padding: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: visible !important;
+        }
+        @media (max-width: 768px) {
+          .content-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+          }
+        }
+        @media (max-width: 600px) {
+          .content-grid {
+            grid-template-columns: 1fr !important;
+          }
+          .certificate-card-image {
+            padding: 15px;
+          }
+        }
+      </style>
+      <div class="content-card" style="text-align:center;">
+        <div class="card-image certificate-card-image">
+          <img src="../images/certificates/amocrm.jpg" alt="amoCRM Certificate" class="certificate-image">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">amoCRM</h3>
+          <p>Сертифицированный партнер</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-header">
       <i class="fa fa-users"></i>
       <h2>Наши клиенты</h2>
     </div>
