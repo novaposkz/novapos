@@ -270,8 +270,21 @@
         .search-input,
         .filter-select {
           width: 100%;
-      }
-  }
+        }
+
+        .navigation-buttons {
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .nav-button {
+            width: 100%;
+            max-width: 280px;
+            padding: 14px 24px;
+            font-size: 1rem;
+        }
+    }
 
   .cash-programs-center-wrapper {
     display: flex;
@@ -302,13 +315,69 @@
     height: 180px;
     padding: 20px 0;
 }
-.cash-program-logo img {
-    max-width: 140px;
-    max-height: 140px;
-    border-radius: 14px;
-    box-shadow: 0 2px 8px rgba(102,126,234,0.07);
-    margin-top: 20px;
-}
+    .cash-program-logo img {
+        max-width: 140px;
+        max-height: 140px;
+        border-radius: 14px;
+        box-shadow: 0 2px 8px rgba(102,126,234,0.07);
+        margin-top: 20px;
+    }
+
+    /* Navigation buttons styles */
+    .navigation-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 40px;
+        flex-wrap: wrap;
+    }
+
+    .nav-button {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 16px 32px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        border: none;
+        cursor: pointer;
+        min-width: 180px;
+        justify-content: center;
+    }
+
+    .nav-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 35px rgba(102, 126, 234, 0.4);
+        color: white;
+        text-decoration: none;
+    }
+
+    .nav-button:active {
+        transform: translateY(-1px);
+    }
+
+    .nav-button i {
+        font-size: 1.3rem;
+    }
+
+    .nav-button.video-nav {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    .nav-button.articles-nav {
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        box-shadow: 0 8px 25px rgba(245, 87, 108, 0.3);
+    }
+
+    .nav-button.articles-nav:hover {
+        box-shadow: 0 12px 35px rgba(245, 87, 108, 0.4);
+    }
 @media (max-width: 900px) {
     .cash-programs-grid {
         max-width: 100%;
@@ -370,6 +439,18 @@
     </div>
 
     <div class="knowledge-container">
+        <!-- Navigation buttons -->
+        <div class="navigation-buttons">
+            <a href="#video-section" class="nav-button video-nav">
+                <i class="fa fa-play-circle"></i>
+                <span>Видео-уроки</span>
+            </a>
+            <a href="#articles-section" class="nav-button articles-nav">
+                <i class="fa fa-file-text"></i>
+                <span>Статьи</span>
+            </a>
+        </div>
+
         <div class="search-section">
             <div class="search-container">
                 <input type="text" class="search-input" id="video-search" placeholder="Поиск по видео-урокам...">
@@ -381,7 +462,7 @@
             </div>
         </div>
 
-        <div class="section-header">
+        <div class="section-header" id="video-section">
             <i class="fa fa-play-circle"></i>
             <h2>Видео-уроки</h2>
         </div>
@@ -955,7 +1036,7 @@
             </div>
         </div>
 
-        <div class="section-header">
+        <div class="section-header" id="articles-section">
             <i class="fa fa-file-text"></i>
             <h2>Статьи и инструкции</h2>
         </div>
@@ -1066,6 +1147,936 @@
                     </div>
                 </div>
             </a>
+            <a href="articles/gbs-market/marked-goods.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Как продавать маркированные товары</h3>
+                        <p class="card-description">Кассовая программа GBS.Market позволяет осуществлять продажу товаров подлежащих маркировке.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 4 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/credit-sales-article.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Продажи в долг</h3>
+                        <p class="card-description">Описание процесса продажи в долг и внесение платежа по задолженности.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 3 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/returns-article.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Оформление возврата</h3>
+                        <p class="card-description">Инструкция по оформлению возврата товаров от покупателя, печать чека возврата прихода и просмотр истории возвратов.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 5 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/x-z-reports.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Снятие X и Z-отчетов на кассе</h3>
+                        <p class="card-description">Описание процесса снятия дневного отчета и закрытия смены на кассе через программу.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 3 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/email-reports.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Настройка отчетов на E-mail</h3>
+                        <p class="card-description">Настройка отправки отчетов о продажах в торговой точке на электронную почту.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 4 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/telegram-reports.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Отправка отчетов в Telegram</h3>
+                        <p class="card-description">В кассовой программе GBS.Market реализована возможность получения отчетов о работе торговой точки (магазина, кафе) в чат или группу в Telegram (телеграм) через бота.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 5 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/home-office-mode.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Режим работы "Дом/офис"</h3>
+                        <p class="card-description">Описание режима работы "дом/офис" для удаленного контроля.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 3 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/cloud-sync-troubleshooting.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Что делать, если синхронизация через "облако" не работает</h3>
+                        <p class="card-description">Кассовая программа GBS.Market может использовать облачную синхронизацию для обмена данными между рабочими местами.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 4 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/web-office.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Онлайн-сервис "Веб-офис"</h3>
+                        <p class="card-description">Описание онлайн-сервиса "Веб-офис", который позволяет удаленного контролировать работу торговых точек.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 3 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/web-office-setup.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Настройка выгрузки данных в веб-офис</h3>
+                        <p class="card-description">Для того чтобы данные в "веб-офисе" отображались, необходимо выполнить настройку программы по данной инструкции.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 4 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/transfer-between-stores.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Создание перемещения в другую торговую точку</h3>
+                        <p class="card-description">Процесс отправки товаров через перемещение в другую торговую точку.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 3 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/view-other-stores.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Просмотр остатков из других торговых точек</h3>
+                        <p class="card-description">Инструкция по поиску товаров в других торговых точках и настройке обмена данными о товарах.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 4 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/contacts-sync.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Синхронизация контактов между торговыми точками</h3>
+                        <p class="card-description">Описание процесса настройки синхронизации покупателей и принцип работы обмена.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 3 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/password-recovery-article.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Как восстановить забытый пароль для входа сотрудника</h3>
+                        <p class="card-description">Если вы забыли пароль от входа в программу, воспользуйтесь данной инструкцией, чтобы восстановить доступ.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 2 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/employee-history.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Настройки - Сотрудники: история действий</h3>
+                        <p class="card-description">Описание журнала с историей действий сотрудников.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 3 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/price-tags-article.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Печать ценников</h3>
+                        <p class="card-description">Описание процесса печати ценников из каталога товаров или журнала поступлений.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 3 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/labels-printing.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Печать этикеток</h3>
+                        <p class="card-description">В кассовой программе GBS.Market доступна печать этикеток для товаров.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 3 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/template-installation.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Установка шаблонов</h3>
+                        <p class="card-description">Процесс установки шаблона документов.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 2 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/custom-fields-template.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Добавление доп. полей в шаблон</h3>
+                        <p class="card-description">В статье описан процесс добавления значений доп. полей товаров в шаблоны документов.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 4 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/auto-backup.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Автоматическое создание резервных копий</h3>
+                        <p class="card-description">Настройка автоматического резервного копирования данных.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 3 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/cloud-backup.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Настройка резервного копирования в "облако"</h3>
+                        <p class="card-description">Описание процесса настройки сохранения резервных копий программы в "облако" на примере Яндекс.Диска.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 5 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/manual-backup.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Создание резервной копии вручную</h3>
+                        <p class="card-description">Инструкция по созданию резервной копии данных вручную.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 2 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/restore-backup.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Восстановление из резервной копии</h3>
+                        <p class="card-description">Восстановление данных из резервной копии может потребоваться в случае утраты данных в связи с выходом компьютера из строя или при переносе данных на другое устройство.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 4 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/main-form.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Главная форма</h3>
+                        <p class="card-description">Данная статья описывает интерфейс основной формы.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 3 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/cafe-main-window.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Основное окно режима "Кафе"</h3>
+                        <p class="card-description">Описание внешнего вида и назначения элементов в главной форме режима "Кафе".</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 3 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/summary-report.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Сводный отчет</h3>
+                        <p class="card-description">Описание раздела меню Отчеты - Сводный отчет.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 3 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/seller-report.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Отчет продавца</h3>
+                        <p class="card-description">Описание раздела Отчеты – Отчет продавца, доступ к которому осуществляется из главной формы.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 3 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/sale-card.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Карточка продажи</h3>
+                        <p class="card-description">Описание карточки продажи, содержащей информацию по продаже: товары, платежи, возвраты.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 3 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/sales-journal.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Журнал продаж</h3>
+                        <p class="card-description">Описание раздела "Отчеты - Журнал продаж", в котором отображается история всех продаж.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 3 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/report-wizard.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Мастер отчетов</h3>
+                        <p class="card-description">Описание раздела "Отчеты - Мастер отчетов" и примеры отчетов, которые могут быть сформированы в данном разделе.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 4 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/product-card.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Карточка товара</h3>
+                        <p class="card-description">Описание внешнего вида и функциональности карточки товара.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 3 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/product-catalog.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Каталог товаров</h3>
+                        <p class="card-description">Описание каталога товаров, в котором происходит управление номенклатурой и ассортиментом товаров.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 3 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/category-card.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Карточка категории товаров</h3>
+                        <p class="card-description">Категория (группа) товаров предназначена для объединения товаров, имеющих одинаковые признаки, характеристики и логику продажи.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 2 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/product-categories.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Категории товаров</h3>
+                        <p class="card-description">Описание раздела Товары - Категории товаров для управления категориями (группами) товаров.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 3 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/bulk-edit-products.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Групповое редактировние товаров</h3>
+                        <p class="card-description">Описание процесса массового (группового) редактирования товаров.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 3 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/receipt-card.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Карточка накладной на поступление</h3>
+                        <p class="card-description">В кассовой программе GBS.Market доступно управление входящими накладными, через которые происходит оформление поступления товаров от поставщика.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 3 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/receipts-journal.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Журнал поступлений</h3>
+                        <p class="card-description">Описание внешнего вида и доступной функциональности в разделе Документы - Журнал поступлений.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 3 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/inventory-card.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Карточка инвентаризации</h3>
+                        <p class="card-description">Описание окна "Карточка инвентаризации", в котором происходит процесс проведения пересчета (инвентаризации) товарных остатков в складской программе.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 3 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/order-reserve-card.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Карточка заказа/резерва</h3>
+                        <p class="card-description">В кассовой программе GBS.Market доступна возможность по созданию заказов/резервов.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 3 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/contact-card.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Карточка контакта</h3>
+                        <p class="card-description">Описание внешнего вида, доступных полей и информации в карточке контакта (покупателя, поставщика).</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 3 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/contacts-list.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Список контактов</h3>
+                        <p class="card-description">Описание раздела Контакты - Список контактов, в котором происходит управление поставщиками и покупателями, внесенными в базу данных программы.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 3 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/contact-group-card.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Карточка группы контактов</h3>
+                        <p class="card-description">Описание внешнего вида карточки группы контактов.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 2 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/contact-groups.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Группы контактов</h3>
+                        <p class="card-description">Описание раздела Контакты - группы контактов, в котором происходит управление списком групп покупателей и поставщиков.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 3 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/debtors-list.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Список должников</h3>
+                        <p class="card-description">Описание раздела Контакты - Дожники.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 2 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/product-actions.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Действия с товаром</h3>
+                        <p class="card-description">Раздел настроек программы, в котором можно сконфигурировать логику работы для действий с товарами: продажи, возвраты, поступления и т.п.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 3 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/discounts-settings.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Скидки</h3>
+                        <p class="card-description">Описание настроек, связанных с дисконтной системой лояльности.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 3 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/points-settings.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Баллы</h3>
+                        <p class="card-description">Описание раздела настроек Скидки/баллы - Баллы.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 3 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/employees-settings.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Сотрудники</h3>
+                        <p class="card-description">Описание раздела "Сотрудники" в настройках программы GBS.Market. Управление группами сотрудников, сотрудниками, права доступа и параметрами авторизации.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 4 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/money-settings.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Денежные средства</h3>
+                        <p class="card-description">Описание раздела настроек "Денежные средства". Открыть настройки можно из главного окна программы Файл – Настройки.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 3 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/remote-control-settings.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Удаленный контроль</h3>
+                        <p class="card-description">Описание раздела настроек "Удаленный контроль", где можно настроить параметры удаленного контроля и облачной синхронизации.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 3 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/database-settings.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">База данных</h3>
+                        <p class="card-description">Раздел настроек "База данных", в котором размещены параметры, связанные с подключением и работой с базой данных.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 3 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/contacts-settings.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Контакты</h3>
+                        <p class="card-description">Настройки программы, связанные с контактами (клиентами, покупателями).</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 3 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/barcode-scanner-settings.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Сканер штрихкодов</h3>
+                        <p class="card-description">Описание раздела настроек сканера штрихкодов.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 3 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/receipt-printing-settings.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Печать чеков</h3>
+                        <p class="card-description">Описание настроек, связанных с печатью чеков на принтерах или фискальных регистраторах/ККМ.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 4 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/keyboard-settings.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Клавиатура</h3>
+                        <p class="card-description">Раздел настроек, связанных с экранной клавиатурой и "горячими" клавишами (хоткеями) в кассовой программе GBS.Market.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 3 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/customer-display-settings.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Дисплей покупателя</h3>
+                        <p class="card-description">Раздел настроек программы, связанный с конфигурированием дополнительных дисплеев и второго монитора.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 3 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/acquiring-settings.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Эквайринг</h3>
+                        <p class="card-description">Описание вкладки "Эквайринг" раздела "Оборудование" в настройках кассовой программы GBS.Market.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 3 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/labels-printing-settings.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Печать этикеток 2</h3>
+                        <p class="card-description">Описание настроек вкладки «Печать этикеток» раздела «Оборудование». Настройки, описанные в этой статье, отвечают за поведение программы в процессе печати этикеток.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 3 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/additional-printers.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Доп. принтеры</h3>
+                        <p class="card-description">Конфигурирование дополнительных принтеров, используемых в программе.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 3 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/scales-settings.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Весы</h3>
+                        <p class="card-description">Описание раздела настроек программы "Оборудование - Весы".</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 3 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/login-form.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Форма входа/выхода</h3>
+                        <p class="card-description">Форма логина (входа/выхода) для сотрудников необходима для фиксации факта входа в программу и определении доступных прав для сотрудников, которые выполнили вход.</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 3 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="articles/gbs-market/cafe-settings.html" class="content-card-link" style="text-decoration:none;color:inherit;">
+                <div class="content-card">
+                    <div class="card-image">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Кафе</h3>
+                        <p class="card-description">Настройки программы, связанные с работой в режиме "Кафе".</p>
+                        <div class="card-meta">
+                            <span class="card-type"><img src="../images/gbs-market.jpg" alt="GBS.Market" style="height:20px;width:20px;vertical-align:middle;border-radius:4px;margin-right:6px;">Статья</span>
+                            <span class="card-duration"><i class="fa fa-clock-o"></i> 3 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
             <div class="coming-soon">
                 <i class="fa fa-file-text"></i>
                 <h3>Статьи в разработке</h3>
@@ -1131,8 +2142,28 @@
  </div>
 
 <script>
-// Search functionality for video lessons and articles
+// Smooth scrolling for navigation buttons
 document.addEventListener('DOMContentLoaded', function() {
+    // Navigation buttons smooth scrolling
+    const navButtons = document.querySelectorAll('.nav-button');
+    
+    navButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Search functionality for video lessons and articles
     const videoSearch = document.getElementById('video-search');
     const videoFilter = document.getElementById('video-filter');
     const articleSearch = document.getElementById('article-search');
