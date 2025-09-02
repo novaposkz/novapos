@@ -40,6 +40,7 @@
             padding: 80px 20px;
             margin-bottom: 50px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
         }
         .moysklad-header h1 {
             font-size: 4rem;
@@ -53,6 +54,56 @@
             margin: 20px 0 0 0;
             opacity: 0.9;
             font-weight: 300;
+        }
+        
+        /* Header Login Button Styles */
+        .header-login-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        
+        .header-login-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .header-login-btn:hover {
+            background: linear-gradient(135deg, #ee5a24 0%, #ff6b6b 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+        
+        .header-login-btn i {
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive adjustments for header login button */
+        @media (max-width: 768px) {
+            .header-login-container {
+                position: relative;
+                top: auto;
+                right: auto;
+                margin-bottom: 20px;
+            }
+            
+            .header-login-btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
         }
         .moysklad-container {
             max-width: 1200px;
@@ -146,6 +197,8 @@
             background: linear-gradient(90deg, #764ba2 0%, #667eea 100%);
             transform: translateY(-2px) scale(1.04);
         }
+        
+
         @media (max-width: 768px) {
             .moysklad-header h1 {
                 font-size: 2.5rem;
@@ -193,6 +246,7 @@
                     <li><a href="../contacts/">Контакты</a></li>
                     <li><a href="../partnership/">Стать партнером</a></li>
                 </ul>
+
             </div>
         </div>
     </div>
@@ -200,6 +254,11 @@
     <script src="../scripts/script.js"></script>
 
     <div class="moysklad-header">
+        <div class="header-login-container">
+            <a href="https://www.moysklad.kz/login/" target="_blank" class="header-login-btn">
+                <i class="fa fa-sign-in"></i> Войти
+            </a>
+        </div>
         <h1>МойСклад</h1>
         <p>Облачная система управления торговлей и складом для вашего бизнеса</p>
     </div>
