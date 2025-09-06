@@ -598,8 +598,269 @@
             background: linear-gradient(90deg, #764ba2 0%, #667eea 100%);
             transform: translateY(-2px) scale(1.04);
         }
+        
+        /* Mobile Pricing Styles */
+        .pricing-mobile {
+            display: none;
+        }
+        
+        .mobile-pricing-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .nav-arrow {
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+        
+        .nav-arrow:hover {
+            background: #5a6fd8;
+            transform: scale(1.1);
+        }
+        
+        .nav-arrow:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .mobile-pricing-slider {
+            flex: 1;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .mobile-pricing-option {
+            display: none;
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .mobile-pricing-option.active {
+            display: block;
+            border-color: #667eea;
+        }
+        
+        .mobile-pricing-option.popular {
+            border-color: #667eea;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .mobile-plan-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .mobile-pricing-option.popular .mobile-plan-name {
+            color: white;
+        }
+        
+        .mobile-plan-price {
+                font-size: 2rem;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+        
+        .mobile-pricing-option.popular .mobile-plan-price {
+            color: white;
+        }
+        
+        .mobile-plan-monthly-price {
+            font-size: 1.2rem;
+            color: #999;
+            margin-bottom: 20px;
+        }
+        
+        .mobile-pricing-option.popular .mobile-plan-monthly-price {
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .mobile-plan-button {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-bottom: 10px;
+        }
+        
+        .mobile-pricing-option.popular .mobile-plan-button {
+            background: white;
+            color: #667eea;
+        }
+        
+        .mobile-plan-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .mobile-plan-trial {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .mobile-pricing-option.popular .mobile-plan-trial {
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .mobile-plan-features {
+            margin: 20px 0;
+            text-align: left;
+        }
+        
+        .mobile-feature-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            font-size: 0.9rem;
+        }
+        
+        .mobile-feature-item > span:last-child {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            min-width: 80px;
+        }
+        
+        .mobile-pricing-option.popular .mobile-feature-item {
+            border-bottom-color: rgba(255,255,255,0.2);
+        }
+        
+        .mobile-feature-item:last-child {
+            border-bottom: none;
+        }
+        
+        .mobile-feature-item span:first-child {
+            color: #333;
+            font-weight: 500;
+        }
+        
+        .mobile-pricing-option.popular .mobile-feature-item span:first-child {
+            color: white;
+        }
+        
+        .mobile-feature-item span:last-child {
+            color: #667eea;
+            font-weight: 600;
+        }
+        
+        .mobile-pricing-option.popular .mobile-feature-item span:last-child {
+            color: white;
+        }
+        
+        .mobile-feature-item i {
+            font-size: 1.1rem;
+        }
+        
+        .mobile-checkbox {
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-checkbox:hover {
+            transform: scale(1.1);
+        }
+        
+        .mobile-checkbox.checked {
+            color: white !important;
+            background-color: #28a745;
+            border-radius: 3px;
+            padding: 2px;
+        }
+        
+        .mobile-pricing-option.popular .mobile-checkbox.checked {
+            background-color: rgba(255,255,255,0.2);
+        }
+        
+        .mobile-feature-value {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 8px;
+            position: relative;
+            min-width: 80px;
+        }
+        
+        .mobile-feature-number {
+            font-weight: 600;
+        }
+        
+        .mobile-feature-icon {
+            font-size: 0.9rem;
+            color: #667eea;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            padding: 4px;
+            border-radius: 3px;
+        }
+        
+        .mobile-feature-icon:hover {
+            background-color: #f0f0f0;
+            transform: scale(1.1);
+        }
+        
+        .mobile-feature-icon.mobile-plus {
+            color: #28a745;
+        }
+        
+        .mobile-feature-icon.mobile-minus {
+            color: #dc3545;
+            position: absolute;
+            left: -15px;
+        }
+        
+        .mobile-pricing-option.popular .mobile-feature-icon {
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .mobile-pricing-option.popular .mobile-feature-icon:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+        
+        .mobile-pricing-option.popular .mobile-feature-icon.mobile-plus {
+            color: rgba(255,255,255,0.9);
+        }
+        
+        .mobile-pricing-option.popular .mobile-feature-icon.mobile-minus {
+            color: rgba(255,255,255,0.7);
+        }
 
         @media (max-width: 768px) {
+            .pricing-table {
+                display: none;
+            }
+            
+            .pricing-mobile {
+                display: block;
+            }
+            
             .moysklad-header h1 { font-size: 2.5rem; }
             .moysklad-header p { font-size: 1.1rem; }
             .hero-logo { max-width: 200px; }
@@ -945,9 +1206,327 @@
                 </div>
             </div>
             
-            <div style="text-align: center; margin-top: 20px;">
-                <a href="#" style="color: #667eea; text-decoration: none; font-weight: 500;">Другие варианты</a>
+            <!-- Mobile Pricing -->
+            <div class="pricing-mobile">
+                <div class="mobile-pricing-container">
+                    <button class="nav-arrow nav-arrow-left" onclick="previousMobileTariff()">
+                        <i class="fa fa-chevron-left"></i>
+                    </button>
+                    
+                    <div class="mobile-pricing-slider">
+                        <div class="mobile-pricing-option active" data-tariff="free">
+                            <div class="mobile-plan-name">Бесплатный</div>
+                            <div class="mobile-plan-price">0 ₸</div>
+                            <div class="mobile-plan-monthly-price"></div>
+                            <div class="mobile-plan-features">
+                                <div class="mobile-feature-item">
+                                    <span>Сотрудники:</span>
+                                    <span>5</span>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>Точки продаж:</span>
+                                    <span>2</span>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>Интернет-магазины:</span>
+                                    <span>3</span>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>Хранилище:</span>
+                                    <span>50 МБ</span>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>Товары:</span>
+                                    <span>100</span>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>Юридические лица:</span>
+                                    <span>1</span>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>CRM:</span>
+                                    <i class="fa fa-check" style="color: #28a745;"></i>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>Производство:</span>
+                                    <i class="fa fa-check" style="color: #28a745;"></i>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>Финансы:</span>
+                                    <i class="fa fa-check" style="color: #28a745;"></i>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>Автоматические сценарии:</span>
+                                    <i class="fa fa-times" style="color: #dc3545;"></i>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>Расширенная бонусная программа:</span>
+                                    <i class="fa fa-times" style="color: #dc3545;"></i>
+                                </div>
+                            </div>
+                            <a href="https://www.moysklad.kz/register/?p=2024-3951" target="_blank" class="mobile-plan-button">Подключить</a>
+                            <div class="mobile-plan-trial">Всегда бесплатно</div>
+                        </div>
+                        
+                        <div class="mobile-pricing-option" data-tariff="start">
+                            <div class="mobile-plan-name">Старт</div>
+                            <div class="mobile-plan-price">2 970 ₸</div>
+                            <div class="mobile-plan-monthly-price">—</div>
+                            <div class="mobile-plan-features">
+                                <div class="mobile-feature-item">
+                                    <span>Сотрудники:</span>
+                                    <span>1</span>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>Точки продаж:</span>
+                                    <span>1</span>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>Интернет-магазины:</span>
+                                    <span>0</span>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>Хранилище:</span>
+                                    <span>100 МБ</span>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>Товары:</span>
+                                    <span>500</span>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>Юридические лица:</span>
+                                    <span>1</span>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>CRM:</span>
+                                    <i class="fa fa-times" style="color: #dc3545;"></i>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>Производство:</span>
+                                    <i class="fa fa-times" style="color: #dc3545;"></i>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>Финансы:</span>
+                                    <i class="fa fa-times" style="color: #dc3545;"></i>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>Автоматические сценарии:</span>
+                                    <i class="fa fa-times" style="color: #dc3545;"></i>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>Расширенная бонусная программа:</span>
+                                    <i class="fa fa-times" style="color: #dc3545;"></i>
+                                </div>
+                            </div>
+                            <a href="https://www.moysklad.kz/register/?p=2024-3951" target="_blank" class="mobile-plan-button">Подключить</a>
+                            <div class="mobile-plan-trial">Бесплатно 14 дней</div>
+                        </div>
+                        
+                        <div class="mobile-pricing-option" data-tariff="basic">
+                            <div class="mobile-plan-name">Базовый</div>
+                            <div class="mobile-plan-price">6 240 ₸</div>
+                            <div class="mobile-plan-monthly-price">7 800 ₸</div>
+                            <div class="mobile-plan-features">
+                                <div class="mobile-feature-item">
+                                    <span>Сотрудники:</span>
+                                    <div class="mobile-feature-value">
+                                        <span class="mobile-feature-number">2</span>
+                                        <i class="fa fa-plus mobile-feature-icon mobile-plus" data-min="2" data-unit="" data-feature="employees" data-price="3120" data-monthly-price="3900"></i>
+                                    </div>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>Точки продаж:</span>
+                                    <div class="mobile-feature-value">
+                                        <span class="mobile-feature-number">0</span>
+                                        <i class="fa fa-plus mobile-feature-icon mobile-plus" data-min="0" data-unit="" data-feature="stores" data-price="3120" data-monthly-price="3900"></i>
+                                    </div>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>Интернет-магазины:</span>
+                                    <div class="mobile-feature-value">
+                                        <span class="mobile-feature-number">0</span>
+                                        <i class="fa fa-plus mobile-feature-icon mobile-plus" data-min="0" data-unit="" data-feature="shops" data-price="3120" data-monthly-price="3900"></i>
+                                    </div>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>Хранилище:</span>
+                                    <div class="mobile-feature-value">
+                                        <span class="mobile-feature-number">0.5 ГБ</span>
+                                        <i class="fa fa-plus mobile-feature-icon mobile-plus" data-min="0.5" data-unit=" ГБ" data-feature="storage" data-price="3120" data-monthly-price="3900"></i>
+                                    </div>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>Товары:</span>
+                                    <span>∞</span>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>Юридические лица:</span>
+                                    <span>∞</span>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>CRM:</span>
+                                    <i class="fa fa-square-o mobile-checkbox" data-feature="crm" data-price="3120" data-monthly-price="3900" style="color: #667eea; cursor: pointer;"></i>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>Производство:</span>
+                                    <i class="fa fa-square-o mobile-checkbox" data-feature="production" data-price="6240" data-monthly-price="7800" style="color: #667eea; cursor: pointer;"></i>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>Финансы:</span>
+                                    <i class="fa fa-square-o mobile-checkbox" data-feature="finance" data-price="6240" data-monthly-price="7800" style="color: #667eea; cursor: pointer;"></i>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>Автоматические сценарии:</span>
+                                    <i class="fa fa-square-o mobile-checkbox" data-feature="automation" data-price="6240" data-monthly-price="7800" style="color: #667eea; cursor: pointer;"></i>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>Расширенная бонусная программа:</span>
+                                    <i class="fa fa-square-o mobile-checkbox" data-feature="bonus" data-price="6240" data-monthly-price="7800" style="color: #667eea; cursor: pointer;"></i>
+                                </div>
+                            </div>
+                            <a href="https://www.moysklad.kz/register/?p=2024-3951" target="_blank" class="mobile-plan-button">Подключить</a>
+                            <div class="mobile-plan-trial">Бесплатно 14 дней</div>
+                        </div>
+                        
+                        <div class="mobile-pricing-option popular" data-tariff="pro">
+                            <div class="mobile-plan-name">Проф</div>
+                            <div class="mobile-plan-price">17 760 ₸</div>
+                            <div class="mobile-plan-monthly-price">22 200 ₸</div>
+                            <div class="mobile-plan-features">
+                                <div class="mobile-feature-item">
+                                    <span>Сотрудники:</span>
+                                    <div class="mobile-feature-value">
+                                        <span class="mobile-feature-number">5</span>
+                                        <i class="fa fa-plus mobile-feature-icon mobile-plus" data-min="5" data-unit="" data-feature="employees" data-price="3120" data-monthly-price="3900"></i>
+                                    </div>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>Точки продаж:</span>
+                                    <div class="mobile-feature-value">
+                                        <span class="mobile-feature-number">0</span>
+                                        <i class="fa fa-plus mobile-feature-icon mobile-plus" data-min="0" data-unit="" data-feature="stores" data-price="3120" data-monthly-price="3900"></i>
+                                    </div>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>Интернет-магазины:</span>
+                                    <div class="mobile-feature-value">
+                                        <span class="mobile-feature-number">0</span>
+                                        <i class="fa fa-plus mobile-feature-icon mobile-plus" data-min="0" data-unit="" data-feature="shops" data-price="3120" data-monthly-price="3900"></i>
+                                    </div>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>Хранилище:</span>
+                                    <div class="mobile-feature-value">
+                                        <span class="mobile-feature-number">2 ГБ</span>
+                                        <i class="fa fa-plus mobile-feature-icon mobile-plus" data-min="2" data-unit=" ГБ" data-feature="storage" data-price="3120" data-monthly-price="3900"></i>
+                                    </div>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>Товары:</span>
+                                    <span>∞</span>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>Юридические лица:</span>
+                                    <span>∞</span>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>CRM:</span>
+                                    <i class="fa fa-check" style="color: #28a745;"></i>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>Производство:</span>
+                                    <i class="fa fa-square-o mobile-checkbox" data-feature="production_prof" data-price="6240" data-monthly-price="7800" style="color: #667eea; cursor: pointer;"></i>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>Финансы:</span>
+                                    <i class="fa fa-square-o mobile-checkbox" data-feature="finance_prof" data-price="6240" data-monthly-price="7800" style="color: #667eea; cursor: pointer;"></i>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>Автоматические сценарии:</span>
+                                    <i class="fa fa-square-o mobile-checkbox" data-feature="automation_prof" data-price="6240" data-monthly-price="7800" style="color: #667eea; cursor: pointer;"></i>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>Расширенная бонусная программа:</span>
+                                    <i class="fa fa-square-o mobile-checkbox" data-feature="bonus_prof" data-price="6240" data-monthly-price="7800" style="color: #667eea; cursor: pointer;"></i>
+                                </div>
+                            </div>
+                            <a href="https://www.moysklad.kz/register/?p=2024-3951" target="_blank" class="mobile-plan-button">Подключить</a>
+                            <div class="mobile-plan-trial">Бесплатно 14 дней</div>
+                        </div>
+                        
+                        <div class="mobile-pricing-option" data-tariff="corp">
+                            <div class="mobile-plan-name">Корп</div>
+                            <div class="mobile-plan-price">42 240 ₸</div>
+                            <div class="mobile-plan-monthly-price">52 800 ₸</div>
+                            <div class="mobile-plan-features">
+                                <div class="mobile-feature-item">
+                                    <span>Сотрудники:</span>
+                                    <div class="mobile-feature-value">
+                                        <span class="mobile-feature-number">10</span>
+                                        <i class="fa fa-plus mobile-feature-icon mobile-plus" data-min="10" data-unit="" data-feature="employees" data-price="3120" data-monthly-price="3900"></i>
+                                    </div>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>Точки продаж:</span>
+                                    <div class="mobile-feature-value">
+                                        <span class="mobile-feature-number">5</span>
+                                        <i class="fa fa-plus mobile-feature-icon mobile-plus" data-min="5" data-unit="" data-feature="stores" data-price="3120" data-monthly-price="3900"></i>
+                                    </div>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>Интернет-магазины:</span>
+                                    <div class="mobile-feature-value">
+                                        <span class="mobile-feature-number">0</span>
+                                        <i class="fa fa-plus mobile-feature-icon mobile-plus" data-min="0" data-unit="" data-feature="shops" data-price="3120" data-monthly-price="3900"></i>
+                                    </div>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>Хранилище:</span>
+                                    <div class="mobile-feature-value">
+                                        <span class="mobile-feature-number">10 ГБ</span>
+                                        <i class="fa fa-plus mobile-feature-icon mobile-plus" data-min="10" data-unit=" ГБ" data-feature="storage" data-price="3120" data-monthly-price="3900"></i>
+                                    </div>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>Товары:</span>
+                                    <span>∞</span>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>Юридические лица:</span>
+                                    <span>∞</span>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>CRM:</span>
+                                    <i class="fa fa-check" style="color: #28a745;"></i>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>Производство:</span>
+                                    <i class="fa fa-square-o mobile-checkbox" data-feature="production_corp" data-price="6240" data-monthly-price="7800" style="color: #667eea; cursor: pointer;"></i>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>Финансы:</span>
+                                    <i class="fa fa-square-o mobile-checkbox" data-feature="finance_corp" data-price="6240" data-monthly-price="7800" style="color: #667eea; cursor: pointer;"></i>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>Автоматические сценарии:</span>
+                                    <i class="fa fa-square-o mobile-checkbox" data-feature="automation_corp" data-price="6240" data-monthly-price="7800" style="color: #667eea; cursor: pointer;"></i>
+                                </div>
+                                <div class="mobile-feature-item">
+                                    <span>Расширенная бонусная программа:</span>
+                                    <i class="fa fa-square-o mobile-checkbox" data-feature="bonus_corp" data-price="6240" data-monthly-price="7800" style="color: #667eea; cursor: pointer;"></i>
+                                </div>
+                            </div>
+                            <a href="https://www.moysklad.kz/register/?p=2024-3951" target="_blank" class="mobile-plan-button">Подключить</a>
+                            <div class="mobile-plan-trial">Бесплатно 14 дней</div>
+                        </div>
+                    </div>
+                    
+                    <button class="nav-arrow nav-arrow-right" onclick="nextMobileTariff()">
+                        <i class="fa fa-chevron-right"></i>
+                    </button>
+                </div>
             </div>
+            
         </div>
 
         <!-- Calculator Section -->
@@ -1324,8 +1903,179 @@
             }
         }
 
+        // Mobile Pricing Navigation
+        let currentMobileTariff = 0;
+        const mobileTariffs = ['free', 'start', 'basic', 'pro', 'corp'];
+        
+        function nextMobileTariff() {
+            if (currentMobileTariff < mobileTariffs.length - 1) {
+                currentMobileTariff++;
+                showMobileTariff(currentMobileTariff);
+            }
+        }
+        
+        function previousMobileTariff() {
+            if (currentMobileTariff > 0) {
+                currentMobileTariff--;
+                showMobileTariff(currentMobileTariff);
+            }
+        }
+        
+        function showMobileTariff(index) {
+            // Hide all tariffs
+            document.querySelectorAll('.mobile-pricing-option').forEach(function(tariff) {
+                tariff.classList.remove('active');
+            });
+            
+            // Show current tariff
+            document.querySelectorAll('.mobile-pricing-option')[index].classList.add('active');
+            
+            // Update navigation arrows
+            const leftArrow = document.querySelector('.nav-arrow-left');
+            const rightArrow = document.querySelector('.nav-arrow-right');
+            
+            if (leftArrow) leftArrow.disabled = index === 0;
+            if (rightArrow) rightArrow.disabled = index === mobileTariffs.length - 1;
+        }
+        
+        // Mobile checkbox functionality
+        function toggleMobileCheckbox(checkbox) {
+            const isChecked = checkbox.classList.contains('checked');
+            const feature = checkbox.getAttribute('data-feature');
+            
+            if (isChecked) {
+                // Uncheck
+                checkbox.classList.remove('checked');
+                checkbox.className = 'fa fa-square-o mobile-checkbox';
+            } else {
+                // Check
+                checkbox.classList.add('checked');
+                checkbox.className = 'fa fa-check mobile-checkbox checked';
+            }
+            
+            // Update mobile prices
+            updateMobilePrices();
+        }
+        
+        function updateMobilePrices() {
+            // Update prices for each mobile tariff
+            updateMobileTariffPrice('basic', 6240, 7800);
+            updateMobileTariffPrice('pro', 17760, 22200);
+            updateMobileTariffPrice('corp', 42240, 52800);
+        }
+        
+        function updateMobileTariffPrice(tariffName, baseYearPrice, baseMonthlyPrice) {
+            let additionalYearPrice = 0;
+            let additionalMonthlyPrice = 0;
+            
+            // Count checked checkboxes for this tariff
+            const tariffElement = document.querySelector(`[data-tariff="${tariffName}"]`);
+            if (tariffElement) {
+                const checkedCheckboxes = tariffElement.querySelectorAll('.mobile-checkbox.checked');
+                checkedCheckboxes.forEach(function(checkbox) {
+                    const yearPrice = parseInt(checkbox.getAttribute('data-price')) || 0;
+                    const monthlyPrice = parseInt(checkbox.getAttribute('data-monthly-price')) || 0;
+                    additionalYearPrice += yearPrice;
+                    additionalMonthlyPrice += monthlyPrice;
+                });
+                
+                // Count increments from plus/minus for this tariff
+                const plusIcons = tariffElement.querySelectorAll('.mobile-plus');
+                plusIcons.forEach(function(plusIcon) {
+                    const yearPrice = parseInt(plusIcon.getAttribute('data-price')) || 0;
+                    const monthlyPrice = parseInt(plusIcon.getAttribute('data-monthly-price')) || 0;
+                    const minValue = parseFloat(plusIcon.getAttribute('data-min')) || 0;
+                    const unit = plusIcon.getAttribute('data-unit') || '';
+                    
+                    // Get current value
+                    const numberElement = plusIcon.parentElement.querySelector('.mobile-feature-number');
+                    if (numberElement) {
+                        const currentText = numberElement.textContent;
+                        const currentValue = parseFloat(currentText.replace(unit, '').trim()) || 0;
+                        const increments = currentValue - minValue;
+                        
+                        if (increments > 0) {
+                            additionalYearPrice += increments * yearPrice;
+                            additionalMonthlyPrice += increments * monthlyPrice;
+                        }
+                    }
+                });
+                
+                // Update prices
+                const priceElement = tariffElement.querySelector('.mobile-plan-price');
+                const monthlyElement = tariffElement.querySelector('.mobile-plan-monthly-price');
+                const totalYearPrice = baseYearPrice + additionalYearPrice;
+                const totalMonthlyPrice = baseMonthlyPrice + additionalMonthlyPrice;
+                
+                if (priceElement) {
+                    priceElement.textContent = totalYearPrice.toLocaleString('ru-RU') + ' ₸';
+                }
+                if (monthlyElement) {
+                    monthlyElement.textContent = totalMonthlyPrice.toLocaleString('ru-RU') + ' ₸';
+                }
+            }
+        }
+        
+        // Mobile plus/minus functionality
+        function incrementMobileValue(plusIcon) {
+            const numberElement = plusIcon.parentElement.querySelector('.mobile-feature-number');
+            const minValue = parseFloat(plusIcon.getAttribute('data-min')) || 0;
+            const unit = plusIcon.getAttribute('data-unit') || '';
+            
+            if (numberElement) {
+                const currentText = numberElement.textContent;
+                const currentValue = parseFloat(currentText.replace(unit, '').trim()) || 0;
+                const newValue = currentValue + 1;
+                
+                numberElement.textContent = newValue + unit;
+                
+                // Add minus icon if not exists
+                const minusIcon = plusIcon.parentElement.querySelector('.mobile-minus');
+                if (!minusIcon) {
+                    const minusElement = document.createElement('i');
+                    minusElement.className = 'fa fa-minus mobile-feature-icon mobile-minus';
+                    minusElement.setAttribute('data-min', minValue);
+                    minusElement.setAttribute('data-unit', unit);
+                    minusElement.setAttribute('data-feature', plusIcon.getAttribute('data-feature'));
+                    minusElement.setAttribute('data-price', plusIcon.getAttribute('data-price'));
+                    minusElement.setAttribute('data-monthly-price', plusIcon.getAttribute('data-monthly-price'));
+                    plusIcon.parentElement.insertBefore(minusElement, plusIcon);
+                }
+                
+                // Update prices
+                updateMobilePrices();
+            }
+        }
+        
+        function decrementMobileValue(minusIcon) {
+            const numberElement = minusIcon.parentElement.querySelector('.mobile-feature-number');
+            const minValue = parseFloat(minusIcon.getAttribute('data-min')) || 0;
+            const unit = minusIcon.getAttribute('data-unit') || '';
+            
+            if (numberElement) {
+                const currentText = numberElement.textContent;
+                const currentValue = parseFloat(currentText.replace(unit, '').trim()) || 0;
+                const newValue = currentValue - 1;
+                
+                if (newValue >= minValue) {
+                    numberElement.textContent = newValue + unit;
+                    
+                    // Remove minus icon if at minimum value
+                    if (newValue === minValue) {
+                        minusIcon.remove();
+                    }
+                }
+                
+                // Update prices
+                updateMobilePrices();
+            }
+        }
+
         document.addEventListener('DOMContentLoaded', function() {
             calculatePrice();
+            
+            // Initialize mobile pricing
+            showMobileTariff(0);
             
             // Добавляем обработчики кликов для всех элементов с плюсиками
             document.querySelectorAll('.feature-value').forEach(function(featureValue) {
@@ -1338,6 +2088,30 @@
                     e.preventDefault();
                     toggleCheckbox(checkbox);
                 });
+            });
+            
+            // Добавляем обработчики кликов для мобильных чекбоксов
+            document.querySelectorAll('.mobile-checkbox').forEach(function(checkbox) {
+                checkbox.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    toggleMobileCheckbox(checkbox);
+                });
+            });
+            
+            // Добавляем обработчики кликов для мобильных плюсиков
+            document.querySelectorAll('.mobile-plus').forEach(function(plusIcon) {
+                plusIcon.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    incrementMobileValue(plusIcon);
+                });
+            });
+            
+            // Добавляем обработчики кликов для мобильных минусов (динамически создаваемых)
+            document.addEventListener('click', function(e) {
+                if (e.target.classList.contains('mobile-minus')) {
+                    e.preventDefault();
+                    decrementMobileValue(e.target);
+                }
             });
             
             // Убираем обработчики кликов для обычных чисел - они должны быть статичными
