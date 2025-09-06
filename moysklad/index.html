@@ -890,7 +890,7 @@
                         </div>
                         <div class="feature-value"><i class="fa fa-check feature-icon check"></i></div>
                         <div class="feature-value"><i class="fa fa-times feature-icon cross"></i></div>
-                        <div class="feature-value"><i class="fa fa-square-o feature-icon checkbox" data-feature="crm" data-price="2000"></i></div>
+                        <div class="feature-value"><i class="fa fa-square-o feature-icon checkbox" data-feature="crm" data-price="3120" data-monthly-price="3900"></i></div>
                         <div class="feature-value popular"><i class="fa fa-check feature-icon check"></i></div>
                         <div class="feature-value"><i class="fa fa-check feature-icon check"></i></div>
                     </div>
@@ -902,9 +902,9 @@
                         </div>
                         <div class="feature-value"><i class="fa fa-check feature-icon check"></i></div>
                         <div class="feature-value"><i class="fa fa-times feature-icon cross"></i></div>
-                        <div class="feature-value"><i class="fa fa-square-o feature-icon checkbox" data-feature="production" data-price="3000"></i></div>
-                        <div class="feature-value popular"><i class="fa fa-square-o feature-icon checkbox" data-feature="production_prof" data-price="3000"></i></div>
-                        <div class="feature-value"><i class="fa fa-square-o feature-icon checkbox" data-feature="production_corp" data-price="3000"></i></div>
+                        <div class="feature-value"><i class="fa fa-square-o feature-icon checkbox" data-feature="production" data-price="6240" data-monthly-price="7800"></i></div>
+                        <div class="feature-value popular"><i class="fa fa-square-o feature-icon checkbox" data-feature="production_prof" data-price="6240" data-monthly-price="7800"></i></div>
+                        <div class="feature-value"><i class="fa fa-square-o feature-icon checkbox" data-feature="production_corp" data-price="6240" data-monthly-price="7800"></i></div>
                     </div>
                     
                     <div class="feature-row">
@@ -914,9 +914,9 @@
                         </div>
                         <div class="feature-value"><i class="fa fa-check feature-icon check"></i></div>
                         <div class="feature-value"><i class="fa fa-times feature-icon cross"></i></div>
-                        <div class="feature-value"><i class="fa fa-square-o feature-icon checkbox" data-feature="finance" data-price="2500"></i></div>
-                        <div class="feature-value popular"><i class="fa fa-square-o feature-icon checkbox" data-feature="finance_prof" data-price="2500"></i></div>
-                        <div class="feature-value"><i class="fa fa-square-o feature-icon checkbox" data-feature="finance_corp" data-price="2500"></i></div>
+                        <div class="feature-value"><i class="fa fa-square-o feature-icon checkbox" data-feature="finance" data-price="6240" data-monthly-price="7800"></i></div>
+                        <div class="feature-value popular"><i class="fa fa-square-o feature-icon checkbox" data-feature="finance_prof" data-price="6240" data-monthly-price="7800"></i></div>
+                        <div class="feature-value"><i class="fa fa-square-o feature-icon checkbox" data-feature="finance_corp" data-price="6240" data-monthly-price="7800"></i></div>
                     </div>
                     
                     <div class="feature-row">
@@ -926,9 +926,9 @@
                         </div>
                         <div class="feature-value"><i class="fa fa-times feature-icon cross"></i></div>
                         <div class="feature-value"><i class="fa fa-times feature-icon cross"></i></div>
-                        <div class="feature-value"><i class="fa fa-square-o feature-icon checkbox" data-feature="automation" data-price="1500"></i></div>
-                        <div class="feature-value popular"><i class="fa fa-square-o feature-icon checkbox" data-feature="automation_prof" data-price="1500"></i></div>
-                        <div class="feature-value"><i class="fa fa-square-o feature-icon checkbox" data-feature="automation_corp" data-price="1500"></i></div>
+                        <div class="feature-value"><i class="fa fa-square-o feature-icon checkbox" data-feature="automation" data-price="6240" data-monthly-price="7800"></i></div>
+                        <div class="feature-value popular"><i class="fa fa-square-o feature-icon checkbox" data-feature="automation_prof" data-price="6240" data-monthly-price="7800"></i></div>
+                        <div class="feature-value"><i class="fa fa-square-o feature-icon checkbox" data-feature="automation_corp" data-price="6240" data-monthly-price="7800"></i></div>
                     </div>
                     
                     <div class="feature-row">
@@ -938,9 +938,9 @@
                         </div>
                         <div class="feature-value"><i class="fa fa-times feature-icon cross"></i></div>
                         <div class="feature-value"><i class="fa fa-times feature-icon cross"></i></div>
-                        <div class="feature-value"><i class="fa fa-square-o feature-icon checkbox" data-feature="bonus" data-price="1000"></i></div>
-                        <div class="feature-value popular"><i class="fa fa-square-o feature-icon checkbox" data-feature="bonus_prof" data-price="1000"></i></div>
-                        <div class="feature-value"><i class="fa fa-square-o feature-icon checkbox" data-feature="bonus_corp" data-price="1000"></i></div>
+                        <div class="feature-value"><i class="fa fa-square-o feature-icon checkbox" data-feature="bonus" data-price="6240" data-monthly-price="7800"></i></div>
+                        <div class="feature-value popular"><i class="fa fa-square-o feature-icon checkbox" data-feature="bonus_prof" data-price="6240" data-monthly-price="7800"></i></div>
+                        <div class="feature-value"><i class="fa fa-square-o feature-icon checkbox" data-feature="bonus_corp" data-price="6240" data-monthly-price="7800"></i></div>
                     </div>
                 </div>
             </div>
@@ -1152,18 +1152,7 @@
             addEventListeners(element);
             
             // Пересчитываем цены после изменения значения
-            updateBasicPrice();
-            updateProfPrice();
-            updateCorpPrice();
-            updateBasicPriceStores();
-            updateProfPriceStores();
-            updateCorpPriceStores();
-            updateBasicPriceShop();
-            updateProfPriceShop();
-            updateCorpPriceShop();
-            updateBasicPriceStorage();
-            updateProfPriceStorage();
-            updateCorpPriceStorage();
+            updateAllPrices();
         }
 
         // Функция для уменьшения значения при клике на минус
@@ -1220,18 +1209,7 @@
             addEventListeners(element);
             
             // Пересчитываем цены после изменения значения
-            updateBasicPrice();
-            updateProfPrice();
-            updateCorpPrice();
-            updateBasicPriceStores();
-            updateProfPriceStores();
-            updateCorpPriceStores();
-            updateBasicPriceShop();
-            updateProfPriceShop();
-            updateCorpPriceShop();
-            updateBasicPriceStorage();
-            updateProfPriceStorage();
-            updateCorpPriceStorage();
+            updateAllPrices();
         }
 
         // Функция для получения исходного значения элемента
@@ -1287,372 +1265,62 @@
                 checkbox.className = 'fa fa-check feature-icon checkbox checked';
             }
             
-            // Пересчитываем цену в зависимости от типа чекбокса
-            if (feature.includes('_prof')) {
-                updateProfPrice();
-            } else if (feature.includes('_corp')) {
-                updateCorpPrice();
-            } else {
-                updateBasicPrice();
-            }
+            // Пересчитываем все цены
+            updateAllPrices();
         }
 
-        // Функция для пересчета цены тарифа Базовый
-        function updateBasicPrice() {
-            console.log('updateBasicPrice вызвана');
-            const checkboxes = document.querySelectorAll('.feature-icon.checkbox:not([data-feature*="_prof"]):not([data-feature*="_corp"])');
-            let additionalPrice = 0;
+        // Функция для пересчета цен конкретного тарифа
+        function updateAllPrices() {
+            // Обновляем цены для каждого тарифа отдельно
+            updateTariffPrice(4, 4, 6240, 7800); // Базовый (4-й заголовок, 4-й столбец в таблице)
+            updateTariffPrice(5, 5, 17760, 22200); // Проф (5-й заголовок, 5-й столбец в таблице)
+            updateTariffPrice(6, 6, 42240, 52800); // Корп (6-й заголовок, 6-й столбец в таблице)
+        }
+
+        // Функция для обновления цены конкретного тарифа
+        function updateTariffPrice(headerIndex, tableColumnIndex, baseYearPrice, baseMonthlyPrice) {
+            let additionalYearPrice = 0;
+            let additionalMonthlyPrice = 0;
             
-            // Добавляем стоимость от чекбоксов
-            checkboxes.forEach(function(checkbox) {
-                if (checkbox.classList.contains('checked')) {
-                    const price = parseInt(checkbox.getAttribute('data-price'));
-                    additionalPrice += price;
+            // Подсчитываем увеличения в столбце этого тарифа (плюсики)
+            const tariffCells = document.querySelectorAll('.feature-row .feature-value:nth-child(' + tableColumnIndex + ')');
+            tariffCells.forEach(function(cell) {
+                const currentText = cell.textContent.trim();
+                const hasMinus = cell.querySelector('.feature-icon.minus');
+                
+                if (hasMinus) {
+                    // Если есть минус, значит значение было увеличено
+                    const numberMatch = currentText.match(/(\d+(?:\.\d+)?)/);
+                    if (numberMatch) {
+                        const currentNumber = parseFloat(numberMatch[1]);
+                        const minValue = parseFloat(cell.getAttribute('data-min')) || 0;
+                        const increments = currentNumber - minValue;
+                        additionalYearPrice += increments * 3120; // 3120 за год за каждое увеличение
+                        additionalMonthlyPrice += increments * 3900; // 3900 за месяц за каждое увеличение
+                    }
                 }
             });
             
-            // Добавляем стоимость от увеличения количества сотрудников в тарифе Базовый
-            // Ищем в четвертом столбце (Базовый) первой строки (Количество сотрудников)
-            const employeesValue = document.querySelector('.feature-row:nth-child(1) .feature-value:nth-child(4)');
-            console.log('employeesValue:', employeesValue);
-            if (employeesValue) {
-                const currentText = employeesValue.textContent.trim();
-                console.log('currentText:', currentText);
-                const currentNumber = parseInt(currentText.split(' ')[0]);
-                console.log('currentNumber:', currentNumber);
-                const baseNumber = 2; // Базовое количество сотрудников
-                const additionalEmployees = Math.max(0, currentNumber - baseNumber);
-                console.log('additionalEmployees:', additionalEmployees);
-                additionalPrice += additionalEmployees * 3120; // 3120 за год за каждого дополнительного сотрудника
-            }
-            
-            console.log('additionalPrice:', additionalPrice);
-            
-            // Обновляем цену в заголовке тарифа Базовый
-            const basicPriceElement = document.querySelector('.pricing-option:nth-child(4) .plan-price');
-            const basicMonthlyElement = document.querySelector('.pricing-option:nth-child(4) .plan-monthly-price');
-            console.log('basicPriceElement:', basicPriceElement);
-            console.log('basicMonthlyElement:', basicMonthlyElement);
-            
-            const basePrice = 6240; // Базовая цена тарифа Базовый за год
-            const baseMonthlyPrice = 7800; // Базовая цена тарифа Базовый за месяц
-            const totalYearPrice = basePrice + additionalPrice;
-            const totalMonthlyPrice = baseMonthlyPrice + (additionalPrice * 1.25); // Месячная цена на 25% выше
-            
-            console.log('totalYearPrice:', totalYearPrice);
-            console.log('totalMonthlyPrice:', totalMonthlyPrice);
-            
-            if (basicPriceElement) {
-                basicPriceElement.textContent = totalYearPrice.toLocaleString('ru-RU') + ' ₸';
-            }
-            if (basicMonthlyElement) {
-                basicMonthlyElement.textContent = totalMonthlyPrice.toLocaleString('ru-RU') + ' ₸';
-            }
-        }
-
-        // Функция для пересчета цены тарифа Проф
-        function updateProfPrice() {
-            const checkboxes = document.querySelectorAll('.feature-icon.checkbox[data-feature*="_prof"]');
-            let additionalPrice = 0;
-            
-            // Добавляем стоимость от чекбоксов
-            checkboxes.forEach(function(checkbox) {
-                if (checkbox.classList.contains('checked')) {
-                    const price = parseInt(checkbox.getAttribute('data-price'));
-                    additionalPrice += price;
-                }
+            // Подсчитываем отмеченные чекбоксы в этом тарифе с их индивидуальными ценами
+            const tariffCheckboxes = document.querySelectorAll('.feature-row .feature-value:nth-child(' + tableColumnIndex + ') .feature-icon.checkbox.checked');
+            tariffCheckboxes.forEach(function(checkbox) {
+                const yearPrice = parseInt(checkbox.getAttribute('data-price')) || 3120;
+                const monthlyPrice = parseInt(checkbox.getAttribute('data-monthly-price')) || 3900;
+                additionalYearPrice += yearPrice;
+                additionalMonthlyPrice += monthlyPrice;
             });
             
-            // Добавляем стоимость от увеличения количества сотрудников в тарифе Проф
-            // Ищем в пятом столбце (Проф) первой строки (Количество сотрудников)
-            const employeesValue = document.querySelector('.feature-row:nth-child(1) .feature-value:nth-child(5)');
-            if (employeesValue) {
-                const currentText = employeesValue.textContent.trim();
-                const currentNumber = parseInt(currentText.split(' ')[0]);
-                const baseNumber = 5; // Базовое количество сотрудников
-                const additionalEmployees = Math.max(0, currentNumber - baseNumber);
-                additionalPrice += additionalEmployees * 3120; // 3120 за год за каждого дополнительного сотрудника
+            // Обновляем цены для этого тарифа
+            const priceElement = document.querySelector('.pricing-option:nth-child(' + headerIndex + ') .plan-price');
+            const monthlyElement = document.querySelector('.pricing-option:nth-child(' + headerIndex + ') .plan-monthly-price');
+            const totalYearPrice = baseYearPrice + additionalYearPrice;
+            const totalMonthlyPrice = baseMonthlyPrice + additionalMonthlyPrice;
+            
+            if (priceElement) {
+                priceElement.textContent = totalYearPrice.toLocaleString('ru-RU') + ' ₸';
             }
-            
-            // Обновляем цену в заголовке тарифа Проф
-            const profPriceElement = document.querySelector('.pricing-option:nth-child(5) .plan-price');
-            const profMonthlyElement = document.querySelector('.pricing-option:nth-child(5) .plan-monthly-price');
-            const basePrice = 17760; // Базовая цена тарифа Проф за год
-            const baseMonthlyPrice = 22200; // Базовая цена тарифа Проф за месяц
-            const totalYearPrice = basePrice + additionalPrice;
-            const totalMonthlyPrice = baseMonthlyPrice + (additionalPrice * 1.25); // Месячная цена на 25% выше
-            
-            profPriceElement.textContent = totalYearPrice.toLocaleString('ru-RU') + ' ₸';
-            profMonthlyElement.textContent = totalMonthlyPrice.toLocaleString('ru-RU') + ' ₸';
-        }
-
-        // Функция для пересчета цены тарифа Корп
-        function updateCorpPrice() {
-            const checkboxes = document.querySelectorAll('.feature-icon.checkbox[data-feature*="_corp"]');
-            let additionalPrice = 0;
-            
-            // Добавляем стоимость от чекбоксов
-            checkboxes.forEach(function(checkbox) {
-                if (checkbox.classList.contains('checked')) {
-                    const price = parseInt(checkbox.getAttribute('data-price'));
-                    additionalPrice += price;
-                }
-            });
-            
-            // Добавляем стоимость от увеличения количества сотрудников в тарифе Корп
-            // Ищем в шестом столбце (Корп) первой строки (Количество сотрудников)
-            const employeesValue = document.querySelector('.feature-row:nth-child(1) .feature-value:nth-child(6)');
-            if (employeesValue) {
-                const currentText = employeesValue.textContent.trim();
-                const currentNumber = parseInt(currentText.split(' ')[0]);
-                const baseNumber = 10; // Базовое количество сотрудников
-                const additionalEmployees = Math.max(0, currentNumber - baseNumber);
-                additionalPrice += additionalEmployees * 3120; // 3120 за год за каждого дополнительного сотрудника
-            }
-            
-            // Обновляем цену в заголовке тарифа Корп
-            const corpPriceElement = document.querySelector('.pricing-option:nth-child(6) .plan-price');
-            const corpMonthlyElement = document.querySelector('.pricing-option:nth-child(6) .plan-monthly-price');
-            const basePrice = 42240; // Базовая цена тарифа Корп за год
-            const baseMonthlyPrice = 52800; // Базовая цена тарифа Корп за месяц
-            const totalYearPrice = basePrice + additionalPrice;
-            const totalMonthlyPrice = baseMonthlyPrice + (additionalPrice * 1.25); // Месячная цена на 25% выше
-            
-            corpPriceElement.textContent = totalYearPrice.toLocaleString('ru-RU') + ' ₸';
-            corpMonthlyElement.textContent = totalMonthlyPrice.toLocaleString('ru-RU') + ' ₸';
-        }
-
-        // Функция для пересчета цены тарифа Базовый (Точки продаж)
-        function updateBasicPriceStores() {
-            const storesValue = document.querySelector('.feature-row:nth-child(2) .feature-value:nth-child(4)');
-            if (!storesValue) return;
-            
-            const currentText = storesValue.textContent.trim();
-            const currentNumber = parseInt(currentText) || 0;
-            const baseStores = 0; // Базовое количество точек продаж для тарифа Базовый
-            
-            if (currentNumber > baseStores) {
-                const additionalStores = currentNumber - baseStores;
-                const additionalPrice = additionalStores * 3120; // 3120 за год за каждую дополнительную точку продаж
-                
-                // Обновляем цену в заголовке тарифа Базовый
-                const basicPriceElement = document.querySelector('.pricing-option:nth-child(4) .plan-price');
-                const basicMonthlyElement = document.querySelector('.pricing-option:nth-child(4) .plan-monthly-price');
-                const basePrice = 6240; // Базовая цена тарифа Базовый за год
-                const baseMonthlyPrice = 7800; // Базовая цена тарифа Базовый за месяц
-                const totalYearPrice = basePrice + additionalPrice;
-                const totalMonthlyPrice = baseMonthlyPrice + (additionalPrice * 1.25); // Месячная цена на 25% выше
-                
-                basicPriceElement.textContent = totalYearPrice.toLocaleString('ru-RU') + ' ₸';
-                basicMonthlyElement.textContent = totalMonthlyPrice.toLocaleString('ru-RU') + ' ₸';
-            }
-        }
-
-        // Функция для пересчета цены тарифа Проф (Точки продаж)
-        function updateProfPriceStores() {
-            const storesValue = document.querySelector('.feature-row:nth-child(2) .feature-value:nth-child(5)');
-            if (!storesValue) return;
-            
-            const currentText = storesValue.textContent.trim();
-            const currentNumber = parseInt(currentText) || 0;
-            const baseStores = 0; // Базовое количество точек продаж для тарифа Проф
-            
-            if (currentNumber > baseStores) {
-                const additionalStores = currentNumber - baseStores;
-                const additionalPrice = additionalStores * 3120; // 3120 за год за каждую дополнительную точку продаж
-                
-                // Обновляем цену в заголовке тарифа Проф
-                const profPriceElement = document.querySelector('.pricing-option:nth-child(5) .plan-price');
-                const profMonthlyElement = document.querySelector('.pricing-option:nth-child(5) .plan-monthly-price');
-                const basePrice = 17760; // Базовая цена тарифа Проф за год
-                const baseMonthlyPrice = 22200; // Базовая цена тарифа Проф за месяц
-                const totalYearPrice = basePrice + additionalPrice;
-                const totalMonthlyPrice = baseMonthlyPrice + (additionalPrice * 1.25); // Месячная цена на 25% выше
-                
-                profPriceElement.textContent = totalYearPrice.toLocaleString('ru-RU') + ' ₸';
-                profMonthlyElement.textContent = totalMonthlyPrice.toLocaleString('ru-RU') + ' ₸';
-            }
-        }
-
-        // Функция для пересчета цены тарифа Корп (Точки продаж)
-        function updateCorpPriceStores() {
-            const storesValue = document.querySelector('.feature-row:nth-child(2) .feature-value:nth-child(6)');
-            if (!storesValue) return;
-            
-            const currentText = storesValue.textContent.trim();
-            const currentNumber = parseInt(currentText) || 0;
-            const baseStores = 5; // Базовое количество точек продаж для тарифа Корп
-            
-            if (currentNumber > baseStores) {
-                const additionalStores = currentNumber - baseStores;
-                const additionalPrice = additionalStores * 3120; // 3120 за год за каждую дополнительную точку продаж
-                
-                // Обновляем цену в заголовке тарифа Корп
-                const corpPriceElement = document.querySelector('.pricing-option:nth-child(6) .plan-price');
-                const corpMonthlyElement = document.querySelector('.pricing-option:nth-child(6) .plan-monthly-price');
-                const basePrice = 42240; // Базовая цена тарифа Корп за год
-                const baseMonthlyPrice = 52800; // Базовая цена тарифа Корп за месяц
-                const totalYearPrice = basePrice + additionalPrice;
-                const totalMonthlyPrice = baseMonthlyPrice + (additionalPrice * 1.25); // Месячная цена на 25% выше
-                
-                corpPriceElement.textContent = totalYearPrice.toLocaleString('ru-RU') + ' ₸';
-                corpMonthlyElement.textContent = totalMonthlyPrice.toLocaleString('ru-RU') + ' ₸';
-            }
-        }
-
-        // Функция для пересчета цены тарифа Базовый (Подключение интернет-магазина)
-        function updateBasicPriceShop() {
-            const shopValue = document.querySelector('.feature-row:nth-child(3) .feature-value:nth-child(4)');
-            if (!shopValue) return;
-            
-            const currentText = shopValue.textContent.trim();
-            const currentNumber = parseInt(currentText) || 0;
-            const baseShop = 0; // Базовое количество интернет-магазинов для тарифа Базовый
-            
-            if (currentNumber > baseShop) {
-                const additionalShop = currentNumber - baseShop;
-                const additionalPrice = additionalShop * 3120; // 3120 за год за каждый дополнительный интернет-магазин
-                
-                // Обновляем цену в заголовке тарифа Базовый
-                const basicPriceElement = document.querySelector('.pricing-option:nth-child(4) .plan-price');
-                const basicMonthlyElement = document.querySelector('.pricing-option:nth-child(4) .plan-monthly-price');
-                const basePrice = 6240; // Базовая цена тарифа Базовый за год
-                const baseMonthlyPrice = 7800; // Базовая цена тарифа Базовый за месяц
-                const totalYearPrice = basePrice + additionalPrice;
-                const totalMonthlyPrice = baseMonthlyPrice + (additionalPrice * 1.25); // Месячная цена на 25% выше
-                
-                basicPriceElement.textContent = totalYearPrice.toLocaleString('ru-RU') + ' ₸';
-                basicMonthlyElement.textContent = totalMonthlyPrice.toLocaleString('ru-RU') + ' ₸';
-            }
-        }
-
-        // Функция для пересчета цены тарифа Проф (Подключение интернет-магазина)
-        function updateProfPriceShop() {
-            const shopValue = document.querySelector('.feature-row:nth-child(3) .feature-value:nth-child(5)');
-            if (!shopValue) return;
-            
-            const currentText = shopValue.textContent.trim();
-            const currentNumber = parseInt(currentText) || 0;
-            const baseShop = 0; // Базовое количество интернет-магазинов для тарифа Проф
-            
-            if (currentNumber > baseShop) {
-                const additionalShop = currentNumber - baseShop;
-                const additionalPrice = additionalShop * 3120; // 3120 за год за каждый дополнительный интернет-магазин
-                
-                // Обновляем цену в заголовке тарифа Проф
-                const profPriceElement = document.querySelector('.pricing-option:nth-child(5) .plan-price');
-                const profMonthlyElement = document.querySelector('.pricing-option:nth-child(5) .plan-monthly-price');
-                const basePrice = 17760; // Базовая цена тарифа Проф за год
-                const baseMonthlyPrice = 22200; // Базовая цена тарифа Проф за месяц
-                const totalYearPrice = basePrice + additionalPrice;
-                const totalMonthlyPrice = baseMonthlyPrice + (additionalPrice * 1.25); // Месячная цена на 25% выше
-                
-                profPriceElement.textContent = totalYearPrice.toLocaleString('ru-RU') + ' ₸';
-                profMonthlyElement.textContent = totalMonthlyPrice.toLocaleString('ru-RU') + ' ₸';
-            }
-        }
-
-        // Функция для пересчета цены тарифа Корп (Подключение интернет-магазина)
-        function updateCorpPriceShop() {
-            const shopValue = document.querySelector('.feature-row:nth-child(3) .feature-value:nth-child(6)');
-            if (!shopValue) return;
-            
-            const currentText = shopValue.textContent.trim();
-            const currentNumber = parseInt(currentText) || 0;
-            const baseShop = 0; // Базовое количество интернет-магазинов для тарифа Корп
-            
-            if (currentNumber > baseShop) {
-                const additionalShop = currentNumber - baseShop;
-                const additionalPrice = additionalShop * 3120; // 3120 за год за каждый дополнительный интернет-магазин
-                
-                // Обновляем цену в заголовке тарифа Корп
-                const corpPriceElement = document.querySelector('.pricing-option:nth-child(6) .plan-price');
-                const corpMonthlyElement = document.querySelector('.pricing-option:nth-child(6) .plan-monthly-price');
-                const basePrice = 42240; // Базовая цена тарифа Корп за год
-                const baseMonthlyPrice = 52800; // Базовая цена тарифа Корп за месяц
-                const totalYearPrice = basePrice + additionalPrice;
-                const totalMonthlyPrice = baseMonthlyPrice + (additionalPrice * 1.25); // Месячная цена на 25% выше
-                
-                corpPriceElement.textContent = totalYearPrice.toLocaleString('ru-RU') + ' ₸';
-                corpMonthlyElement.textContent = totalMonthlyPrice.toLocaleString('ru-RU') + ' ₸';
-            }
-        }
-
-        // Функция для пересчета цены тарифа Базовый (Объем хранилища)
-        function updateBasicPriceStorage() {
-            const storageValue = document.querySelector('.feature-row:nth-child(4) .feature-value:nth-child(4)');
-            if (!storageValue) return;
-            
-            const currentText = storageValue.textContent.trim();
-            const currentNumber = parseFloat(currentText) || 0;
-            const baseStorage = 0.5; // Базовый объем хранилища для тарифа Базовый (0.5 ГБ)
-            
-            if (currentNumber > baseStorage) {
-                const additionalStorage = currentNumber - baseStorage;
-                const additionalPrice = additionalStorage * 3120; // 3120 за год за каждый дополнительный ГБ
-                
-                // Обновляем цену в заголовке тарифа Базовый
-                const basicPriceElement = document.querySelector('.pricing-option:nth-child(4) .plan-price');
-                const basicMonthlyElement = document.querySelector('.pricing-option:nth-child(4) .plan-monthly-price');
-                const basePrice = 6240; // Базовая цена тарифа Базовый за год
-                const baseMonthlyPrice = 7800; // Базовая цена тарифа Базовый за месяц
-                const totalYearPrice = basePrice + additionalPrice;
-                const totalMonthlyPrice = baseMonthlyPrice + (additionalPrice * 1.25); // Месячная цена на 25% выше
-                
-                basicPriceElement.textContent = totalYearPrice.toLocaleString('ru-RU') + ' ₸';
-                basicMonthlyElement.textContent = totalMonthlyPrice.toLocaleString('ru-RU') + ' ₸';
-            }
-        }
-
-        // Функция для пересчета цены тарифа Проф (Объем хранилища)
-        function updateProfPriceStorage() {
-            const storageValue = document.querySelector('.feature-row:nth-child(4) .feature-value:nth-child(5)');
-            if (!storageValue) return;
-            
-            const currentText = storageValue.textContent.trim();
-            const currentNumber = parseFloat(currentText) || 0;
-            const baseStorage = 2; // Базовый объем хранилища для тарифа Проф (2 ГБ)
-            
-            if (currentNumber > baseStorage) {
-                const additionalStorage = currentNumber - baseStorage;
-                const additionalPrice = additionalStorage * 3120; // 3120 за год за каждый дополнительный ГБ
-                
-                // Обновляем цену в заголовке тарифа Проф
-                const profPriceElement = document.querySelector('.pricing-option:nth-child(5) .plan-price');
-                const profMonthlyElement = document.querySelector('.pricing-option:nth-child(5) .plan-monthly-price');
-                const basePrice = 17760; // Базовая цена тарифа Проф за год
-                const baseMonthlyPrice = 22200; // Базовая цена тарифа Проф за месяц
-                const totalYearPrice = basePrice + additionalPrice;
-                const totalMonthlyPrice = baseMonthlyPrice + (additionalPrice * 1.25); // Месячная цена на 25% выше
-                
-                profPriceElement.textContent = totalYearPrice.toLocaleString('ru-RU') + ' ₸';
-                profMonthlyElement.textContent = totalMonthlyPrice.toLocaleString('ru-RU') + ' ₸';
-            }
-        }
-
-        // Функция для пересчета цены тарифа Корп (Объем хранилища)
-        function updateCorpPriceStorage() {
-            const storageValue = document.querySelector('.feature-row:nth-child(4) .feature-value:nth-child(6)');
-            if (!storageValue) return;
-            
-            const currentText = storageValue.textContent.trim();
-            const currentNumber = parseFloat(currentText) || 0;
-            const baseStorage = 10; // Базовый объем хранилища для тарифа Корп (10 ГБ)
-            
-            if (currentNumber > baseStorage) {
-                const additionalStorage = currentNumber - baseStorage;
-                const additionalPrice = additionalStorage * 3120; // 3120 за год за каждый дополнительный ГБ
-                
-                // Обновляем цену в заголовке тарифа Корп
-                const corpPriceElement = document.querySelector('.pricing-option:nth-child(6) .plan-price');
-                const corpMonthlyElement = document.querySelector('.pricing-option:nth-child(6) .plan-monthly-price');
-                const basePrice = 42240; // Базовая цена тарифа Корп за год
-                const baseMonthlyPrice = 52800; // Базовая цена тарифа Корп за месяц
-                const totalYearPrice = basePrice + additionalPrice;
-                const totalMonthlyPrice = baseMonthlyPrice + (additionalPrice * 1.25); // Месячная цена на 25% выше
-                
-                corpPriceElement.textContent = totalYearPrice.toLocaleString('ru-RU') + ' ₸';
-                corpMonthlyElement.textContent = totalMonthlyPrice.toLocaleString('ru-RU') + ' ₸';
+            if (monthlyElement) {
+                monthlyElement.textContent = totalMonthlyPrice.toLocaleString('ru-RU') + ' ₸';
             }
         }
 
