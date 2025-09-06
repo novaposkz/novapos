@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript" >
        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -27,12 +28,15 @@
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/98771693" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
+    
     <script>(function(a,m,o,c,r,m){a[m]={id:"432249",hash:"55d12d6c81804d600ee5541cd3be5ebdaf65871b6648cec683d8bf947b9fe8bf",locale:"ru",inline:false,setMeta:function(p){this.params=(this.params||[]).concat([p])}};a[o]=a[o]||function(){(a[o].q=a[o].q||[]).push(arguments)};var d=a.document,s=d.createElement('script');s.async=true;s.id=m+'_script';s.src='https://gso.amocrm.ru/js/button.js';d.head&&d.head.appendChild(s)}(window,0,'amoSocialButton',0,0,'amo_social_button'));
     </script>
+    
     <style>
         body {
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
         }
+        
         .moysklad-header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -42,6 +46,7 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             position: relative;
         }
+        
         .moysklad-header h1 {
             font-size: 4rem;
             font-weight: 800;
@@ -49,6 +54,7 @@
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
             letter-spacing: 2px;
         }
+        
         .moysklad-header p {
             font-size: 1.3rem;
             margin: 20px 0 0 0;
@@ -56,7 +62,6 @@
             font-weight: 300;
         }
         
-        /* Header Login Button Styles */
         .header-login-container {
             position: absolute;
             top: 20px;
@@ -87,54 +92,441 @@
             border-color: rgba(255, 255, 255, 0.3);
         }
         
-        .header-login-btn i {
-            font-size: 0.9rem;
-        }
-        
-        /* Responsive adjustments for header login button */
-        @media (max-width: 768px) {
-            .header-login-container {
-                position: relative;
-                top: auto;
-                right: auto;
-                margin-bottom: 20px;
-            }
-            
-            .header-login-btn {
-                padding: 10px 20px;
-                font-size: 0.9rem;
-            }
-        }
         .moysklad-container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
+        
         .hero-section {
             text-align: center;
             margin-bottom: 60px;
         }
+        
         .hero-logo {
             max-width: 300px;
             margin: 0 auto 30px auto;
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
+        
         .hero-description {
             font-size: 1.2rem;
             color: #666;
             line-height: 1.6;
             margin-bottom: 40px;
         }
-        .features-section {
-            margin-bottom: 60px;
+        
+        /* Pricing Table Styles */
+        .pricing-section {
+            margin-bottom: 80px;
         }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .section-header h3 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .section-header p {
+            font-size: 1.1rem;
+            color: #666;
+        }
+        
+        .pricing-table {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        
+        .pricing-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .pricing-header h3 {
+            font-size: 2rem;
+            margin: 0 0 10px 0;
+            color: white;
+        }
+        
+        .pricing-options {
+            display: grid;
+            grid-template-columns: 1fr repeat(5, 1fr);
+            gap: 0;
+        }
+        
+        .pricing-option {
+            padding: 20px;
+            text-align: center;
+            border-right: 1px solid #eee;
+            position: relative;
+            min-height: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .pricing-option:last-child {
+            border-right: none;
+        }
+        
+        .pricing-option.popular {
+            transform: scale(1.05);
+            z-index: 2;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+        }
+        
+        .pricing-option.feature-header {
+            background: #f8f9fa;
+            border-right: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 120px;
+        }
+        
+        .pricing-option.feature-header .plan-name {
+            color: #333;
+            font-weight: 700;
+            margin: 0;
+        }
+        
+        .pricing-option.feature-header .plan-price {
+            color: #333;
+            font-weight: 600;
+            font-size: 0.8rem;
+            margin: 0;
+            margin-top: -80px;
+        }
+        
+        .pricing-option.feature-header .plan-monthly {
+            color: #333;
+            font-weight: 600;
+            font-size: 0.8rem;
+            margin: 0;
+            margin-top: 30px;
+        }
+        
+        .popular-badge {
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ff6b6b;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .plan-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .plan-price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+        
+        .plan-trial {
+            font-size: 0.8rem;
+            color: #28a745;
+            margin-bottom: 20px;
+        }
+        
+        .plan-monthly-price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #999;
+            margin-bottom: 5px;
+        }
+        
+        /* Поднимаем цену в тарифе Бесплатный, чтобы она была на уровне с другими ценами за год */
+        .pricing-options .pricing-option:nth-child(2) .plan-price {
+            margin-top: -15px !important;
+        }
+        
+        /* Опускаем кнопку в тарифе Бесплатный */
+        .pricing-options .pricing-option:nth-child(2) .plan-button {
+            position: relative !important;
+            top: 15px !important;
+        }
+        
+        .plan-button {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+        }
+        
+        .plan-button.primary {
+            background: #667eea;
+            color: white;
+        }
+        
+        .plan-button.secondary {
+            background: #f8f9fa;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+        
+        .plan-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .pricing-features {
+            border-top: 1px solid #eee;
+        }
+        
+        .feature-row {
+            display: grid;
+            grid-template-columns: 1fr repeat(5, 1fr);
+            gap: 0;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        
+        .feature-row:last-child {
+            border-bottom: none;
+        }
+        
+        .feature-label {
+            padding: 20px;
+            background: #f8f9fa;
+            font-weight: 600;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-align: left;
+            justify-content: flex-start;
+        }
+        
+        .feature-value {
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            position: relative;
+            min-width: 80px;
+        }
+        
+        /* Выделение всего столбца Проф */
+        .pricing-option.popular,
+        .feature-value.popular {
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8f0ff 100%) !important;
+        }
+        
+        .feature-icon {
+            font-size: 1.2rem;
+        }
+        
+        .feature-icon.check {
+            color: #28a745;
+        }
+        
+        .feature-icon.cross {
+            color: #dc3545;
+        }
+        
+        .feature-icon.plus {
+            color: #667eea;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            padding: 2px;
+            border-radius: 3px;
+        }
+        
+        .feature-icon.plus:hover {
+            background-color: #667eea;
+            color: white;
+            transform: scale(1.1);
+        }
+        
+        .feature-icon.minus {
+            color: #dc3545;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            padding: 2px;
+            border-radius: 3px;
+            margin-right: 5px;
+            position: absolute;
+            left: 60px;
+            z-index: 1;
+        }
+        
+        .feature-icon.minus:hover {
+            background-color: #dc3545;
+            color: white;
+            transform: scale(1.1);
+        }
+        
+        /* Специальное позиционирование минуса для строки "Объем хранилища" */
+        .storage-row .feature-icon.minus {
+            left: 40px;
+        }
+        
+        .feature-icon.optional {
+            color: #ffc107;
+        }
+        
+        .feature-icon.checkbox {
+            color: #6c757d;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            padding: 2px;
+            border-radius: 3px;
+        }
+        
+        .feature-icon.checkbox:hover {
+            background-color: #e9ecef;
+            color: #495057;
+            transform: scale(1.1);
+        }
+        
+        .feature-icon.checkbox.checked {
+            color: white;
+            background-color: #28a745;
+        }
+        
+        .feature-icon.checkbox.checked:hover {
+            background-color: #218838;
+            color: white;
+        }
+        
+        
+        .feature-value {
+            font-size: 1rem;
+        }
+        
+        .feature-value.infinity {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        /* Calculator Styles */
+        .calculator-section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            margin-bottom: 80px;
+        }
+        
+        .calculator-form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-group label {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .form-group select,
+        .form-group input {
+            padding: 12px 16px;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group select:focus,
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .calculator-result {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        
+        .calculator-result h4 {
+            font-size: 1.5rem;
+            margin: 0 0 15px 0;
+        }
+        
+        .calculator-price {
+            font-size: 3rem;
+            font-weight: 700;
+            margin: 0 0 10px 0;
+        }
+        
+        .calculator-period {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .calculator-cta {
+            margin-top: 20px;
+        }
+        
+        .calculator-cta .btn {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 15px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .calculator-cta .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-bottom: 40px;
         }
+        
         .feature-card {
             background: white;
             border-radius: 15px;
@@ -143,23 +535,28 @@
             text-align: center;
             transition: transform 0.3s ease;
         }
+        
         .feature-card:hover {
             transform: translateY(-5px);
         }
+        
         .feature-card i {
             font-size: 3rem;
             color: #667eea;
             margin-bottom: 20px;
         }
+        
         .feature-card h3 {
             font-size: 1.4rem;
             color: #333;
             margin-bottom: 15px;
         }
+        
         .feature-card p {
             color: #666;
             line-height: 1.6;
         }
+        
         .register-section {
             background: white;
             border-radius: 15px;
@@ -168,16 +565,19 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             margin-bottom: 60px;
         }
+        
         .register-section h2 {
             font-size: 2.5rem;
             color: #333;
             margin-bottom: 20px;
         }
+        
         .register-section p {
             font-size: 1.1rem;
             color: #666;
             margin-bottom: 30px;
         }
+        
         .register-btn {
             display: inline-flex;
             align-items: center;
@@ -193,32 +593,25 @@
             box-shadow: 0 4px 16px rgba(102,126,234,0.13);
             transition: background 0.2s, transform 0.2s;
         }
+        
         .register-btn:hover {
             background: linear-gradient(90deg, #764ba2 0%, #667eea 100%);
             transform: translateY(-2px) scale(1.04);
         }
-        
 
         @media (max-width: 768px) {
-            .moysklad-header h1 {
-                font-size: 2.5rem;
+            .moysklad-header h1 { font-size: 2.5rem; }
+            .moysklad-header p { font-size: 1.1rem; }
+            .hero-logo { max-width: 200px; }
+            .pricing-options { grid-template-columns: 1fr; }
+            .feature-row { grid-template-columns: 1fr; }
+            .feature-label { 
+                text-align: center; 
+                justify-content: center; 
             }
-            .moysklad-header p {
-                font-size: 1.1rem;
-            }
-            .hero-logo {
-                max-width: 200px;
-            }
-            .features-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            .register-section {
-                padding: 30px 20px;
-            }
-            .register-section h2 {
-                font-size: 2rem;
-            }
+            .calculator-form { grid-template-columns: 1fr; }
+            .register-section { padding: 30px 20px; }
+            .register-section h2 { font-size: 2rem; }
         }
     </style>
 </head>
@@ -246,10 +639,10 @@
                     <li><a href="../contacts/">Контакты</a></li>
                     <li><a href="../partnership/">Стать партнером</a></li>
                 </ul>
-
             </div>
         </div>
     </div>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="../scripts/script.js"></script>
 
@@ -270,6 +663,338 @@
                 МойСклад — это современный облачный сервис, который объединяет все процессы вашего бизнеса в одной системе: 
                 продажи, закупки, складской учет, финансы и производство. Работайте из любой точки мира с любого устройства.
             </p>
+        </div>
+
+        <!-- Pricing Table Section -->
+        <div class="pricing-section">
+            <div class="section-header">
+                <h2>Тарифные планы</h2>
+            </div>
+            
+            <div class="pricing-table">
+                <div class="pricing-header">
+                    <h3>Стоимость подписки</h3>
+                    <p>Выберите удобный способ оплаты</p>
+                </div>
+                
+                <div class="pricing-options">
+                    <div class="pricing-option feature-header">
+                        <div class="plan-name"></div>
+                        <div class="plan-price">При оплате за год</div>
+                        <div class="plan-monthly">При оплате за месяц</div>
+                    </div>
+                    
+                    <div class="pricing-option">
+                        <div class="plan-name">Бесплатный</div>
+                        <div class="plan-price">0 ₸</div>
+                        <div class="plan-monthly-price"></div>
+                        <a href="https://www.moysklad.kz/register/?p=2024-3951" target="_blank" class="plan-button secondary">Подключить</a>
+                        <div class="plan-trial">Всегда бесплатно</div>
+                    </div>
+                    
+                    <div class="pricing-option">
+                        <div class="plan-name">Старт</div>
+                        <div class="plan-price">2 970 ₸</div>
+                        <div class="plan-monthly-price">—</div>
+                        <a href="https://www.moysklad.kz/register/?p=2024-3951" target="_blank" class="plan-button secondary">Подключить</a>
+                        <div class="plan-trial">Бесплатно 14 дней</div>
+                    </div>
+                    
+                    <div class="pricing-option">
+                        <div class="plan-name">Базовый</div>
+                        <div class="plan-price">6 240 ₸</div>
+                        <div class="plan-monthly-price">7 800 ₸</div>
+                        <a href="https://www.moysklad.kz/register/?p=2024-3951" target="_blank" class="plan-button secondary">Подключить</a>
+                        <div class="plan-trial">Бесплатно 14 дней</div>
+                    </div>
+                    
+                    <div class="pricing-option popular">
+                        <div class="popular-badge">Популярный</div>
+                        <div class="plan-name">Проф</div>
+                        <div class="plan-price">17 760 ₸</div>
+                        <div class="plan-monthly-price">22 200 ₸</div>
+                        <a href="https://www.moysklad.kz/register/?p=2024-3951" target="_blank" class="plan-button primary">Подключить</a>
+                        <div class="plan-trial">Бесплатно 14 дней</div>
+                    </div>
+                    
+                    <div class="pricing-option">
+                        <div class="plan-name">Корп</div>
+                        <div class="plan-price">42 240 ₸</div>
+                        <div class="plan-monthly-price">52 800 ₸</div>
+                        <a href="https://www.moysklad.kz/register/?p=2024-3951" target="_blank" class="plan-button secondary">Подключить</a>
+                        <div class="plan-trial">Бесплатно 14 дней</div>
+                    </div>
+                </div>
+                
+                <div class="pricing-features">
+                    <div class="feature-row">
+                        <div class="feature-label">
+                            <i class="fa fa-users"></i>
+                            Количество сотрудников
+                        </div>
+                        <div class="feature-value" data-min="5">5</div>
+                        <div class="feature-value" data-min="1">1</div>
+                        <div class="feature-value" data-min="2">2 <i class="fa fa-plus feature-icon plus"></i></div>
+                        <div class="feature-value popular" data-min="5">5 <i class="fa fa-plus feature-icon plus"></i></div>
+                        <div class="feature-value" data-min="10">10 <i class="fa fa-plus feature-icon plus"></i></div>
+                    </div>
+                    
+                    <div class="feature-row">
+                        <div class="feature-label">
+                            <i class="fa fa-store"></i>
+                            Точки продаж
+                        </div>
+                        <div class="feature-value" data-min="2">2</div>
+                        <div class="feature-value" data-min="1">1</div>
+                        <div class="feature-value" data-min="0">0 <i class="fa fa-plus feature-icon plus"></i></div>
+                        <div class="feature-value popular" data-min="0">0 <i class="fa fa-plus feature-icon plus"></i></div>
+                        <div class="feature-value" data-min="5">5 <i class="fa fa-plus feature-icon plus"></i></div>
+                    </div>
+                    
+                    <div class="feature-row">
+                        <div class="feature-label">
+                            <i class="fa fa-shopping-cart"></i>
+                            Подключение интернет-магазина
+                        </div>
+                        <div class="feature-value" data-min="3">3</div>
+                        <div class="feature-value" data-min="0">0</div>
+                        <div class="feature-value" data-min="0">0 <i class="fa fa-plus feature-icon plus"></i></div>
+                        <div class="feature-value popular" data-min="0">0 <i class="fa fa-plus feature-icon plus"></i></div>
+                        <div class="feature-value" data-min="0">0 <i class="fa fa-plus feature-icon plus"></i></div>
+                    </div>
+                    
+                    <div class="feature-row">
+                        <div class="feature-label">
+                            <i class="fa fa-building"></i>
+                            Юридические лица
+                        </div>
+                        <div class="feature-value" data-min="1">1</div>
+                        <div class="feature-value" data-min="1">1</div>
+                        <div class="feature-value" data-min="2">2</div>
+                        <div class="feature-value popular" data-min="10">10</div>
+                        <div class="feature-value infinity" data-min="∞">∞</div>
+                    </div>
+                    
+                    <div class="feature-row storage-row">
+                        <div class="feature-label">
+                            <i class="fa fa-database"></i>
+                            Объем хранилища
+                        </div>
+                        <div class="feature-value" data-min="50" data-unit="МБ">50 МБ</div>
+                        <div class="feature-value" data-min="100" data-unit="МБ">100 МБ</div>
+                        <div class="feature-value" data-min="0.5" data-unit="ГБ">0.5 ГБ <i class="fa fa-plus feature-icon plus"></i></div>
+                        <div class="feature-value popular" data-min="2" data-unit="ГБ">2 ГБ <i class="fa fa-plus feature-icon plus"></i></div>
+                        <div class="feature-value" data-min="10" data-unit="ГБ">10 ГБ <i class="fa fa-plus feature-icon plus"></i></div>
+                    </div>
+                    
+                    <div class="feature-row">
+                        <div class="feature-label">
+                            <i class="fa fa-box"></i>
+                            Количество товаров
+                        </div>
+                        <div class="feature-value">100</div>
+                        <div class="feature-value infinity">∞</div>
+                        <div class="feature-value infinity">∞</div>
+                        <div class="feature-value popular infinity">∞</div>
+                        <div class="feature-value infinity">∞</div>
+                    </div>
+                    
+                    <div class="feature-row">
+                        <div class="feature-label">
+                            <i class="fa fa-handshake-o"></i>
+                            Количество контрагентов
+                        </div>
+                        <div class="feature-value">100</div>
+                        <div class="feature-value infinity">∞</div>
+                        <div class="feature-value infinity">∞</div>
+                        <div class="feature-value popular infinity">∞</div>
+                        <div class="feature-value infinity">∞</div>
+                    </div>
+                    
+                    <div class="feature-row">
+                        <div class="feature-label">
+                            <i class="fa fa-file-text-o"></i>
+                            Количество документов
+                        </div>
+                        <div class="feature-value">100</div>
+                        <div class="feature-value infinity">∞</div>
+                        <div class="feature-value infinity">∞</div>
+                        <div class="feature-value popular infinity">∞</div>
+                        <div class="feature-value infinity">∞</div>
+                    </div>
+                    
+                    <div class="feature-row">
+                        <div class="feature-label">
+                            <i class="fa fa-barcode"></i>
+                            Поддержка маркировки
+                        </div>
+                        <div class="feature-value"><i class="fa fa-check feature-icon check"></i></div>
+                        <div class="feature-value"><i class="fa fa-check feature-icon check"></i></div>
+                        <div class="feature-value"><i class="fa fa-check feature-icon check"></i></div>
+                        <div class="feature-value popular"><i class="fa fa-check feature-icon check"></i></div>
+                        <div class="feature-value"><i class="fa fa-check feature-icon check"></i></div>
+                    </div>
+                    
+                    <div class="feature-row">
+                        <div class="feature-label">
+                            <i class="fa fa-book"></i>
+                            Каталог решений
+                        </div>
+                        <div class="feature-value"><i class="fa fa-check feature-icon check"></i></div>
+                        <div class="feature-value"><i class="fa fa-check feature-icon check"></i></div>
+                        <div class="feature-value"><i class="fa fa-check feature-icon check"></i></div>
+                        <div class="feature-value popular"><i class="fa fa-check feature-icon check"></i></div>
+                        <div class="feature-value"><i class="fa fa-check feature-icon check"></i></div>
+                    </div>
+                    
+                    <div class="feature-row">
+                        <div class="feature-label">
+                            <i class="fa fa-paint-brush"></i>
+                            Собственные шаблоны
+                        </div>
+                        <div class="feature-value"><i class="fa fa-times feature-icon cross"></i></div>
+                        <div class="feature-value"><i class="fa fa-times feature-icon cross"></i></div>
+                        <div class="feature-value"><i class="fa fa-check feature-icon check"></i></div>
+                        <div class="feature-value popular"><i class="fa fa-check feature-icon check"></i></div>
+                        <div class="feature-value"><i class="fa fa-check feature-icon check"></i></div>
+                    </div>
+                    
+                    <div class="feature-row">
+                        <div class="feature-label">
+                            <i class="fa fa-plus-square-o"></i>
+                            Дополнительные поля
+                        </div>
+                        <div class="feature-value"><i class="fa fa-times feature-icon cross"></i></div>
+                        <div class="feature-value"><i class="fa fa-times feature-icon cross"></i></div>
+                        <div class="feature-value"><i class="fa fa-check feature-icon check"></i></div>
+                        <div class="feature-value popular"><i class="fa fa-check feature-icon check"></i></div>
+                        <div class="feature-value"><i class="fa fa-check feature-icon check"></i></div>
+                    </div>
+                    
+                    <div class="feature-row">
+                        <div class="feature-label">
+                            <i class="fa fa-user-secret"></i>
+                            Управление правами пользователей
+                        </div>
+                        <div class="feature-value"><i class="fa fa-check feature-icon check"></i></div>
+                        <div class="feature-value"><i class="fa fa-times feature-icon cross"></i></div>
+                        <div class="feature-value"><i class="fa fa-times feature-icon cross"></i></div>
+                        <div class="feature-value popular"><i class="fa fa-check feature-icon check"></i></div>
+                        <div class="feature-value"><i class="fa fa-check feature-icon check"></i></div>
+                    </div>
+                    
+                    <div class="feature-row">
+                        <div class="feature-label">
+                            <i class="fa fa-phone"></i>
+                            CRM
+                        </div>
+                        <div class="feature-value"><i class="fa fa-check feature-icon check"></i></div>
+                        <div class="feature-value"><i class="fa fa-times feature-icon cross"></i></div>
+                        <div class="feature-value"><i class="fa fa-square-o feature-icon checkbox" data-feature="crm" data-price="2000"></i></div>
+                        <div class="feature-value popular"><i class="fa fa-check feature-icon check"></i></div>
+                        <div class="feature-value"><i class="fa fa-check feature-icon check"></i></div>
+                    </div>
+                    
+                    <div class="feature-row">
+                        <div class="feature-label">
+                            <i class="fa fa-industry"></i>
+                            Производство
+                        </div>
+                        <div class="feature-value"><i class="fa fa-check feature-icon check"></i></div>
+                        <div class="feature-value"><i class="fa fa-times feature-icon cross"></i></div>
+                        <div class="feature-value"><i class="fa fa-square-o feature-icon checkbox" data-feature="production" data-price="3000"></i></div>
+                        <div class="feature-value popular"><i class="fa fa-square-o feature-icon checkbox" data-feature="production_prof" data-price="3000"></i></div>
+                        <div class="feature-value"><i class="fa fa-square-o feature-icon checkbox" data-feature="production_corp" data-price="3000"></i></div>
+                    </div>
+                    
+                    <div class="feature-row">
+                        <div class="feature-label">
+                            <i class="fa fa-money"></i>
+                            Финансы
+                        </div>
+                        <div class="feature-value"><i class="fa fa-check feature-icon check"></i></div>
+                        <div class="feature-value"><i class="fa fa-times feature-icon cross"></i></div>
+                        <div class="feature-value"><i class="fa fa-square-o feature-icon checkbox" data-feature="finance" data-price="2500"></i></div>
+                        <div class="feature-value popular"><i class="fa fa-square-o feature-icon checkbox" data-feature="finance_prof" data-price="2500"></i></div>
+                        <div class="feature-value"><i class="fa fa-square-o feature-icon checkbox" data-feature="finance_corp" data-price="2500"></i></div>
+                    </div>
+                    
+                    <div class="feature-row">
+                        <div class="feature-label">
+                            <i class="fa fa-magic"></i>
+                            Автоматические сценарии
+                        </div>
+                        <div class="feature-value"><i class="fa fa-times feature-icon cross"></i></div>
+                        <div class="feature-value"><i class="fa fa-times feature-icon cross"></i></div>
+                        <div class="feature-value"><i class="fa fa-square-o feature-icon checkbox" data-feature="automation" data-price="1500"></i></div>
+                        <div class="feature-value popular"><i class="fa fa-square-o feature-icon checkbox" data-feature="automation_prof" data-price="1500"></i></div>
+                        <div class="feature-value"><i class="fa fa-square-o feature-icon checkbox" data-feature="automation_corp" data-price="1500"></i></div>
+                    </div>
+                    
+                    <div class="feature-row">
+                        <div class="feature-label">
+                            <i class="fa fa-gift"></i>
+                            Расширенная бонусная программа
+                        </div>
+                        <div class="feature-value"><i class="fa fa-times feature-icon cross"></i></div>
+                        <div class="feature-value"><i class="fa fa-times feature-icon cross"></i></div>
+                        <div class="feature-value"><i class="fa fa-square-o feature-icon checkbox" data-feature="bonus" data-price="1000"></i></div>
+                        <div class="feature-value popular"><i class="fa fa-square-o feature-icon checkbox" data-feature="bonus_prof" data-price="1000"></i></div>
+                        <div class="feature-value"><i class="fa fa-square-o feature-icon checkbox" data-feature="bonus_corp" data-price="1000"></i></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="#" style="color: #667eea; text-decoration: none; font-weight: 500;">Другие варианты</a>
+            </div>
+        </div>
+
+        <!-- Calculator Section -->
+        <div class="calculator-section">
+            <div class="section-header">
+                <h3>Калькулятор стоимости</h3>
+            </div>
+            
+            <div class="calculator-form">
+                <div class="form-group">
+                    <label for="plan">Выберите тарифный план</label>
+                    <select id="plan" onchange="calculatePrice()">
+                        <option value="free">Бесплатный</option>
+                        <option value="start">Старт</option>
+                        <option value="basic">Базовый</option>
+                        <option value="pro">Проф</option>
+                        <option value="corp">Корп</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="period">Период оплаты</label>
+                    <select id="period" onchange="calculatePrice()">
+                        <option value="year">За год</option>
+                        <option value="month">За месяц</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="employees">Количество сотрудников</label>
+                    <input type="number" id="employees" min="1" max="100" value="5" onchange="calculatePrice()">
+                </div>
+                
+                <div class="form-group">
+                    <label for="stores">Количество точек продаж</label>
+                    <input type="number" id="stores" min="0" max="50" value="1" onchange="calculatePrice()">
+                </div>
+            </div>
+            
+            <div class="calculator-result">
+                <h4>Итоговая стоимость</h4>
+                <div class="calculator-price" id="totalPrice">0 ₸</div>
+                <div class="calculator-period" id="periodText">за год</div>
+                <div class="calculator-cta">
+                    <a href="https://www.moysklad.kz/register/?p=2024-3951" target="_blank" class="btn">Подключить тариф</a>
+                </div>
+            </div>
         </div>
 
         <div class="features-section">
@@ -323,7 +1048,6 @@
     <div id="copyright">
         <p>ВСЕ ПРАВА ЗАЩИЩЕНЫ <span style="font-size:18px">&copy;</span> NOVAPOS.KZ </p>
     </div>
-    
 
     <div class="bottom-nav">
         <a href="../feedback/">
@@ -347,5 +1071,609 @@
             <input type="text" placeholder="Поиск">
         </div>
     </div>
+
+    <script>
+        // Pricing data
+        const pricingData = {
+            free: { year: 0, month: 0 },
+            start: { year: 2970, month: 0 },
+            basic: { year: 6240, month: 7800 },
+            pro: { year: 17760, month: 22200 },
+            corp: { year: 42240, month: 52800 }
+        };
+
+        // Calculate price function
+        function calculatePrice() {
+            const plan = document.getElementById('plan').value;
+            const period = document.getElementById('period').value;
+            
+            let basePrice = pricingData[plan][period];
+            
+            if (plan === 'free') {
+                basePrice = 0;
+            } else if (plan === 'start' && period === 'month') {
+                basePrice = 0;
+            }
+            
+            const formattedPrice = basePrice.toLocaleString('ru-RU') + ' ₸';
+            document.getElementById('totalPrice').textContent = formattedPrice;
+            
+            const periodText = period === 'year' ? 'за год' : 'за месяц';
+            document.getElementById('periodText').textContent = periodText;
+            
+            const periodSelect = document.getElementById('period');
+            if (plan === 'start') {
+                periodSelect.value = 'year';
+                periodSelect.disabled = true;
+            } else {
+                periodSelect.disabled = false;
+            }
+        }
+
+        // Функция для увеличения значения при клике на плюс
+        function incrementValue(element) {
+            // Проверяем, есть ли уже плюсик в элементе
+            const hasPlus = element.querySelector('.feature-icon.plus');
+            const currentText = element.textContent.trim();
+            
+            let newValue;
+            
+            // Обрабатываем разные форматы значений
+            if (currentText === '∞') {
+                return; // Бесконечность не увеличиваем
+            } else if (hasPlus) {
+                // Если есть плюс, извлекаем число и увеличиваем, сохраняя плюс
+                const numberText = currentText.split(' ')[0];
+                const number = numberText.includes('.') ? parseFloat(numberText) : parseInt(numberText);
+                
+                // Проверяем, есть ли единицы измерения
+                if (currentText.includes('ГБ') || currentText.includes('МБ')) {
+                    const unit = currentText.split(' ')[1]; // Получаем единицу измерения
+                    newValue = '<i class="fa fa-minus feature-icon minus"></i><span>' + (number + 1) + ' ' + unit + '</span> <i class="fa fa-plus feature-icon plus"></i>';
+                } else {
+                    newValue = '<i class="fa fa-minus feature-icon minus"></i><span>' + (number + 1) + '</span> <i class="fa fa-plus feature-icon plus"></i>';
+                }
+            } else if (currentText.includes('ГБ') || currentText.includes('МБ')) {
+                // Для объема хранилища - увеличиваем без плюса
+                const number = parseFloat(currentText.split(' ')[0]);
+                const unit = currentText.split(' ')[1];
+                newValue = '<i class="fa fa-minus feature-icon minus"></i><span>' + (number + 1) + ' ' + unit + '</span> <i class="fa fa-plus feature-icon plus"></i>';
+            } else {
+                // Обычные числа - увеличиваем без плюса
+                const number = parseInt(currentText);
+                if (!isNaN(number)) {
+                    newValue = '<i class="fa fa-minus feature-icon minus"></i><span>' + (number + 1) + '</span> <i class="fa fa-plus feature-icon plus"></i>';
+                } else {
+                    return;
+                }
+            }
+            
+            element.innerHTML = newValue;
+            addEventListeners(element);
+            
+            // Пересчитываем цены после изменения значения
+            updateBasicPrice();
+            updateProfPrice();
+            updateCorpPrice();
+            updateBasicPriceStores();
+            updateProfPriceStores();
+            updateCorpPriceStores();
+            updateBasicPriceShop();
+            updateProfPriceShop();
+            updateCorpPriceShop();
+            updateBasicPriceStorage();
+            updateProfPriceStorage();
+            updateCorpPriceStorage();
+        }
+
+        // Функция для уменьшения значения при клике на минус
+        function decrementValue(element) {
+            // Получаем текст без HTML-тегов для извлечения числа
+            const currentText = element.textContent.trim();
+            const hasPlus = element.querySelector('.feature-icon.plus');
+            const hasMinus = element.querySelector('.feature-icon.minus');
+            
+            let newValue;
+            
+            // Обрабатываем разные форматы значений
+            if (currentText === '∞') {
+                return; // Бесконечность не уменьшаем
+            } else if (hasPlus && hasMinus) {
+                // Если есть и плюс, и минус, извлекаем число и уменьшаем
+                // Получаем innerHTML и извлекаем число из текста
+                const innerHTML = element.innerHTML;
+                const numberMatch = innerHTML.match(/>(\d+(?:\.\d+)?)\s*</);
+                const number = numberMatch ? parseFloat(numberMatch[1]) : 0;
+                
+                // Получаем минимальное значение из исходного HTML
+                const originalValue = getOriginalValue(element);
+                const minValue = originalValue.number;
+                
+                
+                
+                
+                
+                
+                // Проверяем, станет ли результат минимальным значением
+                const newNumber = number - 1;
+                
+                if (newNumber <= minValue) {
+                    // Если результат будет минимальным или меньше, убираем минус, плюс остается
+                    if (currentText.includes('ГБ') || currentText.includes('МБ')) {
+                        const unit = currentText.split(' ')[1];
+                        newValue = minValue + ' ' + unit + ' <i class="fa fa-plus feature-icon plus"></i>';
+                    } else {
+                        newValue = minValue + ' <i class="fa fa-plus feature-icon plus"></i>';
+                    }
+                } else {
+                    // Уменьшаем на 1
+                    if (currentText.includes('ГБ') || currentText.includes('МБ')) {
+                        const unit = currentText.split(' ')[1];
+                        newValue = '<i class="fa fa-minus feature-icon minus"></i><span>' + newNumber + ' ' + unit + '</span> <i class="fa fa-plus feature-icon plus"></i>';
+                    } else {
+                        newValue = '<i class="fa fa-minus feature-icon minus"></i><span>' + newNumber + '</span> <i class="fa fa-plus feature-icon plus"></i>';
+                    }
+                }
+            }
+            
+            element.innerHTML = newValue;
+            addEventListeners(element);
+            
+            // Пересчитываем цены после изменения значения
+            updateBasicPrice();
+            updateProfPrice();
+            updateCorpPrice();
+            updateBasicPriceStores();
+            updateProfPriceStores();
+            updateCorpPriceStores();
+            updateBasicPriceShop();
+            updateProfPriceShop();
+            updateCorpPriceShop();
+            updateBasicPriceStorage();
+            updateProfPriceStorage();
+            updateCorpPriceStorage();
+        }
+
+        // Функция для получения исходного значения элемента
+        function getOriginalValue(element) {
+            // Получаем минимальное значение из data-атрибута
+            const minValue = element.getAttribute('data-min');
+            const unit = element.getAttribute('data-unit') || '';
+            
+            if (minValue === '∞') {
+                return { number: '∞', unit: '' };
+            }
+            
+            return { 
+                number: parseFloat(minValue), 
+                unit: unit 
+            };
+        }
+
+        // Функция для добавления обработчиков событий
+        function addEventListeners(element) {
+            const plusIcon = element.querySelector('.feature-icon.plus');
+            const minusIcon = element.querySelector('.feature-icon.minus');
+            
+            if (plusIcon) {
+                plusIcon.style.cursor = 'pointer';
+                plusIcon.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    incrementValue(element);
+                });
+            }
+            
+            if (minusIcon) {
+                minusIcon.style.cursor = 'pointer';
+                minusIcon.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    decrementValue(element);
+                });
+            }
+        }
+
+        // Функция для обработки клика по чекбоксу
+        function toggleCheckbox(checkbox) {
+            const isChecked = checkbox.classList.contains('checked');
+            const feature = checkbox.getAttribute('data-feature');
+            
+            if (isChecked) {
+                // Убираем галочку
+                checkbox.classList.remove('checked');
+                checkbox.className = 'fa fa-square-o feature-icon checkbox';
+            } else {
+                // Ставим галочку
+                checkbox.classList.add('checked');
+                checkbox.className = 'fa fa-check feature-icon checkbox checked';
+            }
+            
+            // Пересчитываем цену в зависимости от типа чекбокса
+            if (feature.includes('_prof')) {
+                updateProfPrice();
+            } else if (feature.includes('_corp')) {
+                updateCorpPrice();
+            } else {
+                updateBasicPrice();
+            }
+        }
+
+        // Функция для пересчета цены тарифа Базовый
+        function updateBasicPrice() {
+            console.log('updateBasicPrice вызвана');
+            const checkboxes = document.querySelectorAll('.feature-icon.checkbox:not([data-feature*="_prof"]):not([data-feature*="_corp"])');
+            let additionalPrice = 0;
+            
+            // Добавляем стоимость от чекбоксов
+            checkboxes.forEach(function(checkbox) {
+                if (checkbox.classList.contains('checked')) {
+                    const price = parseInt(checkbox.getAttribute('data-price'));
+                    additionalPrice += price;
+                }
+            });
+            
+            // Добавляем стоимость от увеличения количества сотрудников в тарифе Базовый
+            // Ищем в четвертом столбце (Базовый) первой строки (Количество сотрудников)
+            const employeesValue = document.querySelector('.feature-row:nth-child(1) .feature-value:nth-child(4)');
+            console.log('employeesValue:', employeesValue);
+            if (employeesValue) {
+                const currentText = employeesValue.textContent.trim();
+                console.log('currentText:', currentText);
+                const currentNumber = parseInt(currentText.split(' ')[0]);
+                console.log('currentNumber:', currentNumber);
+                const baseNumber = 2; // Базовое количество сотрудников
+                const additionalEmployees = Math.max(0, currentNumber - baseNumber);
+                console.log('additionalEmployees:', additionalEmployees);
+                additionalPrice += additionalEmployees * 3120; // 3120 за год за каждого дополнительного сотрудника
+            }
+            
+            console.log('additionalPrice:', additionalPrice);
+            
+            // Обновляем цену в заголовке тарифа Базовый
+            const basicPriceElement = document.querySelector('.pricing-option:nth-child(4) .plan-price');
+            const basicMonthlyElement = document.querySelector('.pricing-option:nth-child(4) .plan-monthly-price');
+            console.log('basicPriceElement:', basicPriceElement);
+            console.log('basicMonthlyElement:', basicMonthlyElement);
+            
+            const basePrice = 6240; // Базовая цена тарифа Базовый за год
+            const baseMonthlyPrice = 7800; // Базовая цена тарифа Базовый за месяц
+            const totalYearPrice = basePrice + additionalPrice;
+            const totalMonthlyPrice = baseMonthlyPrice + (additionalPrice * 1.25); // Месячная цена на 25% выше
+            
+            console.log('totalYearPrice:', totalYearPrice);
+            console.log('totalMonthlyPrice:', totalMonthlyPrice);
+            
+            if (basicPriceElement) {
+                basicPriceElement.textContent = totalYearPrice.toLocaleString('ru-RU') + ' ₸';
+            }
+            if (basicMonthlyElement) {
+                basicMonthlyElement.textContent = totalMonthlyPrice.toLocaleString('ru-RU') + ' ₸';
+            }
+        }
+
+        // Функция для пересчета цены тарифа Проф
+        function updateProfPrice() {
+            const checkboxes = document.querySelectorAll('.feature-icon.checkbox[data-feature*="_prof"]');
+            let additionalPrice = 0;
+            
+            // Добавляем стоимость от чекбоксов
+            checkboxes.forEach(function(checkbox) {
+                if (checkbox.classList.contains('checked')) {
+                    const price = parseInt(checkbox.getAttribute('data-price'));
+                    additionalPrice += price;
+                }
+            });
+            
+            // Добавляем стоимость от увеличения количества сотрудников в тарифе Проф
+            // Ищем в пятом столбце (Проф) первой строки (Количество сотрудников)
+            const employeesValue = document.querySelector('.feature-row:nth-child(1) .feature-value:nth-child(5)');
+            if (employeesValue) {
+                const currentText = employeesValue.textContent.trim();
+                const currentNumber = parseInt(currentText.split(' ')[0]);
+                const baseNumber = 5; // Базовое количество сотрудников
+                const additionalEmployees = Math.max(0, currentNumber - baseNumber);
+                additionalPrice += additionalEmployees * 3120; // 3120 за год за каждого дополнительного сотрудника
+            }
+            
+            // Обновляем цену в заголовке тарифа Проф
+            const profPriceElement = document.querySelector('.pricing-option:nth-child(5) .plan-price');
+            const profMonthlyElement = document.querySelector('.pricing-option:nth-child(5) .plan-monthly-price');
+            const basePrice = 17760; // Базовая цена тарифа Проф за год
+            const baseMonthlyPrice = 22200; // Базовая цена тарифа Проф за месяц
+            const totalYearPrice = basePrice + additionalPrice;
+            const totalMonthlyPrice = baseMonthlyPrice + (additionalPrice * 1.25); // Месячная цена на 25% выше
+            
+            profPriceElement.textContent = totalYearPrice.toLocaleString('ru-RU') + ' ₸';
+            profMonthlyElement.textContent = totalMonthlyPrice.toLocaleString('ru-RU') + ' ₸';
+        }
+
+        // Функция для пересчета цены тарифа Корп
+        function updateCorpPrice() {
+            const checkboxes = document.querySelectorAll('.feature-icon.checkbox[data-feature*="_corp"]');
+            let additionalPrice = 0;
+            
+            // Добавляем стоимость от чекбоксов
+            checkboxes.forEach(function(checkbox) {
+                if (checkbox.classList.contains('checked')) {
+                    const price = parseInt(checkbox.getAttribute('data-price'));
+                    additionalPrice += price;
+                }
+            });
+            
+            // Добавляем стоимость от увеличения количества сотрудников в тарифе Корп
+            // Ищем в шестом столбце (Корп) первой строки (Количество сотрудников)
+            const employeesValue = document.querySelector('.feature-row:nth-child(1) .feature-value:nth-child(6)');
+            if (employeesValue) {
+                const currentText = employeesValue.textContent.trim();
+                const currentNumber = parseInt(currentText.split(' ')[0]);
+                const baseNumber = 10; // Базовое количество сотрудников
+                const additionalEmployees = Math.max(0, currentNumber - baseNumber);
+                additionalPrice += additionalEmployees * 3120; // 3120 за год за каждого дополнительного сотрудника
+            }
+            
+            // Обновляем цену в заголовке тарифа Корп
+            const corpPriceElement = document.querySelector('.pricing-option:nth-child(6) .plan-price');
+            const corpMonthlyElement = document.querySelector('.pricing-option:nth-child(6) .plan-monthly-price');
+            const basePrice = 42240; // Базовая цена тарифа Корп за год
+            const baseMonthlyPrice = 52800; // Базовая цена тарифа Корп за месяц
+            const totalYearPrice = basePrice + additionalPrice;
+            const totalMonthlyPrice = baseMonthlyPrice + (additionalPrice * 1.25); // Месячная цена на 25% выше
+            
+            corpPriceElement.textContent = totalYearPrice.toLocaleString('ru-RU') + ' ₸';
+            corpMonthlyElement.textContent = totalMonthlyPrice.toLocaleString('ru-RU') + ' ₸';
+        }
+
+        // Функция для пересчета цены тарифа Базовый (Точки продаж)
+        function updateBasicPriceStores() {
+            const storesValue = document.querySelector('.feature-row:nth-child(2) .feature-value:nth-child(4)');
+            if (!storesValue) return;
+            
+            const currentText = storesValue.textContent.trim();
+            const currentNumber = parseInt(currentText) || 0;
+            const baseStores = 0; // Базовое количество точек продаж для тарифа Базовый
+            
+            if (currentNumber > baseStores) {
+                const additionalStores = currentNumber - baseStores;
+                const additionalPrice = additionalStores * 3120; // 3120 за год за каждую дополнительную точку продаж
+                
+                // Обновляем цену в заголовке тарифа Базовый
+                const basicPriceElement = document.querySelector('.pricing-option:nth-child(4) .plan-price');
+                const basicMonthlyElement = document.querySelector('.pricing-option:nth-child(4) .plan-monthly-price');
+                const basePrice = 6240; // Базовая цена тарифа Базовый за год
+                const baseMonthlyPrice = 7800; // Базовая цена тарифа Базовый за месяц
+                const totalYearPrice = basePrice + additionalPrice;
+                const totalMonthlyPrice = baseMonthlyPrice + (additionalPrice * 1.25); // Месячная цена на 25% выше
+                
+                basicPriceElement.textContent = totalYearPrice.toLocaleString('ru-RU') + ' ₸';
+                basicMonthlyElement.textContent = totalMonthlyPrice.toLocaleString('ru-RU') + ' ₸';
+            }
+        }
+
+        // Функция для пересчета цены тарифа Проф (Точки продаж)
+        function updateProfPriceStores() {
+            const storesValue = document.querySelector('.feature-row:nth-child(2) .feature-value:nth-child(5)');
+            if (!storesValue) return;
+            
+            const currentText = storesValue.textContent.trim();
+            const currentNumber = parseInt(currentText) || 0;
+            const baseStores = 0; // Базовое количество точек продаж для тарифа Проф
+            
+            if (currentNumber > baseStores) {
+                const additionalStores = currentNumber - baseStores;
+                const additionalPrice = additionalStores * 3120; // 3120 за год за каждую дополнительную точку продаж
+                
+                // Обновляем цену в заголовке тарифа Проф
+                const profPriceElement = document.querySelector('.pricing-option:nth-child(5) .plan-price');
+                const profMonthlyElement = document.querySelector('.pricing-option:nth-child(5) .plan-monthly-price');
+                const basePrice = 17760; // Базовая цена тарифа Проф за год
+                const baseMonthlyPrice = 22200; // Базовая цена тарифа Проф за месяц
+                const totalYearPrice = basePrice + additionalPrice;
+                const totalMonthlyPrice = baseMonthlyPrice + (additionalPrice * 1.25); // Месячная цена на 25% выше
+                
+                profPriceElement.textContent = totalYearPrice.toLocaleString('ru-RU') + ' ₸';
+                profMonthlyElement.textContent = totalMonthlyPrice.toLocaleString('ru-RU') + ' ₸';
+            }
+        }
+
+        // Функция для пересчета цены тарифа Корп (Точки продаж)
+        function updateCorpPriceStores() {
+            const storesValue = document.querySelector('.feature-row:nth-child(2) .feature-value:nth-child(6)');
+            if (!storesValue) return;
+            
+            const currentText = storesValue.textContent.trim();
+            const currentNumber = parseInt(currentText) || 0;
+            const baseStores = 5; // Базовое количество точек продаж для тарифа Корп
+            
+            if (currentNumber > baseStores) {
+                const additionalStores = currentNumber - baseStores;
+                const additionalPrice = additionalStores * 3120; // 3120 за год за каждую дополнительную точку продаж
+                
+                // Обновляем цену в заголовке тарифа Корп
+                const corpPriceElement = document.querySelector('.pricing-option:nth-child(6) .plan-price');
+                const corpMonthlyElement = document.querySelector('.pricing-option:nth-child(6) .plan-monthly-price');
+                const basePrice = 42240; // Базовая цена тарифа Корп за год
+                const baseMonthlyPrice = 52800; // Базовая цена тарифа Корп за месяц
+                const totalYearPrice = basePrice + additionalPrice;
+                const totalMonthlyPrice = baseMonthlyPrice + (additionalPrice * 1.25); // Месячная цена на 25% выше
+                
+                corpPriceElement.textContent = totalYearPrice.toLocaleString('ru-RU') + ' ₸';
+                corpMonthlyElement.textContent = totalMonthlyPrice.toLocaleString('ru-RU') + ' ₸';
+            }
+        }
+
+        // Функция для пересчета цены тарифа Базовый (Подключение интернет-магазина)
+        function updateBasicPriceShop() {
+            const shopValue = document.querySelector('.feature-row:nth-child(3) .feature-value:nth-child(4)');
+            if (!shopValue) return;
+            
+            const currentText = shopValue.textContent.trim();
+            const currentNumber = parseInt(currentText) || 0;
+            const baseShop = 0; // Базовое количество интернет-магазинов для тарифа Базовый
+            
+            if (currentNumber > baseShop) {
+                const additionalShop = currentNumber - baseShop;
+                const additionalPrice = additionalShop * 3120; // 3120 за год за каждый дополнительный интернет-магазин
+                
+                // Обновляем цену в заголовке тарифа Базовый
+                const basicPriceElement = document.querySelector('.pricing-option:nth-child(4) .plan-price');
+                const basicMonthlyElement = document.querySelector('.pricing-option:nth-child(4) .plan-monthly-price');
+                const basePrice = 6240; // Базовая цена тарифа Базовый за год
+                const baseMonthlyPrice = 7800; // Базовая цена тарифа Базовый за месяц
+                const totalYearPrice = basePrice + additionalPrice;
+                const totalMonthlyPrice = baseMonthlyPrice + (additionalPrice * 1.25); // Месячная цена на 25% выше
+                
+                basicPriceElement.textContent = totalYearPrice.toLocaleString('ru-RU') + ' ₸';
+                basicMonthlyElement.textContent = totalMonthlyPrice.toLocaleString('ru-RU') + ' ₸';
+            }
+        }
+
+        // Функция для пересчета цены тарифа Проф (Подключение интернет-магазина)
+        function updateProfPriceShop() {
+            const shopValue = document.querySelector('.feature-row:nth-child(3) .feature-value:nth-child(5)');
+            if (!shopValue) return;
+            
+            const currentText = shopValue.textContent.trim();
+            const currentNumber = parseInt(currentText) || 0;
+            const baseShop = 0; // Базовое количество интернет-магазинов для тарифа Проф
+            
+            if (currentNumber > baseShop) {
+                const additionalShop = currentNumber - baseShop;
+                const additionalPrice = additionalShop * 3120; // 3120 за год за каждый дополнительный интернет-магазин
+                
+                // Обновляем цену в заголовке тарифа Проф
+                const profPriceElement = document.querySelector('.pricing-option:nth-child(5) .plan-price');
+                const profMonthlyElement = document.querySelector('.pricing-option:nth-child(5) .plan-monthly-price');
+                const basePrice = 17760; // Базовая цена тарифа Проф за год
+                const baseMonthlyPrice = 22200; // Базовая цена тарифа Проф за месяц
+                const totalYearPrice = basePrice + additionalPrice;
+                const totalMonthlyPrice = baseMonthlyPrice + (additionalPrice * 1.25); // Месячная цена на 25% выше
+                
+                profPriceElement.textContent = totalYearPrice.toLocaleString('ru-RU') + ' ₸';
+                profMonthlyElement.textContent = totalMonthlyPrice.toLocaleString('ru-RU') + ' ₸';
+            }
+        }
+
+        // Функция для пересчета цены тарифа Корп (Подключение интернет-магазина)
+        function updateCorpPriceShop() {
+            const shopValue = document.querySelector('.feature-row:nth-child(3) .feature-value:nth-child(6)');
+            if (!shopValue) return;
+            
+            const currentText = shopValue.textContent.trim();
+            const currentNumber = parseInt(currentText) || 0;
+            const baseShop = 0; // Базовое количество интернет-магазинов для тарифа Корп
+            
+            if (currentNumber > baseShop) {
+                const additionalShop = currentNumber - baseShop;
+                const additionalPrice = additionalShop * 3120; // 3120 за год за каждый дополнительный интернет-магазин
+                
+                // Обновляем цену в заголовке тарифа Корп
+                const corpPriceElement = document.querySelector('.pricing-option:nth-child(6) .plan-price');
+                const corpMonthlyElement = document.querySelector('.pricing-option:nth-child(6) .plan-monthly-price');
+                const basePrice = 42240; // Базовая цена тарифа Корп за год
+                const baseMonthlyPrice = 52800; // Базовая цена тарифа Корп за месяц
+                const totalYearPrice = basePrice + additionalPrice;
+                const totalMonthlyPrice = baseMonthlyPrice + (additionalPrice * 1.25); // Месячная цена на 25% выше
+                
+                corpPriceElement.textContent = totalYearPrice.toLocaleString('ru-RU') + ' ₸';
+                corpMonthlyElement.textContent = totalMonthlyPrice.toLocaleString('ru-RU') + ' ₸';
+            }
+        }
+
+        // Функция для пересчета цены тарифа Базовый (Объем хранилища)
+        function updateBasicPriceStorage() {
+            const storageValue = document.querySelector('.feature-row:nth-child(4) .feature-value:nth-child(4)');
+            if (!storageValue) return;
+            
+            const currentText = storageValue.textContent.trim();
+            const currentNumber = parseFloat(currentText) || 0;
+            const baseStorage = 0.5; // Базовый объем хранилища для тарифа Базовый (0.5 ГБ)
+            
+            if (currentNumber > baseStorage) {
+                const additionalStorage = currentNumber - baseStorage;
+                const additionalPrice = additionalStorage * 3120; // 3120 за год за каждый дополнительный ГБ
+                
+                // Обновляем цену в заголовке тарифа Базовый
+                const basicPriceElement = document.querySelector('.pricing-option:nth-child(4) .plan-price');
+                const basicMonthlyElement = document.querySelector('.pricing-option:nth-child(4) .plan-monthly-price');
+                const basePrice = 6240; // Базовая цена тарифа Базовый за год
+                const baseMonthlyPrice = 7800; // Базовая цена тарифа Базовый за месяц
+                const totalYearPrice = basePrice + additionalPrice;
+                const totalMonthlyPrice = baseMonthlyPrice + (additionalPrice * 1.25); // Месячная цена на 25% выше
+                
+                basicPriceElement.textContent = totalYearPrice.toLocaleString('ru-RU') + ' ₸';
+                basicMonthlyElement.textContent = totalMonthlyPrice.toLocaleString('ru-RU') + ' ₸';
+            }
+        }
+
+        // Функция для пересчета цены тарифа Проф (Объем хранилища)
+        function updateProfPriceStorage() {
+            const storageValue = document.querySelector('.feature-row:nth-child(4) .feature-value:nth-child(5)');
+            if (!storageValue) return;
+            
+            const currentText = storageValue.textContent.trim();
+            const currentNumber = parseFloat(currentText) || 0;
+            const baseStorage = 2; // Базовый объем хранилища для тарифа Проф (2 ГБ)
+            
+            if (currentNumber > baseStorage) {
+                const additionalStorage = currentNumber - baseStorage;
+                const additionalPrice = additionalStorage * 3120; // 3120 за год за каждый дополнительный ГБ
+                
+                // Обновляем цену в заголовке тарифа Проф
+                const profPriceElement = document.querySelector('.pricing-option:nth-child(5) .plan-price');
+                const profMonthlyElement = document.querySelector('.pricing-option:nth-child(5) .plan-monthly-price');
+                const basePrice = 17760; // Базовая цена тарифа Проф за год
+                const baseMonthlyPrice = 22200; // Базовая цена тарифа Проф за месяц
+                const totalYearPrice = basePrice + additionalPrice;
+                const totalMonthlyPrice = baseMonthlyPrice + (additionalPrice * 1.25); // Месячная цена на 25% выше
+                
+                profPriceElement.textContent = totalYearPrice.toLocaleString('ru-RU') + ' ₸';
+                profMonthlyElement.textContent = totalMonthlyPrice.toLocaleString('ru-RU') + ' ₸';
+            }
+        }
+
+        // Функция для пересчета цены тарифа Корп (Объем хранилища)
+        function updateCorpPriceStorage() {
+            const storageValue = document.querySelector('.feature-row:nth-child(4) .feature-value:nth-child(6)');
+            if (!storageValue) return;
+            
+            const currentText = storageValue.textContent.trim();
+            const currentNumber = parseFloat(currentText) || 0;
+            const baseStorage = 10; // Базовый объем хранилища для тарифа Корп (10 ГБ)
+            
+            if (currentNumber > baseStorage) {
+                const additionalStorage = currentNumber - baseStorage;
+                const additionalPrice = additionalStorage * 3120; // 3120 за год за каждый дополнительный ГБ
+                
+                // Обновляем цену в заголовке тарифа Корп
+                const corpPriceElement = document.querySelector('.pricing-option:nth-child(6) .plan-price');
+                const corpMonthlyElement = document.querySelector('.pricing-option:nth-child(6) .plan-monthly-price');
+                const basePrice = 42240; // Базовая цена тарифа Корп за год
+                const baseMonthlyPrice = 52800; // Базовая цена тарифа Корп за месяц
+                const totalYearPrice = basePrice + additionalPrice;
+                const totalMonthlyPrice = baseMonthlyPrice + (additionalPrice * 1.25); // Месячная цена на 25% выше
+                
+                corpPriceElement.textContent = totalYearPrice.toLocaleString('ru-RU') + ' ₸';
+                corpMonthlyElement.textContent = totalMonthlyPrice.toLocaleString('ru-RU') + ' ₸';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            calculatePrice();
+            
+            // Добавляем обработчики кликов для всех элементов с плюсиками
+            document.querySelectorAll('.feature-value').forEach(function(featureValue) {
+                addEventListeners(featureValue);
+            });
+            
+            // Добавляем обработчики кликов для чекбоксов
+            document.querySelectorAll('.feature-icon.checkbox').forEach(function(checkbox) {
+                checkbox.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    toggleCheckbox(checkbox);
+                });
+            });
+            
+            // Убираем обработчики кликов для обычных чисел - они должны быть статичными
+        });
+    </script>
 </body>
 </html>
