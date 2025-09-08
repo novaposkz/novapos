@@ -520,6 +520,108 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
         
+        /* Additional Options Section */
+        .additional-options-section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            margin-bottom: 80px;
+        }
+        
+        .additional-options-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .additional-option-card {
+            background: transparent;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .additional-option-card:hover {
+            transform: translateY(-5px);
+            border-color: #667eea;
+        }
+        
+        .option-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+        
+        .option-icon i {
+            font-size: 24px;
+            color: white;
+        }
+        
+        .option-content h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        
+        .option-price {
+            font-size: 24px;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+        
+        .option-period {
+            font-size: 14px;
+            color: #7f8c8d;
+            font-weight: 500;
+        }
+        
+        /* Mobile styles for additional options */
+        @media (max-width: 768px) {
+            .additional-options-section {
+                padding: 30px 20px;
+                margin-bottom: 60px;
+            }
+            
+            .additional-options-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .additional-option-card {
+                padding: 25px 20px;
+            }
+            
+            .option-icon {
+                width: 50px;
+                height: 50px;
+                margin-bottom: 15px;
+            }
+            
+            .option-icon i {
+                font-size: 20px;
+            }
+            
+            .option-content h3 {
+                font-size: 16px;
+                margin-bottom: 12px;
+            }
+            
+            .option-price {
+                font-size: 20px;
+            }
+        }
+
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -1572,6 +1674,114 @@
                 <div class="calculator-period" id="periodText">за год</div>
                 <div class="calculator-cta">
                     <a href="https://www.moysklad.kz/register/?p=2024-3951" target="_blank" class="btn">Подключить тариф</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Options Section -->
+        <div class="additional-options-section">
+            <div class="section-header">
+                <h2>Дополнительные опции</h2>
+            </div>
+            
+            <div class="additional-options-grid">
+                <div class="additional-option-card">
+                    <div class="option-icon">
+                        <i class="fa fa-user-plus"></i>
+                    </div>
+                    <div class="option-content">
+                        <h3>Дополнительный сотрудник</h3>
+                        <div class="option-price">3900₸</div>
+                        <div class="option-period">в месяц</div>
+                    </div>
+                </div>
+                
+                <div class="additional-option-card">
+                    <div class="option-icon">
+                        <i class="fa fa-shopping-cart"></i>
+                    </div>
+                    <div class="option-content">
+                        <h3>Подключение интернет-магазина</h3>
+                        <div class="option-price">3900₸</div>
+                        <div class="option-period">в месяц</div>
+                    </div>
+                </div>
+                
+                <div class="additional-option-card">
+                    <div class="option-icon">
+                        <i class="fa fa-store"></i>
+                    </div>
+                    <div class="option-content">
+                        <h3>Дополнительная точка продаж</h3>
+                        <div class="option-price">3900₸</div>
+                        <div class="option-period">в месяц</div>
+                    </div>
+                </div>
+                
+                <div class="additional-option-card">
+                    <div class="option-icon">
+                        <i class="fa fa-hdd-o"></i>
+                    </div>
+                    <div class="option-content">
+                        <h3>Дополнительное место для хранения файлов</h3>
+                        <div class="option-price">3900₸</div>
+                        <div class="option-period">в месяц</div>
+                    </div>
+                </div>
+                
+                <div class="additional-option-card">
+                    <div class="option-icon">
+                        <i class="fa fa-users"></i>
+                    </div>
+                    <div class="option-content">
+                        <h3>CRM управление клиентами</h3>
+                        <div class="option-price">3900₸</div>
+                        <div class="option-period">в месяц</div>
+                    </div>
+                </div>
+                
+                <div class="additional-option-card">
+                    <div class="option-icon">
+                        <i class="fa fa-cogs"></i>
+                    </div>
+                    <div class="option-content">
+                        <h3>Производство</h3>
+                        <div class="option-price">7800₸</div>
+                        <div class="option-period">в месяц</div>
+                    </div>
+                </div>
+                
+                <div class="additional-option-card">
+                    <div class="option-icon">
+                        <i class="fa fa-line-chart"></i>
+                    </div>
+                    <div class="option-content">
+                        <h3>Финансы</h3>
+                        <div class="option-price">7800₸</div>
+                        <div class="option-period">в месяц</div>
+                    </div>
+                </div>
+                
+                <div class="additional-option-card">
+                    <div class="option-icon">
+                        <i class="fa fa-magic"></i>
+                    </div>
+                    <div class="option-content">
+                        <h3>Автоматические сценарии</h3>
+                        <div class="option-price">7800₸</div>
+                        <div class="option-period">в месяц</div>
+                    </div>
+                </div>
+                
+                <div class="additional-option-card">
+                    <div class="option-icon">
+                        <i class="fa fa-gift"></i>
+                    </div>
+                    <div class="option-content">
+                        <h3>Расширенная бонусная программа</h3>
+                        <div class="option-price">7800₸</div>
+                        <div class="option-period">в месяц</div>
+                    </div>
                 </div>
             </div>
         </div>
