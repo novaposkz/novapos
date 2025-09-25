@@ -6,6 +6,7 @@
 	<meta name="description" content="Автоматизация торговли: программы, кассовое оборудование, принтеры чеков и этикеток, сканеры, денежные ящики, моноблоки — всё в одном месте!">
 	<title>NovaPos.kz — автоматизация торговли и кассы по Казахстану</title>
 	<link href="styles/styles.css" rel="stylesheet" type="text/css">
+	<link href="styles/design-system.css" rel="stylesheet" type="text/css">
 	<link rel="icon" href="images/favicon.png">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -57,15 +58,10 @@
 	</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
-	<div style="padding-left:20px">
-		<div class="header-container">
-			<h1>АВТОМАТИЗАЦИЯ ТОРГОВЛИ В КАЗАХСТАНЕ</h1>
-<!-- 			<div class="flag kazakhstan">
-				<img height="70" src="https://imgur.com/kRMTKRv.png" alt="" class="kazakhstan__center_logo" />
-				<img height="89" src="https://imgur.com/ZrWtDUS.png" alt="" class="kazakhstan__left_logo" />
-			</div> -->
-		</div>
-	</div>
+	<section class="novapos-header">
+		<h1>Автоматизация торговли в Казахстане</h1>
+		<p>Кассовые решения, оборудование и сопровождение — под ваш бизнес</p>
+	</section>
 
 	<div class="carousel">
 		<div class="carousel-inner">
@@ -114,135 +110,182 @@
 		<!-- Dots will be added dynamically via JavaScript -->
 	</div>
 
-	<section class="trade-section">
-		<h1>ВЫБЕРИТЕ СФЕРУ ТОРГОВЛИ</h1>
-		<div class="trade-search-container">
-			<div class="trade-search-bar">
-				<i class="fa fa-search"></i>
-				<input type="text" id="tradeSearch" placeholder="Поиск сферы торговли..." onkeyup="filterTradeItems()">
+	<section class="trade-section" style="max-width:1200px; margin:0 auto; padding:0 20px 40px;">
+		<div class="section-header">
+			<i class="fa fa-industry"></i>
+			<h2>Выберите сферу торговли</h2>
+		</div>
+		<div class="search-section">
+			<div class="search-container">
+				<input type="text" id="tradeSearch" class="search-input" placeholder="Поиск сферы торговли..." onkeyup="filterTradeItems()">
 			</div>
 		</div>
-		<div class="category-grid">
-			<a href="category/clothing-shoes/index.html" class="category-item">
-				<span class="category-icon">👕</span>
-				<span class="category-name">Одежда и обувь</span>
+		<div class="content-grid" id="tradeGrid">
+			<a href="category/clothing-shoes/index.html" class="content-card category-item">
+				<div class="card-image">👕</div>
+				<div class="card-content">
+					<div class="card-title category-name">Одежда и обувь</div>
+					<div class="card-meta"><span class="card-type">Розница</span></div>
+				</div>
 			</a>
-			<a href="category/food/index.html" class="category-item">
-				<span class="category-icon">🛒</span>
-				<span class="category-name">Продукты питания</span>
+			<a href="category/food/index.html" class="content-card category-item">
+				<div class="card-image">🛒</div>
+				<div class="card-content">
+					<div class="card-title category-name">Продукты питания</div>
+					<div class="card-meta"><span class="card-type">Розница</span></div>
+				</div>
 			</a>
-			<a href="category/horeca/index.html" class="category-item">
-				<span class="category-icon">🍽️</span>
-				<span class="category-name">Общественное питание (HoReCa)</span>
+			<a href="category/horeca/index.html" class="content-card category-item">
+				<div class="card-image">🍽️</div>
+				<div class="card-content">
+					<div class="card-title category-name">Общественное питание (HoReCa)</div>
+					<div class="card-meta"><span class="card-type">HoReCa</span></div>
+				</div>
 			</a>
-			<a href="category/pharmacy/index.html" class="category-item">
-				<span class="category-icon">⚕️</span>
-				<span class="category-name">Аптеки и медицина</span>
+			<a href="category/pharmacy/index.html" class="content-card category-item">
+				<div class="card-image">⚕️</div>
+				<div class="card-content">
+					<div class="card-title category-name">Аптеки и медицина</div>
+					<div class="card-meta"><span class="card-type">Фарма</span></div>
+				</div>
 			</a>
-			<a href="category/beauty-health/index.html" class="category-item">
-				<span class="category-icon">💄</span>
-				<span class="category-name">Красота и здоровье</span>
+			<a href="category/beauty-health/index.html" class="content-card category-item">
+				<div class="card-image">💄</div>
+				<div class="card-content">
+					<div class="card-title category-name">Красота и здоровье</div>
+					<div class="card-meta"><span class="card-type">Услуги</span></div>
+				</div>
 			</a>
-			<a href="category/electronics/index.html" class="category-item">
-				<span class="category-icon">📱</span>
-				<span class="category-name">Электроника и техника</span>
+			<a href="category/electronics/index.html" class="content-card category-item">
+				<div class="card-image">📱</div>
+				<div class="card-content">
+					<div class="card-title category-name">Электроника и техника</div>
+					<div class="card-meta"><span class="card-type">Розница</span></div>
+				</div>
 			</a>
-			<a href="category/alcohol-tobacco/index.html" class="category-item">
-				<span class="category-icon">🍷</span>
-				<span class="category-name">Алкоголь и табак</span>
+			<a href="category/alcohol-tobacco/index.html" class="content-card category-item">
+				<div class="card-image">🍷</div>
+				<div class="card-content">
+					<div class="card-title category-name">Алкоголь и табак</div>
+					<div class="card-meta"><span class="card-type">Розница</span></div>
+				</div>
 			</a>
-			<a href="category/home-household/index.html" class="category-item">
-				<span class="category-icon">🏠</span>
-				<span class="category-name">Дом и хозяйство</span>
+			<a href="category/home-household/index.html" class="content-card category-item">
+				<div class="card-image">🏠</div>
+				<div class="card-content">
+					<div class="card-title category-name">Дом и хозяйство</div>
+					<div class="card-meta"><span class="card-type">Розница</span></div>
+				</div>
 			</a>
-			<a href="category/children/index.html" class="category-item">
-				<span class="category-icon">👶</span>
-				<span class="category-name">Детские товары</span>
+			<a href="category/children/index.html" class="content-card category-item">
+				<div class="card-image">👶</div>
+				<div class="card-content">
+					<div class="card-title category-name">Детские товары</div>
+					<div class="card-meta"><span class="card-type">Розница</span></div>
+				</div>
 			</a>
-			<a href="category/sports/index.html" class="category-item">
-				<span class="category-icon">🏃</span>
-				<span class="category-name">Спорт и активный отдых</span>
+			<a href="category/sports/index.html" class="content-card category-item">
+				<div class="card-image">🏃</div>
+				<div class="card-content">
+					<div class="card-title category-name">Спорт и активный отдых</div>
+					<div class="card-meta"><span class="card-type">Розница</span></div>
+				</div>
 			</a>
-			<a href="category/flowers-gifts/index.html" class="category-item">
-				<span class="category-icon">💐</span>
-				<span class="category-name">Цветы и подарки</span>
+			<a href="category/flowers-gifts/index.html" class="content-card category-item">
+				<div class="card-image">💐</div>
+				<div class="card-content">
+					<div class="card-title category-name">Цветы и подарки</div>
+					<div class="card-meta"><span class="card-type">Розница</span></div>
+				</div>
 			</a>
-			<a href="category/auto-transport/index.html" class="category-item">
-				<span class="category-icon">🚗</span>
-				<span class="category-name">Авто и транспорт</span>
+			<a href="category/auto-transport/index.html" class="content-card category-item">
+				<div class="card-image">🚗</div>
+				<div class="card-content">
+					<div class="card-title category-name">Авто и транспорт</div>
+					<div class="card-meta"><span class="card-type">Розница</span></div>
+				</div>
 			</a>
-			<a href="category/farm-eco/index.html" class="category-item">
-				<span class="category-icon">🌱</span>
-				<span class="category-name">Фермерские и эко-продукты</span>
+			<a href="category/farm-eco/index.html" class="content-card category-item">
+				<div class="card-image">🌱</div>
+				<div class="card-content">
+					<div class="card-title category-name">Фермерские и эко-продукты</div>
+					<div class="card-meta"><span class="card-type">Розница</span></div>
+				</div>
 			</a>
-			<a href="category/services/index.html" class="category-item">
-				<span class="category-icon">🔧</span>
-				<span class="category-name">Услуги с продажей сопутствующих товаров</span>
+			<a href="category/services/index.html" class="content-card category-item">
+				<div class="card-image">🔧</div>
+				<div class="card-content">
+					<div class="card-title category-name">Услуги с продажей сопутствующих товаров</div>
+					<div class="card-meta"><span class="card-type">Услуги</span></div>
+				</div>
 			</a>
-			<a href="category/jewelry/index.html" class="category-item">
-				<span class="category-icon">💍</span>
-				<span class="category-name">Ювелирные изделия и аксессуары</span>
+			<a href="category/jewelry/index.html" class="content-card category-item">
+				<div class="card-image">💍</div>
+				<div class="card-content">
+					<div class="card-title category-name">Ювелирные изделия и аксессуары</div>
+					<div class="card-meta"><span class="card-type">Розница</span></div>
+				</div>
 			</a>
-			<a href="category/pets/index.html" class="category-item">
-				<span class="category-icon">🐾</span>
-				<span class="category-name">Животные и зоотовары</span>
+			<a href="category/pets/index.html" class="content-card category-item">
+				<div class="card-image">🐾</div>
+				<div class="card-content">
+					<div class="card-title category-name">Животные и зоотовары</div>
+					<div class="card-meta"><span class="card-type">Розница</span></div>
+				</div>
 			</a>
-			<a href="category/specialized/index.html" class="category-item">
-				<span class="category-icon">🏪</span>
-				<span class="category-name">Специализированные магазины</span>
+			<a href="category/specialized/index.html" class="content-card category-item">
+				<div class="card-image">🏪</div>
+				<div class="card-content">
+					<div class="card-title category-name">Специализированные магазины</div>
+					<div class="card-meta"><span class="card-type">Розница</span></div>
+				</div>
 			</a>
 		</div>
 	</section>
 
-	<div class="services-section">
-	  <h2 class="services-title">НАШИ УСЛУГИ</h2>
-	  
-	  <div class="services-intro">
-	    <h3>Автоматизация торговли и переход с других кассовых программ</h3>
-	    <p>Мы предлагаем комплексную автоматизацию торговых точек: поставляем и настраиваем кассовое оборудование (принтеры чеков и этикеток, денежные ящики, сканеры, моноблоки и прочее), устанавливаем кассовое программное обеспечение и обучаем сотрудников работе с системой.</p>
-	    <p>Если вы уже используете другую кассовую программу, но она не устраивает вас по интерфейсу, производительности или стоимости — мы поможем перейти на более удобное решение. Переносим все данные, включая товары и остатки, без потери информации.</p>
-	  </div>
-
-	  <div class="services-blocks">
-	    <div class="service-block">
-	      <h3>GBS.Market — современное решение для торговли</h3>
-	      <div class="service-image">
-	        <img src="images/gbs-logo.jpg" alt="GBS.Market">
-	      </div>
-	      <div class="service-description gbs">
-	        <p>GBS.Market — это легкое и удобное кассовое программное обеспечение, разработанное специально для магазинов, кафе и других торговых точек.</p>
-	        <p>Преимущества GBS.Market:</p>
-	        <ul>
-	          <li>Простота интерфейса — не требует долгого обучения;</li>
-	          <li>Стабильная работа на любом оборудовании, даже на недорогих ноутбуках и моноблоках;</li>
-	          <li>Гибкая система настроек под разные типы бизнеса;</li>
-	          <li>Регулярные обновления и техническая поддержка.</li>
-	        </ul>
-	        <p>Мы являемся официальными партнерами GBS.Market и полностью сопровождаем установку, настройку и обучение.</p>
-	      </div>
-	      <a href="https://wa.me/77765595726?text=Здравствуйте!%20Интересует%20GBS.Market.%20Можно%20узнать%20подробнее?" class="service-button" target="_blank">Подробнее</a>
-	    </div>
-
-	    <div class="service-block">
-	      <h3>МойСклад — мощная система учета и управления</h3>
-	      <div class="service-image">
-	        <img src="images/moysklad-logo.jpg" alt="МойСклад">
-	      </div>
-	      <div class="service-description moysklad">
-	        <p>МойСклад — это облачное решение для учета товаров, продаж и остатков, идеально подходящее для розничной торговли и малого бизнеса.</p>
-	        <p>Преимущества МойСклад:</p>
-	        <ul>
-	          <li>Удобный веб-интерфейс с доступом из любой точки мира;</li>
-	          <li>Поддержка онлайн-торговли и интеграция с популярными маркетплейсами;</li>
-	          <li>Подробная аналитика, отчеты и контроль остатков в реальном времени;</li>
-	          <li>Надежное хранение данных в облаке.</li>
-	        </ul>
-	        <p>Мы не только устанавливаем МойСклад, но и обучаем персонал, помогаем адаптировать систему под нужды конкретного бизнеса.</p>
-	      </div>
-	      <a href="https://wa.me/77765595726?text=Здравствуйте!%20Интересует%20МойСклад.%20Можно%20узнать%20подробнее?" class="service-button" target="_blank">Подробнее</a>
-	    </div>
-	  </div>
-	</div>
+	<section id="services" style="max-width:1200px; margin:0 auto; padding:0 20px 60px;">
+		<div class="section-header">
+			<i class="fa fa-briefcase"></i>
+			<h2>Наши услуги</h2>
+		</div>
+		<div class="services-intro">
+			<h3><strong>Автоматизация торговли и переход с других кассовых программ</strong></h3>
+			<p>Мы предлагаем комплексную автоматизацию торговых точек: поставляем и настраиваем кассовое оборудование (принтеры чеков и этикеток, денежные ящики, сканеры, моноблоки и прочее), устанавливаем кассовое программное обеспечение и обучаем сотрудников работе с системой.</p>
+			<p>Если вы уже используете другую кассовую программу, но она не устраивает вас по интерфейсу, производительности или стоимости — мы поможем перейти на более удобное решение. Переносим все данные, включая товары и остатки, без потери информации.</p>
+		</div>
+		<div class="content-grid">
+			<div class="content-card">
+				<div class="card-image">
+					<img src="images/gbs-logo.jpg" alt="GBS.Market">
+				</div>
+				<div class="card-content">
+					<div class="card-title">GBS.Market — современное решение для торговли</div>
+					<p class="card-description">Легкое и удобное кассовое ПО для магазинов, кафе и других точек. Простота интерфейса, стабильная работа и гибкие настройки.</p>
+					<div class="card-meta">
+						<span class="card-type">ПО</span>
+						<span class="card-duration"><i class="fa fa-refresh"></i> Регулярные обновления</span>
+					</div>
+					<p class="card-description">Мы официальные партнёры GBS.Market: установка, настройка и обучение.</p>
+					<p><a href="https://wa.me/77765595726?text=Здравствуйте!%20Интересует%20GBS.Market.%20Можно%20узнать%20подробнее?" target="_blank" class="card-type" style="text-decoration:none;">Подробнее</a></p>
+				</div>
+			</div>
+			<div class="content-card">
+				<div class="card-image">
+					<img src="images/moysklad-logo.jpg" alt="МойСклад">
+				</div>
+				<div class="card-content">
+					<div class="card-title">МойСклад — система учёта и управления</div>
+					<p class="card-description">Облачное решение для учёта товаров, продаж и остатков. Интеграции с маркетплейсами и подробная аналитика.</p>
+					<div class="card-meta">
+						<span class="card-type">SaaS</span>
+						<span class="card-duration"><i class="fa fa-cloud"></i> Данные в облаке</span>
+					</div>
+					<p class="card-description">Поможем адаптировать систему под ваш бизнес и обучим персонал.</p>
+					<p><a href="https://wa.me/77765595726?text=Здравствуйте!%20Интересует%20МойСклад.%20Можно%20узнать%20подробнее?" target="_blank" class="card-type" style="text-decoration:none;">Подробнее</a></p>
+				</div>
+			</div>
+		</div>
+	</section>
 
 	<style>
 	.services-section {
@@ -742,6 +785,153 @@
 	    width: 100%;
 	  }
 	}
+
+	/* Trade grid (categories) — design-system sizing overrides */
+	#tradeGrid {
+	  display: grid;
+	  grid-template-columns: repeat(4, 1fr);
+	  gap: 16px;
+	}
+	#tradeGrid .content-card .card-image {
+	  height: 100px;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  font-size: 2rem; /* smaller emoji/icon */
+	}
+	#tradeGrid .content-card .card-content {
+	  padding: 16px;
+	}
+	#tradeGrid .content-card .card-title {
+	  font-size: 1rem;
+	}
+	#tradeGrid .card-meta {
+	  font-size: 0.85rem;
+	}
+	@media (max-width: 768px) {
+	  #tradeGrid {
+	    grid-template-columns: repeat(2, 1fr);
+	    gap: 12px;
+	  }
+	  #tradeGrid .content-card .card-image {
+	    height: 80px;
+	    font-size: 1.6rem;
+	  }
+	  #tradeGrid .content-card .card-title {
+	    font-size: 0.95rem;
+	  }
+	}
+
+	/* Bottom form — full width white background and modern styles (from partnership) */
+	.bottom-form-section {
+	  background: #ffffff;
+	  padding: 80px 20px;
+	  max-width: none !important;
+	  margin: 0 !important;
+	  width: 100% !important;
+	}
+	.bottom-form-container {
+	  max-width: 1200px;
+	  margin: 0 auto;
+	}
+	.bottom-form-content {
+	  display: grid;
+	  grid-template-columns: 1fr 1fr;
+	  gap: 60px;
+	  align-items: center;
+	}
+	.bottom-form-text {
+	  color: #333;
+	  text-align: left;
+	  display: flex;
+	  flex-direction: column;
+	  align-items: flex-start;
+	}
+	.bottom-form-icon {
+	  width: 80px;
+	  height: 80px;
+	  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	  border-radius: 50%;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  margin-bottom: 30px;
+	  box-shadow: 0 10px 25px rgba(102,126,234,0.25);
+	}
+	.bottom-form-icon i { font-size: 2rem; color: #ffffff; }
+	.bottom-form-text h2 { font-size: 2.5rem; font-weight: 700; margin: 0 0 12px 0; text-align: left; }
+	.bottom-form-text p { font-size: 1.1rem; color: #666; margin: 0; text-align: left; }
+	.bottom-form-wrapper { background: white; border-radius: 25px; padding: 40px; box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
+	.bottom-contact-form { margin-bottom: 20px; }
+	.bottom-form-fields { display: flex; flex-direction: column; gap: 20px; margin-bottom: 30px; }
+	.bottom-form-group { position: relative; }
+	.bottom-form-group input { width: 100%; padding: 18px 20px; border: 2px solid #e0e0e0; border-radius: 15px; font-size: 1rem; transition: all 0.3s ease; background: #f8f9fa; }
+	.bottom-form-group input:focus { outline: none; border-color: #667eea; background: white; box-shadow: 0 0 0 4px rgba(102,126,234,0.1); }
+	.bottom-phone-group { display: flex; align-items: center; border: 2px solid #e0e0e0; border-radius: 15px; background: #f8f9fa; overflow: hidden; transition: all 0.3s ease; }
+	.bottom-phone-group:focus-within { border-color: #667eea; background: white; box-shadow: 0 0 0 4px rgba(102,126,234,0.1); }
+	.bottom-phone-group .country-prefix { display: flex; align-items: center; gap: 8px; padding: 18px 20px; background: #e9ecef; border-right: 1px solid #e0e0e0; }
+	.bottom-phone-group .country-flag { width: 20px; height: 15px; object-fit: cover; border-radius: 2px; }
+	.bottom-phone-group .prefix { font-weight: 500; color: #333; }
+	.bottom-phone-group input { border: none; background: none; flex: 1; padding: 18px 20px; }
+	.bottom-submit-button { width: 100%; padding: 18px 30px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 15px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease; display: flex; align-items: center; justify-content: center; gap: 10px; }
+	.bottom-submit-button:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(102,126,234,0.25); }
+	.bottom-form-footer { text-align: center; }
+	.bottom-agreement-text { color: #666; font-size: 0.9rem; margin-bottom: 10px; line-height: 1.5; }
+	.bottom-policy-link { color: #667eea; text-decoration: none; font-size: 0.9rem; font-weight: 500; }
+	.bottom-policy-link:hover { text-decoration: underline; }
+	@media (max-width: 768px) {
+	  .bottom-form-content { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+	  .bottom-form-text { text-align: center; }
+	  .bottom-form-icon { margin: 0 auto 30px auto; }
+	  .bottom-form-wrapper { padding: 30px 20px; }
+	}
+	/* Services cards — force square image area, remove gradient bg, fill width */
+	#services .content-card .card-image {
+	  aspect-ratio: 1 / 1;
+	  height: auto; /* override DS fixed height */
+	  background: transparent !important;
+	}
+	#services .content-card .card-image img {
+	  width: 100% !important;
+	  height: 100% !important;
+	  object-fit: contain !important;
+	}
+
+	/* Services cards — bigger CTA buttons aligned horizontally */
+	#services .content-grid {
+	  align-items: stretch;
+	}
+	#services .content-card {
+	  display: flex;
+	  flex-direction: column;
+	}
+	#services .content-card .card-content {
+	  display: flex;
+	  flex-direction: column;
+	  height: 100%;
+	}
+	#services .content-card .card-content p:last-child {
+	  margin-top: auto;
+	}
+	#services .content-card .card-content a.card-type {
+	  display: block !important;
+	  width: 100% !important;
+	  padding: 18px 28px !important;
+	  background: #667eea !important;
+	  color: #fff !important;
+	  border-radius: 10px !important;
+	  text-align: center !important;
+	  text-decoration: none !important;
+	  font-weight: 700 !important;
+	  font-size: 1.15rem !important;
+	  box-shadow: 0 6px 20px rgba(102,126,234,0.3) !important;
+	  transition: transform .15s ease, box-shadow .15s ease, background .2s ease !important;
+	}
+	#services .content-card .card-content a.card-type:hover {
+	  transform: translateY(-1px);
+	  box-shadow: 0 10px 28px rgba(102,126,234,0.35);
+	  background: #586adf !important;
+	}
 	</style>
 
 	<section class="map-section">
@@ -756,35 +946,39 @@
 	</section>
 
 	<div class="bottom-form-section">
-		<h2>Остались вопросы?</h2>
-		<p class="subtitle">Оставьте заявку и мы свяжемся с вами</p>
-		
-		<form onsubmit="handleFormSubmit(event)" method="post" class="bottom-contact-form">
-			<div class="form-row">
-				<div class="form-group">
-					<input type="text" id="bottom-name" name="name" placeholder="Ваше Имя" required>
+		<div class="bottom-form-container">
+			<div class="bottom-form-content">
+				<div class="bottom-form-text">
+					<div class="bottom-form-icon"><i class="fas fa-headset"></i></div>
+					<h2>Остались вопросы?</h2>
+					<p>Оставьте заявку и мы свяжемся с вами в ближайшее время</p>
 				</div>
-				
-				<div class="form-group">
-					<input type="email" id="bottom-email" name="email" placeholder="E-mail (необязательно)">
-				</div>
-				
-				<div class="form-group">
-					<div class="phone-input">
-						<div class="country-prefix">
-							<img src="images/kz-flag.png" alt="KZ" class="country-flag">
-							<span class="prefix">+7</span>
+				<div class="bottom-form-wrapper">
+					<form onsubmit="handleFormSubmit(event)" method="post" class="bottom-contact-form">
+						<div class="bottom-form-fields">
+							<div class="bottom-form-group">
+								<input type="text" id="bottom-name" name="name" placeholder="Ваше Имя" required>
+							</div>
+							<div class="bottom-form-group">
+								<input type="email" id="bottom-email" name="email" placeholder="E-mail (необязательно)">
+							</div>
+							<div class="bottom-form-group bottom-phone-group">
+								<div class="country-prefix">
+									<img src="images/kz-flag.png" alt="KZ" class="country-flag">
+									<span class="prefix">+7</span>
+								</div>
+								<input type="tel" id="bottom-phone" name="phone" placeholder="(777) 777-77-77" pattern="\d{10}" maxlength="14" required>
+							</div>
 						</div>
-						<input type="tel" id="bottom-phone" name="phone" placeholder="(777) 777-77-77" pattern="\d{10}" maxlength="14" required>
+						<button type="submit" class="bottom-submit-button"><span>Отправить заявку</span><i class="fas fa-arrow-right"></i></button>
+					</form>
+					<div class="bottom-form-footer">
+						<p class="bottom-agreement-text">Нажимая на кнопку, вы даёте согласие на обработку своих персональных данных</p>
+						<a href="policy/" class="bottom-policy-link">Политика конфиденциальности</a>
 					</div>
 				</div>
-				
-				<button type="submit" class="bottom-submit-button">Отправить</button>
 			</div>
-			
-			<p class="bottom-agreement-text">Нажимая на кнопку, вы даёте согласие на обработку своих персональных данных</p>
-			<a href="policy/" class="bottom-policy-link">Политика конфиденциальности и обработки персональных данных</a>
-		</form>
+		</div>
 	</div>
 
 	<!-- Copyright Section -->
