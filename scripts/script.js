@@ -15,7 +15,12 @@
 
 
     $('#nav-toggle').click(function(){
-      $('.navbar ul').slideToggle();
+      // Check if we're on mobile (screen width <= 790px)
+      if (window.innerWidth <= 790) {
+        $('.mobile-icon-menu').slideToggle();
+      } else {
+        $('.navbar ul').slideToggle();
+      }
     });
 
 
@@ -23,6 +28,23 @@
       this.classList.toggle('active');
     });
 
+    // Close mobile menu when clicking on a menu item
+    $('.mobile-menu-item').on('click', function(){
+      if (window.innerWidth <= 790) {
+        $('.mobile-icon-menu').slideUp();
+        $('#nav-toggle').removeClass('active');
+      }
+    });
+
+    // Close mobile menu when clicking outside
+    $(document).on('click', function(e){
+      if (window.innerWidth <= 790) {
+        if (!$(e.target).closest('.navbar').length) {
+          $('.mobile-icon-menu').slideUp();
+          $('#nav-toggle').removeClass('active');
+        }
+      }
+    });
 
   });
 })(jQuery);

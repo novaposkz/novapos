@@ -1756,14 +1756,91 @@ body {
   }
 }
 
-/* Remove contact-specific styles */
-.branch-list,
-.branch,
-.social-links,
-.social-links a,
-.social-links a:hover {
-  /* These styles will be removed */
+/* Mobile Icon Menu Styles */
+.mobile-icon-menu {
+  display: none;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 998;
+  overflow-y: auto;
+  padding: 20px;
 }
 
+.mobile-menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 10px;
+}
 
+.mobile-menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 10px;
+  background: #333;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease;
+  min-height: 100px;
+  text-align: center;
+}
 
+.mobile-menu-item:hover,
+.mobile-menu-item:active {
+  background: #444;
+  transform: scale(1.05);
+}
+
+.mobile-menu-item i {
+  font-size: 2rem;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.mobile-menu-item span {
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #fff;
+}
+
+/* Show mobile icon menu when nav-toggle is active */
+@media only screen and (max-width: 790px) {
+  /* Mobile icon menu will be toggled via JavaScript */
+  
+  /* Hide the old list menu on mobile */
+  .navbar ul.nav-list {
+    display: none !important;
+  }
+}
+
+/* Adjust for smaller mobile screens */
+@media only screen and (max-width: 480px) {
+  .mobile-menu-grid {
+    gap: 10px;
+    padding: 5px;
+  }
+  
+  .mobile-menu-item {
+    padding: 15px 8px;
+    min-height: 85px;
+  }
+  
+  .mobile-menu-item i {
+    font-size: 1.6rem;
+    margin-bottom: 6px;
+  }
+  
+  .mobile-menu-item span {
+    font-size: 0.75rem;
+  }
+}
