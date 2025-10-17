@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
@@ -76,21 +76,18 @@
 		.contact-card {
 			background: white;
 			border-radius: 15px;
-			overflow: hidden;
+			overflow: visible;
 			box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 			transition: all 0.3s ease;
 			border: 1px solid #e0e0e0;
 			padding: 30px 25px 25px 25px;
 			display: flex;
 			flex-direction: column;
-			gap: 18px;
-			min-height: 180px;
-			max-height: 220px;
+			gap: 12px;
 		}
 		@media (max-width: 768px) {
 			.contact-card {
-				min-height: 160px;
-				max-height: 200px;
+				gap: 10px;
 			}
 		}
 		.contact-card:hover {
@@ -128,6 +125,145 @@
 			.section-header {
 				padding-left: 16px !important;
 				padding-right: 16px !important;
+			}
+		}
+		/* Phone number clickable styles */
+		.phone-number {
+			cursor: pointer;
+			color: #667eea;
+			transition: all 0.3s ease;
+			position: relative;
+			padding: 2px 0;
+		}
+		.phone-number:hover {
+			color: #764ba2;
+			text-decoration: underline;
+		}
+		/* Modal styles */
+		.phone-modal {
+			display: none;
+			position: fixed;
+			z-index: 10000;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.6);
+			animation: fadeIn 0.3s ease;
+		}
+		.phone-modal.active {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.phone-modal-content {
+			background: white;
+			border-radius: 20px;
+			padding: 35px 30px;
+			max-width: 400px;
+			width: 90%;
+			box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+			animation: slideUp 0.3s ease;
+			position: relative;
+		}
+		.phone-modal-header {
+			text-align: center;
+			margin-bottom: 25px;
+		}
+		.phone-modal-header h3 {
+			margin: 0 0 10px 0;
+			font-size: 1.5rem;
+			color: #333;
+			font-weight: 700;
+		}
+		.phone-modal-number {
+			color: #667eea;
+			font-size: 1.3rem;
+			font-weight: 600;
+			margin: 0;
+		}
+		.phone-modal-actions {
+			display: flex;
+			gap: 15px;
+			margin-top: 25px;
+		}
+		.phone-action-btn {
+			flex: 1;
+			padding: 20px 15px;
+			border: none;
+			border-radius: 15px;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			font-size: 1rem;
+			font-weight: 600;
+			text-decoration: none;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 10px;
+			box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+		}
+		.phone-action-btn i {
+			font-size: 2rem;
+		}
+		.phone-action-btn.call {
+			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+			color: white;
+		}
+		.phone-action-btn.call:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+		}
+		.phone-action-btn.whatsapp {
+			background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+			color: white;
+		}
+		.phone-action-btn.whatsapp:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+		}
+		.phone-modal-close {
+			position: absolute;
+			top: 15px;
+			right: 15px;
+			background: #f5f5f5;
+			border: none;
+			width: 35px;
+			height: 35px;
+			border-radius: 50%;
+			cursor: pointer;
+			font-size: 1.3rem;
+			color: #666;
+			transition: all 0.3s ease;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.phone-modal-close:hover {
+			background: #e0e0e0;
+			color: #333;
+			transform: rotate(90deg);
+		}
+		@keyframes fadeIn {
+			from { opacity: 0; }
+			to { opacity: 1; }
+		}
+		@keyframes slideUp {
+			from {
+				transform: translateY(50px);
+				opacity: 0;
+			}
+			to {
+				transform: translateY(0);
+				opacity: 1;
+			}
+		}
+		@media (max-width: 480px) {
+			.phone-modal-actions {
+				flex-direction: column;
+			}
+			.phone-action-btn {
+				width: 100%;
 			}
 		}
 	</style>
@@ -234,92 +370,93 @@
 			<div class="contact-card">
 				<div class="contact-city"><i class="fa fa-building"></i>Уральск <span style="font-size:0.9rem;color:#764ba2;font-weight:500;margin-left:8px;">(Главный офис)</span></div>
 				<div class="contact-info"><i class="fa fa-map-marker"></i><span>Улица Шолохова, 11/5</span></div>
-				<div class="contact-info"><i class="fa fa-phone"></i><span>+7 (776) 559-57-26</span></div>
+				<div class="contact-info"><i class="fa fa-phone"></i><span class="phone-number" data-phone="+77765595726" onclick="openPhoneModal('+77765595726', '+7 (776) 559-57-26')">+7 (776) 559-57-26</span></div>
 			</div>
 			<div class="contact-card">
 				<div class="contact-city"><i class="fa fa-building"></i>Астана</div>
-				<div class="contact-info"><i class="fa fa-map-marker"></i><span>Проспект Мангилик Ел, 51/2</span></div>
-				<div class="contact-info"><i class="fa fa-phone"></i><span>+7 (700) 211-89-63</span></div>
+				<div class="contact-info"><i class="fa fa-map-marker"></i><span>ул. Е-15-3</span></div>
+				<div class="contact-info"><i class="fa fa-phone"></i><span class="phone-number" data-phone="+77002118963" onclick="openPhoneModal('+77002118963', '+7 (700) 211-89-63')">+7 (700) 211-89-63</span></div>
+				<div class="contact-info"><i class="fa fa-phone"></i><span class="phone-number" data-phone="+77769766627" onclick="openPhoneModal('+77769766627', '+7 (776) 976-66-27')">+7 (776) 976-66-27</span></div>
 			</div>
 			<div class="contact-card">
 				<div class="contact-city"><i class="fa fa-building"></i>Алматы</div>
 				<div class="contact-info"><i class="fa fa-map-marker"></i><span>Адрес офиса в Алматы</span></div>
-				<div class="contact-info"><i class="fa fa-phone"></i><span>+7 (776) 559-57-26</span></div>
+				<div class="contact-info"><i class="fa fa-phone"></i><span class="phone-number" data-phone="+77765595726" onclick="openPhoneModal('+77765595726', '+7 (776) 559-57-26')">+7 (776) 559-57-26</span></div>
 			</div>
 			<div class="contact-card">
 				<div class="contact-city"><i class="fa fa-building"></i>Актобе</div>
 				<div class="contact-info"><i class="fa fa-map-marker"></i><span>БЦ "Асан" Улица Аз Наурыз, 17 308 офис; 3 этаж</span></div>
-				<div class="contact-info"><i class="fa fa-phone"></i><span>+7 (702) 500-19-93</span></div>
+				<div class="contact-info"><i class="fa fa-phone"></i><span class="phone-number" data-phone="+77025001993" onclick="openPhoneModal('+77025001993', '+7 (702) 500-19-93')">+7 (702) 500-19-93</span></div>
 			</div>
 			<div class="contact-card">
 				<div class="contact-city"><i class="fa fa-building"></i>Атырау</div>
 				<div class="contact-info"><i class="fa fa-map-marker"></i><span>Улица Ахмет Байтурсынов, 47а 3 этаж</span></div>
-				<div class="contact-info"><i class="fa fa-phone"></i><span>+7 (706) 604-08-95</span></div>
+				<div class="contact-info"><i class="fa fa-phone"></i><span class="phone-number" data-phone="+77066040895" onclick="openPhoneModal('+77066040895', '+7 (706) 604-08-95')">+7 (706) 604-08-95</span></div>
 			</div>
 			<div class="contact-card">
 				<div class="contact-city"><i class="fa fa-building"></i>Актау</div>
 				<div class="contact-info"><i class="fa fa-map-marker"></i><span>БЦ Nomad 16-й микрорайон, 6</span></div>
-				<div class="contact-info"><i class="fa fa-phone"></i><span>+7 (706) 604-08-95</span></div>
+				<div class="contact-info"><i class="fa fa-phone"></i><span class="phone-number" data-phone="+77066040895" onclick="openPhoneModal('+77066040895', '+7 (706) 604-08-95')">+7 (706) 604-08-95</span></div>
 			</div>
 			<div class="contact-card">
 				<div class="contact-city"><i class="fa fa-building"></i>Шымкент</div>
 				<div class="contact-info"><i class="fa fa-map-marker"></i><span>Улица Рыскулова, 8а/1 1 этаж</span></div>
-				<div class="contact-info"><i class="fa fa-phone"></i><span>+7 (706) 604-08-95</span></div>
+				<div class="contact-info"><i class="fa fa-phone"></i><span class="phone-number" data-phone="+77066040895" onclick="openPhoneModal('+77066040895', '+7 (706) 604-08-95')">+7 (706) 604-08-95</span></div>
 			</div>
 			<div class="contact-card">
 				<div class="contact-city"><i class="fa fa-building"></i>Тараз</div>
 				<div class="contact-info"><i class="fa fa-map-marker"></i><span>БЦ Begans Улица Айтеке би, 73</span></div>
-				<div class="contact-info"><i class="fa fa-phone"></i><span>+7 (706) 604-08-95</span></div>
+				<div class="contact-info"><i class="fa fa-phone"></i><span class="phone-number" data-phone="+77066040895" onclick="openPhoneModal('+77066040895', '+7 (706) 604-08-95')">+7 (706) 604-08-95</span></div>
 			</div>
 			<div class="contact-card">
 				<div class="contact-city"><i class="fa fa-building"></i>Туркестан</div>
 				<div class="contact-info"><i class="fa fa-map-marker"></i><span>Улица Аль-Фараби, 10</span></div>
-				<div class="contact-info"><i class="fa fa-phone"></i><span>+7 (706) 604-08-95</span></div>
+				<div class="contact-info"><i class="fa fa-phone"></i><span class="phone-number" data-phone="+77066040895" onclick="openPhoneModal('+77066040895', '+7 (706) 604-08-95')">+7 (706) 604-08-95</span></div>
 			</div>
 			<div class="contact-card">
 				<div class="contact-city"><i class="fa fa-building"></i>Кызылорда</div>
 				<div class="contact-info"><i class="fa fa-map-marker"></i><span>Улица Ивана Журба, 96 к1</span></div>
-				<div class="contact-info"><i class="fa fa-phone"></i><span>+7 (706) 604-08-95</span></div>
+				<div class="contact-info"><i class="fa fa-phone"></i><span class="phone-number" data-phone="+77715757212" onclick="openPhoneModal('+77715757212', '+7 (771) 575-72-12')">+7 (771) 575-72-12</span></div>
 			</div>
 			<div class="contact-card">
 				<div class="contact-city"><i class="fa fa-building"></i>Жезказган</div>
 				<div class="contact-info"><i class="fa fa-map-marker"></i><span>Улица Тарадая, 2</span></div>
-				<div class="contact-info"><i class="fa fa-phone"></i><span>+7 (776) 559-57-26</span></div>
+				<div class="contact-info"><i class="fa fa-phone"></i><span class="phone-number" data-phone="+77765595726" onclick="openPhoneModal('+77765595726', '+7 (776) 559-57-26')">+7 (776) 559-57-26</span></div>
 			</div>
 			<div class="contact-card">
 				<div class="contact-city"><i class="fa fa-building"></i>Караганда</div>
 				<div class="contact-info"><i class="fa fa-map-marker"></i><span>Проспект Нуркена Абдирова, 26/6</span></div>
-				<div class="contact-info"><i class="fa fa-phone"></i><span>+7 (706) 604-08-95</span></div>
+				<div class="contact-info"><i class="fa fa-phone"></i><span class="phone-number" data-phone="+77066040895" onclick="openPhoneModal('+77066040895', '+7 (706) 604-08-95')">+7 (706) 604-08-95</span></div>
 			</div>
 			<div class="contact-card">
 				<div class="contact-city"><i class="fa fa-building"></i>Экибастуз</div>
 				<div class="contact-info"><i class="fa fa-map-marker"></i><span>Улица Мухтара Ауэзова, 53а</span></div>
-				<div class="contact-info"><i class="fa fa-phone"></i><span>+7 (706) 604-08-95</span></div>
+				<div class="contact-info"><i class="fa fa-phone"></i><span class="phone-number" data-phone="+77066040895" onclick="openPhoneModal('+77066040895', '+7 (706) 604-08-95')">+7 (706) 604-08-95</span></div>
 			</div>
 			<div class="contact-card">
 				<div class="contact-city"><i class="fa fa-building"></i>Костанай</div>
 				<div class="contact-info"><i class="fa fa-map-marker"></i><span>Адрес офиса в Костанае</span></div>
-				<div class="contact-info"><i class="fa fa-phone"></i><span>+7 (776) 559-57-26</span></div>
+				<div class="contact-info"><i class="fa fa-phone"></i><span class="phone-number" data-phone="+77765595726" onclick="openPhoneModal('+77765595726', '+7 (776) 559-57-26')">+7 (776) 559-57-26</span></div>
 			</div>
 			<div class="contact-card">
 				<div class="contact-city"><i class="fa fa-building"></i>Павлодар</div>
 				<div class="contact-info"><i class="fa fa-map-marker"></i><span>БЦ 8 Марта Улица Машхур Жусупа, 189</span></div>
-				<div class="contact-info"><i class="fa fa-phone"></i><span>+7 (706) 604-08-95</span></div>
+				<div class="contact-info"><i class="fa fa-phone"></i><span class="phone-number" data-phone="+77066040895" onclick="openPhoneModal('+77066040895', '+7 (706) 604-08-95')">+7 (706) 604-08-95</span></div>
 			</div>
 			<div class="contact-card">
 				<div class="contact-city"><i class="fa fa-building"></i>Петропавловск</div>
 				<div class="contact-info"><i class="fa fa-map-marker"></i><span>Адрес офиса в Петропавловске</span></div>
-				<div class="contact-info"><i class="fa fa-phone"></i><span>+7 (776) 559-57-26</span></div>
+				<div class="contact-info"><i class="fa fa-phone"></i><span class="phone-number" data-phone="+77765595726" onclick="openPhoneModal('+77765595726', '+7 (776) 559-57-26')">+7 (776) 559-57-26</span></div>
 			</div>
 			<div class="contact-card">
 				<div class="contact-city"><i class="fa fa-building"></i>Семей</div>
 				<div class="contact-info"><i class="fa fa-map-marker"></i><span>БЦ Ertis Улица Абая, 99в</span></div>
-				<div class="contact-info"><i class="fa fa-phone"></i><span>+7 (776) 559‒57‒26</span></div>
+				<div class="contact-info"><i class="fa fa-phone"></i><span class="phone-number" data-phone="+77765595726" onclick="openPhoneModal('+77765595726', '+7 (776) 559‒57‒26')">+7 (776) 559‒57‒26</span></div>
 			</div>
 			<div class="contact-card">
 				<div class="contact-city"><i class="fa fa-building"></i>Усть-Каменогорск</div>
 				<div class="contact-info"><i class="fa fa-map-marker"></i><span>Адрес офиса в Усть-Каменогорске</span></div>
-				<div class="contact-info"><i class="fa fa-phone"></i><span>+7 (776) 559‒57‒26</span></div>
+				<div class="contact-info"><i class="fa fa-phone"></i><span class="phone-number" data-phone="+77765595726" onclick="openPhoneModal('+77765595726', '+7 (776) 559‒57‒26')">+7 (776) 559‒57‒26</span></div>
 			</div>
 		</div>
 		<div class="section-header" style="padding: 0 0 0 0; max-width: 1200px; margin-left: auto; margin-right: auto; margin-top:60px;">
@@ -350,9 +487,64 @@ searchInput.addEventListener('input', function() {
 		}
 	});
 });
+
+// Phone modal functionality
+function openPhoneModal(phoneNumber, displayNumber) {
+	const modal = document.getElementById('phoneModal');
+	const modalNumber = document.getElementById('modalPhoneNumber');
+	const callBtn = document.getElementById('callBtn');
+	const whatsappBtn = document.getElementById('whatsappBtn');
+	
+	modalNumber.textContent = displayNumber;
+	callBtn.href = 'tel:' + phoneNumber;
+	whatsappBtn.href = 'https://wa.me/' + phoneNumber;
+	
+	modal.classList.add('active');
+	document.body.style.overflow = 'hidden';
+}
+
+function closePhoneModal() {
+	const modal = document.getElementById('phoneModal');
+	modal.classList.remove('active');
+	document.body.style.overflow = '';
+}
+
+// Close modal when clicking outside
+document.addEventListener('click', function(event) {
+	const modal = document.getElementById('phoneModal');
+	if (event.target === modal) {
+		closePhoneModal();
+	}
+});
+
+// Close modal on Escape key
+document.addEventListener('keydown', function(event) {
+	if (event.key === 'Escape') {
+		closePhoneModal();
+	}
+});
 </script>
 
-	
+	<!-- Phone Modal -->
+	<div class="phone-modal" id="phoneModal">
+		<div class="phone-modal-content">
+			<button class="phone-modal-close" onclick="closePhoneModal()">&times;</button>
+			<div class="phone-modal-header">
+				<h3>Выберите действие</h3>
+				<p class="phone-modal-number" id="modalPhoneNumber"></p>
+			</div>
+			<div class="phone-modal-actions">
+				<a href="#" class="phone-action-btn call" id="callBtn">
+					<i class="fa fa-phone"></i>
+					<span>Позвонить</span>
+				</a>
+				<a href="#" class="phone-action-btn whatsapp" id="whatsappBtn" target="_blank">
+					<i class="fab fa-whatsapp"></i>
+					<span>WhatsApp</span>
+				</a>
+			</div>
+		</div>
+	</div>
 
 	<div class="bottom-nav">
 		<a href="../feedback/">
