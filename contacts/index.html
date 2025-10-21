@@ -150,6 +150,18 @@
 			color: #764ba2;
 			text-decoration: underline;
 		}
+		/* Address clickable styles */
+		.address-clickable {
+			cursor: pointer;
+			color: #666;
+			transition: all 0.3s ease;
+			position: relative;
+			padding: 2px 0;
+		}
+		.address-clickable:hover {
+			color: #667eea;
+			text-decoration: underline;
+		}
 		/* Modal styles */
 		.phone-modal {
 			display: none;
@@ -277,6 +289,120 @@
 				width: 100%;
 			}
 		}
+		/* Map modal styles */
+		.map-modal {
+			display: none;
+			position: fixed;
+			z-index: 10000;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.6);
+			animation: fadeIn 0.3s ease;
+		}
+		.map-modal.active {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.map-modal-content {
+			background: white;
+			border-radius: 20px;
+			padding: 35px 30px;
+			max-width: 400px;
+			width: 90%;
+			box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+			animation: slideUp 0.3s ease;
+			position: relative;
+		}
+		.map-modal-header {
+			text-align: center;
+			margin-bottom: 25px;
+		}
+		.map-modal-header h3 {
+			margin: 0 0 10px 0;
+			font-size: 1.5rem;
+			color: #333;
+			font-weight: 700;
+		}
+		.map-modal-address {
+			color: #667eea;
+			font-size: 1.1rem;
+			font-weight: 500;
+			margin: 0;
+			line-height: 1.4;
+		}
+		.map-modal-actions {
+			display: flex;
+			gap: 15px;
+			margin-top: 25px;
+		}
+		.map-action-btn {
+			flex: 1;
+			padding: 20px 15px;
+			border: none;
+			border-radius: 15px;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			font-size: 1rem;
+			font-weight: 600;
+			text-decoration: none;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 10px;
+			box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+		}
+		.map-action-btn i {
+			font-size: 2rem;
+		}
+		.map-action-btn.yandex {
+			background: linear-gradient(135deg, #fc3f1d 0%, #d62e14 100%);
+			color: white;
+		}
+		.map-action-btn.yandex:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 8px 25px rgba(252, 63, 29, 0.4);
+		}
+		.map-action-btn.gis {
+			background: linear-gradient(135deg, #31ac45 0%, #28923a 100%);
+			color: white;
+		}
+		.map-action-btn.gis:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 8px 25px rgba(49, 172, 69, 0.4);
+		}
+		.map-modal-close {
+			position: absolute;
+			top: 15px;
+			right: 15px;
+			background: #f5f5f5;
+			border: none;
+			width: 35px;
+			height: 35px;
+			border-radius: 50%;
+			cursor: pointer;
+			font-size: 1.3rem;
+			color: #666;
+			transition: all 0.3s ease;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.map-modal-close:hover {
+			background: #e0e0e0;
+			color: #333;
+			transform: rotate(90deg);
+		}
+		@media (max-width: 480px) {
+			.map-modal-actions {
+				flex-direction: column;
+			}
+			.map-action-btn {
+				width: 100%;
+			}
+		}
 	</style>
 </head>
 <body>
@@ -380,110 +506,110 @@
 		<div class="contacts-grid" id="contacts-grid">
 			<div class="contact-card">
 				<div class="contact-city"><i class="fa fa-building"></i>Уральск <span style="font-size:0.9rem;color:#764ba2;font-weight:500;margin-left:8px;">(Главный офис)</span></div>
-				<div class="contact-info"><i class="fa fa-map-marker"></i><span>Улица Шолохова, 11/5</span></div>
+				<div class="contact-info"><i class="fa fa-map-marker"></i><span class="address-clickable" data-yandex="https://yandex.kz/maps/ru/org/novapos/103846002612/?ll=51.412983%2C51.226919&mode=search&sll=51.370528%2C51.204030&sspn=0.407524%2C0.175130&text=novapos&z=13" data-2gis="https://2gis.kz/uralsk/firm/70000001060424620?m=51.388822%2C51.24671%2F16" onclick="openMapModal('Улица Шолохова, 11/5', this.dataset.yandex, this.dataset['2gis'])">Улица Шолохова, 11/5</span></div>
 				<div class="contact-info"><i class="fa fa-phone"></i><span class="phone-number" data-phone="+77765595726" onclick="openPhoneModal('+77765595726', '+7 (776) 559-57-26')">+7 (776) 559-57-26</span></div>
 				<div class="contact-info"><i class="fab fa-instagram"></i><a href="https://instagram.com/novapos.kz" target="_blank">@novapos.kz</a></div>
 			</div>
 			<div class="contact-card">
 				<div class="contact-city"><i class="fa fa-building"></i>Астана</div>
-				<div class="contact-info"><i class="fa fa-map-marker"></i><span>ул. Е-15-3</span></div>
+				<div class="contact-info"><i class="fa fa-map-marker"></i><span class="address-clickable" data-yandex="https://yandex.kz/maps/ru/163/astana/house/e_15_koshesi_3/Y0gYdQJpTE0PQFtrfX1zeXlgYQ==/?ll=71.359588%2C51.128535&z=17" data-2gis="https://2gis.kz/astana/geo/9570784863379900?m=71.358545%2C51.12897%2F16" onclick="openMapModal('ул. Е-15-3', this.dataset.yandex, this.dataset['2gis'])">ул. Е-15-3</span></div>
 				<div class="contact-info"><i class="fa fa-phone"></i><span class="phone-number" data-phone="+77002118963" onclick="openPhoneModal('+77002118963', '+7 (700) 211-89-63')">+7 (700) 211-89-63</span></div>
 				<div class="contact-info"><i class="fa fa-phone"></i><span class="phone-number" data-phone="+77769766627" onclick="openPhoneModal('+77769766627', '+7 (776) 976-66-27')">+7 (776) 976-66-27</span></div>
 				<div class="contact-info"><i class="fab fa-instagram"></i><a href="https://instagram.com/novapos.astana" target="_blank">@novapos.astana</a></div>
 			</div>
 			<div class="contact-card">
 				<div class="contact-city"><i class="fa fa-building"></i>Алматы</div>
-				<div class="contact-info"><i class="fa fa-map-marker"></i><span>Адрес офиса в Алматы</span></div>
-				<div class="contact-info"><i class="fa fa-phone"></i><span class="phone-number" data-phone="+77765595726" onclick="openPhoneModal('+77765595726', '+7 (776) 559-57-26')">+7 (776) 559-57-26</span></div>
+				<div class="contact-info"><i class="fa fa-map-marker"></i><span class="address-clickable" data-yandex="" data-2gis="" onclick="openMapModal('Адрес офиса в Алматы', this.dataset.yandex, this.dataset['2gis'])">Адрес офиса в Алматы</span></div>
+				<div class="contact-info"><i class="fa fa-phone"></i><span class="phone-number" data-phone="+77067194537" onclick="openPhoneModal('+77067194537', '+7 (706) 719-45-37')">+7 (706) 719-45-37</span></div>
 				<div class="contact-info"><i class="fab fa-instagram"></i><a href="https://instagram.com/novapos_almaty" target="_blank">@novapos_almaty</a></div>
 			</div>
 			<div class="contact-card">
 				<div class="contact-city"><i class="fa fa-building"></i>Актобе</div>
-				<div class="contact-info"><i class="fa fa-map-marker"></i><span>БЦ "Асан" Улица Аз Наурыз, 17 308 офис; 3 этаж</span></div>
+				<div class="contact-info"><i class="fa fa-map-marker"></i><span class="address-clickable" data-yandex="https://yandex.kz/maps/ru/org/novapos_kz/38595477903/?ll=57.203029%2C50.286566&mode=search&sll=57.203029%2C50.286566&sspn=0.012473%2C0.005467&text=novapos&z=17.03" data-2gis="https://2gis.kz/aktobe/firm/70000001089702058?m=57.20287%2C50.286518%2F16" onclick="openMapModal('БЦ &quot;Асан&quot; Улица Аз Наурыз, 17 308 офис; 3 этаж', this.dataset.yandex, this.dataset['2gis'])">БЦ "Асан" Улица Аз Наурыз, 17 308 офис; 3 этаж</span></div>
 				<div class="contact-info"><i class="fa fa-phone"></i><span class="phone-number" data-phone="+77025001993" onclick="openPhoneModal('+77025001993', '+7 (702) 500-19-93')">+7 (702) 500-19-93</span></div>
 				<div class="contact-info"><i class="fab fa-instagram"></i><a href="https://instagram.com/novapos.aktobe" target="_blank">@novapos.aktobe</a></div>
 			</div>
 			<div class="contact-card">
 				<div class="contact-city"><i class="fa fa-building"></i>Атырау</div>
-				<div class="contact-info"><i class="fa fa-map-marker"></i><span>Улица Ахмет Байтурсынов, 47а 3 этаж</span></div>
+				<div class="contact-info"><i class="fa fa-map-marker"></i><span class="address-clickable" data-yandex="" data-2gis="" onclick="openMapModal('Улица Ахмет Байтурсынов, 47а 3 этаж', this.dataset.yandex, this.dataset['2gis'])">Улица Ахмет Байтурсынов, 47а 3 этаж</span></div>
 				<div class="contact-info"><i class="fa fa-phone"></i><span class="phone-number" data-phone="+77066040895" onclick="openPhoneModal('+77066040895', '+7 (706) 604-08-95')">+7 (706) 604-08-95</span></div>
 				<div class="contact-info"><i class="fab fa-instagram"></i><a href="https://instagram.com/novapos.kz" target="_blank">@novapos.kz</a></div>
 			</div>
 			<div class="contact-card">
 				<div class="contact-city"><i class="fa fa-building"></i>Актау</div>
-				<div class="contact-info"><i class="fa fa-map-marker"></i><span>БЦ Nomad 16-й микрорайон, 6</span></div>
+				<div class="contact-info"><i class="fa fa-map-marker"></i><span class="address-clickable" data-yandex="" data-2gis="" onclick="openMapModal('БЦ Nomad 16-й микрорайон, 6', this.dataset.yandex, this.dataset['2gis'])">БЦ Nomad 16-й микрорайон, 6</span></div>
 				<div class="contact-info"><i class="fa fa-phone"></i><span class="phone-number" data-phone="+77066040895" onclick="openPhoneModal('+77066040895', '+7 (706) 604-08-95')">+7 (706) 604-08-95</span></div>
 				<div class="contact-info"><i class="fab fa-instagram"></i><a href="https://instagram.com/novapos.kz" target="_blank">@novapos.kz</a></div>
 			</div>
 			<div class="contact-card">
 				<div class="contact-city"><i class="fa fa-building"></i>Шымкент</div>
-				<div class="contact-info"><i class="fa fa-map-marker"></i><span>Улица Рыскулова, 8а/1 1 этаж</span></div>
+				<div class="contact-info"><i class="fa fa-map-marker"></i><span class="address-clickable" data-yandex="" data-2gis="" onclick="openMapModal('Улица Рыскулова, 8а/1 1 этаж', this.dataset.yandex, this.dataset['2gis'])">Улица Рыскулова, 8а/1 1 этаж</span></div>
 				<div class="contact-info"><i class="fa fa-phone"></i><span class="phone-number" data-phone="+77066040895" onclick="openPhoneModal('+77066040895', '+7 (706) 604-08-95')">+7 (706) 604-08-95</span></div>
 				<div class="contact-info"><i class="fab fa-instagram"></i><a href="https://instagram.com/novapos.kz" target="_blank">@novapos.kz</a></div>
 			</div>
 			<div class="contact-card">
 				<div class="contact-city"><i class="fa fa-building"></i>Тараз</div>
-				<div class="contact-info"><i class="fa fa-map-marker"></i><span>БЦ Begans Улица Айтеке би, 73</span></div>
+				<div class="contact-info"><i class="fa fa-map-marker"></i><span class="address-clickable" data-yandex="" data-2gis="" onclick="openMapModal('БЦ Begans Улица Айтеке би, 73', this.dataset.yandex, this.dataset['2gis'])">БЦ Begans Улица Айтеке би, 73</span></div>
 				<div class="contact-info"><i class="fa fa-phone"></i><span class="phone-number" data-phone="+77066040895" onclick="openPhoneModal('+77066040895', '+7 (706) 604-08-95')">+7 (706) 604-08-95</span></div>
 				<div class="contact-info"><i class="fab fa-instagram"></i><a href="https://instagram.com/novapos.kz" target="_blank">@novapos.kz</a></div>
 			</div>
 			<div class="contact-card">
 				<div class="contact-city"><i class="fa fa-building"></i>Туркестан</div>
-				<div class="contact-info"><i class="fa fa-map-marker"></i><span>Улица Аль-Фараби, 10</span></div>
+				<div class="contact-info"><i class="fa fa-map-marker"></i><span class="address-clickable" data-yandex="" data-2gis="" onclick="openMapModal('Улица Аль-Фараби, 10', this.dataset.yandex, this.dataset['2gis'])">Улица Аль-Фараби, 10</span></div>
 				<div class="contact-info"><i class="fa fa-phone"></i><span class="phone-number" data-phone="+77066040895" onclick="openPhoneModal('+77066040895', '+7 (706) 604-08-95')">+7 (706) 604-08-95</span></div>
 				<div class="contact-info"><i class="fab fa-instagram"></i><a href="https://instagram.com/novapos.kz" target="_blank">@novapos.kz</a></div>
 			</div>
 			<div class="contact-card">
 				<div class="contact-city"><i class="fa fa-building"></i>Кызылорда</div>
-				<div class="contact-info"><i class="fa fa-map-marker"></i><span>Улица Ивана Журба, 96 к1</span></div>
+				<div class="contact-info"><i class="fa fa-map-marker"></i><span class="address-clickable" data-yandex="" data-2gis="" onclick="openMapModal('Улица Ивана Журба, 96 к1', this.dataset.yandex, this.dataset['2gis'])">Улица Ивана Журба, 96 к1</span></div>
 				<div class="contact-info"><i class="fa fa-phone"></i><span class="phone-number" data-phone="+77715757212" onclick="openPhoneModal('+77715757212', '+7 (771) 575-72-12')">+7 (771) 575-72-12</span></div>
 				<div class="contact-info"><i class="fab fa-instagram"></i><a href="https://instagram.com/novapos.kyzylorda" target="_blank">@novapos.kyzylorda</a></div>
 			</div>
 			<div class="contact-card">
 				<div class="contact-city"><i class="fa fa-building"></i>Жезказган</div>
-				<div class="contact-info"><i class="fa fa-map-marker"></i><span>Улица Тарадая, 2</span></div>
+				<div class="contact-info"><i class="fa fa-map-marker"></i><span class="address-clickable" data-yandex="" data-2gis="" onclick="openMapModal('Улица Тарадая, 2', this.dataset.yandex, this.dataset['2gis'])">Улица Тарадая, 2</span></div>
 				<div class="contact-info"><i class="fa fa-phone"></i><span class="phone-number" data-phone="+77765595726" onclick="openPhoneModal('+77765595726', '+7 (776) 559-57-26')">+7 (776) 559-57-26</span></div>
 				<div class="contact-info"><i class="fab fa-instagram"></i><a href="https://instagram.com/novapos.kz" target="_blank">@novapos.kz</a></div>
 			</div>
 			<div class="contact-card">
 				<div class="contact-city"><i class="fa fa-building"></i>Караганда</div>
-				<div class="contact-info"><i class="fa fa-map-marker"></i><span>Проспект Нуркена Абдирова, 26/6</span></div>
+				<div class="contact-info"><i class="fa fa-map-marker"></i><span class="address-clickable" data-yandex="" data-2gis="" onclick="openMapModal('Проспект Нуркена Абдирова, 26/6', this.dataset.yandex, this.dataset['2gis'])">Проспект Нуркена Абдирова, 26/6</span></div>
 				<div class="contact-info"><i class="fa fa-phone"></i><span class="phone-number" data-phone="+77066040895" onclick="openPhoneModal('+77066040895', '+7 (706) 604-08-95')">+7 (706) 604-08-95</span></div>
 				<div class="contact-info"><i class="fab fa-instagram"></i><a href="https://instagram.com/novapos.kz" target="_blank">@novapos.kz</a></div>
 			</div>
 			<div class="contact-card">
 				<div class="contact-city"><i class="fa fa-building"></i>Экибастуз</div>
-				<div class="contact-info"><i class="fa fa-map-marker"></i><span>Улица Мухтара Ауэзова, 53а</span></div>
-				<div class="contact-info"><i class="fa fa-phone"></i><span class="phone-number" data-phone="+77066040895" onclick="openPhoneModal('+77066040895', '+7 (706) 604-08-95')">+7 (706) 604-08-95</span></div>
+				<div class="contact-info"><i class="fa fa-map-marker"></i><span class="address-clickable" data-yandex="" data-2gis="" onclick="openMapModal('Улица Мухтара Ауэзова, 53а', this.dataset.yandex, this.dataset['2gis'])">Улица Мухтара Ауэзова, 53а</span></div>
+				<div class="contact-info"><i class="fa fa-phone"></i><span class="phone-number" data-phone="+77028704812" onclick="openPhoneModal('+77028704812', '+7 (702) 870-48-12')">+7 (702) 870-48-12</span></div>
 				<div class="contact-info"><i class="fab fa-instagram"></i><a href="https://instagram.com/novapos.kz" target="_blank">@novapos.kz</a></div>
 			</div>
 			<div class="contact-card">
 				<div class="contact-city"><i class="fa fa-building"></i>Костанай</div>
-				<div class="contact-info"><i class="fa fa-map-marker"></i><span>Адрес офиса в Костанае</span></div>
+				<div class="contact-info"><i class="fa fa-map-marker"></i><span class="address-clickable" data-yandex="" data-2gis="" onclick="openMapModal('Адрес офиса в Костанае', this.dataset.yandex, this.dataset['2gis'])">Адрес офиса в Костанае</span></div>
 				<div class="contact-info"><i class="fa fa-phone"></i><span class="phone-number" data-phone="+77765595726" onclick="openPhoneModal('+77765595726', '+7 (776) 559-57-26')">+7 (776) 559-57-26</span></div>
 				<div class="contact-info"><i class="fab fa-instagram"></i><a href="https://instagram.com/novapos.kz" target="_blank">@novapos.kz</a></div>
 			</div>
 			<div class="contact-card">
 				<div class="contact-city"><i class="fa fa-building"></i>Павлодар</div>
-				<div class="contact-info"><i class="fa fa-map-marker"></i><span>БЦ 8 Марта Улица Машхур Жусупа, 189</span></div>
+				<div class="contact-info"><i class="fa fa-map-marker"></i><span class="address-clickable" data-yandex="" data-2gis="" onclick="openMapModal('БЦ 8 Марта Улица Машхур Жусупа, 189', this.dataset.yandex, this.dataset['2gis'])">БЦ 8 Марта Улица Машхур Жусупа, 189</span></div>
 				<div class="contact-info"><i class="fa fa-phone"></i><span class="phone-number" data-phone="+77066040895" onclick="openPhoneModal('+77066040895', '+7 (706) 604-08-95')">+7 (706) 604-08-95</span></div>
 				<div class="contact-info"><i class="fab fa-instagram"></i><a href="https://instagram.com/novapos.kz" target="_blank">@novapos.kz</a></div>
 			</div>
 			<div class="contact-card">
 				<div class="contact-city"><i class="fa fa-building"></i>Петропавловск</div>
-				<div class="contact-info"><i class="fa fa-map-marker"></i><span>Адрес офиса в Петропавловске</span></div>
+				<div class="contact-info"><i class="fa fa-map-marker"></i><span class="address-clickable" data-yandex="" data-2gis="" onclick="openMapModal('Адрес офиса в Петропавловске', this.dataset.yandex, this.dataset['2gis'])">Адрес офиса в Петропавловске</span></div>
 				<div class="contact-info"><i class="fa fa-phone"></i><span class="phone-number" data-phone="+77765595726" onclick="openPhoneModal('+77765595726', '+7 (776) 559-57-26')">+7 (776) 559-57-26</span></div>
 				<div class="contact-info"><i class="fab fa-instagram"></i><a href="https://instagram.com/novapos.kz" target="_blank">@novapos.kz</a></div>
 			</div>
 			<div class="contact-card">
 				<div class="contact-city"><i class="fa fa-building"></i>Семей</div>
-				<div class="contact-info"><i class="fa fa-map-marker"></i><span>БЦ Ertis Улица Абая, 99в</span></div>
+				<div class="contact-info"><i class="fa fa-map-marker"></i><span class="address-clickable" data-yandex="" data-2gis="" onclick="openMapModal('БЦ Ertis Улица Абая, 99в', this.dataset.yandex, this.dataset['2gis'])">БЦ Ertis Улица Абая, 99в</span></div>
 				<div class="contact-info"><i class="fa fa-phone"></i><span class="phone-number" data-phone="+77765595726" onclick="openPhoneModal('+77765595726', '+7 (776) 559‒57‒26')">+7 (776) 559‒57‒26</span></div>
 				<div class="contact-info"><i class="fab fa-instagram"></i><a href="https://instagram.com/novapos.kz" target="_blank">@novapos.kz</a></div>
 			</div>
 			<div class="contact-card">
 				<div class="contact-city"><i class="fa fa-building"></i>Усть-Каменогорск</div>
-				<div class="contact-info"><i class="fa fa-map-marker"></i><span>Адрес офиса в Усть-Каменогорске</span></div>
+				<div class="contact-info"><i class="fa fa-map-marker"></i><span class="address-clickable" data-yandex="" data-2gis="" onclick="openMapModal('Адрес офиса в Усть-Каменогорске', this.dataset.yandex, this.dataset['2gis'])">Адрес офиса в Усть-Каменогорске</span></div>
 				<div class="contact-info"><i class="fa fa-phone"></i><span class="phone-number" data-phone="+77765595726" onclick="openPhoneModal('+77765595726', '+7 (776) 559‒57‒26')">+7 (776) 559‒57‒26</span></div>
 				<div class="contact-info"><i class="fab fa-instagram"></i><a href="https://instagram.com/novapos.kz" target="_blank">@novapos.kz</a></div>
 			</div>
@@ -550,6 +676,73 @@ document.addEventListener('click', function(event) {
 document.addEventListener('keydown', function(event) {
 	if (event.key === 'Escape') {
 		closePhoneModal();
+		closeMapModal();
+	}
+});
+
+// Map modal functionality
+function openMapModal(address, yandexUrl, gisUrl) {
+	const modal = document.getElementById('mapModal');
+	const modalAddress = document.getElementById('modalAddress');
+	const yandexBtn = document.getElementById('yandexBtn');
+	const gisBtn = document.getElementById('gisBtn');
+	
+	modalAddress.textContent = address;
+	
+	// Show/hide buttons based on URL availability
+	if (yandexUrl && yandexUrl.trim() !== '') {
+		yandexBtn.href = yandexUrl;
+		yandexBtn.style.display = 'flex';
+	} else {
+		yandexBtn.style.display = 'none';
+	}
+	
+	if (gisUrl && gisUrl.trim() !== '') {
+		gisBtn.href = gisUrl;
+		gisBtn.style.display = 'flex';
+	} else {
+		gisBtn.style.display = 'none';
+	}
+	
+	// If no URLs available, show message
+	if ((!yandexUrl || yandexUrl.trim() === '') && (!gisUrl || gisUrl.trim() === '')) {
+		const actionsDiv = modal.querySelector('.map-modal-actions');
+		actionsDiv.innerHTML = '<p style="text-align:center;color:#999;padding:20px;">Ссылки на карты будут добавлены позже</p>';
+	}
+	
+	modal.classList.add('active');
+	document.body.style.overflow = 'hidden';
+}
+
+function closeMapModal() {
+	const modal = document.getElementById('mapModal');
+	modal.classList.remove('active');
+	document.body.style.overflow = '';
+	
+	// Restore buttons if they were hidden
+	const actionsDiv = modal.querySelector('.map-modal-actions');
+	const yandexBtn = document.getElementById('yandexBtn');
+	const gisBtn = document.getElementById('gisBtn');
+	
+	if (!yandexBtn || !gisBtn) {
+		actionsDiv.innerHTML = `
+			<a href="#" class="map-action-btn yandex" id="yandexBtn" target="_blank">
+				<i class="fa fa-map-marker"></i>
+				<span>Yandex Maps</span>
+			</a>
+			<a href="#" class="map-action-btn gis" id="gisBtn" target="_blank">
+				<i class="fa fa-map-marked-alt"></i>
+				<span>2GIS</span>
+			</a>
+		`;
+	}
+}
+
+// Close map modal when clicking outside
+document.addEventListener('click', function(event) {
+	const mapModal = document.getElementById('mapModal');
+	if (event.target === mapModal) {
+		closeMapModal();
 	}
 });
 </script>
@@ -570,6 +763,27 @@ document.addEventListener('keydown', function(event) {
 				<a href="#" class="phone-action-btn whatsapp" id="whatsappBtn" target="_blank">
 					<i class="fab fa-whatsapp"></i>
 					<span>WhatsApp</span>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- Map Modal -->
+	<div class="map-modal" id="mapModal">
+		<div class="map-modal-content">
+			<button class="map-modal-close" onclick="closeMapModal()">&times;</button>
+			<div class="map-modal-header">
+				<h3>Выберите карту</h3>
+				<p class="map-modal-address" id="modalAddress"></p>
+			</div>
+			<div class="map-modal-actions">
+				<a href="#" class="map-action-btn yandex" id="yandexBtn" target="_blank">
+					<i class="fa fa-map-marker"></i>
+					<span>Yandex Maps</span>
+				</a>
+				<a href="#" class="map-action-btn gis" id="gisBtn" target="_blank">
+					<i class="fa fa-map-marked-alt"></i>
+					<span>2GIS</span>
 				</a>
 			</div>
 		</div>
