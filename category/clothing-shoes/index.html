@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Это временная страница.">
-  <title>Страница в разработке - NovaPos.kz</title>
+  <meta name="description" content="Автоматизация магазина одежды и обуви — удобное управление продажами, остатками и ассортиментом. Кассовое оборудование и ПО для бутиков и сетевых магазинов.">
+  <title>Автоматизация магазина одежды и обуви - NovaPos.kz</title>
   <link href="../../styles/styles.css" rel="stylesheet" type="text/css">
+  <link href="../../styles/design-system.css" rel="stylesheet" type="text/css">
   <link rel="icon" href="../../images/favicon.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -26,53 +27,223 @@
   <noscript><div><img src="https://mc.yandex.ru/watch/98771693" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
   <!-- /Yandex.Metrika counter -->
   <style>
-    .under-development {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 60vh;
-      padding: 40px 20px;
-      text-align: center;
-      background-color: #f8f9fa;
+    .main-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
     }
-
-    .under-development i {
-      font-size: 4rem;
-      color: #333;
+    
+    .intro-section {
+      background: white;
+      border-radius: 15px;
+      padding: 40px;
+      margin-bottom: 40px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .intro-section p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #555;
       margin-bottom: 20px;
     }
-
-    .under-development h1 {
-      font-size: 2.5rem;
+    
+    .intro-section p:last-child {
+      margin-bottom: 0;
+    }
+    
+    .benefits-list {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+    
+    .benefits-list li {
+      padding: 15px 0 15px 50px;
+      position: relative;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: #555;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    
+    .benefits-list li:last-child {
+      border-bottom: none;
+    }
+    
+    .benefits-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 15px;
+      width: 30px;
+      height: 30px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+    
+    .services-list {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+    
+    .services-list li {
+      padding: 12px 0 12px 40px;
+      position: relative;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #555;
+    }
+    
+    .services-list li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: #667eea;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    
+    .equipment-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 20px 0;
+    }
+    
+    .equipment-item {
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 10px;
+      border-left: 4px solid #667eea;
+    }
+    
+    .equipment-item strong {
+      display: block;
+      color: #333;
+      margin-bottom: 8px;
+      font-size: 1.05rem;
+    }
+    
+    .software-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin: 30px 0;
+    }
+    
+    .software-card {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      border-top: 4px solid #667eea;
+    }
+    
+    .software-card h3 {
+      font-size: 1.5rem;
       color: #333;
       margin-bottom: 15px;
+      font-weight: 700;
     }
-
-    .under-development p {
-      font-size: 1.2rem;
+    
+    .software-card p {
       color: #666;
-      max-width: 600px;
-      margin: 0 auto;
       line-height: 1.6;
+      font-size: 1rem;
     }
-
+    
+    .advantages-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 30px 0;
+    }
+    
+    .advantage-item {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+    
+    .advantage-item i {
+      font-size: 2.5rem;
+      color: #667eea;
+      margin-bottom: 15px;
+    }
+    
+    .advantage-item p {
+      color: #555;
+      font-size: 1rem;
+      line-height: 1.5;
+      margin: 0;
+    }
+    
+    .consultation-button {
+      display: block;
+      width: 100%;
+      max-width: 500px;
+      margin: 60px auto;
+      padding: 25px 40px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 15px;
+      font-size: 1.3rem;
+      font-weight: 700;
+      box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+      transition: all 0.3s ease;
+    }
+    
+    .consultation-button:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+    }
+    
+    .consultation-button i {
+      margin-right: 10px;
+    }
+    
     @media (max-width: 768px) {
-      .under-development {
-        min-height: 50vh;
-        padding: 30px 15px;
+      .intro-section {
+        padding: 25px 20px;
       }
-
-      .under-development i {
-        font-size: 3rem;
+      
+      .intro-section p {
+        font-size: 1rem;
       }
-
-      .under-development h1 {
-        font-size: 2rem;
+      
+      .benefits-list li {
+        padding-left: 45px;
+        font-size: 1rem;
       }
-
-      .under-development p {
+      
+      .equipment-list {
+        grid-template-columns: 1fr;
+      }
+      
+      .software-section {
+        grid-template-columns: 1fr;
+      }
+      
+      .advantages-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .consultation-button {
+        padding: 20px 30px;
         font-size: 1.1rem;
+        margin: 40px auto;
       }
     }
   </style>
@@ -160,14 +331,154 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="../../scripts/script.js"></script>
 
-  <div class="under-development">
-    <i class="fas fa-tools"></i>
-    <h1>Страница находится в разработке</h1>
-    <p>Мы работаем над созданием качественного контента для вас. Пожалуйста, загляните позже или свяжитесь с нами для получения дополнительной информации.</p>
+  <section class="novapos-header">
+    <h1>Автоматизация магазина одежды и обуви</h1>
+    <p>Удобное управление продажами, остатками и ассортиментом без ручных ошибок</p>
+  </section>
+
+  <div class="main-content">
+    <div class="intro-section">
+      <p>Автоматизация магазина одежды и обуви — это удобное управление продажами, остатками и ассортиментом без ручных ошибок и потери времени. Мы помогаем внедрить современную систему учёта с кассовым оборудованием и программным обеспечением, которое подходит как для небольших бутиков, так и для сетевых магазинов.</p>
+      <p>Наша компания занимается продажей, установкой и поддержкой оборудования и программ для автоматизации торговли. Мы бесплатно консультируем, подбираем оптимальное решение, настраиваем систему «под ключ» и обучаем персонал работе с кассой и складом.</p>
+    </div>
+
+    <section>
+      <div class="section-header">
+        <i class="fa fa-question-circle"></i>
+        <h2>Зачем нужна автоматизация магазина одежды и обуви</h2>
+      </div>
+      <div class="intro-section">
+        <p>В магазинах одежды и обуви важно учитывать размеры, цвета, модели и сезонность товара. Без автоматизации это приводит к ошибкам в остатках, потере продаж и сложностям при инвентаризации.</p>
+        <p><strong>Автоматизация позволяет:</strong></p>
+        <ul class="benefits-list">
+          <li>вести точный учёт товаров по размерам, цветам и коллекциям;</li>
+          <li>быстро обслуживать покупателей и оформлять продажи;</li>
+          <li>печатать ценники и этикетки со штрихкодами;</li>
+          <li>контролировать остатки и своевременно пополнять ассортимент;</li>
+          <li>отслеживать популярные модели и анализировать продажи;</li>
+          <li>упростить возвраты, обмены и переоценку товаров.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-header">
+        <i class="fa fa-briefcase"></i>
+        <h2>Наши услуги</h2>
+      </div>
+      <div class="intro-section">
+        <p>Мы сопровождаем клиента на всех этапах автоматизации:</p>
+        <ul class="services-list">
+          <li><strong>Бесплатная консультация</strong> — помогаем выбрать программу и оборудование с учётом формата магазина.</li>
+          <li><strong>Подбор оборудования и ПО</strong> — предлагаем решения под ваш бюджет и задачи.</li>
+          <li><strong>Установка и настройка программ</strong> GBS.Market и «МойСклад».</li>
+          <li><strong>Подключение оборудования</strong> и тестирование всей системы.</li>
+          <li><strong>Обучение персонала</strong> работе с кассой и учётом товаров.</li>
+          <li><strong>Техническая поддержка</strong> — удалённо или с выездом IT-специалиста.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-header">
+        <i class="fa fa-desktop"></i>
+        <h2>Оборудование для магазина одежды и обуви</h2>
+      </div>
+      <div class="intro-section">
+        <p>Мы поставляем и настраиваем всё необходимое оборудование для торговой точки:</p>
+        <div class="equipment-list">
+          <div class="equipment-item">
+            <strong>POS-моноблоки и кассовые компьютеры</strong>
+          </div>
+          <div class="equipment-item">
+            <strong>Принтеры чеков</strong>
+          </div>
+          <div class="equipment-item">
+            <strong>Принтеры этикеток</strong> для ценников и штрихкодов
+          </div>
+          <div class="equipment-item">
+            <strong>Сканеры штрихкодов</strong> (проводные и беспроводные)
+          </div>
+          <div class="equipment-item">
+            <strong>Денежные ящики</strong>
+          </div>
+          <div class="equipment-item">
+            <strong>Дополнительные периферийные устройства</strong> (при необходимости)
+          </div>
+        </div>
+        <p style="margin-top: 20px;">Всё оборудование совместимо с выбранным программным обеспечением и готово к работе сразу после установки.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-header">
+        <i class="fa fa-code"></i>
+        <h2>Программное обеспечение</h2>
+      </div>
+      <div class="software-section">
+        <div class="software-card">
+          <h3>GBS.Market</h3>
+          <p>Кассовая программа для розничной торговли с удобным интерфейсом, быстрой обработкой продаж и поддержкой торгового оборудования.</p>
+        </div>
+        <div class="software-card">
+          <h3>МойСклад</h3>
+          <p>Облачная система учёта товаров и остатков. Подходит для магазинов одежды и обуви с большим ассортиментом, позволяет вести аналитику, контролировать склад и управлять ценами.</p>
+        </div>
+      </div>
+      <div class="intro-section" style="margin-top: 20px;">
+        <p>Мы являемся официальными дистрибьюторами и выполняем полную настройку программ под бизнес-процессы клиента.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-header">
+        <i class="fa fa-star"></i>
+        <h2>Преимущества работы с нами</h2>
+      </div>
+      <div class="advantages-grid">
+        <div class="advantage-item">
+          <i class="fa fa-check-circle"></i>
+          <p>Опыт автоматизации магазинов одежды и обуви</p>
+        </div>
+        <div class="advantage-item">
+          <i class="fa fa-comments"></i>
+          <p>Бесплатная консультация перед началом работ</p>
+        </div>
+        <div class="advantage-item">
+          <i class="fa fa-key"></i>
+          <p>Решения «под ключ» — от подбора до поддержки</p>
+        </div>
+        <div class="advantage-item">
+          <i class="fa fa-graduation-cap"></i>
+          <p>Обучение продавцов и администраторов</p>
+        </div>
+        <div class="advantage-item">
+          <i class="fa fa-headphones"></i>
+          <p>Быстрая удалённая техподдержка</p>
+        </div>
+        <div class="advantage-item">
+          <i class="fa fa-truck"></i>
+          <p>Выезд специалиста на торговую точку при необходимости</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-header">
+        <i class="fa fa-life-ring"></i>
+        <h2>Поддержка и сопровождение</h2>
+      </div>
+      <div class="intro-section">
+        <p>После запуска системы мы остаёмся на связи. Если возникают вопросы или сбои, наша техническая поддержка помогает удалённо. В случае необходимости специалист приедет к вам и на месте настроит оборудование или программное обеспечение.</p>
+      </div>
+    </section>
+
+    <a href="tel:+77765595726" class="consultation-button">
+      <i class="fa fa-phone"></i>
+      Проконсультироваться
+    </a>
   </div>
 
-
-  
   <div class="bottom-nav">
     <a href="../../feedback/">
         <i class="fa fa-comments"></i>
@@ -192,4 +503,3 @@
   </div>
 </body>
 </html>
-
