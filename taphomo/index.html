@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тапалка</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow-x: hidden;
+      padding: 20px;
+    }
+
+    .container {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .title {
+      color: white;
+      font-size: 3rem;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      font-weight: bold;
+    }
+
+    .counter {
+      color: white;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      font-weight: bold;
+    }
+
+    .coin-display {
+      display: block;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      padding: 15px 30px;
+      border-radius: 50px;
+      margin-top: 30px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .image-container {
+      position: relative;
+      display: block;
+      cursor: pointer;
+      user-select: none;
+      transition: transform 0.1s ease;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .image-container:active {
+      transform: scale(0.95);
+    }
+
+    .tap-image {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+      border: 5px solid rgba(255, 255, 255, 0.5);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .image-container:hover .tap-image {
+      box-shadow: 0 15px 50px rgba(0,0,0,0.4);
+    }
+
+    .coin {
+      position: absolute;
+      font-size: 2rem;
+      font-weight: bold;
+      pointer-events: none;
+      z-index: 1000;
+      user-select: none;
+    }
+
+    .coin-dollar {
+      color: #ffd700;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .coin-tenge {
+      color: #ff6b6b;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    @keyframes coinFloat {
+      0% {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotate(0deg);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-150px) scale(1.5) rotate(360deg);
+      }
+    }
+
+    .coin-animation {
+      animation: coinFloat 1s ease-out forwards;
+    }
+
+    .instructions {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 1.2rem;
+      margin-top: 30px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    }
+
+    @media (max-width: 768px) {
+      .title {
+        font-size: 2rem;
+      }
+
+      .tap-image {
+        width: 250px;
+        height: 250px;
+      }
+
+      .counter {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">💰 Тапалка 💰</h1>
+    <div class="image-container" id="tapArea">
+      <img src="../images/vlastelin.jpeg" alt="Тапалка" class="tap-image" id="tapImage">
+    </div>
+    <div class="coin-display">
+      <div class="counter" id="coinCounter">0 ₸</div>
+    </div>
+    <p class="instructions">Нажимай на картинку, чтобы заработать монеты! 🪙</p>
+  </div>
+
+  <script>
+    let coinCount = 0;
+    const tapArea = document.getElementById('tapArea');
+    const coinCounter = document.getElementById('coinCounter');
+    const tapImage = document.getElementById('tapImage');
+
+    // Функция для создания звука монеты
+    function playCoinSound() {
+      const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+      const oscillator = audioContext.createOscillator();
+      const gainNode = audioContext.createGain();
+
+      oscillator.connect(gainNode);
+      gainNode.connect(audioContext.destination);
+
+      // Настройка звука монеты
+      oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
+      oscillator.frequency.exponentialRampToValueAtTime(400, audioContext.currentTime + 0.1);
+      
+      gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+      gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.1);
+
+      oscillator.start(audioContext.currentTime);
+      oscillator.stop(audioContext.currentTime + 0.1);
+    }
+
+    // Функция для создания анимации монеты
+    function createCoin(event) {
+      const coin = document.createElement('div');
+      coin.className = 'coin coin-animation';
+      
+      // Случайный выбор между долларом и тенге
+      const coinTypes = [
+        { symbol: '$', class: 'coin-dollar', value: 10 },
+        { symbol: '₸', class: 'coin-tenge', value: 5 }
+      ];
+      
+      const randomCoin = coinTypes[Math.floor(Math.random() * coinTypes.length)];
+      coin.textContent = randomCoin.symbol;
+      coin.classList.add(randomCoin.class);
+
+      // Позиционирование монеты в месте клика
+      const rect = tapArea.getBoundingClientRect();
+      const x = event.clientX - rect.left;
+      const y = event.clientY - rect.top;
+      
+      coin.style.left = x + 'px';
+      coin.style.top = y + 'px';
+
+      tapArea.appendChild(coin);
+
+      // Обновление счетчика
+      coinCount += randomCoin.value;
+      coinCounter.textContent = coinCount.toLocaleString('ru-RU') + ' ₸';
+
+      // Удаление монеты после анимации
+      setTimeout(() => {
+        coin.remove();
+      }, 1000);
+
+      // Воспроизведение звука
+      try {
+        playCoinSound();
+      } catch (e) {
+        // Игнорируем ошибки звука (если браузер не поддерживает)
+      }
+    }
+
+    // Обработчик клика
+    tapArea.addEventListener('click', createCoin);
+
+    // Поддержка тач-событий для мобильных устройств
+    tapArea.addEventListener('touchstart', (e) => {
+      e.preventDefault();
+      createCoin(e.touches[0]);
+    });
+  </script>
+</body>
+</html>
