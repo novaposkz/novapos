@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -27,7 +27,9 @@
       });
   </script>
   <link href="../styles/design-system.css" rel="stylesheet" type="text/css">
-  <script>(function(a,m,o,c,r,m){a[m]={id:"432249",hash:"55d12d6c81804d600ee5541cd3be5ebdaf65871b6648cec683d8bf947b9fe8bf",locale:"ru",inline:false,setMeta:function(p){this.params=(this.params||[]).concat([p])}};a[o]=a[o]||function(){(a[o].q=a[o].q||[]).push(arguments)};var d=a.document,s=d.createElement('script');s.async=true;s.id=m+'_script';s.src='https://gso.amocrm.ru/js/button.js';d.head&&d.head.appendChild(s)}(window,0,'amoSocialButton',0,0,'amo_social_button'));
+<!-- Cleversite chat button -->
+    <script src="//widget.cleversite.ru/widget/134451/209241/"></script>
+<!-- / End of Cleversite chat button -->
 </script>
 <style>
     body {
@@ -378,6 +380,15 @@
     .nav-button.articles-nav:hover {
         box-shadow: 0 12px 35px rgba(245, 87, 108, 0.4);
     }
+
+    .nav-button.programs-nav {
+        background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+        box-shadow: 0 8px 25px rgba(17, 153, 142, 0.3);
+    }
+
+    .nav-button.programs-nav:hover {
+        box-shadow: 0 12px 35px rgba(17, 153, 142, 0.4);
+    }
 @media (max-width: 900px) {
     .cash-programs-grid {
         max-width: 100%;
@@ -513,6 +524,10 @@
             <a href="#articles-section" class="nav-button articles-nav">
                 <i class="fa fa-file-text"></i>
                 <span>Статьи</span>
+            </a>
+            <a href="#cash-programs-section" class="nav-button programs-nav">
+                <i class="fa fa-cash-register"></i>
+                <span>Кассовые программы</span>
             </a>
         </div>
 
@@ -2224,7 +2239,7 @@
             </div>
         </div>
 
-        <div class="section-header" style="margin-top:60px;">
+        <div class="section-header" id="cash-programs-section" style="margin-top:60px;">
             <i class="fa fa-cash-register"></i>
             <h2>Кассовые программы</h2>
         </div>
